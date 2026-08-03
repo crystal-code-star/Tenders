@@ -1,0 +1,14 @@
+
+  🔄 PIPELINE: 12/2026/BP
+  ──────────────────────────────────────────────────
+  📦 4 fichiers
+    Avis  AR. N° 12.pdf: 1,697 chars 📢
+    Avis  FR AOO N° 12.pdf: 1,890 chars 📢
+    CPS AEP LAAOUINA  2026.pdf: 71,973 chars 📢
+    RC  .pdf: 40,271 chars 📜
+
+  📢 3 AAO | 📜 RC: oui
+    🏗️ Visite trouvée dans CPS AEP LAAOUINA  2026.pdf: "ndividuel    L'entreprise est tenue de faire une visite des lieux.    Tous les échantillons doivent être agrées par la maîtrise d'œuvre avant leur p..."
+    🏗️ Phrase visite ajoutée au prompt
+    🤖 Envoi LLM: 3 AAO + RC + Visite = 10,660 chars
+    📊 LLM: {"estimation": 2666400, "caution_provisoire": 45000, "caution_definitive": null, "visite_lieux_obligatoire": true, "classe_demandee": "4", "attestation_reference_demandee": "certificat de qualification et de classification"}

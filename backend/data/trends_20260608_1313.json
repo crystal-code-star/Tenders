@@ -1,0 +1,78 @@
+{
+  "trends": [
+    {
+      "rank": 1,
+      "trend_name": "Digital Water Treatment Innovations",
+      "category": "Technology",
+      "strength": 80,
+      "article_count": 1,
+      "evidence": "Digital twin innovation cuts energy costs in water purification",
+      "why_matters": "CrystalWater cares about this trend as it can help reduce energy costs and improve efficiency in water treatment, making it a competitive advantage in the Moroccan market",
+      "linkedin_post_ideas": [
+        "How digital twins can revolutionize water treatment in Morocco",
+        "The role of innovation in reducing energy costs in water purification",
+        "Morocco's potential for adopting digital water treatment technologies"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "Digital twin innovation cuts energy costs in water purification",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWmF1alNhd21zNzRqdWJZZUUzZE5pRDlzRGdrY19aOWxoQkQ0a21UZXdlVEY0OG5UdER5VkRpRVpfTElyUWlxeHQ3MXktbW83MnN0WDVPMDJCUDBQZ3d2Y2p6UkdGcUFfOWQ3a05kU2Q5MWFXZ1VmalJkTnhYM05QaTVCd3h6WWtCTlh3SmtjYmNqMzJub2FjS1Yzclp1N041ZmtEZA?oc=5",
+          "source": "Technology Org",
+          "published": "Mon, 08 Jun 2026 11:00:20 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "trend_name": "Water Reuse and Conservation",
+      "category": "Sustainability",
+      "strength": 70,
+      "article_count": 1,
+      "evidence": "Water reuse – waiting for change is not a strategy",
+      "why_matters": "CrystalWater cares about this trend as water reuse and conservation are crucial for addressing Morocco's water scarcity challenges, and the company can offer solutions to support these efforts",
+      "linkedin_post_ideas": [
+        "The importance of water reuse in addressing Morocco's drought challenges",
+        "How CrystalWater can support water conservation efforts in Morocco",
+        "The role of water reuse in ensuring a sustainable future for Morocco's water resources"
+      ],
+      "suggested_posts": 5,
+      "source_articles": [
+        {
+          "title": "Water reuse – waiting for change is not a strategy",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTG9henRrdm1lRHdkSm5rMWQxdG5ReUNGNkROdFpBMUxGQ3BSZ3FJdE1fYXZscW9ORE1kRjJBVko1Z0tuUUxEc3pYcTJOckM3Mk5VWnB3OFZJWnhxYU4zZGpabXJnLVZDWG55ZDh6VFZlVnMzZFZTck5jeGU3VGlqVzkzQWhNcV9O?oc=5",
+          "source": "Smart Water Magazine",
+          "published": "Mon, 08 Jun 2026 09:55:13 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "trend_name": "Sustainable Production Practices",
+      "category": "Environmental Responsibility",
+      "strength": 60,
+      "article_count": 1,
+      "evidence": "Redefining What Responsible Production Looks Like",
+      "why_matters": "CrystalWater cares about this trend as it highlights the importance of adopting sustainable production practices, which can help the company reduce its environmental footprint and improve its reputation in the Moroccan market",
+      "linkedin_post_ideas": [
+        "The importance of sustainable production practices in the water treatment industry",
+        "How CrystalWater is adopting responsible production practices in Morocco",
+        "The role of sustainable production in ensuring a environmentally responsible water treatment sector"
+      ],
+      "suggested_posts": 3,
+      "source_articles": [
+        {
+          "title": "Redefining What Responsible Production Looks Like",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQ1hmdC1MbTZfR1N3YmRwYVdiQS1oQTA3UGhOZUhQWWtjZmtLSDJwOHhGQWcyd2tJUVU2SlV2d2o4TnZtZzZoc2oxUFNmNlhzSHFZcEd1ajJ0XzhDS2U1ckI0MlVCX2p3SWpzOXNBVmJNV0RWOXZjM3UtbzA1VmNNVXA5bE03SzNPMmlDUkZscEVYSGNxUWVSNjZQSVpyMWdoR2x0YtIBsAFBVV95cUxOVEhQZWUwZmtRY0tLWnFhcG5VRHk2R3JmWDF1TXZia1RHWTk5Qm5FdnNpUkRsaGVTdzRXbnFUM0t4emtTODM0YXRMaHFlQTY1c2VRejlwY0wyU3ZDaVhJd045VTdTREg2ZlFmQTBHVTRURGlPQmppeFlMWVRjVURSTnJYWURHSHlsUU5sODFMR0o3N1VzS0xKajZCUDI1R2NXb1BaeDNjMXk4Sk5WSnFLcw?oc=5",
+          "source": "Fibre2Fashion",
+          "published": "Mon, 08 Jun 2026 05:36:48 GMT"
+        }
+      ]
+    }
+  ],
+  "engine": "Groq",
+  "total_fetched": 3,
+  "week": "Week-24-2026",
+  "week_label": "Week 24, June 2026",
+  "research_date": "2026-06-08"
+}

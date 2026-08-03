@@ -1,0 +1,32 @@
+2026-06-23 16:54:36,463 - tender_scanner - INFO - =======================================================
+2026-06-23 16:54:36,464 - tender_scanner - INFO -   CrystalWater - Scan + Nettoyage + DCE
+2026-06-23 16:54:36,466 - tender_scanner - INFO -   2026-06-23 16:54
+2026-06-23 16:54:36,474 - tender_scanner - INFO - =======================================================
+2026-06-23 16:54:36,474 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees...
+2026-06-23 16:54:37,824 - tender_scanner - INFO -   Aucun AO a nettoyer
+2026-06-23 16:54:38,696 - tender_scanner - INFO -   0 AO deja en base
+2026-06-23 16:54:38,701 - tender_scanner - INFO -   CrystalWater - Scan intelligent
+2026-06-23 16:55:03,381 - tender_scanner - INFO -   Total: 428 pages | Arret apres 15 pages vides
+2026-06-23 16:55:04,309 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:05,128 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:05,950 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:06,017 - tender_scanner - INFO -   Page 1/428 - 3/10 nouveaux (total: 3)
+2026-06-23 16:55:32,617 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:33,424 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:33,447 - tender_scanner - INFO -   Page 5/428 - 2/10 nouveaux (total: 5)
+2026-06-23 16:55:41,317 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:42,030 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:42,846 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:43,506 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:44,263 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:44,282 - tender_scanner - INFO -   Page 6/428 - 5/10 nouveaux (total: 10)
+2026-06-23 16:55:58,078 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:55:58,171 - tender_scanner - INFO -   Page 8/428 - 1/10 nouveaux (total: 11)
+2026-06-23 16:56:05,161 - tender_scanner - INFO -   Arret: 15 pages sans nouveau AO
+2026-06-23 16:56:05,171 - tender_scanner - ERROR -   Erreur: Exception: BrowserContext.new_page: Connection closed while reading from the driver
+2026-06-23 16:56:05,173 - tender_scanner - INFO -   Scan: 11 nouveaux AO / 90 scannes | 0 DCE
+2026-06-23 16:56:05,180 - tender_scanner - INFO - =======================================================
+2026-06-23 16:56:05,180 - tender_scanner - INFO -   11 nouveaux AO | 3 haute priorite | 0 avec DCE
+2026-06-23 16:56:05,180 - tender_scanner - INFO -   0 doublons, 0 faux positifs supprimes
+2026-06-23 16:56:05,181 - tender_scanner - INFO -   Total en base: 11
+2026-06-23 16:56:05,181 - tender_scanner - INFO - =======================================================

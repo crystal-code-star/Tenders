@@ -1,0 +1,12 @@
+2026-06-23 12:34:40,716 - tender_scanner - INFO -   CrystalWater — Scan + Nettoyage
+2026-06-23 12:34:40,717 - tender_scanner - INFO -   2026-06-23 12:34
+2026-06-23 12:34:42,128 - tender_scanner - INFO -   Aucun AO à nettoyer
+2026-06-23 12:34:42,945 - tender_scanner - INFO -   0 AO déjà en base
+2026-06-23 12:34:42,952 - tender_scanner - INFO -   CrystalWater — Scan intelligent
+2026-06-23 12:35:11,236 - tender_scanner - INFO -   Total: 414 pages | Arrêt après 15 pages vides
+2026-06-23 12:35:11,570 - tender_scanner - INFO -   Page 1/414 — 3/10 nouveaux (total: 3)
+2026-06-23 12:35:35,464 - tender_scanner - ERROR -   Erreur: TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed
+2026-06-23 12:35:35,466 - tender_scanner - INFO -   Scan: 3 nouveaux AO / 40 scannés
+2026-06-23 12:35:36,637 - tender_scanner - INFO -   3 nouveaux AO | 1 haute priorité
+2026-06-23 12:35:36,638 - tender_scanner - INFO -   0 doublons, 0 faux positifs supprimés
+2026-06-23 12:35:36,638 - tender_scanner - INFO -   Total en base: 3

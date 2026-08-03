@@ -1,0 +1,461 @@
+2026-07-20 15:18:36,614 - google-generativeai not installed. Gemini disabled.
+2026-07-20 15:18:37,025 - 
+2026-07-20 15:18:37,026 - ╔══════════════════════════════════════╗
+2026-07-20 15:18:37,028 - ║  🔴 REALTIME TENDER SCANNER  🔴     ║
+2026-07-20 15:18:37,029 - ║  Stop à la 1ère AO déjà en base      ║
+2026-07-20 15:18:37,030 - ╚══════════════════════════════════════╝
+2026-07-20 15:18:37,030 -   ⏱️  Interval: 300s | 📋 Table: tenders_3
+2026-07-20 15:18:37,663 -   📊 226 AO en base
+2026-07-20 15:18:37,665 -   🟢 Démarrage automatique dans 3s...
+2026-07-20 15:18:40,921 - 🔍 CYCLE #1 | 15:18:40 | 226 AO en base
+2026-07-20 15:19:05,449 -   ❌ Page.click: Timeout 10000ms exceeded.
+Call log:
+waiting for locator("#ctl0_CONTENU_PAGE_AdvancedSearch_lancerRecherche")
+  -   locator resolved to <input type="submit" value="Lancer la recherche" title="Lancer la recherche" class="bouton-moyen-120 float-right" id="ctl0_CONTENU_PAGE_AdvancedSearch_lancerRecherche" name="ctl0$CONTENU_PAGE$AdvancedSearch$lancerRecherche"/>
+  - attempting click action
+  -   waiting for element to be visible, enabled and stable
+  -   element is visible, enabled and stable
+  -   scrolling into view if needed
+  -   done scrolling
+  -   performing click action
+  -   click action done
+  -   waiting for scheduled navigations to finish
+
+2026-07-20 15:19:06,226 -   ✅ 0 nouvelles AO | 25.6s | Total: 0
+2026-07-21 10:09:40,259 - google-generativeai not installed. Gemini disabled.
+2026-07-21 10:09:40,810 - ======================================================================
+2026-07-21 10:09:40,812 - 🚀 CrystalWater AI Agent API v6.8 - Démarrage
+2026-07-21 10:09:40,812 - ======================================================================
+2026-07-21 10:09:40,817 - ✅ Scheduler démarré
+2026-07-21 10:09:40,818 - ======================================================================
+2026-07-21 10:09:40,822 - 🚀 DÉMARRAGE AUTOMATIQUE DU SCANNER HYBRIDE
+2026-07-21 10:09:40,824 - ======================================================================
+2026-07-21 10:09:40,827 - 📊 Configuration:
+2026-07-21 10:09:40,828 -    - Phase 1: Rattrapage (>= 01/06/2026)
+2026-07-21 10:09:40,830 -    - Phase 2: Temps réel (intervalle: 300s)
+2026-07-21 10:09:40,831 -    - Table: tenders_3
+2026-07-21 10:09:40,832 - ======================================================================
+2026-07-21 10:09:40,840 - 
+2026-07-21 10:09:40,841 - ✅ Scanner hybride démarré en arrière-plan
+2026-07-21 10:09:40,842 - ╔══════════════════════════════════════════════╗
+2026-07-21 10:09:40,844 - ======================================================================
+2026-07-21 10:09:40,845 - ║  💧 CRYSTALWATER - HYBRID SCANNER 💧       ║
+2026-07-21 10:09:40,846 - ✅ API prête !
+2026-07-21 10:09:40,847 - ║  Phase 1: Rattrapage (>= 01/06/2026)        ║
+2026-07-21 10:09:40,848 - 📡 http://0.0.0.0:8000/docs
+2026-07-21 10:09:40,849 - ║  Phase 2: Temps réel (surveillance)         ║
+2026-07-21 10:09:40,850 - ======================================================================
+
+2026-07-21 10:09:40,850 - ╚══════════════════════════════════════════════╝
+2026-07-21 10:09:41,566 -   📊 226 AO déjà en base
+2026-07-21 10:09:41,568 -   📅 Filtre rattrapage: >= 01/06/2026
+2026-07-21 10:09:41,571 -   🛑 Arrêt: 50 résultats consécutifs hors plage
+2026-07-21 10:09:41,575 - 
+2026-07-21 10:09:41,577 - ============================================================
+2026-07-21 10:09:41,579 -   📥 PHASE 1: RATTRAPAGE (>= 01/06/2026)
+2026-07-21 10:09:41,582 - ============================================================
+2026-07-21 10:10:07,959 -   📄 13340 pages à scanner
+2026-07-21 10:10:07,960 -   🔍 Filtrage: date >= 01/06/2026
+2026-07-21 10:10:07,961 - 
+2026-07-21 10:10:08,809 -   ✅ [1] E/219/26 | 21/07/2026 | Entretien postes HTA/BT...Entretien postes HTA/BT
+2026-07-21 10:10:09,064 -   ✅ [2] C/166/26 | 21/07/2026 | RATISSAGE, CONTRÔLE ET VÉRIFICATION DES RÉSEAUX DE DISTRIBUTION ET DES
+2026-07-21 10:10:09,274 -   ✅ [3] E/190/26 | 21/07/2026 | Acquisition et insertion des IACM pour la Direction Provinciale de Sid
+2026-07-21 10:10:09,520 -   ✅ [4] 022/2026/CHUMVIO | 21/07/2026 | « Achat, installation et mise en service de pousse-seringues électriqu
+2026-07-21 10:10:09,944 -   ✅ [5] 179/26/C | 21/07/2026 | Entretien et maintenance des climatiseurs -Région Marrakech Safi....En
+2026-07-21 10:10:10,348 -   ✅ [6] 157/26/I | 21/07/2026 | Maintenance de la plateforme système hébergeant les bases de données d
+2026-07-21 10:10:10,731 -   ✅ [7] 11/2026CHRO | 21/07/2026 | L’Achat de Fongibles afférents à la Radiologie du Centre Hospitalier R
+2026-07-21 10:10:10,737 -   📄 P.1/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:7
+2026-07-21 10:10:21,810 -   ✅ [8] AOOS06/2026/81300 | 21/07/2026 | Fourniture et installation de  monte malade au profit de la  polyclini
+2026-07-21 10:10:22,056 -   ✅ [9] 150/26/C | 21/07/2026 | Location longue durée des agences commerciales mobiles-Region Marrakec
+2026-07-21 10:10:22,363 -   ✅ [10] AOOS04/2026/81300 | 21/07/2026 | Achat des réactifs de laboratoire avec mise à disposition des automate
+2026-07-21 10:10:22,618 -   ✅ [11] AOOS08/2026/81300 | 21/07/2026 | La réalisation de la restauration lors des réceptions des invités au p
+2026-07-21 10:10:22,870 -   ✅ [12] 24/AOO/AASLM/2026 | 21/07/2026 | REALISATION DES PRESTATIONS DES ETUDES TECHNIQUES POUR LA MAITRISE D’Œ
+2026-07-21 10:10:23,066 -   ✅ [13] 50/2022/DAM/CM | 20/07/2026 | Travaux de reprographie, tirage de plans et édition des documents de c
+2026-07-21 10:10:23,318 -   ✅ [14] 17/2026/DRANEFMS/DPANEF_MA | 20/07/2026 | L’exécution des travaux d’entretien des arbres anciens (vivants) dans 
+2026-07-21 10:10:23,324 -   📄 P.2/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:14
+2026-07-21 10:10:34,954 -   ✅ [15] AO/09/2026 | 20/07/2026 | ACHAT DES EQUIPEMENTS POUR LE CENTRE DE REGULATION DE L'EXTREME PRECAR
+2026-07-21 10:10:35,211 -   ✅ [16] GN4130405/DXG/2026 | 20/07/2026 | Prestation de service pour la location d’échafaudage, grue et nacelles
+2026-07-21 10:10:35,514 -   ✅ [17] 20/OLT/2026 | 20/07/2026 | TRAVAUX DE MISE A NIVEAU DE L’OASIS SIDI YAHYA A OUJDA...TRAVAUX DE MI
+2026-07-21 10:10:35,809 -   ✅ [18] 52/2026 | 20/07/2026 | LA REALISATION DES ETUDES TECHNIQUES ET LE SUIVI, CONTROLE ET COORDINA
+2026-07-21 10:10:36,078 -   ✅ [19] 51/2026 | 20/07/2026 | L’ACHAT DES FOURNITURES DE BUREAU ET FOURNITURES INFORMATIQUES POUR LE
+2026-07-21 10:10:36,308 -   ✅ [20] 17/2026/FS/CAM | 20/07/2026 | ACHAT DE PEINTURE POUR LES BESOINS DU BUREAU DE LA MAINTENANCE RELEVAN
+2026-07-21 10:10:36,559 -   ✅ [21] 27/BR/RGON/2026 | 20/07/2026 | TRAVAUX DE MISE A NIVEAU DES QUARTIER EL MOUHIT A LA VILLE DE SIDI IFN
+2026-07-21 10:10:36,967 -   ✅ [22] INSPO/05/2026 | 20/07/2026 | PRESTATIONS DE MISE A DISPOSITION DE PERSONNEL D’INTERIM POUR LE COMPT
+2026-07-21 10:10:36,971 -   📄 P.3/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:22
+2026-07-21 10:10:49,400 -   ✅ [23] 15/2026/AOON/CHM6M | 20/07/2026 | L'achat des fournitures de bureau pour les besoins des hôpitaux releva
+2026-07-21 10:10:49,649 -   ✅ [24] 23/2026/ABHBC | 20/07/2026 | Traitement de l’annuaire hydrologique des stations hydrométriques situ
+2026-07-21 10:10:49,913 -   ✅ [25] 3/2026 | 20/07/2026 | TRAVAUX D’AMENAGEMENT DES PISTES D’ACCES AU QUARTIER DHAR EL AABI RAYH
+2026-07-21 10:10:50,175 -   ✅ [26] 56/2026/S2A | 20/07/2026 | Études techniques, contrôle général et suivi technique des travaux d’e
+2026-07-21 10:10:50,434 -   ✅ [27] 29/26 | 20/07/2026 | LA RÉALISATION DES TRAVAUX DE CONSTRUCTION TCE DE LA RÉSIDENCE NAHDA À
+2026-07-21 10:10:50,720 -   ✅ [28] 39/FA/DAAFL/DIV.GF/ZS/2026 | 20/07/2026 | Achat de fournitures et matériaux de construction pour entretien et ré
+2026-07-21 10:10:50,993 -   ✅ [29] 55/2026/S2A | 20/07/2026 | TRAVAUX D’EXTENSION ET DE MISE A NIVEAU DE PLUSIEUERS ETABLISSEMENTS S
+2026-07-21 10:10:51,233 -   ✅ [30] AO06/2026/DRCS | 20/07/2026 | Appel d’offres International à majoration ayant pour la réalisation de
+2026-07-21 10:10:51,239 -   📄 P.4/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:30
+2026-07-21 10:11:03,326 -   ✅ [31] 27/2026/TGR | 20/07/2026 | la maintenance des équipements informatiques de stockage  pour le comp
+2026-07-21 10:11:03,627 -   ✅ [32] 08/2026/CARTTH | 20/07/2026 | PRESTATIONS D’ORGANISATION DE TROIS FORUMS REGIONAUX DANS LA REGION TA
+2026-07-21 10:11:04,060 -   ✅ [33] 01/DPCR/ANP/2026 | 20/07/2026 | Fourniture, installation, mise en service et maintenance du nouveau sy
+2026-07-21 10:11:04,294 -   ✅ [34] 05/DELIO/2026 | 20/07/2026 | Acquisition d’une ambulance médicalisée type A au profit de la Provinc
+2026-07-21 10:11:04,525 -   ✅ [35] 44/2026/EST/DST | 20/07/2026 | FOURNITURE ET INSTALLATION DU MOBILIER HOSPITALIER POUR LES ETABLISSEM
+2026-07-21 10:11:04,761 -   ✅ [36] 33/2026/2 | 20/07/2026 | Achat  de matériel médico-technique destiné à différentes formations s
+2026-07-21 10:11:04,764 -   📄 P.5/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:36
+2026-07-21 10:11:15,845 -   ✅ [37] 5/2026 | 20/07/2026 | TRAVAUX D’AMENAGEMENT DES RUELLES AU DOUAR OUED EL LIL A LA COMMUNE MA
+2026-07-21 10:11:16,097 -   ✅ [38] 15/2026/DPA/SAF | 20/07/2026 | ACHAT, FOURNITURE, LIVRAISON ET MISE EN MARCHE DU MATERIEL TECHNIQUE A
+2026-07-21 10:11:16,341 -   ✅ [39] 33/2026/DSAH | 20/07/2026 | La maintenance préventive, corrective des installations techniques ins
+2026-07-21 10:11:16,600 -   ✅ [40] 09/2026/DRCADOE | 20/07/2026 | L’Organisation d’un voyage d’étude au profit des femmes rurales de la 
+2026-07-21 10:11:16,829 -   ✅ [41] 15/2026/ALEM | 20/07/2026 | Travaux de viabilisation du lotissement Al Jihad sis à Sidi Ifni lot :
+2026-07-21 10:11:17,078 -   ✅ [42] 08/2026/DRCADOE | 20/07/2026 | L’Organisation d’un voyage d’étude au profit des agriculteurs, agricul
+2026-07-21 10:11:17,309 -   ✅ [43] 04/CAO/2026 | 20/07/2026 | Prestations de nettoyage des locaux administratifs de la chambre d’art
+2026-07-21 10:11:17,577 -   ✅ [44] 07/2026/DRCADOE | 20/07/2026 | La Prise en charge des frais de restauration des participants aux jour
+2026-07-21 10:11:17,578 -   📄 P.6/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:44
+2026-07-21 10:11:29,528 -   ✅ [45] 18/2026/DPA/SAFI | 20/07/2026 | DIAGNOSTIC DE L’ETAT ACTUEL DE LA SEGUIA RELEVANT DU PMH ET ETUDE TECH
+2026-07-21 10:11:29,745 -   ✅ [46] 06/2026/DRCADOE | 20/07/2026 | ORGANISATION DE SESSIONS DE FORMATION AU PROFIT DES FEMMES RURALES DE 
+2026-07-21 10:11:30,003 -   ✅ [47] 05/2026/DRCADOE | 20/07/2026 | ORGANISATION DES JOURNEES DE SENSIBILISATION AU PROFIT DES AGRICULTEUR
+2026-07-21 10:11:30,306 -   ✅ [48] 04/2026/DRCADOE | 20/07/2026 | L'ORGANISATION DES SESSIONS DE FORMATION AU PROFIT DES AGRICULTEURS ET
+2026-07-21 10:11:30,575 -   ✅ [49] 18/AOO/DPLR/ANP/2026 | 20/07/2026 | FOURNITURE DES COMPTEURS D’EAU POTABLE POUR LA DIRECTION DU PORT DE LA
+2026-07-21 10:11:30,889 -   ✅ [50] 14/2026/2 | 20/07/2026 | Achat de mobilier hospitalier destiné au nouvel Hôpital Ibn Sina....Ac
+2026-07-21 10:11:31,157 -   ✅ [51] 25/AOO/AASLM/2026 | 20/07/2026 | REALISATION DES TRAVAUX PREPARATOIRE DES PROJETS D'AMENAGEMENT DE L'AG
+2026-07-21 10:11:31,161 -   📄 P.7/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:51
+2026-07-21 10:11:42,074 -   ✅ [52] 21/AOO/AASLM/2026 | 20/07/2026 | L'EXÉCUTION DES PRESTATIONS DE SURVEILLANCE DES SITES ENTRANT DANS LA 
+2026-07-21 10:11:42,400 -   ✅ [53] 76/EXP/2026 | 20/07/2026 | Achat de fournitures de bureau, reprographie et informatiques pour et 
+2026-07-21 10:11:42,700 -   ✅ [54] 20/AOO/AASLM/2026 | 20/07/2026 | L'EXÉCUTION DES PRESTATIONS DE NETTOYAGE DES ABORDS DE LA LAGUNE DE MA
+2026-07-21 10:11:42,958 -   ✅ [55] 040/DPO/INV/2026 | 20/07/2026 | PRESTATION D’ENTRETIEN ET DE MAINTENANCE DU MOBILIER SCOLAIRE DES ÉTAB
+2026-07-21 10:11:43,373 -   ✅ [56] 05/2026/ENFI | 20/07/2026 | Restauration des étudiants et du personnel encadrant de l’Ecole Nation
+2026-07-21 10:11:43,664 -   ✅ [57] 042/DPO/INV/2026 | 20/07/2026 | Etudes techniques et suivi des travaux d’aménagement  de centre socio-
+2026-07-21 10:11:43,888 -   ✅ [58] 71/EXP/2026 | 20/07/2026 | Achat de matières et fournitures d'enseignement pour les établissement
+2026-07-21 10:11:44,143 -   ✅ [59] 09/DRAI/GON/BG/2026 | 20/07/2026 | Achat de fournitures de bureau et fournitures pour matériel techniques
+2026-07-21 10:11:44,146 -   📄 P.8/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:59
+2026-07-21 10:11:55,239 -   ✅ [60] 20/RH/2026/INV | 20/07/2026 | TRAVAUX D’AMENAGEMENT ET DE REHABILITATION DES UNITÉS SCOLAIRES PRIMAI
+2026-07-21 10:11:55,472 -   ✅ [61] 29/RH/2026/INV | 20/07/2026 | TRAVAUX D’AMENAGEMENT ET DE REHABILITATION DES UNITÉS SCOLAIRES PRIMAI
+2026-07-21 10:11:55,715 -   ✅ [62] 18/RH/2026/INV | 20/07/2026 | TRAVAUX D'EXTENSION DES LYCEES COLLEGIAUX RELEVANT DE LA DIRECTION PRO
+2026-07-21 10:11:55,959 -   ✅ [63] 05/CAO/2026 | 20/07/2026 | Location et installation de chapiteaux, stands et mobilier pour l’orga
+2026-07-21 10:11:56,206 -   ✅ [64] AO/119/2026 | 20/07/2026 | TRAVAUX D’ACHÈVEMENT DE REQUALIFICATION DE LA COMMUNE OULED MKOUDOU   
+2026-07-21 10:11:56,838 -   ✅ [65] 6/2026/CG | 20/07/2026 | Travaux d’extension du réseau électrique pour l’électrification des fo
+2026-07-21 10:11:57,074 -   ✅ [66] 05/2026/CHRG | 20/07/2026 | Fourniture, installation et mise en marche d’un amplificateur de brill
+2026-07-21 10:11:57,287 -   ✅ [67] 18/FDT/2026 | 20/07/2026 | Acquisition  d’une Pick-up  au profit de la Commune d’Ouarzazate, Prov
+2026-07-21 10:11:57,290 -   📄 P.9/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:67
+2026-07-21 10:12:08,642 -   ✅ [68] AAO19/2026/DPA/20/MARRAKECH | 20/07/2026 | Travaux de plantation de 200 hectares d'Atriplex Nummularia dans le ca
+2026-07-21 10:12:08,876 -   ✅ [69] 14/2026/HAO | 20/07/2026 | MISSION D’AUDIT FINANCIER DU CYCLE DE TRESORERIE DES SOCIETES FILIALES
+2026-07-21 10:12:09,107 -   ✅ [70] 16/RH/2026/EXP | 20/07/2026 | Prestations de Gardiennage et de Surveillance des locaux relevant de l
+2026-07-21 10:12:09,340 -   ✅ [71] 20/2026/BG | 20/07/2026 | Achat du mobilier et de matériel de bureau pour l’équipement du siège 
+2026-07-21 10:12:09,571 -   ✅ [72] 15/RH/2026/EXP | 20/07/2026 | Achat de matières et fournitures d’enseignement au profit des établiss
+2026-07-21 10:12:09,786 -   ✅ [73] 23/2026/DPJM | 20/07/2026 | L’ACHAT DE PRODUITS D’IMPRESSION POUR LE COMPTE DES TRIBUNAUX DE LA CI
+2026-07-21 10:12:10,013 -   ✅ [74] 22/RH/2026/EXP | 20/07/2026 | Prestation d’impression et de reproduction des documents et articles a
+2026-07-21 10:12:10,257 -   ✅ [75] 1/CSCFHP/2026 | 20/07/2026 | Conception, développement, intégration et déploiement d’une extension 
+2026-07-21 10:12:10,259 -   📄 P.10/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:75
+2026-07-21 10:12:22,544 -   ✅ [76] 24/2026/MEF/AC/MAIN | 20/07/2026 | La maintenance de la solution d’affichage dynamique du Ministère de l’
+2026-07-21 10:12:22,810 -   ✅ [77] 32/RH/2026/EXPP | 20/07/2026 | Achat de fournitures de bureau au profit des écoles primaires, lycées 
+2026-07-21 10:12:23,054 -   ✅ [78] 10/RH/2026/EXP | 20/07/2026 | Achat de consommable au profit des services administratifs, des écoles
+2026-07-21 10:12:23,262 -   ✅ [79] 08/RH/2026/INV | 20/07/2026 | Fourniture et installation de 482 (quatre cent quatre-vingt-deux) supp
+2026-07-21 10:12:23,472 -   ✅ [80] 04/2026/CHRG | 20/07/2026 | FOURNITURE, INSTALLATION ET MISE EN MARCHE AUTOCLAVE HORIZONTAL DOUBLE
+2026-07-21 10:12:23,710 -   ✅ [81] 01/2026/CPMAS | 20/07/2026 | l’acquisition de gilets de sauvetage gonflables destinés aux barques d
+2026-07-21 10:12:23,950 -   ✅ [82] 22/2026/DPJM | 20/07/2026 | ACHAT DE FOURNITURES POUR RELIURE AU PROFIT DES JURIDICTIONS DE LA CIR
+2026-07-21 10:12:24,184 -   ✅ [83] 02/2026/CHRG | 20/07/2026 | Fourniture, installation et mise en marche d’un échographe numérique 
+
+2026-07-21 10:12:24,189 -   📄 P.11/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:83
+2026-07-21 10:12:35,962 -   ✅ [84] 13/2026/DPATZSAHA | 20/07/2026 | Travaux d’aménagement hydro-agricole relatifs à la réhabilitation des 
+2026-07-21 10:12:36,202 -   ✅ [85] 01/CFSSK/2026 | 20/07/2026 | Acquisition des produits alimentaires à usage humain pour l’internat d
+2026-07-21 10:12:39,538 -   ✅ [86] 12/2026/DPATZSMOPFP | 20/07/2026 | TRAVAUX DE NETTOYAGE ET D’ENTRETIEN DE 9 200 TOUFFES DE PALMIER DATTIE
+2026-07-21 10:12:39,951 -   ✅ [87] 01/2026 | 20/07/2026 | Entretien et maintenance des équipements techniques et audiovisuels du
+2026-07-21 10:12:40,141 -   ✅ [88] 82/INV/2026 | 20/07/2026 | Travaux d’aménagement et de réhabilitation des toilettes aux écoles pr
+2026-07-21 10:12:40,351 -   ✅ [89] 04/ESSP/2026/ANEPCO | 20/07/2026 | TRAVAUX DE MISE À NIVEAU DES ÉTABLISSEMENTS DE SOINS DE SANTÉ PRIMAIRE
+2026-07-21 10:12:40,355 -   📄 P.12/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:89
+2026-07-21 10:12:52,510 -   ✅ [90] 72/INV/2026 | 20/07/2026 | Travaux d’aménagement et de réhabilitation du lycée Qualifiant FATIMA 
+2026-07-21 10:12:52,737 -   ✅ [91] A089/RRA/2026 | 20/07/2026 | TRAVAUX DE RÉALISATION D'UNE EXTENSION DE LA PLATEFORME AGROALIMENTAIR
+2026-07-21 10:12:52,953 -   ✅ [92] 171/26/ELEC | 20/07/2026 | Assistance technique de la SRM-MS aux travaux remboursables de rétabli
+2026-07-21 10:12:53,187 -   ✅ [93] 98/26/ELEC | 20/07/2026 | Achat d'un localisateur de défaut HTA souterrain avec accessoires– PRO
+2026-07-21 10:12:53,669 -   ✅ [94] 2/2026/CRRAM | 20/07/2026 | Prestations de service de travaux agricoles et de laboratoires pour le
+2026-07-21 10:12:53,672 -   📄 P.13/13340 | ✅5 | ⏭️ anciens:0 | ⏭️ existants:5 | 📊 total:94
+2026-07-21 10:13:04,524 -   ✅ [95] 74/EXP/2026 | 20/07/2026 | La prestation du gardiennage et surveillance des locaux des établissem
+2026-07-21 10:13:04,739 -   ✅ [96] 53/2026/DRSPSFM | 20/07/2026 | Etudes techniques et suivi des travaux de construction de l’hôpital de
+2026-07-21 10:13:05,000 -   ✅ [97] 38/2026/DRSPSFM | 20/07/2026 | Etudes techniques et suivi des travaux de construction de l’hôpital de
+2026-07-21 10:13:05,244 -   ✅ [98] 25.R1/2026/SRMFM | 20/07/2026 | Prestations de prélèvement et d'analyses physico-chimiques et bactério
+2026-07-21 10:13:05,456 -   ✅ [99] 76/2026/SRMFM | 20/07/2026 | Fourniture de compteurs d’eau potable DN 65MM, 80MM, 100MM ET 150 MM..
+2026-07-21 10:13:05,461 -   📄 P.14/13340 | ✅5 | ⏭️ anciens:0 | ⏭️ existants:5 | 📊 total:99
+2026-07-21 10:13:16,642 -   ✅ [100] 26S038 | 20/07/2026 | Acquisition des licences pour les modules NCM et SAM, et le renouvelle
+2026-07-21 10:13:16,889 -   ✅ [101] 13/2026 | 20/07/2026 | Programme de mise à niveau des infrastructures routières dans la Régio
+2026-07-21 10:13:17,130 -   ✅ [102] 10/2026/so3303up | 20/07/2026 | Construction en bicouche de la piste reliant RP 4233 vers douar Chamaa
+2026-07-21 10:13:17,376 -   ✅ [103] 09/2026/so3303up | 20/07/2026 | Travaux de construction d'une piste reliant douar Amarate et Kediat Me
+2026-07-21 10:13:17,617 -   ✅ [104] 129/2026/ADHA | 20/07/2026 | TRAVAUX DE RECONSTRUCTION DES ETABLISSEMENTS SCOLAIRES (TAGDIT DONT LE
+2026-07-21 10:13:17,857 -   ✅ [105] 128/2026/ADHA | 20/07/2026 | FOURNITURE ET INSTALLATION DU MATERIEL TECHNIQUE POUR EQUIPEMENT D’UNE
+2026-07-21 10:13:18,105 -   ✅ [106] 2/2026/so3303up | 20/07/2026 | mise en œuvre du plan de communication digitale et audiovisuelle de L’
+2026-07-21 10:13:18,333 -   ✅ [107] AO/08/2026 | 20/07/2026 | ACHAT DES EQUIPEMENTS POUR LE CENTRE DE REGULATION DE L'EXTREME PRECAR
+2026-07-21 10:13:18,334 -   📄 P.15/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:107
+2026-07-21 10:13:29,284 -   ✅ [108] 07/2026/so3303up | 20/07/2026 | Achat de 03 (trois) ambulances type B au profit des communes : Sidi Ka
+2026-07-21 10:13:29,473 -   ✅ [109] 05/AAS/2026 | 20/07/2026 | ACHAT DE MOBILIER DE BUREAU AU PROFIT DE L’ARRONDISSEMENT AIN SEBAA (L
+2026-07-21 10:13:29,683 -   ✅ [110] 47/2026/EST/DST | 20/07/2026 | Fourniture et installation d'équipements médico-Techniques destinés au
+2026-07-21 10:13:29,899 -   ✅ [111] 49/2026/EST/DST | 20/07/2026 | ACHAT ET INSTALATION DU MATERIEL INFORMATIQUE ET AUDIOVISUEL AU PROFIT
+2026-07-21 10:13:30,093 -   ✅ [112] 05/E/2026 | 20/07/2026 | Location des boutiques appartenant au domaine privée de la commune de 
+2026-07-21 10:13:30,285 -   ✅ [113] 20/SGPTV/2026 | 20/07/2026 | Vente de la rampe flottante d’accès aux navires ferries réformée au po
+2026-07-21 10:13:30,475 -   ✅ [114] 36/2026/DSAH | 20/07/2026 | l’externalisation de l’activité des chauffeurs au profil du District S
+2026-07-21 10:13:30,476 -   📄 P.16/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:114
+2026-07-21 10:13:42,707 -   ✅ [115] 127/2026/ADHA | 20/07/2026 | TRAVAUX DE RECONSTRUCTION DES ETABLISSEMENTS SCOLAIRES (TASSAFTE DONT 
+2026-07-21 10:13:42,958 -   ✅ [116] 1/2026 | 20/07/2026 | Elaboration des études techniques et suivi des travaux d’aménagement d
+2026-07-21 10:13:43,184 -   ✅ [117] 12/2026/DPBM | 20/07/2026 | Acquisition de matériel et mobilier de bureau pour le compte du Tribun
+2026-07-21 10:13:43,382 -   ✅ [118] 01/2026/DRDOE | 20/07/2026 | APPEL D’OFFRES OUVERT NATIONAL SUR OFFRES DE PRIX N° 01/2026 RELATIF A
+2026-07-21 10:13:43,620 -   ✅ [119] 09/BP/2026 | 20/07/2026 | TRAVAUX DE CONSTRUCTION DES PISTES ET ROUTES DANS LE TERRITOIRE DE LA 
+2026-07-21 10:13:43,811 -   ✅ [120] AO033/2022/ANCFCC/DOSI | 20/07/2026 | les services d’installation et de mise en service des liens WAN en tro
+2026-07-21 10:13:44,050 -   ✅ [121] 15/2026/DRAFM | 20/07/2026 | TRAVAUX DE RENOVATION DE L’ETANCHEITE D’UN LOGEMENT ADMINISTRATIF RELE
+2026-07-21 10:13:44,053 -   📄 P.17/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:121
+2026-07-21 10:13:56,296 -   ✅ [122] 19/NARSA/2026 | 19/07/2026 | La maintenance des radars portables de contrôle de la vitesse des véhi
+2026-07-21 10:13:56,529 -   ✅ [123] 10/PUITK/2026 | 18/07/2026 | Travaux d’achèvement d’un amphithéâtre à la faculté des sciences humai
+2026-07-21 10:13:56,771 -   ✅ [124] 29/2026/DGR | 17/07/2026 | TRAVAUX D’ENTRETIEN DES RESEAUX D’IRRIGATION GRAVITAIRE EN CANAUX SEMI
+2026-07-21 10:13:57,004 -   ✅ [125] 08/MDA/2026 | 17/07/2026 | Animation des réseaux sociaux et sponsoring des publications de la Mai
+2026-07-21 10:13:57,264 -   ✅ [126] TO1130326/2026/ONEEBELEC | 17/07/2026 | Fourniture et installation des climatiseurs pour les sites de la DTO..
+2026-07-21 10:13:57,506 -   ✅ [127] TO2130322/2026/ONEEBELEC | 17/07/2026 | Abattage et élagage des arbres sous et au voisinage des lignes HTB rel
+2026-07-21 10:13:57,766 -   ✅ [128] 09/PUITK/2026 | 17/07/2026 | Travaux d’aménagement et d’installation d’une charpente métallique et 
+2026-07-21 10:13:57,768 -   📄 P.18/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:128
+2026-07-21 10:14:08,985 -   ✅ [129] 29/AMDIE/2026 | 17/07/2026 | la participation de l’AMDIE à des salons à l’international....la parti
+2026-07-21 10:14:09,213 -   ✅ [130] 31/2026/ABHGZR | 17/07/2026 | Achat de fourniture et produits pour le matériel informatique au profi
+2026-07-21 10:14:09,450 -   ✅ [131] 16/AOO/DPMR/ANP/2026 | 17/07/2026 | FOURNITURE DE BUREAU ET CONSOMMABLE INFORMATIQUE A L’AGENCE NATIONALE 
+2026-07-21 10:14:09,694 -   ✅ [132] 48/2026/S2A | 17/07/2026 | Réalisation des prestations d’études géotechniques, de contrôle de la 
+2026-07-21 10:14:09,950 -   ✅ [133] 18/AOO/DPMR/ANP/2026 | 17/07/2026 | LA MAINTENANCE DES EQUIPEMENTS DE SÛRETE AU PORT DE MOHAMMEDIA...LA MA
+2026-07-21 10:14:10,161 -   ✅ [134] 19/AOO/DPMR/ANP/2026 | 17/07/2026 | FOURNITURE ET INSTALLATION DES CLIMATISEURS POUR LE DEPARTEMENT DU POR
+2026-07-21 10:14:10,161 -   📄 P.19/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:134
+2026-07-21 10:14:21,946 -   ✅ [135] 23/2026/EACCE | 17/07/2026 | l’achat de matériel informatique...l’achat de matériel informatique
+2026-07-21 10:14:22,140 -   ✅ [136] 15/TRAV/DRCDT/2026 | 17/07/2026 | TRAVAUX D’INSTALLATION DES ÉQUIPEMENTS TECHNIQUES AU PROFIT DE LA SALL
+2026-07-21 10:14:22,379 -   ✅ [137] 01/2026/INCVT | 17/07/2026 | Achat et installation des mobiliers de bureaux pour le compte de l’Ins
+2026-07-21 10:14:22,600 -   ✅ [138] 25/2026 | 17/07/2026 | Etude technique de collecte des eaux pluviales au niveau des zones rur
+2026-07-21 10:14:22,804 -   ✅ [139] 31/2026/EACCE | 17/07/2026 | la participation de l’EACCE aux salons ISM MIDDLE EAST qui se tiendra 
+2026-07-21 10:14:23,035 -   ✅ [140] 19/2026/DRAIRSK/BG | 17/07/2026 | LA FOURNITURE ET POSE DES ASPIRATEURS 
+POUR DES MOSQUÉES DANS LA RÉGIO
+2026-07-21 10:14:23,038 -   📄 P.20/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:140
+2026-07-21 10:14:34,374 -   ✅ [141] 52/2026/SOREC | 17/07/2026 | Mise en œuvre du plan de formation annuel au profit des collaborateurs
+2026-07-21 10:14:34,677 -   ✅ [142] 10/BET/DRAIRSK/BG/2026 | 17/07/2026 | l’élaboration des études techniques et le suivi des travaux de constru
+2026-07-21 10:14:34,888 -   ✅ [143] GN4130621/2026/AGS/DXG | 17/07/2026 | PRESTATION DE SUPERVISION DES VISITES SYSTÉMATIQUES  12 000 H DES GROU
+2026-07-21 10:14:35,129 -   ✅ [144] 27/2026/EACCE | 17/07/2026 | l’entretien des espaces verts au niveau du siège de l’EACCE...l’entret
+2026-07-21 10:14:35,360 -   ✅ [145] 07/DAAF/BG/2026 | 17/07/2026 | ACQUISITION DE MATERIEL SCIENTIFIQUE D’OBSERVATION MICROSCOPIQUE, DE T
+2026-07-21 10:14:35,563 -   ✅ [146] 17/2026/BR | 17/07/2026 | FOURNITURE, INSTALLATION ET MISE EN SERVICE DE DEUX (02) STATIONS DE M
+2026-07-21 10:14:35,565 -   📄 P.21/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:146
+2026-07-21 10:15:02,052 -   ✅ [147] 009/26/AOO/ONDA | 17/07/2026 | Entretien des espaces verts de l'Aéroport Tétouan Saniat R'Mel....Entr
+2026-07-21 10:15:02,292 -   ✅ [148] 097/26/AOO/ONDA | 17/07/2026 | Prestation de gestion, de recyclage des chariots à bagages et de shopp
+2026-07-21 10:15:02,558 -   ✅ [149] 38/2026/SAD/GSTTTA | 17/07/2026 | La réparation de l’IRM de marque GE installée à l’Hôpital Universitair
+2026-07-21 10:15:02,814 -   ✅ [150] 25/2026/EACCE | 17/07/2026 | l’achat de voitures de service...l’achat de voitures de service
+2026-07-21 10:15:03,048 -   ✅ [151] 12/BG/2026 | 17/07/2026 | ACHAT DE MATÉRIEL ET MOBILIER DE BUREAU, MATÉRIEL INFORMATIQUE ET TECH
+2026-07-21 10:15:03,292 -   ✅ [152] 142DR5/2025 | 17/07/2026 | Acquisition et installation des groupes de pompage pour les centres de
+2026-07-21 10:15:03,535 -   ✅ [153] 26/2026/ABHBC | 20/07/2026 | Etude de délimitation du domaine public hydraulique relevant de la zon
+2026-07-21 10:15:03,543 -   📄 P.23/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:153
+2026-07-21 10:15:14,580 -   ✅ [154] 31/2026/ABHBC | 20/07/2026 | Acquisition d’un Zodiac pour le barrage Sidi Mohamed Ben Abdellah....A
+2026-07-21 10:15:14,815 -   ✅ [155] 03/CAO/2026 | 17/07/2026 | Prestations de gardiennage et de surveillance des locaux administratif
+2026-07-21 10:15:15,068 -   ✅ [156] 32/2026/CMR | 17/07/2026 | Transport collectif du personnel de la Caisse Marocaine des Retraites.
+2026-07-21 10:15:15,298 -   ✅ [157] 18/2026/APDS | 17/07/2026 | Travaux d’achèvement de la piscine à la commune de Fam El Hisn....Trav
+2026-07-21 10:15:15,299 -   📄 P.24/13340 | ✅4 | ⏭️ anciens:0 | ⏭️ existants:6 | 📊 total:157
+2026-07-21 10:15:26,353 -   ✅ [158] 04/2026 | 17/07/2026 | L'entretien et le nettoyage des bâtiments administratifs des services 
+2026-07-21 10:15:26,753 -   ✅ [159] AO/105/2026 | 17/07/2026 | AMÉNAGEMENT DE LA PLACE PUBLIQUE N°01 DANS LA COMMUNE DE RIBAT ELKHEIR
+2026-07-21 10:15:26,963 -   ✅ [160] 06/rvv/2026 | 17/07/2026 | Entretien des Fontaines et leurs équipements au Parc Hassan II de Raba
+2026-07-21 10:15:27,182 -   ✅ [161] 23/2026/SAD/GSTTTA | 17/07/2026 | l’achat d’outillage et quincaillerie de Maintenance biomédicale pour l
+2026-07-21 10:15:27,202 -   📄 P.25/13340 | ✅4 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:161
+2026-07-21 10:15:38,404 -   ✅ [162] 23/2026/BP | 17/07/2026 | Assistance technique aux travaux de construction de la piste reliant l
+2026-07-21 10:15:38,640 -   ✅ [163] 54/2026/DRSPSFM | 17/07/2026 | Prestation de laboratoire pour le contrôle de la qualité des travaux d
+2026-07-21 10:15:38,837 -   ✅ [164] 25/2026/BP | 17/07/2026 | Contrôle topographique des travaux de construction de la piste reliant
+2026-07-21 10:15:39,062 -   ✅ [165] 22/2026/BP | 17/07/2026 | Travaux de construction de la piste reliant la rocade Fès - Casablanca
+2026-07-21 10:15:39,261 -   ✅ [166] 39/2026/DRSPSFM | 17/07/2026 | Prestation de laboratoire pour le contrôle de la qualité des travaux d
+2026-07-21 10:15:39,450 -   ✅ [167] 03/BI/2026/ENA | 17/07/2026 | Acquisition de rayonnage pour le compte de l’Ecole Nationale d’Agricul
+2026-07-21 10:15:39,451 -   📄 P.26/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:167
+2026-07-21 10:15:51,359 -   ✅ [168] 13/2026/CUI | 17/07/2026 | Gestion déléguée de l’abattoir communal à IMINTANOUT....Gestion délégu
+2026-07-21 10:15:51,597 -   ✅ [169] 12/2026 | 17/07/2026 | PC 2026 : Fourniture des produits d’alimentation pour le personnel de 
+2026-07-21 10:15:51,809 -   ✅ [170] 12/2026/CUI | 17/07/2026 | TRAVAUX D’AMENAGEMENT DES VOIES DE LA VILLE EN DEUX  (02) LOTS SEPARES
+2026-07-21 10:15:52,062 -   ✅ [171] 14/2023/SDRL | 17/07/2026 | Travaux d'aménagement extérieur du siège de la cour d’appel de Laâyoun
+2026-07-21 10:15:52,301 -   ✅ [172] 29/2026 | 17/07/2026 | Achat de matériel de bureau pour le compte du tribunal de famille d'Ou
+2026-07-21 10:15:52,547 -   ✅ [173] 05/26/CAS | 17/07/2026 | Location de voiture utilitaires pour le compte de l'Arrondissement De 
+2026-07-21 10:15:52,758 -   ✅ [174] 7/2026CHPSEFROU | 17/07/2026 | l’achat de matériel de couchage pour le CHP Mohamed v sefrou...l’achat
+2026-07-21 10:15:52,762 -   📄 P.27/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:174
+2026-07-21 10:16:03,981 -   ✅ [175] 18/SAM/BG/2026 | 17/07/2026 | CONCEPTION ET IMPRESSION D’AGENDA, DE CARTE DE VISITE , DE  VŒUX ET  D
+2026-07-21 10:16:04,241 -   ✅ [176] 03/2026/CFRN | 17/07/2026 | La réalisation des prestations de Restauration et Pause-Café dans le c
+2026-07-21 10:16:04,467 -   ✅ [177] 093/26/AOO/ONDA | 17/07/2026 | Fourniture et équipement de bureau pour l’O.N.D.A....Fourniture et équ
+2026-07-21 10:16:04,688 -   ✅ [178] 22AOM/SNRT/2026 | 17/07/2026 | Lot N°01 : Fourniture et installation du matériel de bureau : Photocop
+2026-07-21 10:16:04,893 -   ✅ [179] 32/INO/2026 | 17/07/2026 | L'ACQUISITION DES ÉQUIPEMENTS BIOMÉDICAUX au profit de l'Institut Nati
+2026-07-21 10:16:05,081 -   ✅ [180] 06/2026/CHPKH | 17/07/2026 | L’achat des produits biologiques et chimiques pour l’automate Immunolo
+2026-07-21 10:16:05,083 -   📄 P.28/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:180
+2026-07-21 10:16:17,552 -   ✅ [181] AON23/2026/ | 17/07/2026 | ETUDE D’ELARGISSEMENT ET DU RENFORCEMENT ET DE RECTIFICATION DU TRACE 
+2026-07-21 10:16:17,797 -   ✅ [182] 13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUAR
+2026-07-21 10:16:18,041 -   ✅ [183] 03/2025/DRA_ESSD | 17/07/2026 | Les prestations de gardiennage et de surveillance des bâtiments releva
+2026-07-21 10:16:18,299 -   ✅ [184] 17/2026/APDS | 17/07/2026 | Travaux d’achèvement du complexe touristique à la commune de Fam El Hi
+2026-07-21 10:16:18,302 -   📄 P.29/13340 | ✅4 | ⏭️ anciens:0 | ⏭️ existants:6 | 📊 total:184
+2026-07-21 10:16:29,681 -   ✅ [185] 85/ENSM/2026 | 17/07/2026 | -	Prestations de gardiennage et de surveillance des locaux de l’École 
+2026-07-21 10:16:29,903 -   ✅ [186] 15/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE LA PISCINE DU CENTRE SOCIO SPORTIF DE PROXIMI
+2026-07-21 10:16:30,127 -   ✅ [187] 07/2026/BG | 17/07/2026 | Entretien et maintenance préventive et curative des installations élec
+2026-07-21 10:16:30,366 -   ✅ [188] 03/2026/DRI/RABAT | 17/07/2026 | LA REALISATION DES TRAVAUX D’AMENAGEMENT DE L’IMMEUBLE DES IMPOTS DE T
+2026-07-21 10:16:30,603 -   ✅ [189] 78/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT D’UN LYCEE COLLEGIAL PIONNIER A LA CT IMZOUREN R
+2026-07-21 10:16:31,158 -   ✅ [190] 79/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT 02 DEUX LYCEES COLLEGIAUX PIONNIERS AUX CT AL HO
+2026-07-21 10:16:31,167 -   📄 P.30/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:190
+2026-07-21 10:16:43,484 -   ✅ [191] 75/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 06 SIX ECOLES PIONNIERES AUX CT AL HOCEIMA , 
+2026-07-21 10:16:43,676 -   ✅ [192] 76/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 02 DEUX LYCEES COLLEGIAUX PIONNIERS AUX CT IM
+2026-07-21 10:16:43,885 -   ✅ [193] 77/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT D’UN LYCEE COLLEGIAL PIONNIER A LA CT BNI BOUFRA
+2026-07-21 10:16:44,093 -   ✅ [194] 71/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 05 CINQ ECOLES PIONNIERES AUX CT CHAKRANE, BN
+2026-07-21 10:16:44,294 -   ✅ [195] 72/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 04 QUATRE ECOLES PIONNIERES AUX CT AJDIR, IMR
+2026-07-21 10:16:44,480 -   ✅ [196] 05/FSJESS/2026 | 17/07/2026 | Prestation d’entretien et de nettoyage des locaux de la Faculté des Sc
+2026-07-21 10:16:44,670 -   ✅ [197] 73/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 03 TROIS ECOLES PIONNIERES AUX CT IZEMMOUREN 
+2026-07-21 10:16:44,879 -   ✅ [198] 74/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 07 SEPT ECOLES PIONNIERES A LA CT ROUADI RELE
+2026-07-21 10:16:45,082 -   ✅ [199] 69/226 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 05 CINQ ECOLES PIONNIERES AUX CT BNI BOUFRAH,
+2026-07-21 10:16:45,083 -   📄 P.31/13340 | ✅9 | ⏭️ anciens:0 | ⏭️ existants:1 | 📊 total:199
+2026-07-21 10:16:56,545 -   ✅ [200] 70/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 08 HUIT ECOLES PIONNIERES AUX CT ZAOUIAT SIDI
+2026-07-21 10:16:56,764 -   ✅ [201] 67/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 03 TROIS ECOLES PIONNIERES AUX CT ABDELGHAYA 
+2026-07-21 10:16:56,974 -   ✅ [202] 68/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 05 CINQ ECOLES PIONNIERES AUX CT BNI BOUNSAR 
+2026-07-21 10:16:57,195 -   ✅ [203] 64/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 02 DEUX ECOLES PIONNIERES A LA CT ISSAGUEN RE
+2026-07-21 10:16:57,426 -   ✅ [204] 65/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 05 CINQ ECOLES PIONNIERES AUX CT ISSAGUEN ET 
+2026-07-21 10:16:57,621 -   ✅ [205] AOO/09/ANEPCEST/2026 | 17/07/2026 | ETUDE GEOTECHNIQUE, RECEPTION DE FONDS DE FOUILLES ET CONTROLE DE QUAL
+2026-07-21 10:16:57,815 -   ✅ [206] 66/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 04 QUATRE ECOLES PIONNIERES AUX CT MOULAY AHM
+2026-07-21 10:16:57,816 -   📄 P.32/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:206
+2026-07-21 10:17:09,398 -   ✅ [207] 63/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 02 DEUX ECOLES PIONNIERES AUX CT IMZOUREN ET 
+2026-07-21 10:17:09,608 -   ✅ [208] 129/2026/CHUIS | 17/07/2026 | l’externalisation de la collecte et le traitement des déchets médicaux
+2026-07-21 10:17:09,611 -   📄 P.33/13340 | ✅2 | ⏭️ anciens:0 | ⏭️ existants:8 | 📊 total:208
+2026-07-21 10:17:20,661 -   ✅ [209] AOOS09/2026/PSSKENITRA | 17/07/2026 | l’achat de consommables médicaux d’ophtalmologie en lot unique...l’ach
+2026-07-21 10:17:20,905 -   ✅ [210] 06/CPTT/2026 | 17/07/2026 | Etudes techniques et  suivi des travaux de construction d’un bureau co
+2026-07-21 10:17:21,133 -   ✅ [211] 05/CPTT/2026 | 17/07/2026 | Etudes techniques et  suivi des travaux de construction d’un bureau co
+2026-07-21 10:17:21,138 -   📄 P.34/13340 | ✅3 | ⏭️ anciens:0 | ⏭️ existants:7 | 📊 total:211
+2026-07-21 10:17:31,769 -   ✅ [212] 19/2026/DR5 | 17/07/2026 | RENFORCEMENT DE L'AEP D'EL HAJEB A PARTIR DU BARRAGE DRISS 1ER - LOT G
+2026-07-21 10:17:31,989 -   ✅ [213] 23/2026/BG | 17/07/2026 | l’achèvement des travaux d'aménagement des bâtiments administratifs re
+2026-07-21 10:17:32,191 -   ✅ [214] 25/2026/BG | 17/07/2026 | Travaux d'entretien des logements administratifs à la Province de Tizn
+2026-07-21 10:17:32,420 -   ✅ [215] 55/2026/DRSPSFM | 17/07/2026 | Contrôle et optimisation des études techniques et contrôle des travaux
+2026-07-21 10:17:32,658 -   ✅ [216] 50/2026/DRSPSFM | 17/07/2026 | Contrôle et optimisation des études techniques et contrôle des travaux
+2026-07-21 10:17:32,661 -   📄 P.35/13340 | ✅5 | ⏭️ anciens:0 | ⏭️ existants:5 | 📊 total:216
+2026-07-21 10:17:44,242 -   ✅ [217] 04/2026/COM | 17/07/2026 | TRAVAUX DE TRANSFORMATION D UN FORAGE DE RECONNAISSANCE EN FORAGE
+D’EX
+2026-07-21 10:17:44,490 -   ✅ [218] 16/DRAI/BG/2026 | 17/07/2026 | FOURNITURE DES MATERIELS AUDIOVISUELS À DES ECOLES D'ENSEIGNEMENT TRAD
+2026-07-21 10:17:44,720 -   ✅ [219] 28DR1/CI/2026 | 17/07/2026 | Mise à niveau de la station de reprise Tiwrar de refoulement des eaux 
+2026-07-21 10:17:44,961 -   ✅ [220] 10/2026 | 17/07/2026 | organisation de la 10ème Edition du Carrefour d’Oulmès pour le Dévelop
+2026-07-21 10:17:45,215 -   ✅ [221] 108/2026/ADHA | 17/07/2026 | TRAVAUX ALIMENTATION EN EAU POTABLE ET D’ASSAINISSEMENT DES GROUPEMENT
+2026-07-21 10:17:45,222 -   📄 P.36/13340 | ✅5 | ⏭️ anciens:0 | ⏭️ existants:5 | 📊 total:221
+2026-07-21 10:17:56,787 -   ✅ [222] 23DR3/2026 | 17/07/2026 | Réalisation de panneaux thématiques d’inauguration des projets d’eau p
+2026-07-21 10:17:57,020 -   ✅ [223] 108/2026/CHUIS | 17/07/2026 | ACHAT DE FONGIBLES MEDICAUX DESTINES AUX DIVERS ETABLISSEMENTS RELEVEN
+2026-07-21 10:17:57,306 -   ✅ [224] 31/2026 | 17/07/2026 | REALISATION D’UN LEVE DE GEOPHYSIQUE AEROPORTEE (MOBILE MT OU EQUIVALE
+2026-07-21 10:17:57,593 -   ✅ [225] 107/2026/CHUIS | 17/07/2026 | ACHAT DE  FONGIBLES MEDICAUX DESTINES  AUX DIVERS ETABLISSEMENTS RELEV
+2026-07-21 10:17:57,848 -   ✅ [226] 12/2026/ANDA | 17/07/2026 | Mise en place d’un système de gestion et dépôt des dossiers d’investis
+2026-07-21 10:17:58,077 -   ✅ [227] 49DR5/2026 | 17/07/2026 | ACQUISITION D’APPAREILS SCIENTIFIQUES DE LABORATOIRES RURAL...ACQUISIT
+2026-07-21 10:17:58,326 -   ✅ [228] O/192/26 | 17/07/2026 | Travaux divers d’exploitation du réseau de distribution d’eau potable 
+2026-07-21 10:17:58,552 -   ✅ [229] C/175/26 | 17/07/2026 | DETECTION DES FRAUDES AU NIVEAU DES RESEAUX DE DISTRIBUTION ET SYSTEME
+2026-07-21 10:17:58,554 -   📄 P.37/13340 | ✅8 | ⏭️ anciens:0 | ⏭️ existants:2 | 📊 total:229
+2026-07-21 10:18:10,713 -   ✅ [230] O/197/26 | 17/07/2026 | TRAVAUX DE RENFORCEMENT DE L’ALIMENTATION EN EAU POTABLE PAR BORNES FO
+2026-07-21 10:18:10,972 -   ✅ [231] E/128/26 | 17/07/2026 | TRAVAUX DE FONÇAGE POUR LA MISE EN PLACE DE FOURREAUX DESTINES AU RESE
+2026-07-21 10:18:11,190 -   ✅ [232] 25/AREPDT/2026 | 17/07/2026 | Programme de valorisation territoriale et paysagère des zones de monta
+2026-07-21 10:18:11,431 -   ✅ [233] O/182/26 | 17/07/2026 | Études techniques des projets d’alimentation en eau potable des commun
+2026-07-21 10:18:11,661 -   ✅ [234] C/184/26 | 17/07/2026 | TRAVAUX DE RENOUVELEMENT DU RESEAU D’EAU POTABLE ET D’ASSAINISSEMENT L
+2026-07-21 10:18:11,665 -   📄 P.38/13340 | ✅5 | ⏭️ anciens:0 | ⏭️ existants:5 | 📊 total:234
+2026-07-21 10:18:22,779 -   ✅ [235] 093/2017/ANCFCC/DC | 17/07/2026 | l’exécution des prestations de l’immatriculation foncière d’ensemble (
+2026-07-21 10:18:22,985 -   ✅ [236] O/139/26 | 17/07/2026 | Travaux de construction d’un réservoir 15 000 m3 complexe hydraulique 
+2026-07-21 10:18:23,192 -   ✅ [237] A/147/26 | 17/07/2026 | Travaux de réalisation du collecteur D1 amont (tranche 1) à Kénitra...
+2026-07-21 10:18:23,409 -   ✅ [238] 43/2026/ALOMRANE_SOUSS_MASSA | 17/07/2026 | L’Achèvement des travaux de réalisation de la station d’épuration « ST
+2026-07-21 10:18:23,643 -   ✅ [239] AO05/2026/DRCS | 17/07/2026 | Appel d’offres ouvert international à majoration pour la Réalisation d
+2026-07-21 10:18:23,873 -   ✅ [240] 13/2026/DPETLG | 17/07/2026 | Contrôle Extérieur Topographique des Travaux de Construction de la Dév
+2026-07-21 10:18:23,877 -   📄 P.39/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:240
+2026-07-21 10:18:35,506 -   ✅ [241] 19/2026/ANDA | 17/07/2026 | Réalisation de vidéos 3D immersives pour la communication institutionn
+2026-07-21 10:18:35,748 -   ✅ [242] 36/2026/ORH/SEQ | 17/07/2026 | TRAVAUX D'AMENAGEMENT DE LA SEGUIA JDIDA TAKDIMT DANS LA COMMUNE TERRI
+2026-07-21 10:18:35,987 -   ✅ [243] 12/2026/CBG | 17/07/2026 | ACHAT DE MATERIEL INFORMATIQUE AU PROFIT DE LA COMMUNE DE BENGUERIR...
+2026-07-21 10:18:36,232 -   ✅ [244] 32/2026/ORH/SGRID | 17/07/2026 | ENTRETIEN DU MATERIEL HYDROMECANIQUE DES RESEAUX D’IRRIGATION SOUS-PRE
+2026-07-21 10:18:36,472 -   ✅ [245] 31/2026/ORH/SEQ | 17/07/2026 | TRAVAUX D’AMENAGEMENT DES POINTS D’EAU POUR L’IRRIGATION DANS LA ZONE 
+2026-07-21 10:18:36,476 -   📄 P.40/13340 | ✅5 | ⏭️ anciens:0 | ⏭️ existants:5 | 📊 total:245
+2026-07-21 10:18:47,916 -   ✅ [246] 95/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK MOULAY HFID DANS LE CADRE DE LA 
+2026-07-21 10:18:48,151 -   ✅ [247] 18/2026/DPAAG/SG | 17/07/2026 | Achat du matériel informatique pour CHU de Laayoune...Achat du matérie
+2026-07-21 10:18:48,408 -   ✅ [248] 94/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK AL KHADIR DANS LE CADRE DE LA CO
+2026-07-21 10:18:48,660 -   ✅ [249] 123/2026 | 17/07/2026 | TRAVAUX D’ÉCLAIRAGE PUBLIC DE LA COMMUNE D’AGUELMOUS AU NIVEAU DES PÉN
+2026-07-21 10:18:48,898 -   ✅ [250] AO077/2024/ANCFCC/DLAG | 17/07/2026 | Assistance pour la gestion technique du siège de l’Agence Nationale de
+2026-07-21 10:18:49,121 -   ✅ [251] 124DR5/2025 | 17/07/2026 | FOURNITURE TRANSPORT ET POSE DE DEBITMETRES ET COMPTEURS MECANIQUES AU
+2026-07-21 10:18:49,124 -   📄 P.41/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:251
+2026-07-21 10:19:01,019 -   ✅ [252] AO085/2023/ANCFCC/DLAG | 17/07/2026 | Réalisation des travaux d’aménagement du Bloc Foncier d’Oujda...Réalis
+2026-07-21 10:19:01,260 -   ✅ [253] 96/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK AL MELLAK DANS LE CADRE DE LA CO
+2026-07-21 10:19:01,503 -   ✅ [254] 06/M/DAAF/2026 | 17/07/2026 | la réalisation des travaux d’entretien et de maintenance des ascenseur
+2026-07-21 10:19:01,749 -   ✅ [255] 21/DRC/CI/2026 | 17/07/2026 | ENTRETIEN ET REPARATION DES CONDUITES INFERIEURES OU EGALES A 400 MM E
+2026-07-21 10:19:01,938 -   ✅ [256] 06/2026/COM | 17/07/2026 | Travaux de reconstruction du mur de clôture de cimetière principal à l
+2026-07-21 10:19:02,204 -   ✅ [257] 13/2026/MTNRA | 17/07/2026 | Travaux de peinture du siège du ministère Délégué auprès du Chef du Go
+2026-07-21 10:19:02,421 -   ✅ [258] 07/2026/COM | 17/07/2026 | Travaux de dallage par béton de voie au douar Day commune Ouled M'bare
+2026-07-21 10:19:02,426 -   📄 P.42/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:258
+2026-07-21 10:19:13,297 -   ✅ [259] 6/DAILEX2627 | 17/07/2026 | la fourniture à la SONACOS du matériel informatique...la fourniture à 
+2026-07-21 10:19:13,537 -   ✅ [260] 68/2026/DRANEFRSK | 17/07/2026 | Achat de petit outillage et autre matériel (incendies) au profit de la
+2026-07-21 10:19:13,772 -   ✅ [261] 20/2026/DRANEFMS/DPANEF_ES | 16/07/2026 | L’exécution des travaux de reboisement sur une superficie totale de 40
+2026-07-21 10:19:14,005 -   ✅ [262] 07/2026/dpa/es | 16/07/2026 | ACQUISITION DE 390 CITERNES SOUPLES DE 06 M3 POUR LE STOCKAGE DE L’EAU
+2026-07-21 10:19:14,252 -   ✅ [263] C/028/26 | 16/07/2026 | Acquisition des compteurs à prépaiement évolutifs compatibles à la nor
+2026-07-21 10:19:14,469 -   ✅ [264] 04/2026/SDR.F.I.A.S.E.T. | 16/07/2026 | LA REALISATION DES TRAVAUX D’ALIMENTATION EN EAU POTABLE HORS SITE DU 
+2026-07-21 10:19:14,472 -   📄 P.43/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:264
+2026-07-21 10:19:25,247 -   ✅ [265] 07/2026/CARTTH | 16/07/2026 | Prestations de restauration et d’hébergement des participants aux voya
+2026-07-21 10:19:25,476 -   ✅ [266] 06/2026/CARTTH | 16/07/2026 | Achat et livraison des outils et supports de communications au profit 
+2026-07-21 10:19:25,710 -   ✅ [267] 05/2026/CARTTH | 16/07/2026 | Organisation de la foire de produit de terroir à Al Hoceima...Organisa
+2026-07-21 10:19:25,945 -   ✅ [268] 04/2026/CARTTH | 16/07/2026 | Achat et livraison des bidons de lait au profit des organisations prof
+2026-07-21 10:19:26,190 -   ✅ [269] 03/2026/CARTTH | 16/07/2026 | Achat et livraison du matériel d’élevage au profit des éleveurs de la 
+2026-07-21 10:19:26,413 -   ✅ [270] 118/2026 | 16/07/2026 | TRAVAUX D'ENTERREMENT DES LIGNES HTA &amp; BT A LA PENETRANTE DE LA VI
+2026-07-21 10:19:26,649 -   ✅ [271] 119/2026 | 16/07/2026 | TRAVAUX DE REALISATION DES FORAGES (RECONNAISSANCE ET EXPLOITATION) AU
+2026-07-21 10:19:26,653 -   📄 P.44/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:271
+2026-07-21 10:19:37,399 -   ✅ [272] 117/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE LA PISTE TALIOUINE-OUIRINE AU NIVEAU DE LA 
+2026-07-21 10:19:37,603 -   ✅ [273] 10008345 | 16/07/2026 | Étude APS – APD – DCE et Assistance Technique pour la Mise en Place d’
+2026-07-21 10:19:37,808 -   ✅ [274] 09/2026/2 | 16/07/2026 | Achat des tables de radiologie destinés à différentes formations sanit
+2026-07-21 10:19:38,034 -   ✅ [275] 51/2026/S2A | 16/07/2026 | Contrôle technique des études et des travaux d’extension et de mise à 
+2026-07-21 10:19:38,225 -   ✅ [276] 115/2026 | 16/07/2026 | TRAVAUX D’ACHEVEMENT DE L’AMENAGEMENT DU BOULEVARD ZERKTOUNI A LA COMM
+2026-07-21 10:19:38,438 -   ✅ [277] TC4130461/2026/ONEEBELEC | 16/07/2026 | Renforcement du réseau 225 kV de la région de Casablanca...Renforcemen
+2026-07-21 10:19:38,655 -   ✅ [278] 12/2026/B.G. | 16/07/2026 | Etudes techniques et suivi des travaux de construction du siège du Cer
+2026-07-21 10:19:38,658 -   📄 P.45/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:278
+2026-07-21 10:19:50,534 -   ✅ [279] 03/2026/CUMFJ | 16/07/2026 | L’Acquisition d’un  Fourgon Nacelle au profit de la Commune Méchouar F
+2026-07-21 10:19:50,759 -   ✅ [280] 16/2026/INDH | 16/07/2026 | Etudes techniques du projet de construction des pistes d’accès aux dou
+2026-07-21 10:19:50,991 -   ✅ [281] 33/2026/OFPPT | 16/07/2026 | La mesure d'impact du semestre 5 sur les trajectoires post-formation d
+2026-07-21 10:19:51,235 -   ✅ [282] AO050/2026/ANCFCC/DLAG | 16/07/2026 | Acquisition du matériel de bureau pour les services centraux et extéri
+2026-07-21 10:19:51,509 -   ✅ [283] AO045/2026/ANCFCC/DOSI | 16/07/2026 | Extension de la solution de protection contre la fuite des données...E
+2026-07-21 10:19:51,746 -   ✅ [284] 47/INO/2026 | 16/07/2026 | L’ACHAT DES FONGIBLES MEDICAUX POUR L'INSTITUT NATIONAL D'ONCOLOGIE SI
+2026-07-21 10:19:51,984 -   ✅ [285] 03/FPSB/2026 | 16/07/2026 | PRESTATION DE RESTAURATION AU PROFIT DE LA Faculté Polydisciplinaire S
+2026-07-21 10:19:52,213 -   ✅ [286] 1/INDH/2026 | 16/07/2026 | Formation et renforcement des compétences au profit des organes de gou
+2026-07-21 10:19:52,448 -   ✅ [287] 44/2026 | 16/07/2026 | ACQUISITION DES ANTIVIRUS AU PROFIT DES TRIBUNAUX RELEVANT DE LA CIRCO
+2026-07-21 10:19:52,672 -   ✅ [288] 28/2026/TGR | 16/07/2026 | L’assistance technique pour les services informatiques de corrections 
+2026-07-21 10:19:52,672 -   📄 P.46/13340 | ✅10 | ⏭️ anciens:0 | ⏭️ existants:0 | 📊 total:288
+2026-07-21 10:20:03,603 -   ✅ [289] 08/BAH/2026 | 16/07/2026 | Achat des Bacs à Ordures et Barrières Métallique au profit de la Commu
+2026-07-21 10:20:03,841 -   ✅ [290] AOON05/2026/DPAK | 16/07/2026 | TRAVAUX D'AMENAGEMENT HYDRO-AGRICOLE DES SEGUIAS AU NIVEAU DU PERIMETR
+2026-07-21 10:20:04,045 -   ✅ [291] AOON04/2026/DPAK | 16/07/2026 | TRAVAUX D'AMENAGEMENT HYDRO-AGRICOLE DES SEGUIAS AU NIVEAU DES PERIMET
+2026-07-21 10:20:04,296 -   ✅ [292] 27/2026/B.G | 16/07/2026 | Etude architecturale et suivi des travaux de construction du logement 
+2026-07-21 10:20:04,552 -   ✅ [293] 20/2026/CHUMVIA | 16/07/2026 | ACHAT DES PRODUITS ET CONSOMMABLES DE STERILISATION ET DE DESINFECTION
+2026-07-21 10:20:04,797 -   ✅ [294] 11/2026/TGR | 16/07/2026 | l’impression de documents pour le compte de la Trésorerie Générale du 
+2026-07-21 10:20:05,006 -   ✅ [295] 10/2026/B.G | 16/07/2026 | Etude architecturale et suivi des travaux de construction du siège du 
+2026-07-21 10:20:05,009 -   📄 P.47/13340 | ✅7 | ⏭️ anciens:0 | ⏭️ existants:3 | 📊 total:295
+2026-07-21 10:20:16,091 -   ✅ [296] 96/EL/26 | 16/07/2026 | Travaux d'injection des postes HTA-BT et d'aménagement du Réseau HTA a
+2026-07-21 10:20:16,334 -   ✅ [297] 45/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES DE HAOUZIA ET
+2026-07-21 10:20:16,579 -   ✅ [298] 41/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES DE GDANA ET O
+2026-07-21 10:20:16,804 -   ✅ [299] 40/DGPC/PF/2026 | 16/07/2026 | l'acquisition de conteneurs boulangerie destinés aux plateformes régio
+2026-07-21 10:20:17,013 -   ✅ [300] 50/INO/2026 | 16/07/2026 | L’ACHAT DES MEDICAMENTS  AU PROFIT DE L’INSTITUT NATIONAL D’ONCOLOGIE 
+2026-07-21 10:20:17,234 -   ✅ [301] 39/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES DE BNI YAGRIN
+2026-07-21 10:20:17,237 -   📄 P.48/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:301
+2026-07-21 10:20:27,765 -   ✅ [302] DRETLMS/04/2026 | 16/07/2026 | Réalisation des actions de formation inscrites au plan de formation co
+2026-07-21 10:20:27,957 -   ✅ [303] 21/2026/MEF/AC/INF | 16/07/2026 | l’acquisition, l’installation et la mise en œuvre de la solution d’ext
+2026-07-21 10:20:28,154 -   ✅ [304] 38/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES D'OULAD FARES
+2026-07-21 10:20:28,350 -   ✅ [305] 03/2026/DPJL | 16/07/2026 | Achat de fournitures de bureau, des boites d’archives et de papeterie 
+2026-07-21 10:20:28,569 -   ✅ [306] 36/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES D'OULAD FARES
+2026-07-21 10:20:28,787 -   ✅ [307] 33/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES DE SIDI DAHBI
+2026-07-21 10:20:29,006 -   ✅ [308] 47/2026/TGR | 16/07/2026 | La réalisation des prestations de transport de fonds pour le compte de
+2026-07-21 10:20:29,270 -   ✅ [309] 31/2026/TGR | 16/07/2026 | l’assistance technique pour les services informatiques des corrections
+2026-07-21 10:20:29,491 -   ✅ [310] 22/2026 | 16/07/2026 | Travaux de renouvelement de la couche de surface de la RNC reliant la 
+2026-07-21 10:20:29,497 -   📄 P.49/13340 | ✅9 | ⏭️ anciens:0 | ⏭️ existants:1 | 📊 total:310
+2026-07-21 10:20:40,384 -   ✅ [311] 12/2026/c.s | 16/07/2026 | Travaux de Mise à Niveau Urbaine du Boulevard HASSAN II à la Commune d
+2026-07-21 10:20:40,590 -   ✅ [312] 33/2026/TGR | 16/07/2026 | la maintenance des équipements informatiques installés dans les locaux
+2026-07-21 10:20:40,815 -   ✅ [313] 56/2026 | 16/07/2026 | l'appel d'offres ouvert national sur offres de prix n°56/2026 relatif 
+2026-07-21 10:20:41,032 -   ✅ [314] 20/2026/DGH | 16/07/2026 | Travaux d’aménagement de la salle d'annonce des crues abritant le bâti
+2026-07-21 10:20:41,034 -   📄 P.50/13340 | ✅4 | ⏭️ anciens:0 | ⏭️ existants:6 | 📊 total:314
+2026-07-21 10:20:52,585 -   ✅ [315] 06/2026 | 16/07/2026 | la mise à disposition du personnel au profit des navires de l’INRH....
+2026-07-21 10:20:52,833 -   ✅ [316] RHA/03/2026 | 16/07/2026 | Fourniture des panneaux de signalisation pour le réseau routier releva
+2026-07-21 10:20:53,037 -   ✅ [317] 29/INO/2026 | 16/07/2026 | L’ACQUISITION DU MATERIEL INFORMATIQUE POUR...L’ACQUISITION DU MATERIE
+2026-07-21 10:20:53,258 -   ✅ [318] 16/2025 | 16/07/2026 | TRAVAUX DE VIDANGE DES FOSSES SEPTIQUES AU CENTRE DE LA COMMUNE AIT AM
+2026-07-21 10:20:53,486 -   ✅ [319] 105/2026/CL | 16/07/2026 | PRESTATION D’ASSISTANCE TECHNIQUE POUR LA GESTION DES BORNES FONTAINES
+2026-07-21 10:20:53,493 -   📄 P.51/13340 | ✅5 | ⏭️ anciens:0 | ⏭️ existants:5 | 📊 total:319
+2026-07-21 10:21:04,180 -   ✅ [320] 46/2026/2 | 16/07/2026 | Achat de matériel médico-technique, mobilier hospitalier et literie de
+2026-07-21 10:21:04,427 -   ✅ [321] 07ASSIST/2026/FSA | 16/07/2026 | PRESTATIONS DE MISE A DISPOSITION DES AGENTS ASSISTANT AU PROFIT DE LA
+2026-07-21 10:21:04,666 -   ✅ [322] 03REST/2026/FSA | 16/07/2026 | RESTAURATION DU PERSONNEL ET DES INVITES DE LA FACULTE DES SCIENCES AG
+2026-07-21 10:21:04,856 -   ✅ [323] 5/CTAS/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE SIX DALOTS SUR OUED TIFLET....TRAVAUX DE CO
+2026-07-21 10:21:05,056 -   ✅ [324] 16/2026/BR | 16/07/2026 | MAINTENANCE ET ENTRETIEN DU RESEAU INFORMATIQUE, DU SYSTEME DE TELEPHO
+2026-07-21 10:21:05,060 -   📄 P.52/13340 | ✅5 | ⏭️ anciens:0 | ⏭️ existants:5 | 📊 total:324
+2026-07-21 10:21:17,058 -   ✅ [325] 140/26/ASST | 16/07/2026 | Acquisition de deux véhicules 4x4 Pick up avec système complète d’atte
+2026-07-21 10:21:17,263 -   ✅ [326] 103/2026/SI | 16/07/2026 | FOURNITURE ET GESTION DES LICENCES LOGICIELS MICROSOFT POUR LA SRM-TTA
+2026-07-21 10:21:17,485 -   ✅ [327] 06/2026/CBJ | 16/07/2026 | Travaux de restructuration des quartiers à la ville de BIR JDID....Tra
+2026-07-21 10:21:17,684 -   ✅ [328] 35/2026/2 | 16/07/2026 | Achat d’instrumentation pour les spécialités de chirurgie cardiaque mi
+2026-07-21 10:21:17,888 -   ✅ [329] 05/2026/C.BJ | 16/07/2026 | Travaux d’aménagement de la voirie du BD HASSAN 2 (TRANCHE 2) sur un l
+2026-07-21 10:21:18,102 -   ✅ [330] DA/10/26 | 16/07/2026 | la prestation de location longue durée de véhicule utilitaire neuf san
+2026-07-21 10:21:18,109 -   📄 P.53/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:330
+2026-07-21 10:21:29,062 -   ✅ [331] AO9/2026CHPI | 16/07/2026 | L’ Achat de réactifs d’hématologie, d'ionogramme et d'hémostase pour l
+2026-07-21 10:21:29,258 -   ✅ [332] 18DR3/2026 | 16/07/2026 | Entretien des conduites de production en BP par renforcement des manch
+2026-07-21 10:21:29,464 -   ✅ [333] 34/CS/2026 | 16/07/2026 | ACHAT DE FOURNITURES DE BUREAU ET PRODUITS D'IMPRESSION-COMMUNE DE SAL
+2026-07-21 10:21:29,665 -   ✅ [334] 26/BR/RGON/2026 | 16/07/2026 | CONTROLE ET SUIVI DE LA QUALITE DES TRAVAUX DE CONSTRUCTION DE L’ABATT
+2026-07-21 10:21:29,917 -   ✅ [335] 19/CS/2026 | 16/07/2026 | ACHAT DE PETIT MATÉRIEL DE SIGNALISATION....ACHAT DE PETIT MATÉRIEL DE
+2026-07-21 10:21:30,152 -   ✅ [336] 11/CS/2026 | 16/07/2026 | ACHAT D’IMPRIMES-COMMUNE DE SALE-...ACHAT D’IMPRIMES-COMMUNE DE SALE-
+2026-07-21 10:21:30,153 -   📄 P.54/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:336
+2026-07-21 10:21:41,340 -   ✅ [337] 36/2026/CT | 16/07/2026 | Acquisition des véhicules pour la commune de Tétouan....Acquisition de
+2026-07-21 10:21:41,589 -   ✅ [338] 34/2026/2 | 16/07/2026 | Achat d’instrumentation pour les spécialités de chirurgie orthopédique
+2026-07-21 10:21:41,837 -   ✅ [339] 13/2026/CBM | 16/07/2026 | Réalisation de missions d’audit technico-financière et clôture du cont
+2026-07-21 10:21:42,094 -   ✅ [340] 13/2026/DR9 | 16/07/2026 | Etude de transfert de l’eau brute du barrage Dar Khrofa à la ST Mharha
+2026-07-21 10:21:42,329 -   ✅ [341] 01/DRRSK/2026/SONARGES | 16/07/2026 | LA REALISATION DE LA PRESTATION DE NETTOYAGE A L’EVENEMENT AUX INFRAST
+2026-07-21 10:21:42,579 -   ✅ [342] 48/2026/CH/INV | 16/07/2026 | Lot 01 : Les travaux d'extension des établissement primaires, implanté
+2026-07-21 10:21:42,581 -   📄 P.55/13340 | ✅6 | ⏭️ anciens:0 | ⏭️ existants:4 | 📊 total:342
+2026-07-21 10:21:51,130 - ⏹️  Arrêt de l'API...
+2026-07-21 10:21:51,130 - ⏹️  Arrêt du scanner...
+2026-07-21 10:21:51,131 - ✅ API arrêtée

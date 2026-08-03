@@ -1,0 +1,2 @@
+2026-07-01 21:53:21,562 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-01 21:53:21,564 - tender_scanner - WARNING -   [OCR] Module paddleocr non installe ou casse: No module named 'paddleocr'

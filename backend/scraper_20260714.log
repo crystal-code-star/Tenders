@@ -1,0 +1,82 @@
+2026-07-14 16:34:31,962 - INFO - ============================================================
+2026-07-14 16:34:31,962 - INFO - 🚀 Démarrage du scraping des résultats AO
+2026-07-14 16:34:31,963 - INFO - 📅 Date début: 01/01/2024
+2026-07-14 16:34:31,963 - INFO - 📅 Date fin: 14/07/2026
+2026-07-14 16:34:31,964 - INFO - ============================================================
+2026-07-14 16:34:43,645 - INFO - 🌐 Navigation vers la page de recherche...
+2026-07-14 16:34:53,621 - INFO - ✅ Page chargée
+2026-07-14 16:34:53,623 - INFO - 📝 Remplissage du formulaire...
+2026-07-14 16:34:53,772 - INFO -   Date début: 01/01/2024
+2026-07-14 16:34:53,809 - INFO -   Date fin: 14/07/2026
+2026-07-14 16:34:54,829 - INFO - 🔍 Lancement de la recherche...
+2026-07-14 16:35:07,546 - INFO - ✅ Résultats chargés
+2026-07-14 16:35:07,598 - INFO - 📊 Nombre total de pages: 13302
+2026-07-14 16:35:07,599 - INFO - 
+📄 Début du scan (13302 pages)...
+
+2026-07-14 16:35:07,599 - INFO - 📄 Page 1/13302
+2026-07-14 16:35:07,897 - INFO -   ✅ 10 lignes trouvées (Total: 10)
+2026-07-14 16:35:19,931 - INFO - 📄 Page 2/13302
+2026-07-14 16:35:20,323 - INFO -   ✅ 10 lignes trouvées (Total: 20)
+2026-07-14 16:35:32,501 - INFO - 📄 Page 3/13302
+2026-07-14 16:35:32,846 - INFO -   ✅ 10 lignes trouvées (Total: 30)
+2026-07-14 16:35:44,981 - INFO - 📄 Page 4/13302
+2026-07-14 16:35:45,326 - INFO -   ✅ 10 lignes trouvées (Total: 40)
+2026-07-14 16:35:57,337 - INFO - 📄 Page 5/13302
+2026-07-14 16:35:57,726 - INFO -   ✅ 10 lignes trouvées (Total: 50)
+2026-07-14 16:36:10,441 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-14 16:36:10,442 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-14 16:50:41,023 - INFO - ============================================================
+2026-07-14 16:50:41,023 - INFO - 🚀 Démarrage du scraping des résultats AO
+2026-07-14 16:50:41,023 - INFO - 📅 Date début: 01/01/2024
+2026-07-14 16:50:41,024 - INFO - 📅 Date fin: 14/07/2026
+2026-07-14 16:50:41,024 - INFO - 💾 Sauvegarde (fichiers en base64): ao_results_20260714_165041.xlsx
+2026-07-14 16:50:41,024 - INFO - ============================================================
+2026-07-14 16:50:41,075 - INFO - 📁 Fichier Excel initialisé: ao_results_20260714_165041.xlsx
+2026-07-14 16:50:42,315 - INFO - 🌐 Navigation vers la page de recherche...
+2026-07-14 16:50:52,571 - INFO - ✅ Page chargée
+2026-07-14 16:50:52,573 - INFO - 📝 Remplissage du formulaire...
+2026-07-14 16:50:52,899 - INFO -   Date début: 01/01/2024
+2026-07-14 16:50:52,944 - INFO -   Date fin: 14/07/2026
+2026-07-14 16:50:53,959 - INFO - 🔍 Lancement de la recherche...
+2026-07-14 16:51:08,784 - INFO - ✅ Résultats chargés
+2026-07-14 16:51:08,819 - INFO - 📊 Nombre total de pages: 13302
+2026-07-14 16:51:08,820 - INFO - 
+📄 Début du scan (13302 pages)...
+
+2026-07-14 16:51:08,820 - INFO - 
+==================================================
+2026-07-14 16:51:08,820 - INFO - 📄 PAGE 1/13302
+2026-07-14 16:51:08,821 - INFO - ==================================================
+2026-07-14 16:51:09,087 - INFO -   🌐 Accès page détail: 1023512
+2026-07-14 16:51:16,958 - INFO -   📥 Téléchargement: Fichier joint - Avis complémentaire en ligne
+2026-07-14 16:51:18,796 - INFO -   ✅ Fichier encodé: CADRE  DES RESULTATS AO N°10009125.pdf (287.7 KB, base64: 392776 chars)
+2026-07-14 16:51:18,830 - WARNING -   ⚠️ Fichier base64 tronqué (>32000 caractères)
+2026-07-14 16:51:18,854 - INFO -   [1] 📥 10009125 | Travaux | Travaux d’aménagement de l’Agence NADOR CENTRE...Travaux d’a...
+2026-07-14 16:51:18,858 - INFO -   🌐 Accès page détail: 1023510
+2026-07-14 16:51:24,868 - INFO -   📥 Téléchargement: Fichier joint - Avis complémentaire en ligne
+2026-07-14 16:51:26,262 - INFO -   ✅ Fichier encodé: EXTRAIT  DU PV AO N°1009125.pdf (292.7 KB, base64: 399640 chars)
+2026-07-14 16:51:26,282 - WARNING -   ⚠️ Fichier base64 tronqué (>32000 caractères)
+2026-07-14 16:51:26,316 - INFO -   [2] 📥 10009125 | Travaux | Travaux d’aménagement de l’Agence NADOR CENTRE...Travaux d’a...
+2026-07-14 16:51:26,320 - INFO -   🌐 Accès page détail: 1023511
+2026-07-14 16:51:32,353 - INFO -   📥 Téléchargement: Fichier joint - Avis complémentaire en ligne
+2026-07-14 16:51:35,274 - INFO -   ✅ Fichier encodé: Extrait PV AOO 42_26.pdf (1457.7 KB, base64: 1990228 chars)
+2026-07-14 16:51:35,274 - WARNING -   ⚠️ Fichier volumineux! Base64: 1944KB - peut ralentir Excel
+2026-07-14 16:51:35,303 - WARNING -   ⚠️ Fichier base64 tronqué (>32000 caractères)
+2026-07-14 16:51:35,339 - INFO -   [3] 📥 42/26/AREPRRSK | Services | ETUDE GEOTECHNIQUE DES TRAVAUX DE RENFORCEMENT DE L’AVENUE M...
+2026-07-14 16:51:35,343 - INFO -   🌐 Accès page détail: 1023507
+2026-07-14 16:51:41,730 - INFO -   📥 Téléchargement: Fichier joint - Avis complémentaire en ligne
+2026-07-14 16:51:43,078 - INFO -   ✅ Fichier encodé: Résultats définitifs- AO659.pdf (57.3 KB, base64: 78172 chars)
+2026-07-14 16:51:43,100 - WARNING -   ⚠️ Fichier base64 tronqué (>32000 caractères)
+2026-07-14 16:51:43,138 - INFO -   [4] 📥 659/2026/CA/RF/L1/L2/L3 | Travaux | Travaux de ravalement de façades au niveau de la ville de Ca...
+2026-07-14 16:51:43,144 - INFO -   🌐 Accès page détail: 1023503
+2026-07-14 16:51:55,643 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-14 16:51:55,644 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed

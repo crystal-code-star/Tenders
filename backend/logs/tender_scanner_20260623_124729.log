@@ -1,0 +1,48 @@
+2026-06-23 12:47:36,379 - tender_scanner - INFO - =======================================================
+2026-06-23 12:47:36,381 - tender_scanner - INFO -   CrystalWater - Scan + Nettoyage
+2026-06-23 12:47:36,381 - tender_scanner - INFO -   2026-06-23 12:47
+2026-06-23 12:47:36,382 - tender_scanner - INFO - =======================================================
+2026-06-23 12:47:36,383 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees...
+2026-06-23 12:47:38,754 - tender_scanner - INFO -   [CLEAN] 0 doublons, 0 faux positifs supprimes
+2026-06-23 12:47:39,926 - tender_scanner - INFO -   3 AO deja en base
+2026-06-23 12:47:39,929 - tender_scanner - INFO -   CrystalWater - Scan intelligent
+2026-06-23 12:48:11,599 - tender_scanner - INFO -   Total: 415 pages | Arret apres 15 pages vides
+2026-06-23 12:48:12,855 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:13,712 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:14,610 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:14,627 - tender_scanner - INFO -   Page 1/415 - 3/10 nouveaux (total: 3)
+2026-06-23 12:48:41,941 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:42,805 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:43,688 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:44,460 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:44,463 - tender_scanner - INFO -   Page 5/415 - 4/10 nouveaux (total: 7)
+2026-06-23 12:48:51,313 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:52,102 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:52,886 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:48:52,935 - tender_scanner - INFO -   Page 6/415 - 3/10 nouveaux (total: 10)
+2026-06-23 12:49:05,829 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:05,854 - tender_scanner - INFO -   Page 8/415 - 1/10 nouveaux (total: 11)
+2026-06-23 12:49:18,555 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:19,290 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:20,335 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:21,209 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:22,028 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:22,038 - tender_scanner - INFO -   Page 10/415 - 5/10 nouveaux (total: 16)
+2026-06-23 12:49:41,429 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:41,439 - tender_scanner - INFO -   Page 13/415 - 1/10 nouveaux (total: 17)
+2026-06-23 12:49:48,179 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:48,182 - tender_scanner - INFO -   Page 14/415 - 1/10 nouveaux (total: 18)
+2026-06-23 12:49:55,866 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:49:55,869 - tender_scanner - INFO -   Page 15/415 - 1/10 nouveaux (total: 19)
+2026-06-23 12:50:02,801 - tender_scanner - ERROR -   Erreur: TargetClosedError: Page.press: Target page, context or browser has been closed
+Call log:
+waiting for locator("#ctl0_CONTENU_PAGE_resultSearch_numPageTop")
+  -   locator resolved to <input value="16" type="text" title="N° de la page" id="ctl0_CONTENU_PAGE_resultSearch_numPageTop" name="ctl0$CONTENU_PAGE$resultSearch$numPageTop"/>
+  - elementHandle.press("Enter")
+
+2026-06-23 12:50:02,805 - tender_scanner - INFO -   Scan: 19 nouveaux AO / 160 scannes
+2026-06-23 12:50:02,807 - tender_scanner - INFO - =======================================================
+2026-06-23 12:50:02,807 - tender_scanner - INFO -   19 nouveaux AO | 6 haute priorite
+2026-06-23 12:50:02,808 - tender_scanner - INFO -   0 doublons, 0 faux positifs supprimes
+2026-06-23 12:50:02,808 - tender_scanner - INFO -   Total en base: 22
+2026-06-23 12:50:02,808 - tender_scanner - INFO - =======================================================

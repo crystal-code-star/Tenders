@@ -1,0 +1,10 @@
+2026-07-21 22:17:44,492 - tender_scanner - INFO -   ✅ [DOCLING] Initialisé avec succès
+2026-07-21 22:17:45,216 - tender_scanner - INFO -   ✅ [PDF] PyMuPDF disponible
+2026-07-21 22:17:45,775 - tender_scanner - INFO -   [DB] 568 offres existantes chargées
+2026-07-21 22:18:25,071 - tender_scanner - INFO -   [DOWNLOAD] DCE: TN4130616
+2026-07-21 22:18:42,952 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-21 22:19:03,806 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-21 22:19:19,846 - tender_scanner - INFO -   [OK] ZIP received: 6731369 bytes in 54.77s
+2026-07-21 22:19:52,871 - tender_scanner - WARNING -   [AUTO-INDEX] Échec pour TN4130616: Tender TN4130616 not found
+2026-07-21 22:19:53,338 - tender_scanner - INFO -   [DOWNLOAD] DCE: TN4130652
+2026-07-21 22:19:59,524 - tender_scanner - ERROR -   [ERROR] DCE: TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed

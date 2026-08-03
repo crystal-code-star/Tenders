@@ -1,0 +1,5 @@
+2026-07-07 11:45:07,739 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-07 11:45:07,926 - tender_scanner - INFO -   [PDF] PyMuPDF disponible pour l'extraction PDF
+2026-07-07 11:45:35,505 - tender_scanner - ERROR -   [ERROR] _extract_row_data: compute_score() missing 1 required positional argument: 'country'
+2026-07-07 11:45:35,520 - tender_scanner - ERROR -   [ERROR] _extract_row_data: compute_score() missing 1 required positional argument: 'country'
+2026-07-07 11:45:44,984 - tender_scanner - ERROR -   [ERROR] _extract_row_data: compute_score() missing 1 required positional argument: 'country'

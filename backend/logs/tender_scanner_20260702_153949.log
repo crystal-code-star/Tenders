@@ -1,0 +1,77 @@
+2026-07-02 15:39:58,413 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-02 15:39:58,417 - tender_scanner - WARNING -   [OCR] Module paddleocr non installe ou casse: No module named 'paddleocr'
+2026-07-02 15:40:47,526 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees (tenders_3)...
+2026-07-02 15:40:47,976 - tender_scanner - INFO -   0 AO deja en base (tenders_3)
+2026-07-02 15:41:21,377 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-02 15:41:21,379 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-02 15:41:21,380 - tender_scanner - INFO -   [TENDER #1/6] Fourniture de sulfate d'alumine en 07 Lots...Fourniture de sulfate d'alumine en ...
+2026-07-02 15:41:21,381 - tender_scanner - INFO -   [REF] 25/DAM/S/2026
+2026-07-02 15:41:21,549 - tender_scanner - INFO -   [DOWNLOAD] DCE: 25/DAM/S/2026
+2026-07-02 15:41:39,588 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-02 15:41:58,485 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-02 15:42:03,700 - tender_scanner - INFO -   [OK] ZIP received: 4269369 bytes in 42.15s
+2026-07-02 15:42:05,284 - tender_scanner - INFO -   [CHUNKS] Traitement du DCE pour : 25/DAM/S/2026
+2026-07-02 15:42:10,255 - tender_scanner - INFO -   [EMBEDDING] Modèle chargé : all-MiniLM-L6-v2 (384 dimensions)
+2026-07-02 15:42:10,256 - tender_scanner - INFO -   [CHUNKS] 14 fichier(s) dans le ZIP
+2026-07-02 15:42:11,385 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '1. Page de garde.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:11,475 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '2. RCDP AO 25 DAM-S-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:11,564 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '3. RCDG Fournitures ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:11,662 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '4.1 CPS - LOT 1 - AO 25-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:11,741 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '4.2 CPS - LOT 2 - AO 25-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:11,823 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '4.3 CPS - LOT 3 - AO 25-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:11,914 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '4.4 CPS - LOT 4 - AO 25-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:11,993 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '4.5 CPS - LOT 5 - AO 25-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:12,076 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '4.6 CPS - LOT 6 - AO 25-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:12,167 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '4.7 CPS - LOT 7 - AO 25-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:12,241 - tender_scanner - WARNING -   [DOCLING] Erreur extraction '5. Pages de garde BP - AO 25-2026 - 7 Lots.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:12,882 - tender_scanner - INFO -   [DOCLING] '6. Bordereaux des Prix AO 25-2026 - 7 Lots.xlsx' : 19648 caracteres
+2026-07-02 15:42:12,884 - tender_scanner - INFO -   [CHUNKS] Traitement : 6. Bordereaux des Prix AO 25-2026 - 7 Lots.xlsx (19399 caractères)
+2026-07-02 15:42:15,112 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Avis Ar - AO 25 DAM S 2026 - Signé.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:15,206 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Avis Fr - AO 25 DAM S 2026 - Signé.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:42:17,101 - tender_scanner - INFO -   [CHUNKS] 49/49 chunks insérés
+2026-07-02 15:42:17,106 - tender_scanner - INFO -   [CHUNKS] 49 chunks stockés avec embeddings
+2026-07-02 15:42:17,171 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 4373/19457 caracteres
+2026-07-02 15:42:17,172 - tender_scanner - INFO -   [GROQ] Envoi au LLM (4373 caracteres)...
+2026-07-02 15:42:18,355 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-02 15:42:18,381 - tender_scanner - INFO -   [TIMING] Download: 42.15s | Upload: 1.58s | Chunks: 13.10s (49 chunks) | Total: 56.83s
+2026-07-02 15:42:18,614 - tender_scanner - INFO -   [COMPLETE] Tender #1 in 57.23s (49 chunks)
+2026-07-02 15:42:18,619 - tender_scanner - INFO -   [AVG] Average extraction time: 57.23s
+2026-07-02 15:42:18,668 - tender_scanner - INFO - ──────────────────────────────────────────────────
+
+2026-07-02 15:42:18,911 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-02 15:42:18,913 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-02 15:42:18,914 - tender_scanner - INFO -   [TENDER #2/6] AEP de la ville de Souk larbaa à partir de la ST de Loukkos - Lot : Télegestion....
+2026-07-02 15:42:18,915 - tender_scanner - INFO -   [REF] 06/2026/DR4
+2026-07-02 15:42:19,079 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-07-02 15:42:36,094 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-02 15:42:55,438 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-02 15:42:58,596 - tender_scanner - INFO -   [OK] ZIP received: 1372290 bytes in 39.52s
+2026-07-02 15:42:59,430 - tender_scanner - INFO -   [CHUNKS] Traitement du DCE pour : 06/2026/DR4
+2026-07-02 15:42:59,436 - tender_scanner - INFO -   [CHUNKS] 13 fichier(s) dans le ZIP
+2026-07-02 15:42:59,437 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'Annexe 1 - Répartition des prestations VF.xls'...
+2026-07-02 15:42:59,805 - tender_scanner - INFO -   [DOCLING] 'Annexe 1 - Répartition des prestations VF.xls' : 7265 caracteres
+2026-07-02 15:42:59,808 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/Annexe 1 - Répartition des prestations VF.xls (7262 caractères)
+2026-07-02 15:43:00,594 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls'...
+2026-07-02 15:43:01,219 - tender_scanner - INFO -   [DOCLING] 'Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls' : 39349 caracteres
+2026-07-02 15:43:01,223 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls (39170 caractères)
+2026-07-02 15:43:08,120 - tender_scanner - INFO -   [DOCLING] 'Avis AO 06 DR4 2026.docx' : 5110 caracteres
+2026-07-02 15:43:08,121 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/Avis AO 06 DR4 2026.docx (5110 caractères)
+2026-07-02 15:43:10,863 - tender_scanner - INFO -   [DOCLING] 'BP.xlsm' : 4114 caracteres
+2026-07-02 15:43:10,870 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/BP.xlsm (4109 caractères)
+2026-07-02 15:43:17,176 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE 06 DR4 2026/CCAFP Travaux - FSD (Français).docx': Pipeline SimplePipeline failed
+2026-07-02 15:43:39,343 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE 06 DR4 2026/CCTP Télégestion 03.07.2025.docx': Pipeline SimplePipeline failed
+2026-07-02 15:43:39,511 - tender_scanner - INFO -   [DOCLING] 'DP 24-07-2025.xlsx' : 59453 caracteres
+2026-07-02 15:43:39,512 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/DP 24-07-2025.xlsx (59452 caractères)
+2026-07-02 15:48:58,343 - tender_scanner - INFO -   [DOCLING] 'Modeles.docx' : 9374 caracteres
+2026-07-02 15:48:58,353 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/Modeles.docx (9374 caractères)
+2026-07-02 15:52:46,421 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'PG DCE.xls'...
+2026-07-02 15:52:50,151 - tender_scanner - INFO -   [DOCLING] 'PG DCE.xls' : 638 caracteres
+2026-07-02 15:52:50,152 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/PG DCE.xls (633 caractères)
+2026-07-02 15:52:51,087 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE 06 DR4 2026/RCDG Travaux ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-02 15:52:53,923 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE 06 DR4 2026/RCDP Travaux - FSD.docx': Pipeline SimplePipeline failed
+2026-07-02 15:52:54,063 - tender_scanner - INFO -   [DOCLING] 'Tableau Annexe principlal.xlsx' : 19328 caracteres
+2026-07-02 15:52:54,065 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/Tableau Annexe principlal.xlsx (19327 caractères)
+2026-07-02 15:52:55,782 - tender_scanner - INFO -   [DOCLING] 'Tableau Annexe secondaire.xlsx' : 24593 caracteres
+2026-07-02 15:52:55,784 - tender_scanner - INFO -   [CHUNKS] Traitement : DCE 06 DR4 2026/Tableau Annexe secondaire.xlsx (24592 caractères)

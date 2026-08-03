@@ -1,0 +1,21 @@
+2026-06-23 11:50:29,577 - tender_scanner - INFO -   CrystalWater — Scan + Nettoyage
+2026-06-23 11:50:29,577 - tender_scanner - INFO -   2026-06-23 11:50
+2026-06-23 11:50:31,990 - tender_scanner - INFO -   16 AO déjà en base
+2026-06-23 11:50:31,993 - tender_scanner - INFO -   CrystalWater — Scan intelligent
+2026-06-23 11:51:23,652 - tender_scanner - INFO -   Total: 413 pages | Arrêt après 15 pages vides
+2026-06-23 11:51:24,002 - tender_scanner - INFO -   Page 1/413 — 3/10 nouveaux (total: 3)
+2026-06-23 11:51:52,850 - tender_scanner - INFO -   Page 5/413 — 4/10 nouveaux (total: 7)
+2026-06-23 11:52:01,470 - tender_scanner - INFO -   Page 6/413 — 3/10 nouveaux (total: 10)
+2026-06-23 11:52:16,038 - tender_scanner - INFO -   Page 8/413 — 1/10 nouveaux (total: 11)
+2026-06-23 11:52:25,310 - tender_scanner - INFO -   Page 9/413 — 1/10 nouveaux (total: 12)
+2026-06-23 11:52:32,602 - tender_scanner - INFO -   Page 10/413 — 4/10 nouveaux (total: 16)
+2026-06-23 11:52:47,797 - tender_scanner - ERROR -   Erreur: TargetClosedError: Page.press: Target page, context or browser has been closed
+Call log:
+waiting for locator("#ctl0_CONTENU_PAGE_resultSearch_numPageTop")
+  -   locator resolved to <input value="12" type="text" title="N° de la page" id="ctl0_CONTENU_PAGE_resultSearch_numPageTop" name="ctl0$CONTENU_PAGE$resultSearch$numPageTop"/>
+  - elementHandle.press("Enter")
+
+2026-06-23 11:52:47,800 - tender_scanner - INFO -   Scan: 16 nouveaux AO / 120 scannés
+2026-06-23 11:52:49,164 - tender_scanner - INFO -   16 nouveaux AO | 6 haute priorité
+2026-06-23 11:52:49,164 - tender_scanner - INFO -   0 doublons, 0 faux positifs supprimés
+2026-06-23 11:52:49,165 - tender_scanner - INFO -   Total en base: 32

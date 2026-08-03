@@ -1,0 +1,38 @@
+
+  🔄 PIPELINE DCE: 12/2026/DR4
+  ──────────────────────────────────────────────────
+  📦 Étape 1: Extraction du ZIP...
+  📦 8 fichiers trouvés:
+    - RCDP.docx (docx, 124,629 bytes)
+    - Avis AO 12 DR4 2026.docx (docx, 23,516 bytes)
+    - BP .xlsm (xlsx, 48,837 bytes)
+    - CCAFP.docx (docx, 73,428 bytes)
+    - CCTP .doc (doc, 784,384 bytes)
+    - Définition Prix .xls (xls, 263,680 bytes)
+    - Modeles BEI.docx (docx, 76,371 bytes)
+    - RCDG Travaux ONEE (Avril 2021).pdf (pdf, 647,343 bytes)
+
+  📄 Étape 2+3: Extraction texte + Agrégation...
+    📄 Extraction: RCDP.docx (124,629 bytes)
+      → 29,146 caractères extraits
+    📄 Extraction: Avis AO 12 DR4 2026.docx (23,516 bytes)
+      → 5,172 caractères extraits
+    📄 Extraction: BP .xlsm (48,837 bytes)
+      → 13,399 caractères extraits
+    📄 Extraction: CCAFP.docx (73,428 bytes)
+      → 10,426 caractères extraits
+    📄 Extraction: CCTP .doc (784,384 bytes)
+      → 784,384 caractères extraits
+    📄 Extraction: Définition Prix .xls (263,680 bytes)
+      → 16,444 caractères extraits
+    📄 Extraction: Modeles BEI.docx (76,371 bytes)
+      → 14,478 caractères extraits
+    📄 Extraction: RCDG Travaux ONEE (Avril 2021).pdf (647,343 bytes)
+      → 69,367 caractères extraits
+
+  📋 Texte agrégé: 944,024 caractères
+
+  🤖 Étape 4: Extraction structurée via LLM...
+    ⚠️ Texte tronqué: 944,024 → 15,025 caractères
+    🤖 Envoi au LLM (15,025 chars)...
+    📊 JSON extrait avec succès

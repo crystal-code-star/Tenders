@@ -1,0 +1,6 @@
+2026-06-25 15:33:15,059 - tender_scanner - INFO -   CrystalWater - Scan Automatique Continu
+2026-06-25 15:33:15,060 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees...
+2026-06-25 15:33:15,991 - tender_scanner - INFO -   [CLEAN] 0 doublons, 0 faux positifs supprimes
+2026-06-25 15:33:16,840 - tender_scanner - INFO -   15 AO deja en base
+2026-06-25 15:33:46,661 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 15:33:46,770 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4

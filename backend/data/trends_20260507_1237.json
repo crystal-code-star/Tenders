@@ -1,0 +1,208 @@
+{
+  "trends": [
+    {
+      "rank": 1,
+      "trend_name": "Desalination Projects",
+      "category": "Water Treatment",
+      "strength": 90,
+      "article_count": 7,
+      "evidence": "Multiple desalination projects announced in UAE, Morocco, and Texas, with investments over $1 billion",
+      "why_matters": "CrystalWater cares as desalination is a growing market in Morocco and globally, with opportunities for water treatment solutions",
+      "linkedin_post_ideas": [
+        "Desalination: A Solution to Water Scarcity",
+        "Investing in Desalination: Opportunities and Challenges",
+        "Morocco's Desalination Future"
+      ],
+      "suggested_posts": 6,
+      "source_articles": [
+        {
+          "title": "Opinion | Should this water desalination project be linked to a nuclear plant?",
+          "url": "https://news.google.com/rss/articles/CBMijwFBVV95cUxONUJJdVZRMF8tMXVFeTM5UUdZdHgzUFhWZHBuT3FEM1IwN3pkX2NiUXNFbVNGbGhHWjJJNUx0NGVuVjN3azA4NXBKTFFfWkN4RjZEeHpEWkxyV2tJakFzX0RwSnpQOEpGbXBpV0lzOEZHOFZDVHVqZUtFb19KQnR6VUs4ZWFub244dGZtUmktOA?oc=5",
+          "source": "CalMatters",
+          "published": "Wed, 06 May 2026 12:00:00 GMT"
+        },
+        {
+          "title": "UAE’s Dh1 billion Fujairah desalination plant: What it means for water supply",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNdHVRODBWdHk3ZlQ1azRKajRuLXlwTzJ5cjN2d3BFdFpDdW9WR1o3UXBrVFVUT01jbXVuVjF1Z2t6UVpQVjRYeUVQd1haelNuRWZobkUzZFlvZjA1bTk2NGFnMTVuU2hCbzNwVHNaanNpMGl4cVpkMDVBQXRhTHVzRVluRktULTJ2Ni1wSkZsV1NWZ211SEc5eWFfZGlmQU9qYUF4RHBfbFplT3p0UHJfei1jSDlkakx5LTdhb0VwNUxIclnSAdYBQVVfeXFMT0FxVlVPWEdHUUo2MXZncm9JdzJRcmNsM1lfVl85YzFkTThBbVZFWVFXNktnQ1FLSVFxZ2ZoaC1CSnRyMldaZ1ZZUmp6U25ZYW5PSDZfU1FkRUxjNzZzWlg2MzlzYmU5UDZUTEZsYzlGMUhvOHZKMVotdnE2VG45aDFyN01kV1NpVmNRSUZQb2hQMHRmWk0xeXpWdzY3dnJVV0hZOFl5OWpUMHlnQ1RGVEVnb2pPalVpdzFQT3d0ZDVLUjJ0UTlkakxlRUlPV1A3WExJTnVadw?oc=5",
+          "source": "Gulf News",
+          "published": "Wed, 06 May 2026 00:04:00 GMT"
+        },
+        {
+          "title": "Corpus Christi to begin talks on privately built desalinization plant",
+          "url": "https://news.google.com/rss/articles/CBMinAFBVV95cUxPYkZyamlkRVdsWENBRGdSLUhuaXZQRC1KdThlT3lVQ2JZQW9rSmp5ckI2RXA4VzQxTzJCWVJJajROR3ItQVlaRnh6a1d0Tk40Zlg0S2F6NEw1SnpOVUFPUEtoWnkwaTA2QzhLLWpmb3lTWWd1UUVxT1BVZ1dTLTNBNTMxdkpnN3VLQThqLVltWjdLQVJZRjNBVldNRG8?oc=5",
+          "source": "The Texas Tribune",
+          "published": "Tue, 05 May 2026 23:28:27 GMT"
+        },
+        {
+          "title": "US-Israel Joint Venture Unveils $1B Desalination Plant Plan in South Texas",
+          "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOV1NkZHNSVnhXVXE1YUlMQ0NUSmNZNi1GcG1TRFBHbmJVM2t3c19SeTFTQ1VDSEhDcXlDWHAwLTRVcGxpbndHOEIzT3pOOXdGdEhTODhpTUxOa1huNnFfVmVrRkFxWjliaERZbVZvU3B4RV9XalZIeTR3aUFHQktWT3BzNERiMHhGN1VTR0czVjJieGE1RTBudVJzbEh1WUV3T3BwVUJSS0lHYXk3?oc=5",
+          "source": "Engineering News-Record (ENR)",
+          "published": "Tue, 05 May 2026 19:25:08 GMT"
+        },
+        {
+          "title": "EtihadWE expands PPP desalination pipeline in the UAE with second IWP project",
+          "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxNbnprSGR0eURfY0o4WGlEUzd6NFJyc3M1SW1GdHg5Zkc2S2pxMTJMVElLcURhaXFNcWZyZ0dyRlptd1dZM1UxNEZGWkZLUVkzOFlVZm9HMmQwLTJhbFdCQVBZSm1CUGNDVDNwelR1VThyalN3R0tESXNMUWI2ZHhzSl9aUk0wa01uMWY2S3JvdERFc3VRbFJqWVBVdXBjU2NSYzlxbGdEcmhrRUUyNjVXQUJEMk1GWi1PQ1BDekdUNnFZMUtEaEtIazhR?oc=5",
+          "source": "ZAWYA",
+          "published": "Tue, 05 May 2026 17:52:28 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "trend_name": "Water Treatment Chemicals Market",
+      "category": "Market Analysis",
+      "strength": 80,
+      "article_count": 3,
+      "evidence": "Growing demand for water treatment chemicals, with a CAGR of 6.80%",
+      "why_matters": "CrystalWater cares as the market growth presents opportunities for water treatment solutions and partnerships",
+      "linkedin_post_ideas": [
+        "Water Treatment Chemicals: A Growing Market",
+        "Innovations in Water Treatment Chemicals",
+        "Sustainable Water Treatment Solutions"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "Water Treatment Chemicals Market Size, Share & Industry Analysis with Growth Forecast (2026-2032) - CAGR of 6.80%",
+          "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxOdGtyVXJZRWdYN3FzZHBFXzlvR3l1RXQyQUc0NV9IclhmbVZlc2dLblFROGU1WTBMSlFPUmwySzg2LXNOTWI1YVZuLUNjc3NwQldrNktlcmZOcUloVGRBa3dLbW9BRENhaldQdmZYZUJlTEdBdTBRS0xRcG9mMGhJc1pDdzg3VFRjR290eGxmb0NNQQ?oc=5",
+          "source": "openPR.com",
+          "published": "Wed, 06 May 2026 12:38:41 GMT"
+        },
+        {
+          "title": "Membrane Bioreactor System Market to Reach USD 8.60 Billion",
+          "url": "https://news.google.com/rss/articles/CBMimwFBVV95cUxNZDh6YUZQX1pocmdWTEdVTXBjc0FFNnNaM0pxYkhscTNseUxUS3NBYXZ1cW1HeEVjUmYweFJEVkdWMlZnUkhaQTJSQ2J0aVc1ODlsSXdJc2ZPM242WWl6WGk2cVQ1bEpDLVQ0WnNibzM2Z3U1VnI1a0kwLUx3eXlwNEhyX21Jd1Jmc1pnYmUtcF9rbjZPMC05RDh6Zw?oc=5",
+          "source": "openPR.com",
+          "published": "Wed, 06 May 2026 09:53:55 GMT"
+        },
+        {
+          "title": "PFAS Removal: LANXESS Selective Resin Proves Its Worth in Industrial Use",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOOFpHUlR4Um9pV18tUmRxUjIyWUJaR1JBbXpQOWdXcWlDZUJnMnZNTEd5ZEtzZks2OHVlSk9zTEVzYlk2VjZla2VnZ2d5V0U5V2FkRHc3X09ZZm1FYTVaZU9XemQ4MWVNR0FTN2lxdHlpckJDaG9wbi1jdDI1QTBXajFJWkM4RkZza2FibHJod0xsMktPOG9zODE4Q1Z0dkJXUWs5QTV6VjFSWHJMdVJVdWw3SVFlcXp0bG5fUmktVVY?oc=5",
+          "source": "Lanxess",
+          "published": "Tue, 05 May 2026 10:01:10 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "trend_name": "PFAS Treatment Technology",
+      "category": "Water Quality",
+      "strength": 70,
+      "article_count": 4,
+      "evidence": "Increasing concern over PFAS contamination, with new technologies and partnerships emerging",
+      "why_matters": "CrystalWater cares as PFAS treatment is a critical issue in water quality, with opportunities for innovative solutions",
+      "linkedin_post_ideas": [
+        "PFAS: The Emerging Water Quality Issue",
+        "Innovations in PFAS Treatment Technology",
+        "Partnerships for PFAS Removal"
+      ],
+      "suggested_posts": 5,
+      "source_articles": [
+        {
+          "title": "BioLargo and Aquatech partner to accelerate PFAS treatment technology commercialisation",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxQYXQyMjZwSGlQLWRCZ3VmRUFFb3kxcXhiUXppdGtKTTJUZlltRkdKcWNJZVN6bXAwbzJZem5MdXRWbEhRS1JNa2JtXzRqYUNGYnRqRmM5c0duV2NvdVBPejRaNmg2a0ZwUUVFOFBXdFRxNHZpVVJtWE8ybTA3aVBMajJCTDdLMTR3V2QtQjNLWEZKSjl1SGw1Y3dYeS1QcDBrRUNWdzYzOFdzbFU1YzhCVWZiRGtXT2I3NGFFZTJ5SXFPcnVRVEswTnQ2Ym8?oc=5",
+          "source": "Innovation News Network",
+          "published": "Wed, 06 May 2026 10:43:36 GMT"
+        },
+        {
+          "title": "What labs need to know about PFAS and ultrapure water quality",
+          "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxPVHdxUGk4X1l4OW94NHpKZklEZkUwRlZ0T054S05sOUtidndjeDlPRWFRYVhPTnZoTjhpY05uUnA3eDFXUlNENU5ZUW5CWlJvbTJkbjJzdkdaYmJsekZYS1AzYldHY2gyemJpZk1IcXZyZERHRnp6WGx4TXBrMFc3QlVBODEwOWY4U05veDJjUDB3TWgwNWpLWE93V2w5TXBfZUpuNjFqaUdxZE5LRVE?oc=5",
+          "source": "News-Medical",
+          "published": "Wed, 06 May 2026 10:20:00 GMT"
+        },
+        {
+          "title": "PFAS Removal: LANXESS Selective Resin Proves Its Worth in Industrial Use",
+          "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxOOFpHUlR4Um9pV18tUmRxUjIyWUJaR1JBbXpQOWdXcWlDZUJnMnZNTEd5ZEtzZks2OHVlSk9zTEVzYlk2VjZla2VnZ2d5V0U5V2FkRHc3X09ZZm1FYTVaZU9XemQ4MWVNR0FTN2lxdHlpckJDaG9wbi1jdDI1QTBXajFJWkM4RkZza2FibHJod0xsMktPOG9zODE4Q1Z0dkJXUWs5QTV6VjFSWHJMdVJVdWw3SVFlcXp0bG5fUmktVVY?oc=5",
+          "source": "Lanxess",
+          "published": "Tue, 05 May 2026 10:01:10 GMT"
+        },
+        {
+          "title": "Magalies Water Fights Upstream To Secure Downstream Supply",
+          "url": "https://news.google.com/rss/articles/CBMipgFBVV95cUxPZXhBZ2UtZVo5RHRJNW9xMUdSRW1lWktqRWNEeXRLMGp4T0VJblZwZHJGMlNETTRFX0hIYU5TQUtqaUtjYlJPWVdaUDFWd0h5UVR0a1Nnd0R6cl96bmNBNW9UZV93TU5vY1dYVFUxdTFlT0w4OE10ZWVPUzFJdVNCV3Y4eTdNUU5QZnJaT1RZSlNzU1ZwLXVLczA1Y1RzdHBiQVlrVWFR?oc=5",
+          "source": "infrastructurenews.co.za",
+          "published": "Tue, 05 May 2026 08:57:39 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "trend_name": "Moroccan Water Infrastructure",
+      "category": "Infrastructure Development",
+      "strength": 60,
+      "article_count": 4,
+      "evidence": "Moroccan government launching new initiatives and projects for water infrastructure development",
+      "why_matters": "CrystalWater cares as the developments present opportunities for partnerships and water treatment solutions in Morocco",
+      "linkedin_post_ideas": [
+        "Morocco's Water Infrastructure Development",
+        "Partnerships for Water Infrastructure",
+        "Innovations in Water Treatment"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "Le ministère de l’Équipement et de l’Eau déploie sa plateforme de suivi des projets accessible au public",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxObjIxLXBEUm5UNXJwLVp1Z1g3aE8zbWRUWGc1eU50aVI1ZlNWT2I5MHQ3OVdHeXdFVnVud1g2WFVhSElnMHFZSTRHTUYxU1dZWXZmd21fUWVRWWZEcllrZWpwNHpJZkhmclhXbXYwOW5HelB3QlB5VTJtSjMxZFYtNFVIQVVIaW1ja09ES2ZYSEFxaHp6dGZ4MEU0bHc5UUFr?oc=5",
+          "source": "laquotidienne.ma",
+          "published": "Wed, 06 May 2026 15:33:25 GMT"
+        },
+        {
+          "title": "Équipement et Eau : un observatoire digital pour suivre les projets publics en temps réel",
+          "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPS1dKYTREYUplSktDVzZFVjFEM0hlc19wR1pxN3VmYUczU0tQT2ZObXF0WEF5QTgyV0ZHa0pmQnluQXN3Q1J3b3F4Zk5FTXJ3UU53ZDNYY0w0c0tmSlg5akFVMWc2ZVBBVGVIc08wUmhSSjltVnpkYXIwU21oc2VleUNFZmxZQjk1bWdlN2lwMnUzek1UNHc?oc=5",
+          "source": "Infomédiaire",
+          "published": "Wed, 06 May 2026 14:00:20 GMT"
+        },
+        {
+          "title": "GPC certifiée ISO 46001 : un nouveau jalon pour l’industrie durable au Maroc",
+          "url": "https://news.google.com/rss/articles/CBMigAFBVV95cUxONk5IWDlZRHNDaHhsR1oxOU95UFpsTWNmbk5SNmRMMURnbGFKLTNzb2pEYWxYRHlBWUNxemJqT19ZMGU5NV9vY0VCRUNreDZPazhFdFdCR0JRU19nOHNhNmFkT3c5cmE3R1BsT1JXeWFoLV95ZVFYbVplT1djTXNfcw?oc=5",
+          "source": "Infomédiaire",
+          "published": "Wed, 06 May 2026 11:40:47 GMT"
+        },
+        {
+          "title": "Contract awarded to build $270m water plant in Fujairah",
+          "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQR3cyMzlKcF9iall3RUJ3VnpYV1hOOHhGcVh4NGplNVhqZkluNE92N1dtVHdjX1AtY1IwSUNqcmVZekVUMUlScnA3UUVKeXVHLWZDUnJUbF9ldE5yZkxsZWk4bzdkeGx1d0xxUXd6Rnd6RkMtdE02dThST2ExOEJpNHV0NzYxeE55YWRBaFI4UHlVdVVidUFiUTl5SmhyeUJf?oc=5",
+          "source": "Arabian Gulf Business Insight | AGBI",
+          "published": "Wed, 06 May 2026 05:15:00 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "trend_name": "Zero Liquid Discharge Systems",
+      "category": "Wastewater Treatment",
+      "strength": 50,
+      "article_count": 3,
+      "evidence": "Growing adoption of zero liquid discharge systems, with new contracts and projects announced",
+      "why_matters": "CrystalWater cares as zero liquid discharge systems are a critical solution for wastewater treatment, with opportunities for partnerships and innovations",
+      "linkedin_post_ideas": [
+        "Zero Liquid Discharge: A Sustainable Solution",
+        "Innovations in Zero Liquid Discharge Systems",
+        "Partnerships for Wastewater Treatment"
+      ],
+      "suggested_posts": 3,
+      "source_articles": [
+        {
+          "title": "Boosting Sustainability: SED Secures Major ZLD System Contract",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxNN04tTWM1NUNwc3g4Qm5xLVBVYU10UVk2SEFrRGpWdk5qdkRLazRlS2hYYkwwd3NEc1h0Sm9penUyQVRxWHB2a2JMclpyN1BGNUw2dDY1bXRpeWJNWEJ1SzVoU0V5eUczQ0tZbnpsVS00Wlkzb1lnOFVTTXZQZlNjUVMzMlVuSzdHcGw5MHZSbHVFZEgyc3NaUFBobFJqNzhyck1ZOC1VX2djdDF3Mm9IZlNjcms1SmJUYW44d0hB0gG-AUFVX3lxTE03Ti1NYzU1Q3BzeDhCbnEtUFVhTXRRWTZIQWtEalZ2Tmp2REtrNGVLaFhiTDB3c0RzWHRKb2l6dTJBVHFYcHZrYkxyWnI3UEY1TDZ0NjVtdGl5Yk1YQnVLNWhTRXl5RzNDS1luemxVLTRaWTNvWWc4VVNNdlBmU2NRUzMyVW5LN0dwbDkwdlJsdUVkSDJzc1pQUGhsUmo3OHJyTVk4LVVfZ2N0MXcyb0hmU2NyazVKYlRhbjh3SEE?oc=5",
+          "source": "Devdiscourse",
+          "published": "Tue, 05 May 2026 11:41:54 GMT"
+        },
+        {
+          "title": "Zero Liquid Discharge Systems Market Size Accelerating at 13.9%",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxQSkJ1aXN2ZUJmVzMwZi1nTXppUGVJNGk1T1BFTkhuMFl2RXh4UGlkS0xIbzEzQzhtaXRCUDUxWlo0MHhQUkdsck5xNHQ4Z1F2X0RYT1BJZHJCUjVNdHNQZWZpWUFBM2FGRElBb1BBaUxvblZsV0NXR2ZNREpzbDMtWWpYTFAySTlMaUhjVHNtVnBLRWJLeUFpWEVSSHcxMjg?oc=5",
+          "source": "openPR.com",
+          "published": "Tue, 05 May 2026 08:54:51 GMT"
+        },
+        {
+          "title": "SED Wins VA Tech Wabag Contract for Solar Manufacturing Wastewater Recovery Project",
+          "url": "https://news.google.com/rss/articles/CBMihwJBVV95cUxOYjVHbUowUzZMWDdHWlVqSzNqUEFWMjhuTGtnbUN5ZTVnX2FoM1JtRXk3TGZ0bGFGaWpfdEwtRW9zVlZkNTgyTlBZTVQyekljVjJFTlViOTBOeXl6aVg3T1lMMUM2NmFFdXZhQmNzOTJKdndsS1VxdThWSDBMRDJ4SUZXSlB6TkhwYkNTN3NYcWVONURLc3lLcjNCVU5HdXkyNTNNZzZhSzdiWTlMYVNYcnpvV1RmWlBvb0hmOFhiZTdoNERrM1RDam1OS1plUW1xcjNGQm9TVDIwNWRyOUtLNEZRMzVwTHRJa2E2aVlCZDh5WnRsSWFMbmJ3MXNobkpNYTRGajdYd9IBhwJBVV95cUxOYjVHbUowUzZMWDdHWlVqSzNqUEFWMjhuTGtnbUN5ZTVnX2FoM1JtRXk3TGZ0bGFGaWpfdEwtRW9zVlZkNTgyTlBZTVQyekljVjJFTlViOTBOeXl6aVg3T1lMMUM2NmFFdXZhQmNzOTJKdndsS1VxdThWSDBMRDJ4SUZXSlB6TkhwYkNTN3NYcWVONURLc3lLcjNCVU5HdXkyNTNNZzZhSzdiWTlMYVNYcnpvV1RmWlBvb0hmOFhiZTdoNERrM1RDam1OS1plUW1xcjNGQm9TVDIwNWRyOUtLNEZRMzVwTHRJa2E2aVlCZDh5WnRsSWFMbmJ3MXNobkpNYTRGajdYdw?oc=5",
+          "source": "Business Standard",
+          "published": "Tue, 05 May 2026 08:10:05 GMT"
+        }
+      ]
+    }
+  ],
+  "engine": "Groq",
+  "total_fetched": 28,
+  "week": "Week-19-2026",
+  "week_label": "Week 19, May 2026",
+  "research_date": "2026-05-07"
+}

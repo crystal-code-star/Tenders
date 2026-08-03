@@ -1,0 +1,78 @@
+{
+  "trends": [
+    {
+      "rank": 1,
+      "trend_name": "Digitalization in Water Treatment",
+      "category": "Technology",
+      "strength": 80,
+      "article_count": 1,
+      "evidence": "Digital twin innovation cuts energy costs in water purification",
+      "why_matters": "CrystalWater cares about this trend as it can help reduce energy costs and improve efficiency in water treatment, making it a competitive advantage in the Moroccan market",
+      "linkedin_post_ideas": [
+        "How digitalization is transforming the water treatment industry",
+        "The role of digital twins in reducing energy costs",
+        "Innovations in water treatment technology"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "Digital twin innovation cuts energy costs in water purification",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWmF1alNhd21zNzRqdWJZZUUzZE5pRDlzRGdrY19aOWxoQkQ0a21UZXdlVEY0OG5UdER5VkRpRVpfTElyUWlxeHQ3MXktbW83MnN0WDVPMDJCUDBQZ3d2Y2p6UkdGcUFfOWQ3a05kU2Q5MWFXZ1VmalJkTnhYM05QaTVCd3h6WWtCTlh3SmtjYmNqMzJub2FjS1Yzclp1N041ZmtEZA?oc=5",
+          "source": "Technology Org",
+          "published": "Mon, 08 Jun 2026 11:00:20 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "trend_name": "Water Reuse and Conservation",
+      "category": "Sustainability",
+      "strength": 70,
+      "article_count": 1,
+      "evidence": "Water reuse – waiting for change is not a strategy",
+      "why_matters": "CrystalWater cares about this trend as it highlights the importance of water reuse and conservation, which is crucial in drought-prone Morocco",
+      "linkedin_post_ideas": [
+        "The importance of water reuse in reducing waste",
+        "Strategies for implementing water conservation measures",
+        "The role of water reuse in sustainable development"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "Water reuse – waiting for change is not a strategy",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTG9henRrdm1lRHdkSm5rMWQxdG5ReUNGNkROdFpBMUxGQ3BSZ3FJdE1fYXZscW9ORE1kRjJBVko1Z0tuUUxEc3pYcTJOckM3Mk5VWnB3OFZJWnhxYU4zZGpabXJnLVZDWG55ZDh6VFZlVnMzZFZTck5jeGU3VGlqVzkzQWhNcV9O?oc=5",
+          "source": "Smart Water Magazine",
+          "published": "Mon, 08 Jun 2026 09:55:13 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "trend_name": "Sustainable Production Practices",
+      "category": "Environmental Responsibility",
+      "strength": 60,
+      "article_count": 1,
+      "evidence": "Redefining What Responsible Production Looks Like",
+      "why_matters": "CrystalWater cares about this trend as it emphasizes the need for responsible production practices, which is essential for the company's reputation and compliance with environmental regulations",
+      "linkedin_post_ideas": [
+        "The importance of sustainable production practices in the water treatment industry",
+        "How CrystalWater is implementing environmentally responsible practices",
+        "The role of responsible production in reducing environmental impact"
+      ],
+      "suggested_posts": 3,
+      "source_articles": [
+        {
+          "title": "Redefining What Responsible Production Looks Like",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxQQ1hmdC1MbTZfR1N3YmRwYVdiQS1oQTA3UGhOZUhQWWtjZmtLSDJwOHhGQWcyd2tJUVU2SlV2d2o4TnZtZzZoc2oxUFNmNlhzSHFZcEd1ajJ0XzhDS2U1ckI0MlVCX2p3SWpzOXNBVmJNV0RWOXZjM3UtbzA1VmNNVXA5bE03SzNPMmlDUkZscEVYSGNxUWVSNjZQSVpyMWdoR2x0YtIBsAFBVV95cUxOVEhQZWUwZmtRY0tLWnFhcG5VRHk2R3JmWDF1TXZia1RHWTk5Qm5FdnNpUkRsaGVTdzRXbnFUM0t4emtTODM0YXRMaHFlQTY1c2VRejlwY0wyU3ZDaVhJd045VTdTREg2ZlFmQTBHVTRURGlPQmppeFlMWVRjVURSTnJYWURHSHlsUU5sODFMR0o3N1VzS0xKajZCUDI1R2NXb1BaeDNjMXk4Sk5WSnFLcw?oc=5",
+          "source": "Fibre2Fashion",
+          "published": "Mon, 08 Jun 2026 05:36:48 GMT"
+        }
+      ]
+    }
+  ],
+  "engine": "Groq",
+  "total_fetched": 3,
+  "week": "Week-24-2026",
+  "week_label": "Week 24, June 2026",
+  "research_date": "2026-06-08"
+}

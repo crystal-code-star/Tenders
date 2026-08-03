@@ -1,0 +1,21 @@
+
+  🔄 PIPELINE: 12/2026/BP
+  ──────────────────────────────────────────────────
+  📦 Extraction ZIP...
+  📦 4 fichiers
+  📄 Extraction texte...
+    Avis  AR. N° 12.pdf: 1,697 chars
+      📢 → IDENTIFIÉ COMME AAO
+    Avis  FR AOO N° 12.pdf: 1,890 chars
+      📢 → IDENTIFIÉ COMME AAO
+    CPS AEP LAAOUINA  2026.pdf: 71,973 chars
+      📢 → IDENTIFIÉ COMME AAO
+    RC  .pdf: 40,271 chars
+      📜 → IDENTIFIÉ COMME RC
+
+  📢 AAO: CPS AEP LAAOUINA  2026.pdf (71,973 chars)
+  📜 RC: RC  .pdf (40,271 chars)
+
+  🤖 Extraction LLM...
+    🤖 Envoi au LLM: AAO + RC = 11,109 caractères
+    📊 JSON extrait: {"estimation": null, "caution_provisoire": null, "caution_definitive": null, "visite_lieux_obligatoire": null, "classe_demandee": "4", "attestation_reference_demandee": null}

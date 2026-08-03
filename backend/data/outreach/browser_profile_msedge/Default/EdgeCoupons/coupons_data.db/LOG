@@ -1,0 +1,6 @@
+2026/05/06-13:10:41.573 1074 Reusing MANIFEST C:\Users\musta\Downloads\Stage\ai-auto-posting-dev_data\backend\data\outreach\browser_profile_msedge\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/05/06-13:10:41.576 1074 Recovering log #4
+2026/05/06-13:10:41.576 1074 Reusing old log C:\Users\musta\Downloads\Stage\ai-auto-posting-dev_data\backend\data\outreach\browser_profile_msedge\Default\EdgeCoupons/coupons_data.db/000004.log 
+2026/05/06-13:10:42.989 4b98 Level-0 table #8: started
+2026/05/06-13:10:42.995 4b98 Level-0 table #8: 682240 bytes OK
+2026/05/06-13:10:42.997 4b98 Delete type=0 #4

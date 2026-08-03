@@ -1,0 +1,78 @@
+{
+  "trends": [
+    {
+      "rank": 1,
+      "trend_name": "Industrial Transition and Water Treatment in Morocco",
+      "category": "Global Water Treatment News and Moroccan-specific sources",
+      "strength": 70,
+      "article_count": 1,
+      "evidence": "AfDB and OCP sign €450m guarantee to drive Morocco’s industrial transition",
+      "why_matters": "CrystalWater cares about this trend as it may lead to increased demand for water treatment services in Morocco's industrial sector",
+      "linkedin_post_ideas": [
+        "How Morocco's industrial transition can drive water treatment innovation",
+        "The role of water treatment in Morocco's industrial growth",
+        "Opportunities for CrystalWater in Morocco's industrial water treatment market"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "AfDB and OCP sign €450m guarantee to drive Morocco’s industrial transition",
+          "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxQbmFFOHQtTFVtWktVQVBHZUF2d3YxaTNldGxhQmNiNHJUMldxUUhfOUZrVGpWbjlKYnM0N0xfRDNHUnl5S1ZhdDl2NzRSSFNrZHJvcUhtcWthVlRnU2VrTEJRNWpMb21fSURjQXFFREV0Ql9DVS1vMVgwTVZBalpQMjlLYjhFX3VrbmVLdkNXelZkQ2tfemFMaWt5aXI5MFNYQ0Ewc0FwUmgzMVctNFJYM1Bhd1lkTXNBVVpj?oc=5",
+          "source": "Africa Business Communities",
+          "published": "Mon, 25 May 2026 10:35:55 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "trend_name": "Desalination Projects in North Africa",
+      "category": "Global Water Treatment News and Moroccan-specific sources",
+      "strength": 60,
+      "article_count": 1,
+      "evidence": "Egypt plans to offer 5 desalination plants in next two months",
+      "why_matters": "CrystalWater cares about this trend as it may indicate a growing demand for desalination services in the region, potentially benefiting Moroccan companies",
+      "linkedin_post_ideas": [
+        "The future of desalination in North Africa",
+        "How desalination can address water scarcity in the region",
+        "CrystalWater's potential role in North Africa's desalination market"
+      ],
+      "suggested_posts": 3,
+      "source_articles": [
+        {
+          "title": "Egypt plans to offer 5 desalination plants in next two months: Report",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPd0R1T2JQdVJpcEZkbHk2VVFKSEJpbk5xTkV0cmZtN2dZUTBfbzllb1hFVDdXZW5kVmhUbU43R0UtNGk2RGFLZWpVQ3NwakdiMXgydDVVdnNBbmpfaGh3dk11RlE3RzdkcXA5Wm15Zi01M0FfYTFuZTZIZHg0UGJocm9iTUhROVBla0RwdlM3NGZyR2J2QTM2c0xpUUx4QWJ3d0R0cllhbDRkQXFJdTEyZFFDcGpmLTA3bVNDODFn?oc=5",
+          "source": "ZAWYA",
+          "published": "Mon, 25 May 2026 07:32:31 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "trend_name": "Global Water Treatment Innovations",
+      "category": "Global Water Treatment News",
+      "strength": 50,
+      "article_count": 1,
+      "evidence": "A Clearer Path to Cleaner Water",
+      "why_matters": "CrystalWater cares about this trend as it may lead to new technologies and methods that can be applied to the Moroccan market",
+      "linkedin_post_ideas": [
+        "The latest innovations in global water treatment",
+        "How CrystalWater can leverage global water treatment trends in Morocco",
+        "The potential for Moroccan water treatment companies to adopt global best practices"
+      ],
+      "suggested_posts": 2,
+      "source_articles": [
+        {
+          "title": "A Clearer Path to Cleaner Water | Newswise",
+          "url": "https://news.google.com/rss/articles/CBMic0FVX3lxTE9FYUpkQmVaQW0xeTVZQXhQWGtQMzQ4MDNsY2pEY3RFdUtNVF9ZYWo2eVNHLThJcVdWLVBGdHNvWDlNZ1RrdlNfbDVGclRwTkdYaWVFMV9CZkhMUEYyUUZucmszU242U2FIUjQ2elhZVXRGY2vSAXNBVV95cUxPRWFKZEJlWkFtMXk1WUF4UFhrUDM0ODAzbGNqRGN0RXVLTVRfWWFqNnlTRy04SXFXVi1QRnRzb1g5TWdUa3ZTX2w1RnJUcE5HWGllRTFfQmZITFBGMlFGbnJrM1NuNlNhSFI0NnpYWVV0RmNr?oc=5",
+          "source": "Newswise",
+          "published": "Mon, 25 May 2026 09:00:00 GMT"
+        }
+      ]
+    }
+  ],
+  "engine": "Groq",
+  "total_fetched": 3,
+  "week": "Week-22-2026",
+  "week_label": "Week 22, May 2026",
+  "research_date": "2026-05-25"
+}

@@ -1,0 +1,54 @@
+2026-07-08 12:03:45,563 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-08 12:03:46,304 - tender_scanner - INFO -   [PDF] PyMuPDF disponible pour l'extraction PDF
+2026-07-08 12:03:48,251 - tender_scanner - INFO -   [CLEAN] 0 doublons, 2 faux positifs supprimés
+2026-07-08 12:03:48,778 - tender_scanner - INFO -   [DB] 4 offres existantes chargées
+2026-07-08 12:04:33,002 - tender_scanner - INFO -   [INFO] Nombre total de pages: 415
+2026-07-08 12:04:34,613 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-08 12:04:34,617 - tender_scanner - INFO - 
+  [TENDER #1] La passation d’un marché reconductible pour l’entretien, le nettoyage et la dési... (Score: 0)
+2026-07-08 12:04:34,872 - tender_scanner - INFO -   [DOWNLOAD] DCE: 09/2026/DRHAG
+2026-07-08 12:04:56,863 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-08 12:05:19,939 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-08 12:06:06,508 - tender_scanner - INFO -   [OK] ZIP received: 15786607 bytes in 91.64s
+2026-07-08 12:08:06,670 - tender_scanner - INFO -   [COMPLETE] Tender #1 in 212.05s (indexation auto lancée)
+2026-07-08 12:08:07,287 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-08 12:08:07,292 - tender_scanner - INFO - 
+  [TENDER #2] refonte des lignes 60kV du réseau Casablanca – Settat : 
+-	N°266 DAOURAT – IMFOU... (Score: 71)
+2026-07-08 12:08:08,008 - tender_scanner - INFO -   [DOWNLOAD] DCE: TC4130724/2026/ONEEBELEC
+2026-07-08 12:08:30,726 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-08 12:08:52,145 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-08 12:09:22,056 - tender_scanner - INFO -   [OK] ZIP received: 5790562 bytes in 74.05s
+2026-07-08 12:10:10,629 - tender_scanner - INFO -   [COMPLETE] Tender #2 in 123.33s (indexation auto lancée)
+2026-07-08 12:10:27,126 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-08 12:10:27,127 - tender_scanner - INFO - 
+  [TENDER #3] Acquisition des effets spéciaux de protection individuels pour les centres de la... (Score: 71)
+2026-07-08 12:10:27,302 - tender_scanner - INFO -   [DOWNLOAD] DCE: 14/2026/DR4
+2026-07-08 12:10:37,618 - tender_scanner - INFO -   [AUTO-INDEX] Démarrage indexation pour TC4130724/2026/ONEEBELEC...
+2026-07-08 12:10:38,180 - tender_scanner - INFO -   [AUTO-INDEX] TC4130724/2026/ONEEBELEC: 0 chunks créés
+2026-07-08 12:10:44,467 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-08 12:11:05,238 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-08 12:11:15,044 - tender_scanner - INFO -   [OK] ZIP received: 1008261 bytes in 47.74s
+2026-07-08 12:11:24,256 - tender_scanner - INFO -   [COMPLETE] Tender #3 in 57.13s (indexation auto lancée)
+2026-07-08 12:11:24,689 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-08 12:11:24,689 - tender_scanner - INFO - 
+  [TENDER #4] Protection physique des regards des adductions relevant du Secteur de Production... (Score: 71)
+2026-07-08 12:11:24,830 - tender_scanner - INFO -   [DOWNLOAD] DCE: 16/2026/DR4
+2026-07-08 12:11:27,741 - tender_scanner - INFO -   [AUTO-INDEX] Démarrage indexation pour 14/2026/DR4...
+2026-07-08 12:11:28,230 - tender_scanner - INFO -   [AUTO-INDEX] 14/2026/DR4: 0 chunks créés
+2026-07-08 12:11:42,998 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-08 12:12:03,836 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-08 12:12:40,854 - tender_scanner - INFO -   [OK] ZIP received: 1783527 bytes in 76.02s
+2026-07-08 12:12:55,504 - tender_scanner - INFO -   [COMPLETE] Tender #4 in 90.81s (indexation auto lancée)
+2026-07-08 12:12:55,993 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-08 12:12:55,997 - tender_scanner - INFO - 
+  [TENDER #5] Maintenance et réparation des équipements électriques des postes MT/BT et des gr... (Score: 71)
+2026-07-08 12:12:56,231 - tender_scanner - INFO -   [DOWNLOAD] DCE: 15/2026/DR4
+2026-07-08 12:13:00,368 - tender_scanner - INFO -   [AUTO-INDEX] Démarrage indexation pour 16/2026/DR4...
+2026-07-08 12:13:00,863 - tender_scanner - INFO -   [AUTO-INDEX] 16/2026/DR4: 0 chunks créés
+2026-07-08 12:13:13,589 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-08 12:13:33,491 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-08 12:13:39,104 - tender_scanner - INFO -   [OK] ZIP received: 1487838 bytes in 42.87s
+2026-07-08 12:13:51,950 - tender_scanner - INFO -   [COMPLETE] Tender #5 in 55.95s (indexation auto lancée)
+2026-07-08 12:13:54,855 - tender_scanner - INFO -   [AUTO-INDEX] Démarrage indexation pour 15/2026/DR4...
+2026-07-08 12:13:55,244 - tender_scanner - INFO -   [AUTO-INDEX] 15/2026/DR4: 0 chunks créés

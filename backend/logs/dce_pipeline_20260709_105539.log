@@ -1,0 +1,26 @@
+
+  🔄 PIPELINE: 12/2026/DR4
+  ──────────────────────────────────────────────────
+  📦 Extraction ZIP...
+  📦 8 fichiers
+  📄 Extraction texte...
+    RCDP.docx: 29,146 chars
+      📜 → IDENTIFIÉ COMME RC
+    Avis AO 12 DR4 2026.docx: 5,172 chars
+      📢 → IDENTIFIÉ COMME AAO
+    BP .xlsm: 13,372 chars
+    CCAFP.docx: 10,410 chars
+      📜 → IDENTIFIÉ COMME RC
+    CCTP .doc: 784,384 chars
+      📜 → IDENTIFIÉ COMME RC
+    Définition Prix .xls: 16,435 chars
+    Modeles BEI.docx: 14,478 chars
+    RCDG Travaux ONEE (Avril 2021).pdf: 69,367 chars
+      📜 → IDENTIFIÉ COMME RC
+
+  📢 AAO: Avis AO 12 DR4 2026.docx (5,172 chars)
+  📜 RC: RCDG Travaux ONEE (Avril 2021).pdf (69,367 chars)
+
+  🤖 Extraction LLM...
+    🤖 Envoi au LLM: AAO + RC = 7,494 caractères
+    📊 JSON extrait: {"estimation": 516000, "caution_provisoire": 5200, "caution_definitive": null, "visite_lieux_obligatoire": true, "classe_demandee": null, "attestation_reference_demandee": null}

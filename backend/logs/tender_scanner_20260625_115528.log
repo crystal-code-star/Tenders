@@ -1,0 +1,96 @@
+2026-06-25 11:56:48,948 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees...
+2026-06-25 11:56:50,779 - tender_scanner - INFO -   0 AO deja en base
+2026-06-25 11:57:27,541 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 11:57:27,702 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-06-25 11:57:37,175 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 11:57:44,840 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-25 11:58:03,414 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-25 11:58:16,956 - tender_scanner - INFO -   [OK] ZIP recu: 1372290 octets
+2026-06-25 11:58:18,571 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/91534713-0bb7-4562-b1b9-00a33c9f2eda.zip
+2026-06-25 11:58:18,973 - tender_scanner - INFO - 
+============================================================
+  RESUME COMPLET DU DCE
+  Reference: 06/2026/DR4
+============================================================
+
+--- INFORMATIONS GENERALES ---
+  Maitre d'ouvrage : ………………………
+  Objet : la fourniture, l’installation et la mise en service d’un système de télégestion du système de production d’eau potable constituée de : 1 station de traitement 3 stations de reprise 10 réservoirs 1
+  Lieu d'execution : Télegestion AVIS D’APPEL D’OFFRES OUVERT INTER NATIONAL N° 06 DR4/202 6 Séance publique La Direction
+
+--- BUDGET ---
+  Budget estime : 7 003 800,00 DH (7.0 Millions DH)
+
+--- CAUTION & GARANTIES ---
+  Caution provisoire : 112 100,00 DH
+
+--- DATES IMPORTANTES ---
+  Date limite de remise des plis : 01/01/2024
+
+--- DOCUMENTS DU DCE (13) ---
+  - DCE 06 DR4 2026/Annexe 1 - Répartition des prestations VF.xls
+  - DCE 06 DR4 2026/Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls
+  - DCE 06 DR4 2026/Avis AO 06 DR4 2026.docx
+  - DCE 06 DR4 2026/BP.xlsm
+  - DCE 06 DR4 2026/CCAFP Travaux - FSD (Français).docx
+  - DCE 06 DR4 2026/CCTP Télégestion 03.07.2025.docx
+  - DCE 06 DR4 2026/DP 24-07-2025.xlsx
+  - DCE 06 DR4 2026/Modeles.docx
+  - DCE 06 DR4 2026/PG DCE.xls
+  - DCE 06 DR4 2026/RCDG Travaux ONEE (Avril 2021).pdf
+  - DCE 06 DR4 2026/RCDP Travaux - FSD.docx
+  - DCE 06 DR4 2026/Tableau Annexe principlal.xlsx
+  - DCE 06 DR4 2026/Tableau Annexe secondaire.xlsx
+
+--- PERTINENCE CRYSTALWATER ---
+  Mots-cles trouves : traitement, eau, station, pompage, canalisation, vannes
+
+============================================================
+2026-06-25 11:58:19,995 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 11:58:39,016 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 11:58:39,204 - tender_scanner - INFO -   [DOWNLOAD] DCE: 63/DPAJ/2026
+2026-06-25 11:58:48,787 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 11:58:56,638 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-25 11:59:15,477 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-25 11:59:22,468 - tender_scanner - INFO -   [OK] ZIP recu: 263877 octets
+2026-06-25 11:59:23,714 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/2aa0dc5d-3790-4e66-abe6-1186ddb41397.zip
+2026-06-25 11:59:23,934 - tender_scanner - INFO - 
+============================================================
+  RESUME COMPLET DU DCE
+  Reference: 63/DPAJ/2026
+============================================================
+
+--- INFORMATIONS GENERALES ---
+  Maitre d'ouvrage : Travaux de régénération du sol par épandage des eaux pluviales sur une superficie de 750 ha " $ & 4
+  Objet : Objet : Travaux de régénération du sol par épandage des eaux pluviales sur une superficie de 750 ha au niveau des communes Mrija et Oulad ghziyel, province de Jerada
+  Lieu d'execution : NOMENCLATURE DES TERMES UTILISES "Maître d'Ouvrage" ou « MO» désigne Le Directeur provincial de l Ag
+
+--- BUDGET ---
+  Budget estime : Non trouve dans le DCE
+
+--- CAUTION & GARANTIES ---
+  Caution provisoire : 43 000.00dh
+
+--- DATES IMPORTANTES ---
+  Aucune date trouvee dans le DCE
+
+--- DELAI D'EXECUTION ---
+  Delai : CAUTIONNEMENT Le cautionnement provisoire est fixé à la somme de : Quarante-troi
+
+--- DOCUMENTS DU DCE (4) ---
+  - AO N°63-2026/
+  - AO N°63-2026/Avis d AO N° 63-2026 FR ET AR.docx
+  - AO N°63-2026/CPS .doc
+  - AO N°63-2026/RC.doc
+
+--- PERTINENCE CRYSTALWATER ---
+  Mots-cles trouves : eau, station, assainissement
+
+============================================================
+2026-06-25 11:59:24,678 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 11:59:52,232 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 12:00:01,485 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 12:00:01,667 - tender_scanner - INFO -   [DOWNLOAD] DCE: 28/DR5/2026
+2026-06-25 12:00:11,617 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 12:00:16,435 - tender_scanner - ERROR -   [ERROR] DCE: TargetClosedError: Page.wait_for_timeout: Target page, context or browser has been closed
+2026-06-25 12:00:17,335 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows

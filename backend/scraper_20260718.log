@@ -1,0 +1,36 @@
+2026-07-18 08:33:41,465 - INFO - ============================================================
+2026-07-18 08:33:41,465 - INFO - 🚀 Démarrage du scraping des résultats AO
+2026-07-18 08:33:41,466 - INFO - 📅 Date début: 01/01/2024
+2026-07-18 08:33:41,466 - INFO - 📅 Date fin: 18/07/2026
+2026-07-18 08:33:41,466 - INFO - ============================================================
+2026-07-18 08:33:52,386 - INFO - 🌐 Navigation vers la page de recherche...
+2026-07-18 08:34:06,245 - INFO - ✅ Page chargée
+2026-07-18 08:34:06,246 - INFO - 📝 Remplissage du formulaire...
+2026-07-18 08:34:06,409 - INFO -   Date début: 01/01/2024
+2026-07-18 08:34:06,592 - INFO -   Date fin: 18/07/2026
+2026-07-18 08:34:07,607 - INFO - 🔍 Lancement de la recherche...
+2026-07-18 08:34:22,247 - INFO - ✅ Résultats chargés
+2026-07-18 08:34:22,299 - INFO - 📊 Nombre total de pages: 13357
+2026-07-18 08:34:22,304 - INFO - 
+📄 Début du scan (13357 pages)...
+
+2026-07-18 08:34:22,305 - INFO - 📄 Page 1/13357
+2026-07-18 08:34:22,626 - INFO -   ✅ 10 lignes trouvées (Total: 10)
+2026-07-18 08:34:35,454 - INFO - 📄 Page 2/13357
+2026-07-18 08:34:35,801 - INFO -   ✅ 10 lignes trouvées (Total: 20)
+2026-07-18 08:34:50,177 - INFO - 📄 Page 3/13357
+2026-07-18 08:34:50,504 - INFO -   ✅ 10 lignes trouvées (Total: 30)
+2026-07-18 08:35:04,483 - INFO - 📄 Page 4/13357
+2026-07-18 08:35:05,011 - INFO -   ✅ 10 lignes trouvées (Total: 40)
+2026-07-18 08:35:19,718 - INFO - 📄 Page 5/13357
+2026-07-18 08:35:20,097 - INFO -   ✅ 10 lignes trouvées (Total: 50)
+2026-07-18 08:35:32,694 - INFO - 📄 Page 6/13357
+2026-07-18 08:35:32,996 - INFO -   ✅ 10 lignes trouvées (Total: 60)
+2026-07-18 08:35:47,161 - INFO - 📄 Page 7/13357
+2026-07-18 08:35:47,483 - INFO -   ✅ 10 lignes trouvées (Total: 70)
+2026-07-18 08:35:58,226 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-18 08:35:58,227 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed

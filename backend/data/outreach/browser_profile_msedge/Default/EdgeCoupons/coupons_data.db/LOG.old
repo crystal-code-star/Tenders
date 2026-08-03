@@ -1,0 +1,5 @@
+2026/05/06-13:02:04.516 1a00 Creating DB C:\Users\musta\Downloads\Stage\ai-auto-posting-dev_data\backend\data\outreach\browser_profile_msedge\Default\EdgeCoupons/coupons_data.db since it was missing.
+2026/05/06-13:02:04.592 1a00 Reusing MANIFEST C:\Users\musta\Downloads\Stage\ai-auto-posting-dev_data\backend\data\outreach\browser_profile_msedge\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
+2026/05/06-13:02:04.939 3afc Level-0 table #5: started
+2026/05/06-13:02:04.954 3afc Level-0 table #5: 682137 bytes OK
+2026/05/06-13:02:04.958 3afc Delete type=0 #3

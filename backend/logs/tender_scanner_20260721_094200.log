@@ -1,0 +1,18 @@
+2026-07-21 09:42:02,461 - tender_scanner - INFO -   🗄️ 226 références chargées depuis la base
+2026-07-21 09:42:15,791 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-21 09:42:38,674 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-21 09:42:38,725 - tender_scanner - INFO -   ⏭️ AO existant #1: SP4130189
+2026-07-21 09:42:38,729 - tender_scanner - INFO -   🆕 Nouvel AO trouvé → réinitialisation du compteur (était à 1)
+2026-07-21 09:42:38,776 - tender_scanner - INFO -   🆕 Nouvel AO #1: Mise à niveau de la partie 60KV des postes OUAZZANE, R’MEL et REGRAGA...Mise à n
+2026-07-21 09:42:38,784 - tender_scanner - INFO -   🆕 Nouvel AO #2: Renouvellement de la ligne 225 kV n° 25-10 « RIAD – KENITRA »...Renouvellement d
+2026-07-21 09:42:38,792 - tender_scanner - INFO -   🆕 Nouvel AO #3: Travaux de mise à niveau, de construction d'une STEP à boues activées et son exp
+2026-07-21 09:42:38,793 - tender_scanner - INFO -   ✅ 3 nouveaux AO trouvés sur cette page
+2026-07-21 09:47:39,910 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-21 09:47:58,655 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-21 09:47:58,663 - tender_scanner - INFO -   ⏭️ AO existant #1: SP4130189
+2026-07-21 09:47:58,666 - tender_scanner - INFO -   🆕 Nouvel AO trouvé → réinitialisation du compteur (était à 1)
+2026-07-21 09:47:58,715 - tender_scanner - INFO -   ⏭️ AO existant #1: TN4130616
+2026-07-21 09:47:58,717 - tender_scanner - INFO -   ⏭️ AO existant #2: TN4130652
+2026-07-21 09:47:58,719 - tender_scanner - INFO -   ⏭️ AO existant #3: 293/CL/2026/SRMFM
+2026-07-21 09:47:58,721 - tender_scanner - INFO -   🚫 3 AO existants consécutifs trouvés → ARRÊT!
+2026-07-21 09:47:58,723 - tender_scanner - INFO -   ⏭️ Aucun nouvel AO sur cette page

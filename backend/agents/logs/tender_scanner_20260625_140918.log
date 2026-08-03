@@ -1,0 +1,93 @@
+2026-06-25 14:09:18,654 - tender_scanner - INFO -   CrystalWater - Scan Automatique Continu
+2026-06-25 14:09:18,654 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees...
+2026-06-25 14:09:20,188 - tender_scanner - INFO -   0 AO deja en base
+2026-06-25 14:09:45,235 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 14:09:45,356 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-06-25 14:09:54,775 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 14:10:02,334 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-25 14:10:20,742 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-25 14:10:24,036 - tender_scanner - INFO -   [OK] ZIP recu: 1372290 octets
+2026-06-25 14:10:25,426 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/82bd70ab-5d01-4394-8347-1e260567bfce.zip
+2026-06-25 14:10:25,584 - tender_scanner - INFO -   [GROQ] Generation du resume IA...
+2026-06-25 14:10:25,584 - tender_scanner - INFO -   [GROQ] Envoi au LLM pour analyse...
+2026-06-25 14:10:27,079 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-06-25 14:10:27,193 - tender_scanner - INFO - 
+============================================================
+  RESUME DCE - 06/2026/DR4
+============================================================
+
+--- INFORMATIONS GÉNÉRALES ---
+• Maître d'ouvrage : Office National de l'Electricité et de l'Eau Potable (ONEE) - Branche Eau
+• Objet du marché : AEP de la ville de Souk larbaa à partir de la ST de Loukkos - Lot : Télegestion
+• Lieu d'exécution : Kénitra, Rabat-Salé-Kénitra
+• Type de marché : Travaux
+
+--- BUDGET & FINANCES ---
+• Budget estimé : Non spécifié
+• Caution provisoire : 112 100,00 DH
+• Modalités de paiement : Non spécifié
+
+--- DATES CLÉS ---
+• Date limite de remise des plis : Non spécifié
+• Ouverture des plis : Mardi 01/09/2026 à 09h00
+• Visite des lieux : Non spécifié
+• Délai d'exécution : Non spécifié
+
+--- LOTS & PRESTATIONS ---
+• Nombre de lots : 1
+• Description : Télegestion
+• Montants par lot : Non spécifié
+
+--- PERTINENCE CRYSTALWATER ---
+• Score de pertinence : 80
+• Mots-clés trouvés : Télegestion, AEP, Eau potable, ONEE
+• Analyse : Cet appel d'offres est pertinent pour CrystalWater car il concerne la télégestion et l'AEP, qui sont des domaines d'expertise de l'entreprise.
+
+--- RECOMMANDATION ---
+• SOUMISSIONNER : Cette entreprise a les compétences et les capacités nécessaires pour répondre à cet appel d'offres, en particulier dans le domaine de la télégestion et de l'AEP.
+2026-06-25 14:10:27,976 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 14:10:45,510 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 14:10:45,633 - tender_scanner - INFO -   [DOWNLOAD] DCE: 63/DPAJ/2026
+2026-06-25 14:10:53,812 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 14:11:01,418 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-25 14:11:20,432 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-25 14:11:23,971 - tender_scanner - INFO -   [OK] ZIP recu: 263877 octets
+2026-06-25 14:11:25,217 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/e6bac2b2-a90c-4d60-96b3-c4cf1c733ae1.zip
+2026-06-25 14:11:25,440 - tender_scanner - INFO -   [GROQ] Generation du resume IA...
+2026-06-25 14:11:25,450 - tender_scanner - INFO -   [GROQ] Envoi au LLM pour analyse...
+2026-06-25 14:11:27,120 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-06-25 14:11:27,191 - tender_scanner - INFO - 
+============================================================
+  RESUME DCE - 63/DPAJ/2026
+============================================================
+
+--- INFORMATIONS GÉNÉRALES ---
+• Maître d'ouvrage : Le Directeur Provincial de l'Agriculture de Jerada
+• Objet du marché : Travaux de régénération du sol par épandage des eaux pluviales sur une superficie de 750 ha au niveau des communes Mrija et Oulad ghziyel, province de Jerada
+• Lieu d'exécution : Province de Jerada
+• Type de marché : Travaux
+
+--- BUDGET & FINANCES ---
+• Budget estimé : 2 400 000,00 DH
+• Caution provisoire : 43 000,00 DH
+• Modalités de paiement : Non spécifié
+
+--- DATES CLÉS ---
+• Date limite de remise des plis : Non spécifié
+• Ouverture des plis : 03/08/2026 à 10h
+• Visite des lieux : Non spécifié
+• Délai d'exécution : Non spécifié
+
+--- LOTS & PRESTATIONS ---
+• Nombre de lots : 1
+• Description : Travaux de régénération du sol par épandage des eaux pluviales
+• Montants par lot : Non spécifié
+
+--- PERTINENCE CRYSTALWATER ---
+• Score de pertinence : 60 (CrystalWater est spécialisée dans le traitement d'eau potable et assainissement, mais les travaux de régénération du sol par épandage des eaux pluviales ne sont pas directement liés à ses activités)
+• Mots-clés trouvés : régénération du sol, épandage des eaux pluviales, traitement d'eau
+• Analyse : Bien que CrystalWater ne soit pas directement pertinente pour ce marché, elle pourrait être intéressée par les opportunités de collaboration ou de partenariat liées au traitement des eaux pluviales.
+
+--- RECOMMANDATION ---
+• VEILLE : Il est recommandé de suivre ce marché pour éventuelles opportunités de collaboration ou de partenariat.
+2026-06-25 14:11:28,068 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows

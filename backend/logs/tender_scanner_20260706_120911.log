@@ -1,0 +1,19 @@
+2026-07-06 12:09:27,817 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-06 12:09:27,819 - tender_scanner - WARNING -   [OCR] Module paddleocr non installe ou casse: No module named 'paddleocr'
+2026-07-06 12:09:49,562 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees (tenders_3)...
+2026-07-06 12:09:50,041 - tender_scanner - INFO -   0 AO deja en base (tenders_3)
+2026-07-06 12:10:16,874 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-06 12:10:16,877 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-06 12:10:16,880 - tender_scanner - INFO -   [TENDER #1/6] Etudes d’exécution, fourniture des équipements, construction, installation et mi...
+2026-07-06 12:10:16,881 - tender_scanner - INFO -   [REF] SP4130189
+2026-07-06 12:10:17,113 - tender_scanner - INFO -   [DOWNLOAD] DCE: SP4130189
+2026-07-06 12:10:37,695 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-06 12:10:58,861 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-06 12:16:52,809 - tender_scanner - INFO -   [OK] ZIP received: 83636401 bytes in 395.70s
+2026-07-06 12:16:52,810 - tender_scanner - ERROR -   [ZIP] Fichier trop volumineux (>50MB) pour SP4130189
+2026-07-06 12:16:52,811 - tender_scanner - INFO -   [CHUNKS] Traitement du DCE pour : SP4130189
+2026-07-06 12:16:59,111 - tender_scanner - INFO -   [EMBEDDING] Modèle chargé : all-MiniLM-L6-v2 (384 dimensions)
+2026-07-06 12:16:59,119 - tender_scanner - INFO -   [CHUNKS] 4 fichier(s) dans le ZIP
+2026-07-06 12:17:02,196 - tender_scanner - INFO -   [DOCLING] 'BdP STEP El Menzel.xlsx' : 188698 caracteres
+2026-07-06 12:17:02,200 - tender_scanner - INFO -   [CHUNKS] Traitement : AO SP4130189/BdP STEP El Menzel.xlsx (188692 caractères)

@@ -1,0 +1,540 @@
+2026-07-01 14:14:22,695 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-01 14:14:22,697 - tender_scanner - WARNING -   [OCR] Module paddleocr non installe ou casse: No module named 'paddleocr'
+2026-07-01 14:14:26,206 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees (tenders_3)...
+2026-07-01 14:14:27,212 - tender_scanner - INFO -   [CLEAN] 0 doublons, 0 faux positifs supprimes
+2026-07-01 14:14:27,554 - tender_scanner - INFO -   1 AO deja en base (tenders_3)
+2026-07-01 14:14:59,532 - tender_scanner - INFO -   [EXTRACT] Ref: 06/2026/DR4 | Deadline: 01/09/2026 09:00 | Parsed: 2026-09-01T09:00:00 | RepElec: False
+2026-07-01 14:15:00,162 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:15:00,431 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-07-01 14:15:18,106 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:15:37,659 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:15:43,096 - tender_scanner - INFO -   [OK] ZIP recu: 1372290 octets
+2026-07-01 14:15:57,448 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:15:57,467 - tender_scanner - INFO -   [ZIP] 13 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:15:57,468 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'Annexe 1 - Répartition des prestations VF.xls'...
+2026-07-01 14:15:58,021 - tender_scanner - INFO -   [DOCLING] 'Annexe 1 - Répartition des prestations VF.xls' : 7265 caracteres
+2026-07-01 14:15:58,023 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls'...
+2026-07-01 14:15:58,349 - tender_scanner - INFO -   [DOCLING] 'Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls' : 39349 caracteres
+2026-07-01 14:15:59,431 - tender_scanner - INFO -   [DOCLING] 'Avis AO 06 DR4 2026.docx' : 5110 caracteres
+2026-07-01 14:15:59,767 - tender_scanner - INFO -   [DOCLING] 'BP.xlsm' : 4114 caracteres
+2026-07-01 14:16:03,615 - tender_scanner - INFO -   [DOCLING] 'CCAFP Travaux - FSD (Français).docx' : 13966 caracteres
+2026-07-01 14:16:42,425 - tender_scanner - INFO -   [DOCLING] 'CCTP Télégestion 03.07.2025.docx' : 68935 caracteres
+2026-07-01 14:16:42,702 - tender_scanner - INFO -   [DOCLING] 'DP 24-07-2025.xlsx' : 59469 caracteres
+2026-07-01 14:16:45,634 - tender_scanner - INFO -   [DOCLING] 'Modeles.docx' : 9374 caracteres
+2026-07-01 14:16:45,637 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'PG DCE.xls'...
+2026-07-01 14:16:45,811 - tender_scanner - INFO -   [DOCLING] 'PG DCE.xls' : 638 caracteres
+2026-07-01 14:16:47,129 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE 06 DR4 2026/RCDG Travaux ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:16:51,096 - tender_scanner - INFO -   [DOCLING] 'RCDP Travaux - FSD.docx' : 34530 caracteres
+2026-07-01 14:16:51,277 - tender_scanner - INFO -   [DOCLING] 'Tableau Annexe principlal.xlsx' : 19328 caracteres
+2026-07-01 14:16:51,438 - tender_scanner - INFO -   [DOCLING] 'Tableau Annexe secondaire.xlsx' : 24593 caracteres
+2026-07-01 14:16:51,440 - tender_scanner - INFO -   [RESUME] Texte total extrait: 287139 caracteres
+2026-07-01 14:16:51,620 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 8000/287139 caracteres
+2026-07-01 14:16:51,620 - tender_scanner - INFO -   [GROQ] Envoi au LLM (8000 caracteres)...
+2026-07-01 14:16:53,798 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-01 14:16:53,883 - tender_scanner - INFO - 
+Voici le résumé du DCE marocain pour CrystalWater :
+RESUME DCE - 06/2026/DR4
+INFORMATIONS GENERALES
+- Maitre d'ouvrage : ONEE (Office National de l'Électricité et de l'Eau Potable)
+- Financement du marche : Fond Saoudien de Développement (FSD)
+- Objet du marche : Fourniture, installation et mise en service d'un système de télégestion du système de production d'eau potable
+- Lieu d'execution : AEP de la ville de Souk larbaa à partir de la ST de Loukkos
+- Type de marche : Travaux
+- Type d'appel d'offres : International
+- Type d'offre : Ordinaire
+BUDGET ET FINANCES
+- Budget estime total : ---- (pas de montant spécifié)
+- Montant minimum : ---- (pas de montant spécifié)
+- Montant maximum : ---- (pas de montant spécifié)
+- Caution provisoire : 112 100,00 DH
+- Caution definitive : ---- (pas de montant spécifié)
+- Duree de validite de la caution : ---- (pas de durée spécifiée)
+DATES CLES
+- Date limite de remise des plis : ---- (pas de date spécifiée)
+- Ouverture des plis : ---- (pas de date spécifiée)
+- Visite des lieux : ---- (pas de date spécifiée)
+- Delai d'execution : ---- (pas de durée spécifiée)
+PRESTATIONS ET LOTS
+- Nombre de lots : 1
+- Description des prestations : Fourniture, installation et mise en service d'un système de télégestion du système de production d'eau potable
+CONDITIONS DE PARTICIPATION
+- Type d'ouvrage : Travaux
+- Qualification exigee : ---- (pas de classe spécifiée)
+- Chiffre d'affaires minimum : ---- (pas de montant spécifié)
+- Duree attestation CA : ---- (pas d'année spécifiée)
+- Type de references : Attestations du chiffre d'affaires
+- Montant minimum reference : ---- (pas de montant spécifié)
+- Duree minimale reference : ---- (pas de durée spécifiée)
+- Conditions particulieres : Les concurrents doivent fournir les pièces complémentaires suivantes
+- Preference nationale/majoration : ---- (pas de description spécifiée)
+- Base d'attribution : ---- (pas de description spécifiée)
+ANALYSE CRYSTALWATER
+- Score de pertinence : 79/100
+- Mots-cles identifies : Télégestion, production d'eau potable, système de télégestion
+- Opportunite : Cette opportunité présente un intérêt pour CrystalWater en raison de son expertise dans le domaine de la production d'eau potable et de la télégestion.
+RECOMMANDATION
+- Action recommandee : SOUMISSIONNER
+- Justification : Cette opportunité présente un intérêt pour CrystalWater en raison de son expertise dans le domaine de la production d'eau potable et de la télégestion.
+2026-07-01 14:17:20,744 - tender_scanner - INFO -   [EXTRACT] Ref: 27/DAM/ET/2026 | Deadline: 12/08/2026 10:00 | Parsed: 2026-08-12T10:00:00 | RepElec: None
+2026-07-01 14:17:21,358 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:17:21,983 - tender_scanner - INFO -   [DOWNLOAD] DCE: 27/DAM/ET/2026
+2026-07-01 14:17:38,799 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:17:58,424 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:23:46,873 - tender_scanner - INFO -   [OK] ZIP recu: 153963073 octets
+2026-07-01 14:23:46,875 - tender_scanner - ERROR -   [ZIP] Fichier trop volumineux (>50MB) pour 27/DAM/ET/2026
+2026-07-01 14:23:48,045 - tender_scanner - INFO -   [ZIP] 32 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:23:48,387 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Doc information/CONDUITE.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:23:48,676 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Doc information/STATION DE SURPRESSION.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:23:49,404 - tender_scanner - INFO -   [DOCLING] 'Avis FR- AR 27-26.docx' : 5476 caracteres
+2026-07-01 14:23:49,510 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/Avis Initial AO 27-26.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:23:49,638 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/CCAFG Travaux ONEE-Branche Eau (Version 4 - Octobre 2016).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:23:52,376 - tender_scanner - INFO -   [DOCLING] 'CCAFP ONEE-Branche Eau - Travaux- version 2021.docx' : 17462 caracteres
+2026-07-01 14:23:52,471 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/RCDG Travaux ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:23:56,575 - tender_scanner - INFO -   [DOCLING] 'RCDP-Travaux- ONEE.docx' : 53127 caracteres
+2026-07-01 14:23:57,224 - tender_scanner - INFO -   [DOCLING] 'BP- 27-26.xlsm' : 10043 caracteres
+2026-07-01 14:24:48,830 - tender_scanner - INFO -   [DOCLING] 'CCTP conduites.docx' : 157520 caracteres
+2026-07-01 14:25:08,539 - tender_scanner - INFO -   [DOCLING] 'Annexe CCTP -Partie Equipement.docx' : 39498 caracteres
+2026-07-01 14:26:36,996 - tender_scanner - INFO -   [DOCLING] 'CCTP-Equipement.docx' : 313312 caracteres
+2026-07-01 14:26:38,154 - tender_scanner - INFO -   [DOCLING] 'A ajouter au CCTP-SECURITE DU CHANTIER.docx' : 7933 caracteres
+2026-07-01 14:27:10,479 - tender_scanner - INFO -   [DOCLING] 'CCTP-GC.docx' : 111066 caracteres
+2026-07-01 14:27:10,490 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour '1-Définition des prix-Etude.doc'...
+2026-07-01 14:27:10,525 - tender_scanner - INFO -   [CONVERT] '1-Définition des prix-Etude.doc' : 36202 caracteres
+2026-07-01 14:27:15,615 - tender_scanner - INFO -   [DOCLING] '2-Défnition des prix-Conduite.docx' : 47105 caracteres
+2026-07-01 14:27:15,620 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour '3-Définition des prix-GC.doc'...
+2026-07-01 14:27:15,676 - tender_scanner - INFO -   [CONVERT] '3-Définition des prix-GC.doc' : 173644 caracteres
+2026-07-01 14:27:15,679 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour '4-Définition des prix-EQ .doc'...
+2026-07-01 14:27:15,712 - tender_scanner - INFO -   [CONVERT] '4-Définition des prix-EQ .doc' : 109294 caracteres
+2026-07-01 14:27:15,751 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/10-Plan Type Loge Gardien.dwg': Conversion failed for: tmpz_gs3yxc.dwg with status: skipped. Errors: File format not allowed: tmpz_gs3yxc.dwg
+2026-07-01 14:27:15,786 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/11-Plan Type Local annexe.dwg': Conversion failed for: tmpp8iwv971.dwg with status: skipped. Errors: File format not allowed: tmpp8iwv971.dwg
+2026-07-01 14:27:15,835 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/12-Plans type  Cloture Type D avec Barreaudage.dwg': Conversion failed for: tmpxwb3i6gs.dwg with status: skipped. Errors: File format not allowed: tmpxwb3i6gs.dwg
+2026-07-01 14:27:15,965 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/13-Plan Type Def-A3.dwg': Conversion failed for: tmpwyjipm0j.dwg with status: skipped. Errors: File format not allowed: tmpwyjipm0j.dwg
+2026-07-01 14:27:15,983 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/2- Profil reduit-1.dwg': Conversion failed for: tmp1ydmgige.dwg with status: skipped. Errors: File format not allowed: tmp1ydmgige.dwg
+2026-07-01 14:27:16,048 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/3-Trace Reduit.dwg': Conversion failed for: tmpq4r7gpum.dwg with status: skipped. Errors: File format not allowed: tmpq4r7gpum.dwg
+2026-07-01 14:27:16,097 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/4-Trace 1000 Tamri-DEF.dwg': Conversion failed for: tmpczgehtw0.dwg with status: skipped. Errors: File format not allowed: tmpczgehtw0.dwg
+2026-07-01 14:27:16,160 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/5-1 et 5-2-Plan raccord-Comptage amont et conduite exist.dwg': Conversion failed for: tmpist7w899.dwg with status: skipped. Errors: File format not allowed: tmpist7w899.dwg
+2026-07-01 14:27:16,216 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/5-3 -Soupape Projetée.dwg': Conversion failed for: tmplulmpaa9.dwg with status: skipped. Errors: File format not allowed: tmplulmpaa9.dwg
+2026-07-01 14:27:16,553 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/6 et 7-Station Surp Projetee-DEF10.dwg': Conversion failed for: tmptyma6wy3.dwg with status: skipped. Errors: File format not allowed: tmptyma6wy3.dwg
+2026-07-01 14:27:16,592 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/8-Plan Local de livraison (MT).dwg': Conversion failed for: tmpi4qmdmlx.dwg with status: skipped. Errors: File format not allowed: tmpi4qmdmlx.dwg
+2026-07-01 14:27:16,641 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/9-Plan Poste Transf.dwg': Conversion failed for: tmpswrf818b.dwg with status: skipped. Errors: File format not allowed: tmpswrf818b.dwg
+2026-07-01 14:27:17,242 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/1-Plan de situation.dwg': Conversion failed for: tmpvdgwpnna.dwg with status: skipped. Errors: File format not allowed: tmpvdgwpnna.dwg
+2026-07-01 14:27:17,281 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/MNT B-Tamri.dwl': Conversion failed for: tmpzb6v65fo.dwl with status: skipped. Errors: File format not allowed: tmpzb6v65fo.dwl
+2026-07-01 14:27:17,397 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/MNT B-Tamri.dwl2': Conversion failed for: tmpurhbwjzn.dwl2 with status: skipped. Errors: File format not allowed: tmpurhbwjzn.dwl2
+2026-07-01 14:27:17,415 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/plot.log': Conversion failed for: tmptj75dfax.log with status: skipped. Errors: File format not allowed: tmptj75dfax.log
+2026-07-01 14:27:17,441 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/T1.jgw': Conversion failed for: tmpstghtf46.jgw with status: skipped. Errors: File format not allowed: tmpstghtf46.jgw
+2026-07-01 14:27:20,775 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/T1.jpg': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:27:21,120 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II- 2.zip/Plans-Partie II- 2/1-Plan de situation- Suite/T2.jgw': Conversion failed for: tmp7n47f8vh.jgw with status: skipped. Errors: File format not allowed: tmp7n47f8vh.jgw
+2026-07-01 14:27:22,460 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II- 2.zip/Plans-Partie II- 2/1-Plan de situation- Suite/T2.jpg': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:27:22,703 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II- 2.zip/Plans-Partie II- 2/1-Plan de situation- Suite/T3.jgw': Conversion failed for: tmpz2tavcco.jgw with status: skipped. Errors: File format not allowed: tmpz2tavcco.jgw
+2026-07-01 14:27:24,646 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II- 2.zip/Plans-Partie II- 2/1-Plan de situation- Suite/T3.jpg': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:27:24,784 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II- 2.zip/Plans-Partie II- 2/1-Plan de situation- Suite/T4.jgw': Conversion failed for: tmptwocq4cw.jgw with status: skipped. Errors: File format not allowed: tmptwocq4cw.jgw
+2026-07-01 14:27:25,941 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II- 2.zip/Plans-Partie II- 2/1-Plan de situation- Suite/T4.jpg': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:27:26,457 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II- 2.zip/Plans-Partie II- 2/1-Plan de situation- Suite/Tracé en plan conduite RMC ST_1-3.tif': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:27:26,506 - tender_scanner - INFO -   [RESUME] Texte total extrait: 1082731 caracteres
+2026-07-01 14:27:27,036 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 8000/1082731 caracteres
+2026-07-01 14:27:27,038 - tender_scanner - INFO -   [GROQ] Envoi au LLM (8000 caracteres)...
+2026-07-01 14:27:28,102 - tender_scanner - WARNING -   [GROQ] Erreur API (413): {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kv5ny5kzek6axh5t1xjh4sgw` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6277
+2026-07-01 14:27:28,524 - tender_scanner - INFO - 
+RESUME DCE - 27/DAM/ET/2026
+
+INFORMATIONS GENERALES
+- Maitre d'ouvrage : Les concurrents doivent fournir les pièces complémentaires suivantes :
+
+BUDGET ET FINANCES
+- Budget estime : 932,00
+
+DATES CLES
+- Date limite : Non specifiee dans le DCE
+
+DOCUMENTS DU DCE
+- 45 documents
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Doc information/CONDUITE.pdf
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Doc information/STATION DE SURPRESSION.pdf
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/Avis FR- AR 27-26.docx
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/Avis Initial AO 27-26.pdf
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/CCAFG Travaux ONEE-Branche Eau (Version 4 - Octobre 2016).pdf
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/CCAFP ONEE-Branche Eau - Travaux- version 2021.docx
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/RCDG Travaux ONEE (Avril 2021).pdf
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/RCDP-Travaux- ONEE.docx
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie Technique/BP- 27-26.xlsm
+  - DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie Technique/CCTP/Partie Conduite/CCTP conduites.docx
+
+ANALYSE CRYSTALWATER
+- Score de pertinence : 82/100
+2026-07-01 14:28:28,169 - tender_scanner - INFO -   [EXTRACT] Ref: TC1130459/2026/ONEEBELEC | Deadline: 04/08/2026 10:00 | Parsed: 2026-08-04T10:00:00 | RepElec: False
+2026-07-01 14:28:28,822 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:28:29,470 - tender_scanner - INFO -   [DOWNLOAD] DCE: TC1130459/2026/ONEEBELEC
+2026-07-01 14:28:48,226 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:29:10,358 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:29:16,813 - tender_scanner - INFO -   [OK] ZIP recu: 2678016 octets
+2026-07-01 14:29:47,844 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:29:47,868 - tender_scanner - INFO -   [ZIP] 1 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:29:48,326 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'CCH AO n°TC1130459 -  IMPRIMES DTC-.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:29:48,328 - tender_scanner - INFO - 
+Aucun texte exploitable trouve dans les fichiers du DCE.
+2026-07-01 14:30:03,943 - tender_scanner - INFO -   [EXTRACT] Ref: TL1130674/2026/04/ONEEBELEC | Deadline: 04/08/2026 09:00 | Parsed: 2026-08-04T09:00:00 | RepElec: False
+2026-07-01 14:30:05,340 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:30:05,622 - tender_scanner - INFO -   [DOWNLOAD] DCE: TL1130674/2026/04/ONEEBELEC
+2026-07-01 14:30:22,388 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:30:42,461 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:30:51,478 - tender_scanner - INFO -   [OK] ZIP recu: 2757442 octets
+2026-07-01 14:31:26,929 - tender_scanner - INFO -   [ZIP] 2 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:31:27,182 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'CCH de l'AO n° TL1130674.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:31:27,341 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Avis d'AO n° TL1130674 -.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:31:27,343 - tender_scanner - INFO - 
+Aucun texte exploitable trouve dans les fichiers du DCE.
+2026-07-01 14:31:56,462 - tender_scanner - INFO -   [EXTRACT] Ref: TL2130734/2026/05/ONEEBELEC | Deadline: 04/08/2026 09:00 | Parsed: 2026-08-04T09:00:00 | RepElec: False
+2026-07-01 14:31:56,784 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:31:57,494 - tender_scanner - INFO -   [DOWNLOAD] DCE: TL2130734/2026/05/ONEEBELEC
+2026-07-01 14:32:15,192 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:32:34,723 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:32:43,671 - tender_scanner - INFO -   [OK] ZIP recu: 2622281 octets
+2026-07-01 14:33:20,881 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:33:20,910 - tender_scanner - INFO -   [ZIP] 2 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:33:21,035 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'CCH de l'AO n° TL2130734.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:33:21,133 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Avis d'AO n° TL2130734.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:33:21,136 - tender_scanner - INFO - 
+Aucun texte exploitable trouve dans les fichiers du DCE.
+2026-07-01 14:33:36,875 - tender_scanner - INFO -   [EXTRACT] Ref: 264/2026/SRMFM | Deadline: 04/08/2026 08:30 | Parsed: 2026-08-04T08:30:00 | RepElec: True
+2026-07-01 14:33:38,372 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:33:38,608 - tender_scanner - INFO -   [DOWNLOAD] DCE: 264/2026/SRMFM
+2026-07-01 14:33:58,626 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:34:21,079 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:34:54,900 - tender_scanner - INFO -   [OK] ZIP recu: 8156949 octets
+2026-07-01 14:36:55,325 - tender_scanner - ERROR - Erreur upload ZIP: ('Connection aborted.', TimeoutError('The write operation timed out'))
+2026-07-01 14:36:55,386 - tender_scanner - INFO -   [ZIP] 2 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:36:56,019 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'AO N° 264-2026 RC.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:36:56,325 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'AO N° 264-2026 CAF+CTG+CTP+DETAIL.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:36:56,329 - tender_scanner - INFO - 
+Aucun texte exploitable trouve dans les fichiers du DCE.
+2026-07-01 14:37:12,380 - tender_scanner - INFO -   [EXTRACT] Ref: 43/2026/SRMFM | Deadline: 04/08/2026 08:30 | Parsed: 2026-08-04T08:30:00 | RepElec: True
+2026-07-01 14:37:13,208 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:37:13,894 - tender_scanner - INFO -   [DOWNLOAD] DCE: 43/2026/SRMFM
+2026-07-01 14:37:31,265 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:37:51,875 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:38:04,644 - tender_scanner - INFO -   [OK] ZIP recu: 3826897 octets
+2026-07-01 14:38:58,564 - tender_scanner - INFO -   [ZIP] 2 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:38:58,778 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'AO N° 43-2026 RC.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:38:58,939 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'AO N° 43-2026 CAF+CTP+DETAIL.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:38:58,942 - tender_scanner - INFO - 
+Aucun texte exploitable trouve dans les fichiers du DCE.
+2026-07-01 14:39:14,564 - tender_scanner - INFO -   [EXTRACT] Ref: 303/2026/SRMFM | Deadline: 04/08/2026 08:30 | Parsed: 2026-08-04T08:30:00 | RepElec: True
+2026-07-01 14:39:16,247 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:39:16,956 - tender_scanner - INFO -   [DOWNLOAD] DCE: 303/2026/SRMFM
+2026-07-01 14:39:34,317 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:39:54,311 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:40:06,520 - tender_scanner - INFO -   [OK] ZIP recu: 3084286 octets
+2026-07-01 14:40:51,540 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:40:51,558 - tender_scanner - INFO -   [ZIP] 2 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:40:51,694 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'AO N° 303-2026 RC.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:40:51,815 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'AO N° 303-2026 CAF+CTP+DETAIL.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:40:51,817 - tender_scanner - INFO - 
+Aucun texte exploitable trouve dans les fichiers du DCE.
+2026-07-01 14:41:18,443 - tender_scanner - INFO -   [EXTRACT] Ref: 63/DPAJ/2026 | Deadline: 03/08/2026 10:00 | Parsed: 2026-08-03T10:00:00 | RepElec: True
+2026-07-01 14:41:18,809 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:41:19,597 - tender_scanner - INFO -   [DOWNLOAD] DCE: 63/DPAJ/2026
+2026-07-01 14:41:38,204 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:41:59,351 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:42:05,175 - tender_scanner - INFO -   [OK] ZIP recu: 263877 octets
+2026-07-01 14:42:08,688 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:42:08,709 - tender_scanner - INFO -   [ZIP] 3 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:42:10,208 - tender_scanner - INFO -   [DOCLING] 'Avis d AO N° 63-2026 FR ET AR.docx' : 2374 caracteres
+2026-07-01 14:42:10,213 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour 'CPS .doc'...
+2026-07-01 14:42:10,287 - tender_scanner - INFO -   [CONVERT] 'CPS .doc' : 107923 caracteres
+2026-07-01 14:42:10,295 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour 'RC.doc'...
+2026-07-01 14:42:10,351 - tender_scanner - INFO -   [CONVERT] 'RC.doc' : 131467 caracteres
+2026-07-01 14:42:10,352 - tender_scanner - INFO -   [RESUME] Texte total extrait: 241884 caracteres
+2026-07-01 14:42:10,613 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 8000/241884 caracteres
+2026-07-01 14:42:10,616 - tender_scanner - INFO -   [GROQ] Envoi au LLM (8000 caracteres)...
+2026-07-01 14:42:13,451 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-01 14:42:13,535 - tender_scanner - INFO - 
+Voici le resume structure du DCE marocain pour CrystalWater :
+RESUME DCE - 63/DPAJ/2026
+INFORMATIONS GENERALES
+- Maitre d'ouvrage : Direction Provinciale de l'Agriculture de Jerada
+- Financement du marche : ----
+- Objet du marche : Travaux de régénération du sol par épandage des eaux pluviales sur une superficie de 750 ha au niveau des communes Mrija et Oulad ghziyel, province de Jerada
+- Lieu d'execution : Province de Jerada
+- Type de marche : Travaux
+- Type d'appel d'offres : Ouvert national
+- Type d'offre : Ordinaire
+BUDGET ET FINANCES
+- Budget estime total : 2 400 000,00 DH
+- Montant minimum : ----
+- Montant maximum : ----
+- Caution provisoire : 43 000,00 DH
+- Caution definitive : ----
+- Duree de validite de la caution : ----
+DATES CLES
+- Date limite de remise des plis : 03/08/2026
+- Ouverture des plis : 03/08/2026
+- Visite des lieux : ----
+- Delai d'execution : ----
+PRESTATIONS ET LOTS
+- Nombre de lots : 1
+- Description des prestations : Travaux de régénération du sol par épandage des eaux pluviales sur une superficie de 750 ha au niveau des communes Mrija et Oulad ghziyel, province de Jerada
+CONDITIONS DE PARTICIPATION
+- Type d'ouvrage : Genie civil
+- Qualification exigee : ----
+- Chiffre d'affaires minimum : ----
+- Duree attestation CA : ----
+- Type de references : ----
+- Montant minimum reference : ----
+- Duree minimale reference : ----
+- Conditions particulieres : ----
+- Preference nationale/majoration : ----
+- Base d'attribution : Prix le plus bas
+ANALYSE CRYSTALWATER
+- Score de pertinence : 69/100
+- Mots-cles identifies : Travaux de régénération du sol, épandage des eaux pluviales, genie civil
+- Opportunite : Cette opportunité présente un intérêt pour CrystalWater en raison de la nature des travaux et de la superficie à traiter. Cependant, il convient de prendre en compte les conditions de participation et les exigences du maître d'ouvrage.
+RECOMMANDATION
+- Action recommandee : VEILLE
+- Justification : Il convient de surveiller l'évolution de l'appel d'offres et de prendre connaissance des conditions de participation et des exigences du maître d'ouvrage avant de prendre une décision de soumission.
+2026-07-01 14:42:43,352 - tender_scanner - INFO -   [EXTRACT] Ref: 48/2026/DR9 | Deadline: 29/07/2026 10:00 | Parsed: 2026-07-29T10:00:00 | RepElec: False
+2026-07-01 14:42:44,090 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:42:45,184 - tender_scanner - INFO -   [DOWNLOAD] DCE: 48/2026/DR9
+2026-07-01 14:43:03,428 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:43:24,084 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:43:28,267 - tender_scanner - INFO -   [OK] ZIP recu: 32783 octets
+2026-07-01 14:43:30,322 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:43:30,325 - tender_scanner - INFO -   [ZIP] 2 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:43:31,714 - tender_scanner - INFO -   [DOCLING] 'Avis arab48.docx' : 2364 caracteres
+2026-07-01 14:43:32,123 - tender_scanner - INFO -   [DOCLING] 'Avis Français48.docx' : 2980 caracteres
+2026-07-01 14:43:32,124 - tender_scanner - INFO -   [RESUME] Texte total extrait: 5402 caracteres
+2026-07-01 14:43:32,125 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 5402/5402 caracteres
+2026-07-01 14:43:32,125 - tender_scanner - INFO -   [GROQ] Envoi au LLM (5402 caracteres)...
+2026-07-01 14:43:33,892 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-01 14:43:33,994 - tender_scanner - INFO - 
+RESUME DCE - 48/2026/DR9
+INFORMATIONS GENERALES
+- Maitre d'ouvrage : Office National de l'Électricité et de l'Eau Potable (ONEE)
+- Financement du marche : ----
+- Objet du marche : Travaux de confortement de la conduite d'adduction Oued R'mel alimentant le port Tanger Med - Lot 1: Conduites de réhabilitation du tronçon n°12 (Ghougine)
+- Lieu d'execution : Tanger
+- Type de marche : Travaux
+- Type d'appel d'offres : Ouvert
+- Type d'offre : Ordinaire
+BUDGET ET FINANCES
+- Budget estime total : 47 760 000,00 DH
+- Montant minimum : ----
+- Montant maximum : ----
+- Caution provisoire : 477 600,00 DH
+- Caution definitive : ----
+- Duree de validite de la caution : ----
+DATES CLES
+- Date limite de remise des plis : ----
+- Ouverture des plis : Mercredi 29/07/2026 à 10h00
+- Visite des lieux : ----
+- Delai d'execution : ----
+PRESTATIONS ET LOTS
+- Nombre de lots : 1
+- Description des prestations : Travaux de confortement de la conduite d'adduction Oued R'mel alimentant le port Tanger Med - Lot 1: Conduites de réhabilitation du tronçon n°12 (Ghougine)
+CONDITIONS DE PARTICIPATION
+- Type d'ouvrage : Genie civil
+- Qualification exigee : ----
+- Chiffre d'affaires minimum : ----
+- Duree attestation CA : ----
+- Type de references : ----
+- Montant minimum reference : ----
+- Duree minimale reference : ----
+- Conditions particulieres : ----
+- Preference nationale/majoration : ----
+- Base d'attribution : Prix le plus bas
+ANALYSE CRYSTALWATER
+- Score de pertinence : 79/100
+- Mots-cles identifies : Travaux de confortement, conduite d'adduction, port Tanger Med, réhabilitation de tronçon
+- Opportunite : Cette opportunité présente un intérêt pour CrystalWater en raison de son expertise dans le domaine du traitement de l'eau et de l'assainissement. La réalisation de ces travaux pourrait contribuer à améliorer la qualité de l'eau et à réduire les risques de pollution dans la région.
+RECOMMANDATION
+- Action recommandee : SOUMISSIONNER
+- Justification : Cette opportunité présente un intérêt pour CrystalWater en raison de son expertise dans le domaine du traitement de l'eau et de l'assainissement, et la réalisation de ces travaux pourrait contribuer à améliorer la qualité de l'eau et à réduire les risques de pollution dans la région.
+2026-07-01 14:43:35,614 - tender_scanner - INFO -   [EXTRACT] Ref: 50/2026/DR9/C/I | Deadline: 29/07/2026 10:00 | Parsed: 2026-07-29T10:00:00 | RepElec: False
+2026-07-01 14:43:36,180 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:43:36,810 - tender_scanner - INFO -   [DOWNLOAD] DCE: 50/2026/DR9/C/I
+2026-07-01 14:43:54,048 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:44:13,696 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:44:19,789 - tender_scanner - INFO -   [OK] ZIP recu: 1210823 octets
+2026-07-01 14:44:34,023 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:44:34,031 - tender_scanner - INFO -   [ZIP] 9 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:44:34,755 - tender_scanner - INFO -   [DOCLING] 'avis arabe50..docx' : 2405 caracteres
+2026-07-01 14:44:34,993 - tender_scanner - INFO -   [DOCLING] 'avis francais50.docx' : 2931 caracteres
+2026-07-01 14:44:35,602 - tender_scanner - INFO -   [DOCLING] 'BP50.XLSM' : 983 caracteres
+2026-07-01 14:44:37,761 - tender_scanner - INFO -   [DOCLING] 'CCAF.docx' : 23916 caracteres
+2026-07-01 14:44:40,518 - tender_scanner - INFO -   [DOCLING] 'CCTP VP (002).docx' : 11796 caracteres
+2026-07-01 14:44:40,531 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour 'page de garde dceE.doc'...
+2026-07-01 14:44:40,569 - tender_scanner - INFO -   [CONVERT] 'page de garde dceE.doc' : 52346 caracteres
+2026-07-01 14:44:40,778 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'RCDG Services ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:44:47,179 - tender_scanner - INFO -   [DOCLING] 'RCDP Services ONEE - Branche Eau (Septembre 2025).docx' : 35956 caracteres
+2026-07-01 14:44:47,187 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'vf-Définition des prix.xls'...
+2026-07-01 14:44:47,377 - tender_scanner - INFO -   [DOCLING] 'vf-Définition des prix.xls' : 9014 caracteres
+2026-07-01 14:44:47,379 - tender_scanner - INFO -   [RESUME] Texte total extrait: 139601 caracteres
+2026-07-01 14:44:47,468 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 8000/139601 caracteres
+2026-07-01 14:44:47,469 - tender_scanner - INFO -   [GROQ] Envoi au LLM (8000 caracteres)...
+2026-07-01 14:44:49,509 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-01 14:44:49,575 - tender_scanner - INFO - 
+Voici le resume structure en FRANCAIS :
+RESUME DCE - 50/2026/DR9/C/I
+INFORMATIONS GENERALES
+- Maitre d'ouvrage : Direction Régionale de production Tanger-Tétouan-AL Hoceima
+- Financement du marche : ONEE Branche eau
+- Objet du marche : Contrôle réglementaire des appareils de levage et à pression de gaz et de vapeur des installations relevant de la Direction Régionale de production TTA
+- Lieu d'execution : Tanger-Tétouan-AL Hoceima
+- Type de marche : Travaux
+- Type d'appel d'offres : National
+- Type d'offre : Marche cadre
+BUDGET ET FINANCES
+- Budget estime total : ----
+- Montant minimum : ----
+- Montant maximum : ----
+- Caution provisoire : 4 000 DH
+- Caution definitive : ----
+- Duree de validite de la caution : ----
+DATES CLES
+- Date limite de remise des plis : ----
+- Ouverture des plis : Mercredi 29/07/2026 à 10h00
+- Visite des lieux : ----
+- Delai d'execution : ----
+PRESTATIONS ET LOTS
+- Nombre de lots : 1
+- Description des prestations : Contrôle réglementaire des appareils de levage et à pression de gaz et de vapeur des installations relevant de la Direction Régionale de production TTA
+CONDITIONS DE PARTICIPATION
+- Type d'ouvrage : Genie civil
+- Qualification exigee : ----
+- Chiffre d'affaires minimum : ----
+- Duree attestation CA : ----
+- Type de references : Attestations du chiffre d'affaires
+- Montant minimum reference : ----
+- Duree minimale reference : ----
+- Conditions particulieres : Les concurrents doivent fournir les pièces complémentaires suivantes :
+ - Pour les entreprises dont la date de création est antérieure au 01/01/ 2024 : Une ou deux ou trois attestations du chiffre d’affaires ou leurs copies certifiées conformes à l’original, réalisé durant les années 2023 ,2024 et 2025
+ - Pour les entreprises créées durant l’année 2024 , une ou deux attestations du chiffre d’affaires réalisé durant les années 2024 et 2025
+ - Pour les entreprises dont la date de création est postérieure au 01/01/2024 : Une ou deux attestations du chiffre d’affaires réalisé durant les années 2024 et 2025
+- Preference nationale/majoration : ----
+- Base d'attribution : Prix le plus bas
+ANALYSE CRYSTALWATER
+- Score de pertinence : 64/100
+- Mots-cles identifies : Contrôle réglementaire, appareils de levage, pression de gaz et de vapeur, installations, Direction Régionale de production TTA
+- Opportunite : Cette consultation offre une opportunité pour les entreprises de services de genie civil de se positionner sur le marché marocain et de développer leurs activités dans le domaine du contrôle réglementaire des appareils de levage et à pression de gaz et de vapeur.
+RECOMMANDATION
+- Action recommandee : SOUMISSIONNER
+- Justification : Cette consultation présente un intérêt pour CrystalWater en raison de son expertise dans le domaine du genie civil et de son expérience dans le contrôle réglementaire des appareils de levage et à pression de gaz et de vapeur.
+2026-07-01 14:45:05,124 - tender_scanner - INFO -   [EXTRACT] Ref: 28/DRD/CD/D/2026 | Deadline: 29/07/2026 10:00 | Parsed: 2026-07-29T10:00:00 | RepElec: False
+2026-07-01 14:45:06,209 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:45:06,854 - tender_scanner - INFO -   [DOWNLOAD] DCE: 28/DRD/CD/D/2026
+2026-07-01 14:45:24,518 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:45:45,077 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:45:55,730 - tender_scanner - INFO -   [OK] ZIP recu: 3167973 octets
+2026-07-01 14:46:38,439 - tender_scanner - INFO -   [ZIP] 9 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:46:38,572 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO N°28-DRD-CD-D-2026/Avis Arabe_AO 28-DRD-CD-D-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:46:38,690 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO N°28-DRD-CD-D-2026/Avis Français_AO 28-DRD-CD-D-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:46:38,907 - tender_scanner - INFO -   [DOCLING] 'BP AO N°28-DRD-CD-D-2026.xlsx' : 9890 caracteres
+2026-07-01 14:46:39,031 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO N°28-DRD-CD-D-2026/CCAFG Travaux ONEE-Branche Eau (Version 4 - Octobre 2016).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:46:39,140 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO N°28-DRD-CD-D-2026/CCAFP AO N°28-DRD-CD-D-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:46:39,242 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO N°28-DRD-CD-D-2026/Défintion des prix AO 28-DRD-CD-D-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:46:39,352 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO N°28-DRD-CD-D-2026/RCDG Etudes ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:46:39,448 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO N°28-DRD-CD-D-2026/RCDP AO N°28-DRD-CD-D-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:46:39,602 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO N°28-DRD-CD-D-2026/TDR AO 28-DRD-CD-D-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:46:39,603 - tender_scanner - INFO -   [RESUME] Texte total extrait: 9955 caracteres
+2026-07-01 14:46:39,612 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 2000/9955 caracteres
+2026-07-01 14:46:39,613 - tender_scanner - INFO -   [GROQ] Envoi au LLM (2000 caracteres)...
+2026-07-01 14:46:41,346 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-01 14:46:41,367 - tender_scanner - INFO - 
+RESUME DCE - 28/DRD/CD/D/2026
+INFORMATIONS GENERALES
+- Maitre d'ouvrage : ONEE (Office National de l'Energie et des Hydrocarbures)
+- Financement du marche : ONEE
+- Objet du marche : Etude de réhabilitation et mise à niveau de la station de traitement Mansour Eddahbi à Ouarzazate
+- Lieu d'execution : Ouarzazate
+- Type de marche : Travaux
+- Type d'appel d'offres : Restreint
+- Type d'offre : Marche cadre
+BUDGET ET FINANCES
+- Budget estime total : ----
+- Montant minimum : ----
+- Montant maximum : ----
+- Caution provisoire : ----
+- Caution definitive : ----
+- Duree de validite de la caution : ----
+DATES CLES
+- Date limite de remise des plis : ----
+- Ouverture des plis : ----
+- Visite des lieux : ----
+- Delai d'execution : ----
+PRESTATIONS ET LOTS
+- Nombre de lots : ----
+- Description des prestations : Etude de réhabilitation et mise à niveau de la station de traitement Mansour Eddahbi à Ouarzazate
+CONDITIONS DE PARTICIPATION
+- Type d'ouvrage : ----
+- Qualification exigee : ----
+- Chiffre d'affaires minimum : ----
+- Duree attestation CA : ----
+- Type de references : ----
+- Montant minimum reference : ----
+- Duree minimale reference : ----
+- Conditions particulieres : ----
+- Preference nationale/majoration : ----
+- Base d'attribution : ----
+ANALYSE CRYSTALWATER
+- Score de pertinence : 80/100
+- Mots-cles identifies : Etude de réhabilitation, mise à niveau, station de traitement, Mansour Eddahbi, Ouarzazate
+- Opportunite : Cette opportunité présente un intérêt pour CrystalWater en raison de son expertise dans le traitement de l'eau et la réhabilitation de stations de traitement. La mise à niveau de la station de traitement Mansour Eddahbi à Ouarzazate pourrait offrir des opportunités de développement pour l'entreprise.
+RECOMMANDATION
+- Action recommandee : SOUMISSIONNER
+- Justification : La recommandation de soumissionner est basée sur le score de pertinence élevé de 80/100 et l'intérêt potentiel de l'opportunité pour CrystalWater.
+2026-07-01 14:47:10,164 - tender_scanner - INFO -   [EXTRACT] Ref: 42/2026/SRMFM | Deadline: 29/07/2026 08:30 | Parsed: 2026-07-29T08:30:00 | RepElec: True
+2026-07-01 14:47:11,103 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:47:11,424 - tender_scanner - INFO -   [DOWNLOAD] DCE: 42/2026/SRMFM
+2026-07-01 14:47:29,003 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:47:48,128 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:47:58,345 - tender_scanner - INFO -   [OK] ZIP recu: 5701655 octets
+2026-07-01 14:49:02,557 - tender_scanner - INFO -   [ZIP] 2 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:49:02,695 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'AO N° 42-2026 CAF+CTP+DETAIL.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:49:02,826 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'AO N° 42-2026  RC.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:49:02,829 - tender_scanner - INFO - 
+Aucun texte exploitable trouve dans les fichiers du DCE.
+2026-07-01 14:49:31,714 - tender_scanner - INFO -   [EXTRACT] Ref: 19/2026/dpetdezagora | Deadline: 28/07/2026 11:00 | Parsed: 2026-07-28T11:00:00 | RepElec: True
+2026-07-01 14:49:32,160 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:49:32,592 - tender_scanner - INFO -   [DOWNLOAD] DCE: 19/2026/dpetdezagora
+2026-07-01 14:49:49,356 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:50:09,631 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:50:14,186 - tender_scanner - INFO -   [OK] ZIP recu: 1105010 octets
+2026-07-01 14:50:26,745 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:50:26,753 - tender_scanner - INFO -   [ZIP] 8 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:50:26,757 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour 'AVIS AOO 19-2026 AR.doc'...
+2026-07-01 14:50:26,809 - tender_scanner - INFO -   [CONVERT] 'AVIS AOO 19-2026 AR.doc' : 57526 caracteres
+2026-07-01 14:50:26,811 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour 'AVIS AOO 19-2026 Fr.doc'...
+2026-07-01 14:50:26,842 - tender_scanner - INFO -   [CONVERT] 'AVIS AOO 19-2026 Fr.doc' : 44219 caracteres
+2026-07-01 14:50:59,550 - tender_scanner - INFO -   [DOCLING] 'CPS-19-2026- GC école 2026..docx' : 81807 caracteres
+2026-07-01 14:51:00,521 - tender_scanner - INFO -   [DOCLING] 'DECLARATION SUR L’HONNEUR.docx' : 9783 caracteres
+2026-07-01 14:51:00,644 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Dernière page de CPS_0001.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:51:00,723 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Dernière page du rc_0001.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:51:04,650 - tender_scanner - INFO -   [DOCLING] 'RC GC école 2026.modifié.docx' : 23737 caracteres
+2026-07-01 14:51:04,657 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour 'Acte d'engagement.doc'...
+2026-07-01 14:51:04,737 - tender_scanner - INFO -   [CONVERT] 'Acte d'engagement.doc' : 60523 caracteres
+2026-07-01 14:51:04,741 - tender_scanner - INFO -   [RESUME] Texte total extrait: 277819 caracteres
+2026-07-01 14:51:05,048 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 8000/277819 caracteres
+2026-07-01 14:51:05,050 - tender_scanner - INFO -   [GROQ] Envoi au LLM (8000 caracteres)...
+2026-07-01 14:51:07,326 - tender_scanner - WARNING -   [GROQ] Erreur API (413): {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kv5ny5kzek6axh5t1xjh4sgw` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6748
+2026-07-01 14:51:07,476 - tender_scanner - INFO - 
+RESUME DCE - 19/2026/dpetdezagora
+
+INFORMATIONS GENERALES
+
+BUDGET ET FINANCES
+- Budget estime : 2 334 174,00
+
+DATES CLES
+- Date limite : Non specifiee dans le DCE
+
+DOCUMENTS DU DCE
+- 8 documents
+  - AVIS AOO 19-2026 AR.doc
+  - AVIS AOO 19-2026 Fr.doc
+  - CPS-19-2026- GC école 2026..docx
+  - DECLARATION SUR L’HONNEUR.docx
+  - Dernière page de CPS_0001.pdf
+  - Dernière page du rc_0001.pdf
+  - RC GC école 2026.modifié.docx
+  - Acte d'engagement.doc
+
+ANALYSE CRYSTALWATER
+- Score de pertinence : 75/100

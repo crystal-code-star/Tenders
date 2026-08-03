@@ -1,0 +1,10 @@
+2026-07-07 11:39:50,996 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-07 11:39:51,555 - tender_scanner - INFO -   [PDF] PyMuPDF disponible pour l'extraction PDF
+2026-07-07 11:39:51,762 - tender_scanner - INFO -   0 existing tenders in database
+2026-07-07 11:40:32,587 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-07 11:40:32,592 - tender_scanner - INFO - 
+  [TENDER #1/6] Etudes d’exécution, fourniture des équipements, construction, installation et mi...
+2026-07-07 11:40:32,820 - tender_scanner - INFO -   [DOWNLOAD] DCE: SP4130189
+2026-07-07 11:40:56,412 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-07 11:41:21,256 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-07 11:42:36,534 - tender_scanner - WARNING -   [STOP] Download cancelled: Download.path: canceled

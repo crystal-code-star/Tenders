@@ -1,0 +1,23 @@
+2026-07-09 09:59:44,404 - DEBUG -        Fichiers dans le ZIP: 7
+2026-07-09 09:59:44,406 - DEBUG -          - DCE AOO N°A105-RRA-26/
+2026-07-09 09:59:44,407 - DEBUG -          - DCE AOO N°A105-RRA-26/AOO A105-RRA- AR.pdf
+2026-07-09 09:59:44,408 - DEBUG -          - DCE AOO N°A105-RRA-26/AOO A105-RRA- FR.pdf
+2026-07-09 09:59:44,410 - DEBUG -          - DCE AOO N°A105-RRA-26/BPDE_Lot4_OuljaNOTA.pdf
+2026-07-09 09:59:44,411 - DEBUG -          - DCE AOO N°A105-RRA-26/CPS AOO N°A105-RRA-26.pdf
+2026-07-09 09:59:44,413 - DEBUG -          - DCE AOO N°A105-RRA-26/RC  A105-RRA-26.pdf
+2026-07-09 09:59:44,414 - DEBUG -          - DCE AOO N°A105-RRA-26/Reglement des marchés SRRA du 29-05-2025.pdf
+2026-07-09 09:59:44,417 - DEBUG -        AAO non trouvé par nom, recherche dans tous les fichiers...
+2026-07-09 09:59:44,419 - DEBUG -        Extraction: DCE AOO N°A105-RRA-26/ (, 0 bytes)
+2026-07-09 09:59:44,430 - DEBUG -        Extraction: DCE AOO N°A105-RRA-26/AOO A105-RRA- AR.pdf (.pdf, 361587 bytes)
+2026-07-09 09:59:44,654 - DEBUG -        PDF: 1634 chars extraits avec PyMuPDF
+2026-07-09 09:59:44,656 - DEBUG -        Extraction: DCE AOO N°A105-RRA-26/AOO A105-RRA- FR.pdf (.pdf, 127279 bytes)
+2026-07-09 09:59:44,666 - DEBUG -        PDF: 2090 chars extraits avec PyMuPDF
+2026-07-09 09:59:44,667 - DEBUG -        AAO trouvé par contenu: DCE AOO N°A105-RRA-26/AOO A105-RRA- FR.pdf
+2026-07-09 09:59:44,667 - DEBUG -        RC trouvé: DCE AOO N°A105-RRA-26/RC  A105-RRA-26.pdf
+2026-07-09 09:59:44,674 - DEBUG -        Extraction: DCE AOO N°A105-RRA-26/RC  A105-RRA-26.pdf (.pdf, 717293 bytes)
+2026-07-09 09:59:44,788 - DEBUG -        PDF: 64831 chars extraits avec PyMuPDF
+2026-07-09 09:59:44,789 - DEBUG -        AAO preview: ROYAUME DU MAROC  | WILAYA DE LA REGION DE RABAT SALE KENITRA  | SOCIETE RABAT REGION AMENAGEMENTS  |   | AVIS D'APPEL D'OFFRES OUVERT INTERNATIONAL  | N°A0105/RRA/2026  |   |   | Le 24 Juillet 2026 à 11H00, Il sera procédé dans les bureaux de la Société Rabat Région  | Aménagements situés au : N°09, Place Al Joulan, Hassan, Rabat (Tél :05 37 20 70 70 – Fax :  | 05.37.20.45.45), à l'ouverture des plis relatifs à l’appel d’offres ouvert national sur offres de prix,  | pour :  | CONSTRUCTION DE LA CITE D’ARTISANAT ET DES...
+2026-07-09 09:59:44,791 - DEBUG -        Pattern estimation[0] match: '68 400 000.00'
+2026-07-09 09:59:44,791 - DEBUG -        Estimation extraite: 68,400,000
+2026-07-09 09:59:44,792 - DEBUG -        Caution provisoire: 1,000,000
+2026-07-09 09:59:44,796 - DEBUG -        Classe trouvée: S

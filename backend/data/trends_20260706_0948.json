@@ -1,0 +1,103 @@
+{
+  "trends": [
+    {
+      "rank": 1,
+      "trend_name": "Advanced Water Treatment Technologies",
+      "category": "Global Water Treatment",
+      "strength": 70,
+      "article_count": 2,
+      "evidence": "De.Mem's membrane technology and Dowdens' global approach to solving local water treatment issues",
+      "why_matters": "CrystalWater cares about staying updated on the latest water treatment technologies to provide the best solutions for their clients",
+      "linkedin_post_ideas": [
+        "Exploring innovative membrane technologies",
+        "The importance of global expertise in local water treatment solutions"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "De.Mem (ASX:DEM): The Membrane Technology Company Bringing Advanced Water Treatment to Industry",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNa0YydEtGNHpTYnlmcDVkRTEyMzh3S19IR1RfcXZ4bnM0LWUzMlY3azg0ckI5dEFUYnpnTXhkcnFZLWhZTVVxN2hnVG94N0QyNXZwNmdBZjJMUUZXNWNwNWpCWjMwREVJNzFJY01CR1FqSVZDb2x4MDVCTF9ETjU5cXNSYVo1akRTRE15aktwbWx2OFpPaUtQMnEyMU02YXEwN1N5aTY2S1Azc0pwNlEyZ2JNLUZHWkNfRVp3SGU3ZUlmV2c?oc=5",
+          "source": "Kalkine",
+          "published": "Mon, 06 Jul 2026 07:09:00 GMT"
+        },
+        {
+          "title": "The Dowdens approach: Searching globally, solving locally",
+          "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPbzAzTTE3QzFKRDR0dEwtV3ZYbGZ0YWc1RVE1Y3ZZOWZKVy1FVmRVS3RkTGlGRnBjaWstVzhCMGNnUklQQjZwaHZEY1VGTU14YnNERzYwNDZ1Q0xJdm9pQ0ZHbjVFWThsUXBOTEV4bUVaOVVIM1pNWDctMWVFV1NNa2h0dUd4b1MyQlVFMjV6VzNxaVRZNUVF?oc=5",
+          "source": "Australian Mining",
+          "published": "Mon, 06 Jul 2026 01:45:46 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "trend_name": "Water Reuse and Recycling",
+      "category": "Global Water Treatment",
+      "strength": 60,
+      "article_count": 1,
+      "evidence": "Innovative water reuse project launched at Manger Care Centre",
+      "why_matters": "CrystalWater cares about water reuse and recycling as a sustainable solution for water management in Morocco",
+      "linkedin_post_ideas": [
+        "The benefits of water reuse and recycling",
+        "Innovative approaches to water reuse and recycling"
+      ],
+      "suggested_posts": 3,
+      "source_articles": [
+        {
+          "title": "Innovative water reuse project launched at Manger Care Centre",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxOQkJ0Uk1HNm94QkhFdW5LZlp5WWFpbVV1RFMwc0VNN3VKb241ajZLWjNRMFBUUmJ1d1RvelBtTzBTaU9wWkNUSXNnY0ZzSVF1TWNKVW1ZNExfRDF5aWh0eVZpUDAwcHZiakIyc0JfcFA5MnY4enRTUnBISC1BMXAxekZkQVc3eFltaTQ4ZGo0MGdpQ0h6RlZfa0tjTjJ0MzMxbFZjVlNuTFRBajUxUk5BY0VtN0F6NzZLV04tVzQwb09nUFlhclR4U2FETzk?oc=5",
+          "source": "The Citizen",
+          "published": "Mon, 06 Jul 2026 02:37:43 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "trend_name": "Industry-specific Water Treatment Solutions",
+      "category": "Global Water Treatment",
+      "strength": 55,
+      "article_count": 1,
+      "evidence": "De.Mem's advanced water treatment solutions for industry",
+      "why_matters": "CrystalWater is interested in providing industry-specific water treatment solutions for their clients in Morocco",
+      "linkedin_post_ideas": [
+        "The importance of industry-specific water treatment solutions",
+        "Tailoring water treatment solutions to meet industry needs"
+      ],
+      "suggested_posts": 2,
+      "source_articles": [
+        {
+          "title": "De.Mem (ASX:DEM): The Membrane Technology Company Bringing Advanced Water Treatment to Industry",
+          "url": "https://news.google.com/rss/articles/CBMiwwFBVV95cUxNa0YydEtGNHpTYnlmcDVkRTEyMzh3S19IR1RfcXZ4bnM0LWUzMlY3azg0ckI5dEFUYnpnTXhkcnFZLWhZTVVxN2hnVG94N0QyNXZwNmdBZjJMUUZXNWNwNWpCWjMwREVJNzFJY01CR1FqSVZDb2x4MDVCTF9ETjU5cXNSYVo1akRTRE15aktwbWx2OFpPaUtQMnEyMU02YXEwN1N5aTY2S1Azc0pwNlEyZ2JNLUZHWkNfRVp3SGU3ZUlmV2c?oc=5",
+          "source": "Kalkine",
+          "published": "Mon, 06 Jul 2026 07:09:00 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "trend_name": "Desalination Projects",
+      "category": "Global Water Treatment",
+      "strength": 50,
+      "article_count": 1,
+      "evidence": "Desalination project plaque controversy in India",
+      "why_matters": "CrystalWater is interested in desalination projects as a potential solution for water scarcity issues in Morocco",
+      "linkedin_post_ideas": [
+        "Desalination as a solution for water scarcity",
+        "The role of desalination in addressing global water challenges"
+      ],
+      "suggested_posts": 2,
+      "source_articles": [
+        {
+          "title": "'Erasing Dravidian model': DMK slams TVK over removal of Stalin's name from desalination project plaque",
+          "url": "https://news.google.com/rss/articles/CBMi9AFBVV95cUxPQkoyUkNnM19MU3hwSEt4UXdQOGNvdUpYQzlUZk5tRjk5enF5MHVBV0RHclA2MnNMNXF1UWlQQm1ZMnFjMFR2MFV1WDZBdXNSRFc3VFB4eW5PWXNXdEU3ZGFFbzN3REVpZnRVdW1BMlh5UEU4a0NxVEFzNWh2RXZfeTU3MDU3SVdBZHdOei1DQmxlZmwyNUdRYmUwZ0xxdzBfQjlRZzlZTFRGcFhoX3U2Q3hhYnZxakN3VkI3NFlsdThxT1hyWFEzYld1dHpGTnRHd3FRYUpSME9SbHhabDBlXzlkTTJkcDI5M3hqRDc4M2t2VGo30gGCAkFVX3lxTE8ta2dySjQ3N0xhd2tVQXJhU2IwVll1U0RUMWJWWTAyUDd1ZzJYVnZyLWd0c1JQbHRLS0FrYjVRV3loZ2lGOXRlaG5DTVlvdnNRNnpYc25iUzdENEVibnV5eV96U3Y2MlR6SFdtY0NJWi00RGt4VnF1ak53UFAzM3diSUNoQ3c4c3R3VktqRkpQR1hDZXlvVXhFZTZzLWt6YzBzd1d1Z3ZsUlpDaXNWWXJxaVFKaUYySjRiOTRDeTQwT0xzVmJEOHBTRW9vZlFKaVFOR1l4ZFFqQ0hvby1BOXFoWnNMbUNWczFUelNvT1hVdmR4LUlzVHZWNl9SVDd6SjltZw?oc=5",
+          "source": "The New Indian Express",
+          "published": "Mon, 06 Jul 2026 06:19:17 GMT"
+        }
+      ]
+    }
+  ],
+  "engine": "Groq",
+  "total_fetched": 4,
+  "week": "Week-28-2026",
+  "week_label": "Week 28, July 2026",
+  "research_date": "2026-07-06"
+}

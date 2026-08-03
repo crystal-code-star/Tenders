@@ -1,0 +1,60 @@
+# FastAPI backend
+fastapi
+uvicorn
+python-multipart
+
+# HTTP
+requests
+python-dotenv
+
+# LangChain + LLM
+langchain
+langchain-core
+langchain-huggingface
+langchain-groq
+
+# LLM providers
+huggingface-hub
+groq
+
+# Database
+supabase
+sqlalchemy
+psycopg2-binary
+
+# Image processing
+Pillow
+
+# Authentication & Security
+PyJWT==2.8.0
+passlib[bcrypt]==1.7.4
+python-jose[cryptography]==3.3.0
+bcrypt==4.1.2
+
+# RSS / Feed parsing
+feedparser
+
+# LinkedIn Outreach - Multi-source search
+duckduckgo-search==7.2.1
+playwright==1.48.0
+
+# ⭐ TENDERS - Appels d'Offres
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+resend>=0.8.0
+
+fastapi==0.115.0
+uvicorn[standard]==0.32.0
+python-multipart==0.0.12
+requests==2.32.3
+python-dotenv==1.0.1
+mammoth==1.8.0
+openpyxl==3.1.5
+python-docx==1.1.2
+
+docx2pdf
+python-docx
+openpyxl
+xlrd
+mammoth   # if you still use it for HTML preview
+requests

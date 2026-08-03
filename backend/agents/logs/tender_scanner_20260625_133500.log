@@ -1,0 +1,166 @@
+2026-06-25 13:35:00,741 - tender_scanner - INFO -   CrystalWater - Scan Automatique Continu
+2026-06-25 13:35:00,741 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees...
+2026-06-25 13:35:02,553 - tender_scanner - INFO -   0 AO deja en base
+2026-06-25 13:35:32,579 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:35:32,680 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-06-25 13:35:41,668 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 13:35:49,251 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-25 13:36:07,850 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-25 13:36:10,952 - tender_scanner - INFO -   [OK] ZIP recu: 1372290 octets
+2026-06-25 13:36:12,654 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/d21acfde-a029-48ff-af75-583aef4ee4e9.zip
+2026-06-25 13:36:12,795 - tender_scanner - INFO -   [GROQ] Generation du resume IA...
+2026-06-25 13:36:12,796 - tender_scanner - INFO -   [GROQ] Envoi au LLM pour analyse...
+2026-06-25 13:36:14,440 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-06-25 13:36:14,591 - tender_scanner - INFO - 
+============================================================
+  RESUME DCE - 06/2026/DR4
+============================================================
+
+--- INFORMATIONS GÉNÉRALES ---
+• Maître d'ouvrage : Office National de l'Electricité et de l'Eau Potable (ONEE) - Branche Eau
+• Objet du marché : AEP de la ville de Souk larbaa à partir de la ST de Loukkos - Lot : Télegestion
+• Lieu d'exécution : Kénitra, Rabat-Salé-Kénitra
+• Type de marché : Travaux
+
+--- BUDGET & FINANCES ---
+• Budget estimé : Non spécifié
+• Caution provisoire : 112 100,00 DH
+• Modalités de paiement : Non spécifié
+
+--- DATES CLÉS ---
+• Date limite de remise des plis : Non spécifié
+• Ouverture des plis : Mardi 01/09/2026 à 09h00
+• Visite des lieux : Non spécifié
+• Délai d'exécution : Non spécifié
+
+--- LOTS & PRESTATIONS ---
+• Nombre de lots : 1
+• Description : Télegestion
+• Montants par lot : Non spécifié
+
+--- PERTINENCE CRYSTALWATER ---
+• Score de pertinence : 80
+• Mots-clés trouvés : Télegestion, AEP, Eau potable, ONEE
+• Analyse : Cet appel d'offres est pertinent pour CrystalWater car il concerne le traitement et la gestion de l'eau potable, ce qui correspond à la spécialité de l'entreprise.
+
+--- RECOMMANDATION ---
+• SOUMISSIONNER : Cette opportunité est intéressante pour CrystalWater car elle concerne le traitement et la gestion de l'eau potable, ce qui correspond à la spécialité de l'entreprise.
+2026-06-25 13:36:15,423 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:36:33,762 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:36:33,926 - tender_scanner - INFO -   [DOWNLOAD] DCE: 63/DPAJ/2026
+2026-06-25 13:36:42,068 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 13:36:49,691 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-25 13:37:08,363 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-25 13:37:11,200 - tender_scanner - INFO -   [OK] ZIP recu: 263877 octets
+2026-06-25 13:37:12,421 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/d01b28be-4e9f-4e1f-a8c1-f174b8d44d28.zip
+2026-06-25 13:37:12,499 - tender_scanner - INFO -   [GROQ] Generation du resume IA...
+2026-06-25 13:37:12,499 - tender_scanner - INFO -   [GROQ] Envoi au LLM pour analyse...
+2026-06-25 13:37:14,299 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-06-25 13:37:14,372 - tender_scanner - INFO - 
+============================================================
+  RESUME DCE - 63/DPAJ/2026
+============================================================
+
+--- INFORMATIONS GÉNÉRALES ---
+• Maître d'ouvrage : Le Directeur Provincial de l'Agriculture de Jerada
+• Objet du marché : Travaux de régénération du sol par épandage des eaux pluviales sur une superficie de 750 ha
+• Lieu d'exécution : Communes Mrija et Oulad ghziyel, province de Jerada
+• Type de marché : Travaux
+
+--- BUDGET & FINANCES ---
+• Budget estimé : 2 400 000,00 DH
+• Caution provisoire : 43 000,00 DH
+• Modalités de paiement : Non spécifié
+
+--- DATES CLÉS ---
+• Date limite de remise des plis : Non spécifié
+• Ouverture des plis : 03/08/2026 à 10h
+• Visite des lieux : Non spécifié
+• Délai d'exécution : Non spécifié
+
+--- LOTS & PRESTATIONS ---
+• Nombre de lots : 1
+• Description : Travaux de régénération du sol par épandage des eaux pluviales
+• Montants par lot : Non spécifié
+
+--- PERTINENCE CRYSTALWATER ---
+• Score de pertinence : 60 (CrystalWater est spécialisée dans le traitement d'eau potable et assainissement, mais les travaux de régénération du sol par épandage des eaux pluviales ne sont pas directement liés à ses activités)
+• Mots-clés trouvés : eaux pluviales, régénération du sol, épandage
+• Analyse : Même si les travaux de régénération du sol par épandage des eaux pluviales ne sont pas directement liés à l'activité principale de CrystalWater, l'entreprise pourrait être intéressée par ce marché en raison de sa capacité à proposer des solutions innovantes pour la gestion des eaux pluviales.
+
+--- RECOMMANDATION ---
+• VEILLE : CrystalWater pourrait être intéressée par ce marché en raison de sa capacité à proposer des solutions innovantes pour la gestion des eaux pluviales, mais il est préférable de faire une veille avant de soumettre une offre.
+2026-06-25 13:37:15,138 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:37:50,454 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:37:51,208 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:37:51,316 - tender_scanner - INFO -   [DOWNLOAD] DCE: 28/DR5/2026
+2026-06-25 13:37:59,647 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 13:38:07,327 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-25 13:38:26,584 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-25 13:38:45,447 - tender_scanner - INFO -   [OK] ZIP recu: 29280278 octets
+2026-06-25 13:38:52,701 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/dcbf3fb5-69b8-4f79-80c5-4a5e3a8bf92a.zip
+2026-06-25 13:38:54,037 - tender_scanner - INFO -   [GROQ] Generation du resume IA...
+2026-06-25 13:38:54,037 - tender_scanner - INFO -   [GROQ] Envoi au LLM pour analyse...
+2026-06-25 13:38:55,632 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-06-25 13:38:56,886 - tender_scanner - INFO - 
+============================================================
+  RESUME DCE - 28/DR5/2026
+============================================================
+
+--- INFORMATIONS GÉNÉRALES ---
+• Maître d'ouvrage : Office National de l'Électricité et de l'Eau Potable (ONEE) - Branche Eau
+• Objet du marché : Renforcement et sécurisation de l'AEP des localités de l'axe d'El Menzel-Ribat El Kheir à partir de la source Ain Timedrine (2ème tranche) - Lot Prise d'eau, station de traitement, SR1 et SR2
+• Lieu d'exécution : Fès - Meknès
+• Type de marché : Travaux
+
+--- BUDGET & FINANCES ---
+• Budget estimé : 27 960 000,00 DH TTC
+• Caution provisoire : 279 600,00 DH ou son équivalent en devise librement convertible
+• Modalités de paiement : Non spécifié
+
+--- DATES CLÉS ---
+• Date limite de remise des plis : Non spécifié
+• Ouverture des plis : 25/06/2026 à 9 h
+• Visite des lieux : 02/06/2026 à 10 h
+• Délai d'exécution : Non spécifié
+
+--- LOTS & PRESTATIONS ---
+• Nombre de lots : 1
+• Description : Renforcement et sécurisation de l'AEP des localités de l'axe d'El Menzel-Ribat El Kheir à partir de la source Ain Timedrine (2ème tranche) - Lot Prise d'eau, station de traitement, SR1 et SR2
+• Montants par lot : Non spécifié
+
+--- PERTINENCE CRYSTALWATER ---
+• Score de pertinence : 80 (CrystalWater est spécialisée dans le traitement d'eau potable et assainissement, ce qui correspond à l'objet du marché)
+• Mots-clés trouvés : Traitement d'eau potable, assainissement, prise d'eau, station de traitement
+• Analyse : Cet appel d'offres est pertinent pour CrystalWater car il concerne le traitement d'eau potable et assainissement, qui sont des domaines d'expertise de l'entreprise.
+
+--- RECOMMANDATION ---
+• SOUMISSIONNER : Oui, car CrystalWater a les compétences et les capacités nécessaires pour répondre à l'objet du marché.
+2026-06-25 13:38:57,586 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:38:58,375 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:38:58,476 - tender_scanner - INFO -   [DOWNLOAD] DCE: TC4130785/2026/ONEEBELEC
+2026-06-25 13:39:06,695 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 13:39:14,438 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-25 13:39:33,255 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-25 13:39:46,637 - tender_scanner - INFO -   [OK] ZIP recu: 8374603 octets
+2026-06-25 13:39:49,018 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/168099a0-f504-441e-abb4-13c2c7b95b1c.zip
+2026-06-25 13:39:49,598 - tender_scanner - INFO -   [GROQ] Generation du resume IA...
+2026-06-25 13:39:49,599 - tender_scanner - INFO -   [GROQ] Envoi au LLM pour analyse...
+2026-06-25 13:39:50,327 - tender_scanner - WARNING -   [GROQ] Erreur API (413): {"error":{"message":"Request too large for model `llama-3.1-8b-instant` in organization `org_01kv5ny5kzek6axh5t1xjh4sgw` service tier `on_demand` on tokens per minute (TPM): Limit 6000, Requested 6698
+2026-06-25 13:39:51,926 - tender_scanner - INFO - 
+============================================================
+  RESUME DCE - TC4130785/2026/ONEEBELEC
+============================================================
+
+  Budget estime : Non trouve
+
+  1 documents dans le DCE
+    - Cahier des charges Projet MEDZ TC4130785.pdf
+
+  [Resume genere par extraction automatique - Configurer GROQ_API_KEY pour un resume IA]
+============================================================
+2026-06-25 13:39:52,690 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:39:53,441 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-25 13:39:53,557 - tender_scanner - INFO -   [DOWNLOAD] DCE: 38/2026/SRMFM
+2026-06-25 13:40:01,891 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-25 13:40:09,708 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...

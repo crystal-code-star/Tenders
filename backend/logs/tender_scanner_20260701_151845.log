@@ -1,0 +1,120 @@
+2026-07-01 15:19:03,705 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-01 15:19:03,708 - tender_scanner - WARNING -   [OCR] Module paddleocr non installe ou casse: No module named 'paddleocr'
+2026-07-01 15:25:11,995 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees (tenders_3)...
+2026-07-01 15:25:13,147 - tender_scanner - INFO -   0 AO deja en base (tenders_3)
+2026-07-01 15:26:07,001 - tender_scanner - INFO -   [EXTRACT] Ref: 06/2026/DR4 | Deadline: 01/09/2026 09:00 | Parsed: 2026-09-01T09:00:00 | RepElec: False
+2026-07-01 15:26:07,359 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 15:26:10,166 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-07-01 15:26:30,174 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 15:26:50,427 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 15:26:56,199 - tender_scanner - INFO -   [OK] ZIP recu: 1372290 octets
+2026-07-01 15:27:11,868 - tender_scanner - INFO -   [ZIP] 13 fichier(s) detecte(s) dans le DCE
+2026-07-01 15:27:11,880 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'Annexe 1 - Répartition des prestations VF.xls'...
+2026-07-01 15:27:17,441 - tender_scanner - INFO -   [DOCLING] 'Annexe 1 - Répartition des prestations VF.xls' : 7265 caracteres
+2026-07-01 15:27:17,444 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls'...
+2026-07-01 15:27:18,203 - tender_scanner - INFO -   [DOCLING] 'Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls' : 39349 caracteres
+2026-07-01 15:27:19,296 - tender_scanner - INFO -   [DOCLING] 'Avis AO 06 DR4 2026.docx' : 5110 caracteres
+2026-07-01 15:27:19,638 - tender_scanner - INFO -   [DOCLING] 'BP.xlsm' : 4114 caracteres
+2026-07-01 15:27:23,112 - tender_scanner - INFO -   [DOCLING] 'CCAFP Travaux - FSD (Français).docx' : 13966 caracteres
+2026-07-01 15:28:43,919 - tender_scanner - INFO -   [DOCLING] 'CCTP Télégestion 03.07.2025.docx' : 68935 caracteres
+2026-07-01 15:28:44,778 - tender_scanner - INFO -   [DOCLING] 'DP 24-07-2025.xlsx' : 59469 caracteres
+2026-07-01 15:28:49,120 - tender_scanner - INFO -   [DOCLING] 'Modeles.docx' : 9374 caracteres
+2026-07-01 15:28:49,130 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'PG DCE.xls'...
+2026-07-01 15:28:49,627 - tender_scanner - INFO -   [DOCLING] 'PG DCE.xls' : 638 caracteres
+2026-07-01 15:28:59,522 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE 06 DR4 2026/RCDG Travaux ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 15:29:10,392 - tender_scanner - INFO -   [DOCLING] 'RCDP Travaux - FSD.docx' : 34530 caracteres
+2026-07-01 15:29:10,766 - tender_scanner - INFO -   [DOCLING] 'Tableau Annexe principlal.xlsx' : 19328 caracteres
+2026-07-01 15:29:11,353 - tender_scanner - INFO -   [DOCLING] 'Tableau Annexe secondaire.xlsx' : 24593 caracteres
+2026-07-01 15:29:11,356 - tender_scanner - INFO -   [RESUME] Texte total extrait: 287139 caracteres
+2026-07-01 15:29:11,924 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 8000/287139 caracteres
+2026-07-01 15:29:11,924 - tender_scanner - INFO -   [GROQ] Envoi au LLM (8000 caracteres)...
+2026-07-01 15:29:15,776 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-01 15:29:16,003 - tender_scanner - INFO - 
+RESUME DCE - 06/2026/DR4
+INFORMATIONS GENERALES
+- Maitre d'ouvrage : OFFICE NATIONAL DE L'ÉLECTRICITÉ ET DE L'EAU POTABLE (ONEE)
+- Financement du marche : Fond Saoudien de Développement (FSD)
+- Objet du marche : Fourniture, installation et mise en service d'un système de télégestion du système de production d'eau potable constituée de 1 station de traitement, 3 stations de reprise et 10 réservoirs
+- Lieu d'execution : AEP de la ville de Souk larbaa à partir de la ST de Loukkos
+- Type de marche : Travaux
+- Type d'appel d'offres : International
+- Type d'offre : Ordinaire
+BUDGET ET FINANCES
+- Budget estime total : ---- (pas de montant spécifié)
+- Montant minimum : ---- (pas de montant spécifié)
+- Montant maximum : ---- (pas de montant spécifié)
+- Caution provisoire : 112 100,00 DH
+- Caution definitive : ---- (pas de montant spécifié)
+- Duree de validite de la caution : ---- (pas de durée spécifiée)
+DATES CLES
+- Date limite de remise des plis : ---- (pas de date spécifiée)
+- Ouverture des plis : ---- (pas de date spécifiée)
+- Visite des lieux : ---- (pas de date spécifiée)
+- Delai d'execution : ---- (pas de durée spécifiée)
+PRESTATIONS ET LOTS
+- Nombre de lots : 1
+- Description des prestations : Fourniture, installation et mise en service d'un système de télégestion du système de production d'eau potable constituée de 1 station de traitement, 3 stations de reprise et 10 réservoirs
+CONDITIONS DE PARTICIPATION
+- Type d'ouvrage : Travaux
+- Qualification exigee : ---- (pas de classe spécifiée)
+- Chiffre d'affaires minimum : ---- (pas de montant spécifié)
+- Duree attestation CA : ---- (pas d'année spécifiée)
+- Type de references : Attestations du chiffre d'affaires ou leurs copies certifiées conformes à l'original
+- Montant minimum reference : ---- (pas de montant spécifié)
+- Duree minimale reference : ---- (pas de durée spécifiée)
+- Conditions particulieres : Fournir les pièces complémentaires suivantes : attestations du chiffre d'affaires ou leurs copies certifiées conformes à l'original
+- Preference nationale/majoration : ---- (pas de description spécifiée)
+- Base d'attribution : ---- (pas de description spécifiée)
+ANALYSE CRYSTALWATER
+- Score de pertinence : 79/100
+- Mots-cles identifies : Télégestion, production d'eau potable, système de télégestion, station de traitement, stations de reprise, réservoirs
+- Opportunite : Cette opportunité présente un intérêt pour CrystalWater en raison de la fourniture, de l'installation et de la mise en service d'un système de télégestion du système de production d'eau potable. Le projet nécessite une expertise dans le domaine de la télégestion et de la production d'eau potable.
+RECOMMANDATION
+- Action recommandee : SOUMISSIONNER
+- Justification : Cette opportunité présente un intérêt pour CrystalWater en raison de la fourniture, de l'installation et de la mise en service d'un système de télégestion du système de production d'eau potable. Le projet nécessite une expertise dans le domaine de la télégestion et de la production d'eau potable.
+2026-07-01 15:29:29,484 - tender_scanner - INFO -   [EXTRACT] Ref: 27/DAM/ET/2026 | Deadline: 12/08/2026 10:00 | Parsed: 2026-08-12T10:00:00 | RepElec: None
+2026-07-01 15:29:30,640 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 15:29:31,401 - tender_scanner - INFO -   [DOWNLOAD] DCE: 27/DAM/ET/2026
+2026-07-01 15:29:49,675 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 15:30:09,199 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 15:36:05,151 - tender_scanner - INFO -   [OK] ZIP recu: 153963073 octets
+2026-07-01 15:36:05,152 - tender_scanner - ERROR -   [ZIP] Fichier trop volumineux (>50MB) pour 27/DAM/ET/2026
+2026-07-01 15:36:05,154 - tender_scanner - INFO -   [ZIP] 32 fichier(s) detecte(s) dans le DCE
+2026-07-01 15:36:05,451 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Doc information/CONDUITE.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 15:36:05,741 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Doc information/STATION DE SURPRESSION.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 15:36:07,296 - tender_scanner - INFO -   [DOCLING] 'Avis FR- AR 27-26.docx' : 5476 caracteres
+2026-07-01 15:36:07,478 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/Avis Initial AO 27-26.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 15:36:07,711 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/CCAFG Travaux ONEE-Branche Eau (Version 4 - Octobre 2016).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 15:36:15,604 - tender_scanner - INFO -   [DOCLING] 'CCAFP ONEE-Branche Eau - Travaux- version 2021.docx' : 17462 caracteres
+2026-07-01 15:36:15,833 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Partie administrative/RCDG Travaux ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 15:36:27,577 - tender_scanner - INFO -   [DOCLING] 'RCDP-Travaux- ONEE.docx' : 53127 caracteres
+2026-07-01 15:36:28,985 - tender_scanner - INFO -   [DOCLING] 'BP- 27-26.xlsm' : 10043 caracteres
+2026-07-01 15:38:18,923 - tender_scanner - INFO -   [DOCLING] 'CCTP conduites.docx' : 157520 caracteres
+2026-07-01 15:38:57,772 - tender_scanner - INFO -   [DOCLING] 'Annexe CCTP -Partie Equipement.docx' : 39498 caracteres
+2026-07-01 15:44:39,886 - tender_scanner - INFO -   [DOCLING] 'CCTP-Equipement.docx' : 313312 caracteres
+2026-07-01 15:44:41,968 - tender_scanner - INFO -   [DOCLING] 'A ajouter au CCTP-SECURITE DU CHANTIER.docx' : 7933 caracteres
+2026-07-01 15:46:13,778 - tender_scanner - INFO -   [DOCLING] 'CCTP-GC.docx' : 111066 caracteres
+2026-07-01 15:46:13,793 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour '1-Définition des prix-Etude.doc'...
+2026-07-01 15:46:13,853 - tender_scanner - INFO -   [CONVERT] '1-Définition des prix-Etude.doc' : 36202 caracteres
+2026-07-01 15:46:30,872 - tender_scanner - INFO -   [DOCLING] '2-Défnition des prix-Conduite.docx' : 47105 caracteres
+2026-07-01 15:46:30,881 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour '3-Définition des prix-GC.doc'...
+2026-07-01 15:46:31,052 - tender_scanner - INFO -   [CONVERT] '3-Définition des prix-GC.doc' : 173644 caracteres
+2026-07-01 15:46:31,058 - tender_scanner - INFO -   [CONVERT] Conversion .doc -> texte pour '4-Définition des prix-EQ .doc'...
+2026-07-01 15:46:31,205 - tender_scanner - INFO -   [CONVERT] '4-Définition des prix-EQ .doc' : 109294 caracteres
+2026-07-01 15:46:31,350 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/10-Plan Type Loge Gardien.dwg': Conversion failed for: tmp9k_nixad.dwg with status: skipped. Errors: File format not allowed: tmp9k_nixad.dwg
+2026-07-01 15:46:31,688 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/11-Plan Type Local annexe.dwg': Conversion failed for: tmpcphckyws.dwg with status: skipped. Errors: File format not allowed: tmpcphckyws.dwg
+2026-07-01 15:46:31,824 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/12-Plans type  Cloture Type D avec Barreaudage.dwg': Conversion failed for: tmplu5wmqe8.dwg with status: skipped. Errors: File format not allowed: tmplu5wmqe8.dwg
+2026-07-01 15:46:32,445 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/13-Plan Type Def-A3.dwg': Conversion failed for: tmp45l74udt.dwg with status: skipped. Errors: File format not allowed: tmp45l74udt.dwg
+2026-07-01 15:46:32,655 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/2- Profil reduit-1.dwg': Conversion failed for: tmptq4v939i.dwg with status: skipped. Errors: File format not allowed: tmptq4v939i.dwg
+2026-07-01 15:46:32,902 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/3-Trace Reduit.dwg': Conversion failed for: tmpt7spl2wk.dwg with status: skipped. Errors: File format not allowed: tmpt7spl2wk.dwg
+2026-07-01 15:46:33,019 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/4-Trace 1000 Tamri-DEF.dwg': Conversion failed for: tmp0mh06ccz.dwg with status: skipped. Errors: File format not allowed: tmp0mh06ccz.dwg
+2026-07-01 15:46:33,209 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/5-1 et 5-2-Plan raccord-Comptage amont et conduite exist.dwg': Conversion failed for: tmpwjh7_aia.dwg with status: skipped. Errors: File format not allowed: tmpwjh7_aia.dwg
+2026-07-01 15:46:33,449 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/5-3 -Soupape Projetée.dwg': Conversion failed for: tmp6an6zeyv.dwg with status: skipped. Errors: File format not allowed: tmp6an6zeyv.dwg
+2026-07-01 15:46:34,614 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/6 et 7-Station Surp Projetee-DEF10.dwg': Conversion failed for: tmp12xiwoj3.dwg with status: skipped. Errors: File format not allowed: tmp12xiwoj3.dwg
+2026-07-01 15:46:34,714 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/8-Plan Local de livraison (MT).dwg': Conversion failed for: tmphuaytxzj.dwg with status: skipped. Errors: File format not allowed: tmphuaytxzj.dwg
+2026-07-01 15:46:34,826 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE AO 27-2026 Conduites - Eqpts- GC Tamri/Plans-Partie I/9-Plan Poste Transf.dwg': Conversion failed for: tmp5kzjowhg.dwg with status: skipped. Errors: File format not allowed: tmp5kzjowhg.dwg
+2026-07-01 15:46:36,777 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/1-Plan de situation.dwg': Conversion failed for: tmp1ih0eees.dwg with status: skipped. Errors: File format not allowed: tmp1ih0eees.dwg
+2026-07-01 15:46:36,889 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/MNT B-Tamri.dwl': Conversion failed for: tmp4_jj0t15.dwl with status: skipped. Errors: File format not allowed: tmp4_jj0t15.dwl
+2026-07-01 15:46:37,059 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/MNT B-Tamri.dwl2': Conversion failed for: tmpkhtqld31.dwl2 with status: skipped. Errors: File format not allowed: tmpkhtqld31.dwl2
+2026-07-01 15:46:37,107 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/plot.log': Conversion failed for: tmpeida6sw3.log with status: skipped. Errors: File format not allowed: tmpeida6sw3.log
+2026-07-01 15:46:37,149 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'Plans-Partie II-1.zip/Plans-Partie II-1/1-Plan de situation/T1.jgw': Conversion failed for: tmpsa25k69_.jgw with status: skipped. Errors: File format not allowed: tmpsa25k69_.jgw

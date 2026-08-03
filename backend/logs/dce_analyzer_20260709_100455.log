@@ -1,0 +1,19 @@
+2026-07-09 10:04:59,733 - DEBUG -        Fichiers dans le ZIP: 8
+2026-07-09 10:04:59,734 - DEBUG -          - RCDP.docx
+2026-07-09 10:04:59,735 - DEBUG -          - Avis AO 12 DR4 2026.docx
+2026-07-09 10:04:59,736 - DEBUG -          - BP .xlsm
+2026-07-09 10:04:59,737 - DEBUG -          - CCAFP.docx
+2026-07-09 10:04:59,738 - DEBUG -          - CCTP .doc
+2026-07-09 10:04:59,740 - DEBUG -          - Définition Prix .xls
+2026-07-09 10:04:59,741 - DEBUG -          - Modeles BEI.docx
+2026-07-09 10:04:59,742 - DEBUG -          - RCDG Travaux ONEE (Avril 2021).pdf
+2026-07-09 10:04:59,744 - DEBUG -        AAO trouvé: Avis AO 12 DR4 2026.docx
+2026-07-09 10:04:59,746 - DEBUG -        Extraction: Avis AO 12 DR4 2026.docx (.docx, 23516 bytes)
+2026-07-09 10:05:00,121 - DEBUG -        DOCX: 5172 chars extraits avec python-docx
+2026-07-09 10:05:00,154 - DEBUG -        RC trouvé: RCDP.docx
+2026-07-09 10:05:00,211 - DEBUG -        Extraction: RCDP.docx (.docx, 124629 bytes)
+2026-07-09 10:05:00,409 - DEBUG -        DOCX: 29146 chars extraits avec python-docx
+2026-07-09 10:05:00,410 - DEBUG -        AAO preview: OFFICE NATIONAL DE l’ÉLECTRICITÉ et de L’EAU POTABLE (ONEE) | Branche Eau | DIRECTION DE LA REGION DE PRODUCTION RABAT-SALE-KENITRA | Renforcement de l’AEP des centres Zaggota -Selfat à partir des forages de Nzalat Bni Ammar – Lot : Equipement 2. | AVIS D’APPEL D’OFFRES OUVERT   N°   12/DR4/2026 | Séance publique | La Direction Régionale de production RABAT-SALE-KENITRA de l’ONEE-Branche Eau, sise à Kenitra, lance le présent appel d’offres qui concerne le renforcement de l’AEP des centres Zaggota -Selfat à ...
+2026-07-09 10:05:00,412 - DEBUG -        Pattern estimation[1] match: ''
+2026-07-09 10:05:00,412 - DEBUG -        Conversion échouée: ''
+2026-07-09 10:05:00,414 - DEBUG -        Aucun pattern estimation trouvé

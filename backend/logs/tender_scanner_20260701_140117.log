@@ -1,0 +1,75 @@
+2026-07-01 14:01:29,141 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-01 14:01:29,143 - tender_scanner - WARNING -   [OCR] Module paddleocr non installe ou casse: No module named 'paddleocr'
+2026-07-01 14:01:29,189 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees (tenders_3)...
+2026-07-01 14:01:30,674 - tender_scanner - INFO -   0 AO deja en base (tenders_3)
+2026-07-01 14:02:01,174 - tender_scanner - INFO -   [EXTRACT] Ref: 06/2026/DR4 | Deadline: 01/09/2026 09:00 | Parsed: 2026-09-01T09:00:00 | RepElec: False
+2026-07-01 14:02:01,981 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 14:02:02,606 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-07-01 14:02:20,657 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-07-01 14:02:41,100 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-07-01 14:02:46,957 - tender_scanner - INFO -   [OK] ZIP recu: 1372290 octets
+2026-07-01 14:03:01,729 - tender_scanner - ERROR - Erreur upload ZIP: 400 - {"statusCode":"409","error":"Duplicate","message":"The resource already exists"}
+2026-07-01 14:03:01,751 - tender_scanner - INFO -   [ZIP] 13 fichier(s) detecte(s) dans le DCE
+2026-07-01 14:03:01,761 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'Annexe 1 - Répartition des prestations VF.xls'...
+2026-07-01 14:03:02,962 - tender_scanner - INFO -   [DOCLING] 'Annexe 1 - Répartition des prestations VF.xls' : 7265 caracteres
+2026-07-01 14:03:02,966 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls'...
+2026-07-01 14:03:03,593 - tender_scanner - INFO -   [DOCLING] 'Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls' : 39349 caracteres
+2026-07-01 14:03:05,099 - tender_scanner - INFO -   [DOCLING] 'Avis AO 06 DR4 2026.docx' : 5110 caracteres
+2026-07-01 14:03:05,564 - tender_scanner - INFO -   [DOCLING] 'BP.xlsm' : 4114 caracteres
+2026-07-01 14:03:10,442 - tender_scanner - INFO -   [DOCLING] 'CCAFP Travaux - FSD (Français).docx' : 13966 caracteres
+2026-07-01 14:03:55,997 - tender_scanner - INFO -   [DOCLING] 'CCTP Télégestion 03.07.2025.docx' : 68935 caracteres
+2026-07-01 14:03:56,148 - tender_scanner - INFO -   [DOCLING] 'DP 24-07-2025.xlsx' : 59469 caracteres
+2026-07-01 14:03:57,395 - tender_scanner - INFO -   [DOCLING] 'Modeles.docx' : 9374 caracteres
+2026-07-01 14:03:57,399 - tender_scanner - INFO -   [CONVERT] Conversion .xls -> .xlsx pour 'PG DCE.xls'...
+2026-07-01 14:03:57,583 - tender_scanner - INFO -   [DOCLING] 'PG DCE.xls' : 638 caracteres
+2026-07-01 14:04:03,503 - tender_scanner - WARNING -   [DOCLING] Erreur extraction 'DCE 06 DR4 2026/RCDG Travaux ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-01 14:04:08,514 - tender_scanner - INFO -   [DOCLING] 'RCDP Travaux - FSD.docx' : 34530 caracteres
+2026-07-01 14:04:08,702 - tender_scanner - INFO -   [DOCLING] 'Tableau Annexe principlal.xlsx' : 19328 caracteres
+2026-07-01 14:04:08,947 - tender_scanner - INFO -   [DOCLING] 'Tableau Annexe secondaire.xlsx' : 24593 caracteres
+2026-07-01 14:04:08,949 - tender_scanner - INFO -   [RESUME] Texte total extrait: 287139 caracteres
+2026-07-01 14:04:09,198 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 8000/287139 caracteres
+2026-07-01 14:04:09,198 - tender_scanner - INFO -   [GROQ] Envoi au LLM (8000 caracteres)...
+2026-07-01 14:04:12,363 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-01 14:04:12,486 - tender_scanner - INFO - 
+RESUME DCE - 06/2026/DR4
+INFORMATIONS GENERALES
+- Maitre d'ouvrage : OFFICE NATIONAL DE L'ÉLECTRICITÉ ET DE L'EAU POTABLE (ONEE)
+- Financement du marche : Fond Saoudien de Développement (FSD)
+- Objet du marche : Fourniture, installation et mise en service d'un système de télégestion du système de production d'eau potable constituée de 1 station de traitement, 3 stations de reprise et 10 réservoirs
+- Lieu d'execution : AEP de la ville de Souk larbaa à partir de la ST de Loukkos - Lot : Télegestion
+- Type de marche : Travaux
+- Type d'appel d'offres : International
+- Type d'offre : Ordinaire
+BUDGET ET FINANCES
+- Budget estime total : ---- (pas de montant mentionné)
+- Montant minimum : ---- (pas de montant mentionné)
+- Montant maximum : ---- (pas de montant mentionné)
+- Caution provisoire : 112 100,00 DH
+- Caution definitive : ---- (pas de montant mentionné)
+- Duree de validite de la caution : ---- (pas de durée mentionnée)
+DATES CLES
+- Date limite de remise des plis : ---- (pas de date mentionnée)
+- Ouverture des plis : ---- (pas de date mentionnée)
+- Visite des lieux : ---- (pas de date mentionnée)
+- Delai d'execution : ---- (pas de durée mentionnée)
+PRESTATIONS ET LOTS
+- Nombre de lots : 1
+- Description des prestations : Fourniture, installation et mise en service d'un système de télégestion du système de production d'eau potable constituée de 1 station de traitement, 3 stations de reprise et 10 réservoirs
+CONDITIONS DE PARTICIPATION
+- Type d'ouvrage : Travaux
+- Qualification exigee : ---- (pas de classe mentionnée)
+- Chiffre d'affaires minimum : ---- (pas de montant mentionné)
+- Duree attestation CA : ---- (pas d'année mentionnée)
+- Type de references : Attestations du chiffre d'affaires ou leurs copies certifiées conformes à l'original
+- Montant minimum reference : ---- (pas de montant mentionné)
+- Duree minimale reference : ---- (pas de durée mentionnée)
+- Conditions particulieres : Fournir les pièces complémentaires suivantes : attestation du chiffre d'affaires ou leurs copies certifiées conformes à l'original
+- Preference nationale/majoration : ---- (pas de description mentionnée)
+- Base d'attribution : ---- (pas de description mentionnée)
+ANALYSE CRYSTALWATER
+- Score de pertinence : 79/100
+- Mots-cles identifies : Télégestion, production d'eau potable, système de télégestion, station de traitement, stations de reprise, réservoirs
+- Opportunite : Cette opportunité présente un intérêt pour CrystalWater en raison de la fourniture, de l'installation et de la mise en service d'un système de télégestion du système de production d'eau potable. Le projet nécessite des compétences et des expériences dans le domaine de la télégestion et de la production d'eau potable.
+RECOMMANDATION
+- Action recommandee : SOUMISSIONNER
+- Justification : Cette opportunité présente un intérêt pour CrystalWater en raison de la fourniture, de l'installation et de la mise en service d'un système de télégestion du système de production d'eau potable. Le projet nécessite des compétences et des expériences dans le domaine de la télégestion et de la production d'eau potable.

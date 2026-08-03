@@ -1,0 +1,17 @@
+
+  🔄 PIPELINE: 26/2026/INDH/PT
+  ──────────────────────────────────────────────────
+  📦 7 fichiers
+    Acte d'Engagement N°26-2026-INDH-PT.doc: 35,328 chars
+    AVIS A.O ARABE N°26-2026-INDH-PT.doc: 44,032 chars 📢 ⏭️ AR
+    AVIS A.O FR N°26-2026-INDH-PT.docx: 1,591 chars 📢 ✅ FR
+    BPDE N°26-2026-INDH-PT TAZARINE LOT EQUIPEMENT.xls: 10,685 chars
+    CPS AEP TAZARINE LOT EQUIPEMENT.doc: 765,952 chars 📜
+    DH-N°26-2026-INDH-PT.doc: 57,856 chars
+    RC.docx: 18,128 chars
+    ⏭️ 1 AAO arabes ignorés
+
+  📢 AAO FR: 1 | 📜 RC: oui
+    🏷️ 2 phrases de classe trouvées
+    🤖 LLM: 1 AAO + RC + Visite + Classe = 6,171 chars
+    📊 LLM brut: {"estimation": 784080, "caution_provisoire": 15000, "caution_definitive": null, "visite_lieux_obligatoire": null, "classe_demandee": "5", "attestation_reference_demandee": null}

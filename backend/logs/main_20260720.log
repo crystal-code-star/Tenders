@@ -1,0 +1,281 @@
+2026-07-20 15:45:18,450 - main - INFO - ======================================================================
+2026-07-20 15:45:18,450 - main - INFO - 🚀 CrystalWater AI Agent API v6.8 - Démarrage
+2026-07-20 15:45:18,451 - main - INFO - ======================================================================
+2026-07-20 15:45:18,453 - main - INFO - ✅ Scheduler démarré
+2026-07-20 15:45:18,457 - main - INFO - ======================================================================
+2026-07-20 15:45:18,459 - main - INFO - 🚀 DÉMARRAGE AUTOMATIQUE DE LA SURVEILLANCE DES AO
+2026-07-20 15:45:18,460 - main - INFO - ======================================================================
+2026-07-20 15:45:18,461 - main - INFO - 📊 Configuration:
+2026-07-20 15:45:18,463 - main - INFO -    - Mode: Temps réel (vérification périodique)
+2026-07-20 15:45:18,464 - main - INFO -    - Intervalle: 300 secondes (5 minutes)
+2026-07-20 15:45:18,465 - main - INFO -    - Arrêt: Après 3 AO existants consécutifs
+2026-07-20 15:45:18,465 - main - INFO -    - Table: tenders_3
+2026-07-20 15:45:18,469 - main - INFO - ======================================================================
+2026-07-20 15:45:18,473 - main - INFO - ✅ Surveillance démarrée en arrière-plan
+2026-07-20 15:45:18,474 - main - INFO - 📊 Stats disponibles sur /tenders/monitor/status
+2026-07-20 15:45:18,475 - main - INFO - ======================================================================
+2026-07-20 15:45:18,476 - main - INFO - ✅ API prête !
+2026-07-20 15:45:18,478 - main - INFO - 📡 Documentation: http://0.0.0.0:8000/docs
+2026-07-20 15:45:18,479 - main - INFO - ======================================================================
+
+2026-07-20 15:45:18,795 - tender_scanner - INFO -   🗄️ 226 références chargées depuis la base
+2026-07-20 15:45:18,801 - main - INFO - 📚 226 AO déjà en base de données
+2026-07-20 15:45:19,862 - main - INFO - 🌐 Navigateur lancé, début de la surveillance...
+2026-07-20 15:45:19,862 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 15:45:19,863 - main - INFO - 🔍 [2026-07-20 15:45:19] Vérification #1...
+2026-07-20 15:45:19,863 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 15:45:47,010 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 15:45:47,062 - tender_scanner - INFO -   🆕 Nouvel AO: Mise à niveau de la partie 60KV des postes OUAZZANE, R’MEL et REGRAGA...Mise à n
+2026-07-20 15:45:47,066 - tender_scanner - INFO -   🆕 Nouvel AO: Renouvellement de la ligne 225 kV n° 25-10 « RIAD – KENITRA »...Renouvellement d
+2026-07-20 15:45:47,070 - tender_scanner - INFO -   🆕 Nouvel AO: Travaux de mise à niveau, de construction d'une STEP à boues activées et son exp
+2026-07-20 15:45:47,071 - tender_scanner - INFO -   ✅ 3 nouveaux AO trouvés
+2026-07-20 15:45:47,072 - main - INFO - 
+🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕
+2026-07-20 15:45:47,072 - main - INFO - 🔔 3 NOUVEL(LE)(S) AO DÉTECTÉ(S)!
+2026-07-20 15:45:47,073 - main - INFO - 🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕
+2026-07-20 15:45:47,546 - main - INFO -    ✅ Mise à niveau de la partie 60KV des postes OUAZZANE, R’MEL et REGRAGA...Mise à n
+2026-07-20 15:45:47,549 - main - INFO -    📋 Réf: TN4130616
+2026-07-20 15:45:47,552 - main - INFO -    📅 Date: 2026-07-13
+2026-07-20 15:45:47,556 - main - INFO -    ⭐ Score: 71/100
+2026-07-20 15:45:47,562 - main - INFO -    🏢 Acheteur: OFFICE NATIONALE DE L'ELECTRICITE ET DE L'EAU POTABLE - BRAN
+2026-07-20 15:45:47,774 - main - INFO -    ✅ Renouvellement de la ligne 225 kV n° 25-10 « RIAD – KENITRA »...Renouvellement d
+2026-07-20 15:45:47,776 - main - INFO -    📋 Réf: TN4130652
+2026-07-20 15:45:47,778 - main - INFO -    📅 Date: 2026-07-13
+2026-07-20 15:45:47,779 - main - INFO -    ⭐ Score: 74/100
+2026-07-20 15:45:47,781 - main - INFO -    🏢 Acheteur: OFFICE NATIONALE DE L'ELECTRICITE ET DE L'EAU POTABLE - BRAN
+2026-07-20 15:45:48,003 - main - INFO -    ✅ Travaux de mise à niveau, de construction d'une STEP à boues activées et son exp
+2026-07-20 15:45:48,003 - main - INFO -    📋 Réf: 293/CL/2026/SRMFM
+2026-07-20 15:45:48,004 - main - INFO -    📅 Date: 2026-07-17
+2026-07-20 15:45:48,004 - main - INFO -    ⭐ Score: 78/100
+2026-07-20 15:45:48,004 - main - INFO -    🏢 Acheteur: SOCIETE REGIONALE MULTISERVICES FES - MEKNES S.A
+2026-07-20 15:45:48,005 - main - INFO - 
+📊 Total nouveaux AO trouvés: 3
+2026-07-20 15:45:48,005 - main - INFO - ⏳ Prochaine vérification dans 300s...
+2026-07-20 15:50:48,007 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 15:50:48,009 - main - INFO - 🔍 [2026-07-20 15:50:48] Vérification #2...
+2026-07-20 15:50:48,011 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 15:51:05,239 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 15:51:05,259 - main - INFO -    ℹ️  Aucun nouvel AO (1/3)
+2026-07-20 15:51:05,261 - main - INFO - ⏳ Prochaine vérification dans 300s...
+2026-07-20 15:54:17,292 - main - INFO - ⏹️  Arrêt de l'API...
+2026-07-20 15:54:17,293 - main - INFO - ⏹️  Arrêt de la surveillance automatique...
+2026-07-20 15:54:17,293 - main - INFO - ✅ API arrêtée
+2026-07-20 16:26:23,822 - main - INFO - ======================================================================
+2026-07-20 16:26:23,823 - main - INFO - 🚀 CrystalWater AI Agent API v6.8 - Démarrage
+2026-07-20 16:26:23,824 - main - INFO - ======================================================================
+2026-07-20 16:26:23,828 - main - INFO - ✅ Scheduler démarré
+2026-07-20 16:26:23,830 - main - INFO - ======================================================================
+2026-07-20 16:26:23,832 - main - INFO - 🚀 DÉMARRAGE AUTOMATIQUE DE LA SURVEILLANCE DES AO
+2026-07-20 16:26:23,835 - main - INFO - ======================================================================
+2026-07-20 16:26:23,835 - main - INFO - 📊 Configuration:
+2026-07-20 16:26:23,836 - main - INFO -    - Mode: Temps réel (vérification périodique)
+2026-07-20 16:26:23,836 - main - INFO -    - Intervalle: 300 secondes (5 minutes)
+2026-07-20 16:26:23,837 - main - INFO -    - Arrêt: Après 3 AO existants consécutifs
+2026-07-20 16:26:23,837 - main - INFO -    - Table: tenders_3
+2026-07-20 16:26:23,838 - main - INFO - ======================================================================
+2026-07-20 16:26:23,839 - main - INFO - ✅ Surveillance démarrée en arrière-plan
+2026-07-20 16:26:23,840 - main - INFO - 📊 Stats disponibles sur /tenders/monitor/status
+2026-07-20 16:26:23,841 - main - INFO - ======================================================================
+2026-07-20 16:26:23,847 - main - INFO - ✅ API prête !
+2026-07-20 16:26:23,848 - main - INFO - 📡 Documentation: http://0.0.0.0:8000/docs
+2026-07-20 16:26:23,850 - main - INFO - ======================================================================
+
+2026-07-20 16:26:24,461 - tender_scanner - INFO -   🗄️ 226 références chargées depuis la base
+2026-07-20 16:26:24,587 - main - INFO - 📚 226 AO déjà en base de données
+2026-07-20 16:26:32,363 - main - INFO - 🌐 Navigateur lancé, début de la surveillance...
+2026-07-20 16:26:32,366 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 16:26:32,370 - main - INFO - 🔍 [2026-07-20 16:26:32] Vérification #1...
+2026-07-20 16:26:32,371 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 16:27:01,111 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 16:27:01,254 - tender_scanner - INFO -   🆕 Nouvel AO: Mise à niveau de la partie 60KV des postes OUAZZANE, R’MEL et REGRAGA...Mise à n
+2026-07-20 16:27:01,288 - tender_scanner - INFO -   🆕 Nouvel AO: Renouvellement de la ligne 225 kV n° 25-10 « RIAD – KENITRA »...Renouvellement d
+2026-07-20 16:27:01,321 - tender_scanner - INFO -   🆕 Nouvel AO: Travaux de mise à niveau, de construction d'une STEP à boues activées et son exp
+2026-07-20 16:27:01,338 - tender_scanner - INFO -   ✅ 3 nouveaux AO trouvés
+2026-07-20 16:27:01,363 - main - INFO - 
+🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕
+2026-07-20 16:27:01,366 - main - INFO - 🔔 3 NOUVEL(LE)(S) AO DÉTECTÉ(S)!
+2026-07-20 16:27:01,367 - main - INFO - 🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕
+2026-07-20 16:27:01,683 - main - INFO -    ✅ Mise à niveau de la partie 60KV des postes OUAZZANE, R’MEL et REGRAGA...Mise à n
+2026-07-20 16:27:01,693 - main - INFO -    📋 Réf: TN4130616
+2026-07-20 16:27:01,697 - main - INFO -    📅 Date: 2026-07-13
+2026-07-20 16:27:01,705 - main - INFO -    ⭐ Score: 71/100
+2026-07-20 16:27:01,722 - main - INFO -    🏢 Acheteur: OFFICE NATIONALE DE L'ELECTRICITE ET DE L'EAU POTABLE - BRAN
+2026-07-20 16:27:01,997 - main - INFO -    ✅ Renouvellement de la ligne 225 kV n° 25-10 « RIAD – KENITRA »...Renouvellement d
+2026-07-20 16:27:02,003 - main - INFO -    📋 Réf: TN4130652
+2026-07-20 16:27:02,019 - main - INFO -    📅 Date: 2026-07-13
+2026-07-20 16:27:02,021 - main - INFO -    ⭐ Score: 74/100
+2026-07-20 16:27:02,043 - main - INFO -    🏢 Acheteur: OFFICE NATIONALE DE L'ELECTRICITE ET DE L'EAU POTABLE - BRAN
+2026-07-20 16:27:02,312 - main - INFO -    ✅ Travaux de mise à niveau, de construction d'une STEP à boues activées et son exp
+2026-07-20 16:27:02,314 - main - INFO -    📋 Réf: 293/CL/2026/SRMFM
+2026-07-20 16:27:02,318 - main - INFO -    📅 Date: 2026-07-17
+2026-07-20 16:27:02,319 - main - INFO -    ⭐ Score: 78/100
+2026-07-20 16:27:02,321 - main - INFO -    🏢 Acheteur: SOCIETE REGIONALE MULTISERVICES FES - MEKNES S.A
+2026-07-20 16:27:02,323 - main - INFO - 
+📊 Total nouveaux AO trouvés: 3
+2026-07-20 16:27:02,331 - main - INFO - ⏳ Prochaine vérification dans 300s...
+2026-07-20 16:32:02,336 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 16:32:02,338 - main - INFO - 🔍 [2026-07-20 16:32:02] Vérification #2...
+2026-07-20 16:32:02,339 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 16:32:19,945 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 16:32:20,017 - main - INFO -    ℹ️  Aucun nouvel AO (1/3)
+2026-07-20 16:32:20,019 - main - INFO - ⏳ Prochaine vérification dans 300s...
+2026-07-20 16:37:20,020 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 16:37:20,021 - main - INFO - 🔍 [2026-07-20 16:37:20] Vérification #3...
+2026-07-20 16:37:20,022 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 16:37:38,585 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 16:37:38,640 - main - INFO -    ℹ️  Aucun nouvel AO (2/3)
+2026-07-20 16:37:38,640 - main - INFO - ⏳ Prochaine vérification dans 300s...
+2026-07-20 16:42:38,643 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 16:42:38,657 - main - INFO - 🔍 [2026-07-20 16:42:38] Vérification #4...
+2026-07-20 16:42:38,686 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 16:42:56,909 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 16:42:56,975 - main - INFO -    ℹ️  Aucun nouvel AO (3/3)
+2026-07-20 16:42:56,978 - main - INFO - 
+==================================================
+2026-07-20 16:42:56,979 - main - INFO - ⏹️  Arrêt automatique: 3 vérifications sans nouvel AO
+2026-07-20 16:42:56,984 - main - INFO - 📊 Bilan final:
+2026-07-20 16:42:56,988 - main - INFO -    - Nouveaux AO trouvés: 3
+2026-07-20 16:42:56,988 - main - INFO -    - Vérifications effectuées: 4
+2026-07-20 16:42:56,989 - main - INFO -    - Durée: depuis 2026-07-20T16:26:23.839045
+2026-07-20 16:42:56,990 - main - INFO - ==================================================
+2026-07-20 16:42:57,307 - main - INFO - 🌐 Navigateur fermé
+2026-07-20 16:42:57,345 - main - INFO - ⏹️  Surveillance arrêtée
+2026-07-20 21:53:53,238 - main - INFO - ⏹️  Arrêt de l'API...
+2026-07-20 21:53:53,239 - main - INFO - ✅ API arrêtée
+2026-07-20 21:54:16,741 - main - INFO - ======================================================================
+2026-07-20 21:54:16,742 - main - INFO - 🚀 CrystalWater AI Agent API v6.8 - Démarrage
+2026-07-20 21:54:16,742 - main - INFO - ======================================================================
+2026-07-20 21:54:16,743 - main - INFO - ✅ Scheduler démarré
+2026-07-20 21:54:16,744 - main - INFO - ======================================================================
+2026-07-20 21:54:16,744 - main - INFO - 🚀 DÉMARRAGE AUTOMATIQUE DE LA SURVEILLANCE DES AO
+2026-07-20 21:54:16,745 - main - INFO - ======================================================================
+2026-07-20 21:54:16,746 - main - INFO - 📊 Configuration:
+2026-07-20 21:54:16,746 - main - INFO -    - Mode: Temps réel (vérification périodique)
+2026-07-20 21:54:16,748 - main - INFO -    - Intervalle: 300 secondes (5 minutes)
+2026-07-20 21:54:16,749 - main - INFO -    - Arrêt: Après 3 AO existants consécutifs
+2026-07-20 21:54:16,749 - main - INFO -    - Table: tenders_3
+2026-07-20 21:54:16,751 - main - INFO - ======================================================================
+2026-07-20 21:54:16,753 - main - INFO - ✅ Surveillance démarrée en arrière-plan
+2026-07-20 21:54:16,754 - main - INFO - 📊 Stats disponibles sur /tenders/monitor/status
+2026-07-20 21:54:16,754 - main - INFO - ======================================================================
+2026-07-20 21:54:16,755 - main - INFO - ✅ API prête !
+2026-07-20 21:54:16,757 - main - INFO - 📡 Documentation: http://0.0.0.0:8000/docs
+2026-07-20 21:54:16,763 - main - INFO - ======================================================================
+
+2026-07-20 21:54:17,075 - tender_scanner - INFO -   🗄️ 226 références chargées depuis la base
+2026-07-20 21:54:17,077 - main - INFO - 📚 226 AO déjà en base de données
+2026-07-20 21:54:18,954 - main - INFO - 🌐 Navigateur lancé, début de la surveillance...
+2026-07-20 21:54:18,955 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 21:54:18,955 - main - INFO - 🔍 [2026-07-20 21:54:18] Vérification #1...
+2026-07-20 21:54:18,956 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 21:54:40,529 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 21:54:40,547 - tender_scanner - INFO -   ⏭️ AO existant #1: SP4130189
+2026-07-20 21:54:40,549 - tender_scanner - INFO -   🆕 Nouvel AO trouvé → réinitialisation du compteur (était à 1)
+2026-07-20 21:54:40,576 - tender_scanner - INFO -   🆕 Nouvel AO #1: Mise à niveau de la partie 60KV des postes OUAZZANE, R’MEL et REGRAGA...Mise à n
+2026-07-20 21:54:40,581 - tender_scanner - INFO -   🆕 Nouvel AO #2: Renouvellement de la ligne 225 kV n° 25-10 « RIAD – KENITRA »...Renouvellement d
+2026-07-20 21:54:40,587 - tender_scanner - INFO -   🆕 Nouvel AO #3: Travaux de mise à niveau, de construction d'une STEP à boues activées et son exp
+2026-07-20 21:54:40,588 - tender_scanner - INFO -   ✅ 3 nouveaux AO trouvés sur cette page
+2026-07-20 21:54:40,589 - main - INFO - 
+🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕
+2026-07-20 21:54:40,589 - main - INFO - 🔔 2 NOUVEL(LE)(S) AO DÉTECTÉ(S)!
+2026-07-20 21:54:40,590 - main - INFO - 🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕
+2026-07-20 21:54:40,959 - main - ERROR -    ❌ Erreur sauvegarde: 'list' object has no attribute 'get'
+2026-07-20 21:54:41,296 - main - ERROR -    ❌ Erreur sauvegarde: 'int' object has no attribute 'get'
+2026-07-20 21:54:41,298 - main - INFO - 
+📊 Total nouveaux AO trouvés: 2
+2026-07-20 21:54:41,301 - main - INFO - ⏳ Prochaine vérification dans 300s...
+2026-07-20 21:58:39,880 - main - INFO - ⏹️  Arrêt de l'API...
+2026-07-20 21:58:39,881 - main - INFO - ⏹️  Arrêt de la surveillance automatique...
+2026-07-20 21:58:39,881 - main - INFO - ✅ API arrêtée
+2026-07-20 21:58:55,874 - main - INFO - ======================================================================
+2026-07-20 21:58:55,874 - main - INFO - 🚀 CrystalWater AI Agent API v6.8 - Démarrage
+2026-07-20 21:58:55,875 - main - INFO - ======================================================================
+2026-07-20 21:58:55,876 - main - INFO - ✅ Scheduler démarré
+2026-07-20 21:58:55,876 - main - INFO - ======================================================================
+2026-07-20 21:58:55,877 - main - INFO - 🚀 DÉMARRAGE AUTOMATIQUE DE LA SURVEILLANCE DES AO
+2026-07-20 21:58:55,877 - main - INFO - ======================================================================
+2026-07-20 21:58:55,880 - main - INFO - 📊 Configuration:
+2026-07-20 21:58:55,881 - main - INFO -    - Mode: Temps réel (vérification périodique)
+2026-07-20 21:58:55,882 - main - INFO -    - Intervalle: 300 secondes (5 minutes)
+2026-07-20 21:58:55,882 - main - INFO -    - Arrêt: Après 3 AO existants consécutifs sur la page
+2026-07-20 21:58:55,882 - main - INFO -    - Table: tenders_3
+2026-07-20 21:58:55,883 - main - INFO - ======================================================================
+2026-07-20 21:58:55,884 - main - INFO - ✅ Surveillance démarrée en arrière-plan
+2026-07-20 21:58:55,884 - main - INFO - 📊 Stats disponibles sur /tenders/monitor/status
+2026-07-20 21:58:55,885 - main - INFO - ======================================================================
+2026-07-20 21:58:55,885 - main - INFO - ✅ API prête !
+2026-07-20 21:58:55,886 - main - INFO - 📡 Documentation: http://0.0.0.0:8000/docs
+2026-07-20 21:58:55,886 - main - INFO - ======================================================================
+
+2026-07-20 21:58:56,220 - tender_scanner - INFO -   🗄️ 226 références chargées depuis la base
+2026-07-20 21:58:56,221 - main - INFO - 📚 226 AO déjà en base de données
+2026-07-20 21:58:57,456 - main - INFO - 🌐 Navigateur lancé, début de la surveillance...
+2026-07-20 21:58:57,457 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 21:58:57,457 - main - INFO - 🔍 [2026-07-20 21:58:57] Vérification #1...
+2026-07-20 21:58:57,458 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 21:59:16,311 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 21:59:16,328 - tender_scanner - INFO -   ⏭️ AO existant #1: SP4130189
+2026-07-20 21:59:16,330 - tender_scanner - INFO -   🆕 Nouvel AO trouvé → réinitialisation du compteur (était à 1)
+2026-07-20 21:59:16,355 - tender_scanner - INFO -   🆕 Nouvel AO #1: Mise à niveau de la partie 60KV des postes OUAZZANE, R’MEL et REGRAGA...Mise à n
+2026-07-20 21:59:16,360 - tender_scanner - INFO -   🆕 Nouvel AO #2: Renouvellement de la ligne 225 kV n° 25-10 « RIAD – KENITRA »...Renouvellement d
+2026-07-20 21:59:16,367 - tender_scanner - INFO -   🆕 Nouvel AO #3: Travaux de mise à niveau, de construction d'une STEP à boues activées et son exp
+2026-07-20 21:59:16,368 - tender_scanner - INFO -   ✅ 3 nouveaux AO trouvés sur cette page
+2026-07-20 21:59:16,369 - main - INFO - 
+🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕
+2026-07-20 21:59:16,370 - main - INFO - 🔔 3 NOUVEL(LE)(S) AO DÉTECTÉ(S)!
+2026-07-20 21:59:16,370 - main - INFO - 🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕🆕
+2026-07-20 21:59:16,666 - main - INFO -    ✅ Mise à niveau de la partie 60KV des postes OUAZZANE, R’MEL et REGRAGA...Mise à n
+2026-07-20 21:59:16,668 - main - INFO -    📋 Réf: TN4130616
+2026-07-20 21:59:16,670 - main - INFO -    📅 Date: 2026-07-13
+2026-07-20 21:59:16,672 - main - INFO -    ⭐ Score: 71/100
+2026-07-20 21:59:16,674 - main - INFO -    🏢 Acheteur: OFFICE NATIONALE DE L'ELECTRICITE ET DE L'EAU POTABLE - BRAN
+2026-07-20 21:59:16,973 - main - INFO -    ✅ Renouvellement de la ligne 225 kV n° 25-10 « RIAD – KENITRA »...Renouvellement d
+2026-07-20 21:59:16,986 - main - INFO -    📋 Réf: TN4130652
+2026-07-20 21:59:17,018 - main - INFO -    📅 Date: 2026-07-13
+2026-07-20 21:59:17,031 - main - INFO -    ⭐ Score: 74/100
+2026-07-20 21:59:17,032 - main - INFO -    🏢 Acheteur: OFFICE NATIONALE DE L'ELECTRICITE ET DE L'EAU POTABLE - BRAN
+2026-07-20 21:59:17,300 - main - INFO -    ✅ Travaux de mise à niveau, de construction d'une STEP à boues activées et son exp
+2026-07-20 21:59:17,301 - main - INFO -    📋 Réf: 293/CL/2026/SRMFM
+2026-07-20 21:59:17,301 - main - INFO -    📅 Date: 2026-07-17
+2026-07-20 21:59:17,302 - main - INFO -    ⭐ Score: 78/100
+2026-07-20 21:59:17,302 - main - INFO -    🏢 Acheteur: SOCIETE REGIONALE MULTISERVICES FES - MEKNES S.A
+2026-07-20 21:59:17,303 - main - INFO - 
+📊 3/3 AO sauvegardés
+2026-07-20 21:59:17,303 - main - INFO - 📊 Total nouveaux AO trouvés: 3
+2026-07-20 21:59:17,304 - main - INFO - ⏳ Prochaine vérification dans 300s...
+2026-07-20 22:04:17,315 - main - INFO - 
+──────────────────────────────────────────────────
+2026-07-20 22:04:17,316 - main - INFO - 🔍 [2026-07-20 22:04:17] Vérification #2...
+2026-07-20 22:04:17,316 - tender_scanner - INFO -   🔍 Navigation vers le portail...
+2026-07-20 22:04:34,568 - tender_scanner - INFO -   🔍 10 AO trouvés sur la première page
+2026-07-20 22:04:34,574 - tender_scanner - INFO -   ⏭️ AO existant #1: SP4130189
+2026-07-20 22:04:34,576 - tender_scanner - INFO -   🆕 Nouvel AO trouvé → réinitialisation du compteur (était à 1)
+2026-07-20 22:04:34,643 - tender_scanner - INFO -   ⏭️ AO existant #1: TN4130616
+2026-07-20 22:04:34,645 - tender_scanner - INFO -   ⏭️ AO existant #2: TN4130652
+2026-07-20 22:04:34,646 - tender_scanner - INFO -   ⏭️ AO existant #3: 293/CL/2026/SRMFM
+2026-07-20 22:04:34,647 - tender_scanner - INFO -   🚫 3 AO existants consécutifs trouvés → ARRÊT!
+2026-07-20 22:04:34,650 - tender_scanner - INFO -   ⏭️ Aucun nouvel AO sur cette page
+2026-07-20 22:04:34,652 - main - INFO -   ℹ️  Aucun nouvel AO sur cette page
+2026-07-20 22:04:34,652 - main - INFO - 
+==================================================
+2026-07-20 22:04:34,653 - main - INFO - ⏹️  ARRÊT AUTOMATIQUE
+2026-07-20 22:04:34,654 - main - INFO -    Raison: 3 AO existants consécutifs trouvés
+2026-07-20 22:04:34,654 - main - INFO -    Condition: >= 3 AO existants consécutifs
+2026-07-20 22:04:34,655 - main - INFO - ==================================================
+2026-07-20 22:04:34,656 - main - INFO - 📊 Bilan final:
+2026-07-20 22:04:34,658 - main - INFO -    - Nouveaux AO trouvés: 3
+2026-07-20 22:04:34,660 - main - INFO -    - Vérifications effectuées: 2
+2026-07-20 22:04:34,662 - main - INFO -    - Durée: depuis 2026-07-20T21:58:55.883784
+2026-07-20 22:04:34,668 - main - INFO - ==================================================
+2026-07-20 22:04:35,016 - main - ERROR - 💥 Erreur critique dans la surveillance: Event loop is closed! Is Playwright already stopped?
+2026-07-20 22:04:35,023 - main - INFO - ⏹️  Surveillance arrêtée
+2026-07-20 22:17:36,795 - main - INFO - ⏹️  Arrêt de l'API...
+2026-07-20 22:17:36,795 - main - INFO - ✅ API arrêtée

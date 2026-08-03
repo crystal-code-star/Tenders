@@ -1,0 +1,107 @@
+2026-06-23 12:59:18,174 - tender_scanner - INFO - =======================================================
+2026-06-23 12:59:18,176 - tender_scanner - INFO -   CrystalWater - Scan + Nettoyage + DCE
+2026-06-23 12:59:18,177 - tender_scanner - INFO -   2026-06-23 12:59
+2026-06-23 12:59:18,177 - tender_scanner - INFO - =======================================================
+2026-06-23 12:59:18,178 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees...
+2026-06-23 12:59:18,944 - tender_scanner - INFO -   Aucun AO a nettoyer
+2026-06-23 12:59:19,705 - tender_scanner - INFO -   0 AO deja en base
+2026-06-23 12:59:19,709 - tender_scanner - INFO -   CrystalWater - Scan intelligent avec telechargement DCE
+2026-06-23 12:59:46,589 - tender_scanner - INFO -   Total: 415 pages | Arret apres 15 pages vides
+2026-06-23 12:59:47,804 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 12:59:47,815 - tender_scanner - INFO -   [DOWNLOAD] DCE: TS4130117/2026/09/ONEEBELEC
+2026-06-23 12:59:57,539 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-23 13:00:05,519 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-23 13:00:06,585 - tender_scanner - INFO -   [OK] Champ rempli: nom
+2026-06-23 13:00:07,415 - tender_scanner - INFO -   [OK] Champ rempli: prenom
+2026-06-23 13:00:09,684 - tender_scanner - INFO -   [OK] Champ rempli: email
+2026-06-23 13:00:11,013 - tender_scanner - INFO -   [OK] Champ rempli: raisonSocial
+2026-06-23 13:00:12,981 - tender_scanner - INFO -   [OK] Champ rempli: address
+2026-06-23 13:00:12,983 - tender_scanner - INFO -   [CHECK] Case conditions generales...
+2026-06-23 13:00:14,192 - tender_scanner - INFO -   [OK] Conditions generales ACCEPTEES
+2026-06-23 13:00:16,860 - tender_scanner - INFO -   [CLICK] Clic sur Valider...
+2026-06-23 13:00:23,659 - tender_scanner - INFO -   [OK] Page 'Telechargement complet' detectee
+2026-06-23 13:00:23,701 - tender_scanner - INFO -   [OK] Bouton telechargement trouve: #ctl0_CONTENU_PAGE_EntrepriseDownloadDce_completeDownload
+2026-06-23 13:00:25,314 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-23 13:01:02,332 - tender_scanner - INFO -   [OK] ZIP recu: 23301436 octets
+2026-06-23 13:01:06,522 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/fa38c160-8e6f-4c6c-b24c-295836f100bd.zip
+2026-06-23 13:01:11,831 - tender_scanner - INFO - 
+=== DCE: TS4130117/2026/09/ONEEBELEC ===
+
+6 documents dans le DCE:
+  - Dossier de l'AO n°TS4130117.pdf
+  - Addenda n° 1 à l'AO n° TS4130117.zip
+  - /data/local-trust/tgr/var/tmp/uploadFile/file_f09cd2b633d17bab9fe442adbd4f49496a2ad20616b651781191174
+  - /data/local-trust/tgr/var/tmp/uploadFile/file_247a4f86b3b3585bfd335161f92ab8716a2ad3b8a75e01781191608
+  - /data/local-trust/tgr/var/tmp/fileUploaded/c5b0af88f457cd2a24befd02fe609094_1781251668_5e4f1fac38531ce0e24a90e9047de876/tmpDceFile
+  - Avis de report.pdf
+2026-06-23 13:01:13,438 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 13:01:13,449 - tender_scanner - INFO -   [DOWNLOAD] DCE: TS4130670/2026/11/ONEEBELEC
+2026-06-23 13:01:21,683 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-23 13:01:29,801 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-23 13:01:30,722 - tender_scanner - INFO -   [OK] Champ rempli: nom
+2026-06-23 13:01:31,653 - tender_scanner - INFO -   [OK] Champ rempli: prenom
+2026-06-23 13:01:33,829 - tender_scanner - INFO -   [OK] Champ rempli: email
+2026-06-23 13:01:35,157 - tender_scanner - INFO -   [OK] Champ rempli: raisonSocial
+2026-06-23 13:01:37,110 - tender_scanner - INFO -   [OK] Champ rempli: address
+2026-06-23 13:01:37,112 - tender_scanner - INFO -   [CHECK] Case conditions generales...
+2026-06-23 13:01:38,473 - tender_scanner - INFO -   [OK] Conditions generales ACCEPTEES
+2026-06-23 13:01:41,190 - tender_scanner - INFO -   [CLICK] Clic sur Valider...
+2026-06-23 13:01:48,039 - tender_scanner - INFO -   [OK] Page 'Telechargement complet' detectee
+2026-06-23 13:01:48,091 - tender_scanner - INFO -   [OK] Bouton telechargement trouve: #ctl0_CONTENU_PAGE_EntrepriseDownloadDce_completeDownload
+2026-06-23 13:01:49,658 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-23 13:02:00,563 - tender_scanner - INFO -   [OK] ZIP recu: 4454778 octets
+2026-06-23 13:02:02,588 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/b8d03c6a-3d41-414d-87b7-261ba4a5cda1.zip
+2026-06-23 13:02:03,771 - tender_scanner - INFO - 
+=== DCE: TS4130670/2026/11/ONEEBELEC ===
+
+2 documents dans le DCE:
+  - Avis d'appel d'offres n° TS4130670- Français.pdf
+  - Dossier d'AO n° TS4130670.pdf
+2026-06-23 13:02:05,386 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 13:02:05,391 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-06-23 13:02:13,913 - tender_scanner - INFO -   [OK] Lien trouve: a:has-text('Dossier de Consultation')
+2026-06-23 13:02:21,646 - tender_scanner - INFO -   [FORM] Formulaire detecte, remplissage...
+2026-06-23 13:02:22,728 - tender_scanner - INFO -   [OK] Champ rempli: nom
+2026-06-23 13:02:23,521 - tender_scanner - INFO -   [OK] Champ rempli: prenom
+2026-06-23 13:02:25,635 - tender_scanner - INFO -   [OK] Champ rempli: email
+2026-06-23 13:02:26,905 - tender_scanner - INFO -   [OK] Champ rempli: raisonSocial
+2026-06-23 13:02:28,789 - tender_scanner - INFO -   [OK] Champ rempli: address
+2026-06-23 13:02:28,790 - tender_scanner - INFO -   [CHECK] Case conditions generales...
+2026-06-23 13:02:30,014 - tender_scanner - INFO -   [OK] Conditions generales ACCEPTEES
+2026-06-23 13:02:32,673 - tender_scanner - INFO -   [CLICK] Clic sur Valider...
+2026-06-23 13:02:39,652 - tender_scanner - INFO -   [OK] Page 'Telechargement complet' detectee
+2026-06-23 13:02:39,693 - tender_scanner - INFO -   [OK] Bouton telechargement trouve: #ctl0_CONTENU_PAGE_EntrepriseDownloadDce_completeDownload
+2026-06-23 13:02:41,300 - tender_scanner - INFO -   [WAIT] Attente du ZIP...
+2026-06-23 13:02:48,622 - tender_scanner - INFO -   [OK] ZIP recu: 1372290 octets
+2026-06-23 13:02:50,617 - tender_scanner - INFO -   [OK] ZIP upload vers Supabase: https://uxriscdyynjmhazmrvhr.supabase.co/storage/v1/object/public/dce_zips/c4fb1b1a-b404-46dd-9373-c1d55253c138.zip
+2026-06-23 13:02:50,933 - tender_scanner - INFO - 
+=== DCE: 06/2026/DR4 ===
+Budget estime: 7 003 800,00 DH (7.0 Millions DH)
+Caution provisoire: 112 100,00 DH
+Date limite de remise: 01/01/2024
+
+13 documents dans le DCE:
+  - DCE 06 DR4 2026/Annexe 1 - Répartition des prestations VF.xls
+  - DCE 06 DR4 2026/Annexe 2 et 3 - Liste des ES par équipement et par poste satellite VF.xls
+  - DCE 06 DR4 2026/Avis AO 06 DR4 2026.docx
+  - DCE 06 DR4 2026/BP.xlsm
+  - DCE 06 DR4 2026/CCAFP Travaux - FSD (Français).docx
+  - DCE 06 DR4 2026/CCTP Télégestion 03.07.2025.docx
+  - DCE 06 DR4 2026/DP 24-07-2025.xlsx
+  - DCE 06 DR4 2026/Modeles.docx
+  - DCE 06 DR4 2026/PG DCE.xls
+  - DCE 06 DR4 2026/RCDG Travaux ONEE (Avril 2021).pdf
+  - DCE 06 DR4 2026/RCDP Travaux - FSD.docx
+  - DCE 06 DR4 2026/Tableau Annexe principlal.xlsx
+  - DCE 06 DR4 2026/Tableau Annexe secondaire.xlsx
+2026-06-23 13:02:51,761 - tender_scanner - INFO -   Page 1/415 - 3/10 nouveaux (total: 3)
+2026-06-23 13:09:03,930 - tender_scanner - ERROR -   Erreur: TargetClosedError: Page.fill: Target page, context or browser has been closed
+Call log:
+waiting for locator("#ctl0_CONTENU_PAGE_resultSearch_numPageTop")
+
+2026-06-23 13:09:03,932 - tender_scanner - INFO -   Scan: 3 nouveaux AO / 10 scannes | 3 DCE
+2026-06-23 13:09:03,934 - tender_scanner - INFO - =======================================================
+2026-06-23 13:09:03,934 - tender_scanner - INFO -   3 nouveaux AO | 1 haute priorite | 3 avec DCE
+2026-06-23 13:09:03,934 - tender_scanner - INFO -   0 doublons, 0 faux positifs supprimes
+2026-06-23 13:09:03,934 - tender_scanner - INFO -   Total en base: 3
+2026-06-23 13:09:03,935 - tender_scanner - INFO - =======================================================

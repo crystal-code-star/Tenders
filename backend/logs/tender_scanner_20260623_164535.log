@@ -1,0 +1,22 @@
+2026-06-23 16:46:13,512 - tender_scanner - INFO - =======================================================
+2026-06-23 16:46:13,514 - tender_scanner - INFO -   CrystalWater - Scan + Nettoyage + DCE
+2026-06-23 16:46:13,514 - tender_scanner - INFO -   2026-06-23 16:46
+2026-06-23 16:46:13,515 - tender_scanner - INFO - =======================================================
+2026-06-23 16:46:13,515 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees...
+2026-06-23 16:46:15,530 - tender_scanner - INFO -   0 AO deja en base
+2026-06-23 16:46:15,540 - tender_scanner - INFO -   CrystalWater - Scan intelligent
+2026-06-23 16:46:46,182 - tender_scanner - INFO -   Total: 428 pages | Arret apres 15 pages vides
+2026-06-23 16:46:47,486 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:46:48,555 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:46:49,302 - tender_scanner - INFO -   [OK] Supabase tenders: 1/1 rows
+2026-06-23 16:46:49,321 - tender_scanner - INFO -   Page 1/428 - 3/10 nouveaux (total: 3)
+2026-06-23 16:50:00,091 - tender_scanner - ERROR -   Erreur: TargetClosedError: Page.fill: Target page, context or browser has been closed
+Call log:
+waiting for locator("#ctl0_CONTENU_PAGE_resultSearch_numPageTop")
+
+2026-06-23 16:50:00,094 - tender_scanner - INFO -   Scan: 3 nouveaux AO / 10 scannes | 0 DCE
+2026-06-23 16:50:00,095 - tender_scanner - INFO - =======================================================
+2026-06-23 16:50:00,095 - tender_scanner - INFO -   3 nouveaux AO | 1 haute priorite | 0 avec DCE
+2026-06-23 16:50:00,096 - tender_scanner - INFO -   0 doublons, 0 faux positifs supprimes
+2026-06-23 16:50:00,096 - tender_scanner - INFO -   Total en base: 3
+2026-06-23 16:50:00,096 - tender_scanner - INFO - =======================================================

@@ -1,0 +1,1928 @@
+2026-07-19 20:28:18,162 - INFO - ✅ Supabase: https://uxriscdyynjmhazmrvhr.supabase.co
+2026-07-19 20:28:18,162 - INFO - 📋 Table: results_ao | 📦 Bucket: pdf_ao
+2026-07-19 20:28:18,163 - INFO - 📅 Filtre date min: 01/01/2025
+2026-07-19 20:28:19,179 - INFO - 📊 130 références en base
+2026-07-19 20:28:19,179 - INFO - ============================================================
+2026-07-19 20:28:19,180 - INFO - 🚀 Scraping AO | Filtre: >= 01/01/2025
+2026-07-19 20:28:19,180 - INFO - ============================================================
+2026-07-19 20:28:22,068 - INFO - 🌐 Navigation...
+2026-07-19 20:28:33,835 - INFO - 🔍 Lancement recherche (sans filtre formulaire)...
+2026-07-19 20:28:49,381 - INFO - ✅ Résultats chargés
+2026-07-19 20:28:49,477 - INFO - 📊 Pages: 13338
+2026-07-19 20:28:49,478 - INFO - 
+📄 Scan de 13338 pages...
+
+2026-07-19 20:28:49,478 - INFO - 
+==================================================
+2026-07-19 20:28:49,478 - INFO - 📄 PAGE 1/13338
+2026-07-19 20:28:49,479 - INFO - ==================================================
+2026-07-19 20:28:49,770 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:29:03,799 - INFO - 
+==================================================
+2026-07-19 20:29:03,799 - INFO - 📄 PAGE 2/13338
+2026-07-19 20:29:03,800 - INFO - ==================================================
+2026-07-19 20:29:04,154 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:29:16,907 - INFO - 
+==================================================
+2026-07-19 20:29:16,908 - INFO - 📄 PAGE 3/13338
+2026-07-19 20:29:16,909 - INFO - ==================================================
+2026-07-19 20:29:17,266 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:29:29,851 - INFO - 
+==================================================
+2026-07-19 20:29:29,851 - INFO - 📄 PAGE 4/13338
+2026-07-19 20:29:29,851 - INFO - ==================================================
+2026-07-19 20:29:30,129 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:29:44,180 - INFO - 
+==================================================
+2026-07-19 20:29:44,180 - INFO - 📄 PAGE 5/13338
+2026-07-19 20:29:44,181 - INFO - ==================================================
+2026-07-19 20:29:44,524 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:29:57,109 - INFO - 
+==================================================
+2026-07-19 20:29:57,109 - INFO - 📄 PAGE 6/13338
+2026-07-19 20:29:57,110 - INFO - ==================================================
+2026-07-19 20:29:57,389 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:30:10,373 - INFO - 
+==================================================
+2026-07-19 20:30:10,378 - INFO - 📄 PAGE 7/13338
+2026-07-19 20:30:10,381 - INFO - ==================================================
+2026-07-19 20:30:10,784 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:30:25,522 - INFO - 
+==================================================
+2026-07-19 20:30:25,525 - INFO - 📄 PAGE 8/13338
+2026-07-19 20:30:25,526 - INFO - ==================================================
+2026-07-19 20:30:25,860 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:30:38,402 - INFO - 
+==================================================
+2026-07-19 20:30:38,403 - INFO - 📄 PAGE 9/13338
+2026-07-19 20:30:38,404 - INFO - ==================================================
+2026-07-19 20:30:38,765 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:30:51,769 - INFO - 
+==================================================
+2026-07-19 20:30:51,770 - INFO - 📄 PAGE 10/13338
+2026-07-19 20:30:51,770 - INFO - ==================================================
+2026-07-19 20:30:52,051 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:31:06,257 - INFO - 
+==================================================
+2026-07-19 20:31:06,258 - INFO - 📄 PAGE 11/13338
+2026-07-19 20:31:06,259 - INFO - ==================================================
+2026-07-19 20:31:06,535 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:31:19,623 - INFO - 
+==================================================
+2026-07-19 20:31:19,627 - INFO - 📄 PAGE 12/13338
+2026-07-19 20:31:19,629 - INFO - ==================================================
+2026-07-19 20:31:20,161 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:31:34,926 - INFO - 
+==================================================
+2026-07-19 20:31:34,929 - INFO - 📄 PAGE 13/13338
+2026-07-19 20:31:34,932 - INFO - ==================================================
+2026-07-19 20:31:35,345 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:31:48,264 - INFO - 
+==================================================
+2026-07-19 20:31:48,264 - INFO - 📄 PAGE 14/13338
+2026-07-19 20:31:48,265 - INFO - ==================================================
+2026-07-19 20:31:48,546 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:32:02,537 - INFO - 
+==================================================
+2026-07-19 20:32:02,540 - INFO - 📄 PAGE 15/13338
+2026-07-19 20:32:02,542 - INFO - ==================================================
+2026-07-19 20:32:02,925 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:32:15,797 - INFO - 
+==================================================
+2026-07-19 20:32:15,799 - INFO - 📄 PAGE 16/13338
+2026-07-19 20:32:15,800 - INFO - ==================================================
+2026-07-19 20:32:16,151 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:32:28,887 - INFO - 
+==================================================
+2026-07-19 20:32:28,888 - INFO - 📄 PAGE 17/13338
+2026-07-19 20:32:28,888 - INFO - ==================================================
+2026-07-19 20:32:29,259 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:32:42,211 - INFO - 
+==================================================
+2026-07-19 20:32:42,212 - INFO - 📄 PAGE 18/13338
+2026-07-19 20:32:42,213 - INFO - ==================================================
+2026-07-19 20:32:42,584 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:32:56,735 - INFO - 
+==================================================
+2026-07-19 20:32:56,735 - INFO - 📄 PAGE 19/13338
+2026-07-19 20:32:56,736 - INFO - ==================================================
+2026-07-19 20:32:57,017 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:33:11,956 - INFO - 
+==================================================
+2026-07-19 20:33:11,957 - INFO - 📄 PAGE 20/13338
+2026-07-19 20:33:11,959 - INFO - ==================================================
+2026-07-19 20:33:12,348 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 20:33:26,134 - INFO - 
+==================================================
+2026-07-19 20:33:26,145 - INFO - 📄 PAGE 21/13338
+2026-07-19 20:33:26,152 - INFO - ==================================================
+2026-07-19 20:33:43,851 - INFO -   [1] 📥 O/139/26 | 17/07/2026 | Travaux de construction d’un réservoir 15 000 m3 complexe hy...
+2026-07-19 20:33:56,149 - INFO -   [2] 📥 A/147/26 | 17/07/2026 | Travaux de réalisation du collecteur D1 amont (tranche 1) à ...
+2026-07-19 20:34:06,193 - INFO -   [3] 📥 43/2026/ALOMRANE_SOUSS_MASSA | 17/07/2026 | L’Achèvement des travaux de réalisation de la station d’épur...
+2026-07-19 20:34:06,200 - INFO -   ✅ +3 | ⏭️ 0 hors dates | Total: 3
+2026-07-19 20:34:20,309 - INFO - 
+==================================================
+2026-07-19 20:34:20,312 - INFO - 📄 PAGE 22/13338
+2026-07-19 20:34:20,313 - INFO - ==================================================
+2026-07-19 20:34:41,191 - INFO -   [4] 📥 AO05/2026/DRCS | 17/07/2026 | Appel d’offres ouvert international à majoration pour la Réa...
+2026-07-19 20:35:07,011 - INFO -   [5] 📥 13/2026/DPETLG | 17/07/2026 | Contrôle Extérieur Topographique des Travaux de Construction...
+2026-07-19 20:35:19,282 - INFO -   [6] 📥 36/2026/ORH/SEQ | 17/07/2026 | TRAVAUX D'AMENAGEMENT DE LA SEGUIA JDIDA TAKDIMT DANS LA COM...
+2026-07-19 20:35:29,569 - INFO -   [7] 📥 12/2026/CBG | 17/07/2026 | ACHAT DE MATERIEL INFORMATIQUE AU PROFIT DE LA COMMUNE DE BE...
+2026-07-19 20:36:01,906 - ERROR - Upload erreur: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2026-07-19 20:36:31,604 - INFO -   [8] ❌ 32/2026/ORH/SGRID | 17/07/2026 | ENTRETIEN DU MATERIEL HYDROMECANIQUE DES RESEAUX D’IRRIGATIO...
+2026-07-19 20:36:31,605 - INFO -   ✅ +5 | ⏭️ 0 hors dates | Total: 8
+2026-07-19 20:36:44,370 - INFO - 
+==================================================
+2026-07-19 20:36:44,373 - INFO - 📄 PAGE 23/13338
+2026-07-19 20:36:44,374 - INFO - ==================================================
+2026-07-19 20:36:57,802 - INFO -   [9] 📥 31/2026/ORH/SEQ | 17/07/2026 | TRAVAUX D’AMENAGEMENT DES POINTS D’EAU POUR L’IRRIGATION DAN...
+2026-07-19 20:37:09,574 - INFO -   [10] 📥 95/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK MOULAY HFID DANS LE CA...
+2026-07-19 20:37:21,348 - INFO -   [11] 📥 18/2026/DPAAG/SG | 17/07/2026 | Achat du matériel informatique pour CHU de Laayoune...Achat ...
+2026-07-19 20:37:34,050 - INFO -   [12] 📥 94/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK AL KHADIR DANS LE CADR...
+2026-07-19 20:37:34,064 - INFO -   ✅ +4 | ⏭️ 0 hors dates | Total: 12
+2026-07-19 20:37:47,911 - INFO - 
+==================================================
+2026-07-19 20:37:47,913 - INFO - 📄 PAGE 24/13338
+2026-07-19 20:37:47,916 - INFO - ==================================================
+2026-07-19 20:38:06,596 - INFO -   [13] 📥 123/2026 | 17/07/2026 | TRAVAUX D’ÉCLAIRAGE PUBLIC DE LA COMMUNE D’AGUELMOUS AU NIVE...
+2026-07-19 20:38:19,077 - INFO -   [14] 📥 AO077/2024/ANCFCC/DLAG | 17/07/2026 | Assistance pour la gestion technique du siège de l’Agence Na...
+2026-07-19 20:38:32,507 - INFO -   [15] 📥 124DR5/2025 | 17/07/2026 | FOURNITURE TRANSPORT ET POSE DE DEBITMETRES ET COMPTEURS MEC...
+2026-07-19 20:38:43,371 - INFO -   [16] 📥 AO085/2023/ANCFCC/DLAG | 17/07/2026 | Réalisation des travaux d’aménagement du Bloc Foncier d’Oujd...
+2026-07-19 20:38:55,786 - INFO -   [17] 📥 96/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK AL MELLAK DANS LE CADR...
+2026-07-19 20:39:07,632 - INFO -   [18] 📥 06/M/DAAF/2026 | 17/07/2026 | la réalisation des travaux d’entretien et de maintenance des...
+2026-07-19 20:39:20,856 - INFO -   [19] 📥 21/DRC/CI/2026 | 17/07/2026 | ENTRETIEN ET REPARATION DES CONDUITES INFERIEURES OU EGALES ...
+2026-07-19 20:39:38,875 - INFO -   [20] 📥 06/2026/COM | 17/07/2026 | Travaux de reconstruction du mur de clôture de cimetière pri...
+2026-07-19 20:39:38,877 - INFO -   ✅ +8 | ⏭️ 0 hors dates | Total: 20
+2026-07-19 20:39:51,758 - INFO - 
+==================================================
+2026-07-19 20:39:51,760 - INFO - 📄 PAGE 25/13338
+2026-07-19 20:39:51,761 - INFO - ==================================================
+2026-07-19 20:40:20,082 - INFO -   [21] 📥 13/2026/MTNRA | 17/07/2026 | Travaux de peinture du siège du ministère Délégué auprès du ...
+2026-07-19 20:40:32,372 - INFO -   [22] 📥 07/2026/COM | 17/07/2026 | Travaux de dallage par béton de voie au douar Day commune Ou...
+2026-07-19 20:40:50,082 - INFO -   [23] 📥 10/INDH/2026 | 17/07/2026 | ACQUISITION DE TROIS MOYENS DE TRANSPORTS POUR LES CENTRES D...
+2026-07-19 20:41:03,253 - INFO -   [24] 📥 6/DAILEX2627 | 17/07/2026 | la fourniture à la SONACOS du matériel informatique...la fou...
+2026-07-19 20:41:23,528 - INFO -   [25] 📥 68/2026/DRANEFRSK | 17/07/2026 | Achat de petit outillage et autre matériel (incendies) au pr...
+2026-07-19 20:41:34,691 - INFO -   [26] 📥 20/2026/DRANEFMS/DPANEF_ES | 16/07/2026 | L’exécution des travaux de reboisement sur une superficie to...
+2026-07-19 20:41:45,388 - INFO -   [27] 📥 07/2026/dpa/es | 16/07/2026 | ACQUISITION DE 390 CITERNES SOUPLES DE 06 M3 POUR LE STOCKAG...
+2026-07-19 20:41:45,395 - INFO -   ✅ +7 | ⏭️ 0 hors dates | Total: 27
+2026-07-19 20:41:58,032 - INFO - 
+==================================================
+2026-07-19 20:41:58,032 - INFO - 📄 PAGE 26/13338
+2026-07-19 20:41:58,033 - INFO - ==================================================
+2026-07-19 20:42:13,009 - INFO -   [28] 📥 C/028/26 | 16/07/2026 | Acquisition des compteurs à prépaiement évolutifs compatible...
+2026-07-19 20:42:24,285 - INFO -   [29] 📥 04/2026/SDR.F.I.A.S.E.T. | 16/07/2026 | LA REALISATION DES TRAVAUX D’ALIMENTATION EN EAU POTABLE HOR...
+2026-07-19 20:42:59,272 - INFO -   [30] 📥 07/2026/CARTTH | 16/07/2026 | Prestations de restauration et d’hébergement des participant...
+2026-07-19 20:43:17,373 - WARNING - 
+⚠️ Interrompu par l'utilisateur
+======================================================================
+  ✅ Supabase: https://uxriscdyynjmhazmrvhr.supabase.co
+  📋 Table: results_ao | 📦 Bucket: pdf_ao
+  📅 Filtre: >= 01/01/2025
+  📊 160 références en base
+======================================================================
+
+  🚀 SCRAPING AO | Filtre: >= 01/01/2025
+
+  📊 Pages: 13338
+
+  ⏭️  [SKIP-DB]   10/PUITK/2026 | 18/07/2026 | Travaux d’achèvement d’un amphithéâtre à la faculté des sciences humaines et soc
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   29/2026/DGR | 17/07/2026 | TRAVAUX D’ENTRETIEN DES RESEAUX D’IRRIGATION GRAVITAIRE EN CANAUX SEMI-CIRCULIAR
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   29/2026/DGR | 17/07/2026 | TRAVAUX D’ENTRETIEN DES RESEAUX D’IRRIGATION GRAVITAIRE EN CANAUX SEMI-CIRCULIAR
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   08/MDA/2026 | 17/07/2026 | Animation des réseaux sociaux et sponsoring des publications de la Maison de L’A
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   TO1130326/2026/ONEEBELEC | 17/07/2026 | Fourniture et installation des climatiseurs pour les sites de la DTO...Fournitur
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   TO2130322/2026/ONEEBELEC | 17/07/2026 | Abattage et élagage des arbres sous et au voisinage des lignes HTB relevant de l
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   09/PUITK/2026 | 17/07/2026 | Travaux d’aménagement et d’installation d’une charpente métallique et d’une char
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   1/2026 | 17/07/2026 | LA CONCEPTION ARCHITECTURALE ET LE SUIVI DES TRAVAUX DE CONSTRUCTION DE LA FACUL
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   29/AMDIE/2026 | 17/07/2026 | la participation de l’AMDIE à des salons à l’international....la participation d
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   16/2026 | 17/07/2026 | LA CONCEPTION ARCHITECTURALE ET LE SUIVI DES TRAVAUX DE CONSTRUCTION D’UN DISPEN
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 1/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   13/2026 | 17/07/2026 | LA CONCEPTION ARCHITECTURALE ET LE SUIVI DES TRAVAUX DE RECONSTRUCTION DE LA MOS
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   14/2026 | 17/07/2026 | LA CONCEPTION ARCHITECTURALE ET LE SUIVI DES TRAVAUX DE RECONSTRUCTION DE LA MOS
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   31/2026/ABHGZR | 17/07/2026 | Achat de fourniture et produits pour le matériel informatique au profit de l’Age
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   16/AOO/DPMR/ANP/2026 | 17/07/2026 | FOURNITURE DE BUREAU ET CONSOMMABLE INFORMATIQUE A L’AGENCE NATIONALE DES PORTS 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   48/2026/S2A | 17/07/2026 | Réalisation des prestations d’études géotechniques, de contrôle de la qualité et
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   18/AOO/DPMR/ANP/2026 | 17/07/2026 | LA MAINTENANCE DES EQUIPEMENTS DE SÛRETE AU PORT DE MOHAMMEDIA...LA MAINTENANCE 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   19/AOO/DPMR/ANP/2026 | 17/07/2026 | FOURNITURE ET INSTALLATION DES CLIMATISEURS POUR LE DEPARTEMENT DU PORT DE KENIT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   23/2026/EACCE | 17/07/2026 | l’achat de matériel informatique...l’achat de matériel informatique
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   15/TRAV/DRCDT/2026 | 17/07/2026 | TRAVAUX D’INSTALLATION DES ÉQUIPEMENTS TECHNIQUES AU PROFIT DE LA SALLE DE THEAT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   25/2026 | 17/07/2026 | Etude technique de collecte des eaux pluviales au niveau des zones rurales relev
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 2/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   01/2026/INCVT | 17/07/2026 | Achat et installation des mobiliers de bureaux pour le compte de l’Institut Nati
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   01/2026/INCVT | 17/07/2026 | Achat et installation des mobiliers de bureaux pour le compte de l’Institut Nati
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   23/2026/EACCE | 17/07/2026 | l’achat de matériel informatique...l’achat de matériel informatique
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   31/2026/EACCE | 17/07/2026 | la participation de l’EACCE aux salons ISM MIDDLE EAST qui se tiendra à Dubaï – 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   31/2026/EACCE | 17/07/2026 | la participation de l’EACCE aux salons ISM MIDDLE EAST qui se tiendra à Dubaï – 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   19/2026/DRAIRSK/BG | 17/07/2026 | LA FOURNITURE ET POSE DES ASPIRATEURS 
+POUR DES MOSQUÉES DANS LA RÉGION DE RABAT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   19/2026/DRAIRSK/BG | 17/07/2026 | LA FOURNITURE ET POSE DES ASPIRATEURS 
+POUR DES MOSQUÉES DANS LA RÉGION DE RABAT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   52/2026/SOREC | 17/07/2026 | Mise en œuvre du plan de formation annuel au profit des collaborateurs de la SOR
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   10/BET/DRAIRSK/BG/2026 | 17/07/2026 | l’élaboration des études techniques et le suivi des travaux de construction de l
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   52/2026/SOREC | 17/07/2026 | Mise en œuvre du plan de formation annuel au profit des collaborateurs de la SOR
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 3/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   10/BET/DRAIRSK/BG/2026 | 17/07/2026 | l’élaboration des études techniques et le suivi des travaux de construction de l
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   GN4130621/2026/AGS/DXG | 17/07/2026 | PRESTATION DE SUPERVISION DES VISITES SYSTÉMATIQUES  12 000 H DES GROUPES DIESEL
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   27/2026/EACCE | 17/07/2026 | l’entretien des espaces verts au niveau du siège de l’EACCE...l’entretien des es
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   27/2026/EACCE | 17/07/2026 | l’entretien des espaces verts au niveau du siège de l’EACCE...l’entretien des es
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   07/DAAF/BG/2026 | 17/07/2026 | ACQUISITION DE MATERIEL SCIENTIFIQUE D’OBSERVATION MICROSCOPIQUE, DE TRAITEMENT 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   17/2026/BR | 17/07/2026 | FOURNITURE, INSTALLATION ET MISE EN SERVICE DE DEUX (02) STATIONS DE MESURE DE L
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   17/2026/BR | 17/07/2026 | FOURNITURE, INSTALLATION ET MISE EN SERVICE DE DEUX (02) STATIONS DE MESURE DE L
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   19/2026/ANDA | 17/07/2026 | Réalisation de vidéos 3D immersives pour la communication institutionnelle de l’
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AC02/2026/SAPP | 17/07/2026 | Achat des produits pharmaceutiques spécifiques....Achat des produits pharmaceuti
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   10/2026 | 17/07/2026 | ETUDE POUR L’IDENTIFICATION ET L’ELABORATION DES NOUVEAUX PROJETS DE L’AGRICULTU
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 4/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   10/2026 | 17/07/2026 | ETUDE POUR L’IDENTIFICATION ET L’ELABORATION DES NOUVEAUX PROJETS DE L’AGRICULTU
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AOOS10/2026/PSSKENITRA | 17/07/2026 | la maintenance des agencements et installations techniques en 3 lots distincts a
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   51AOM/SNRT/2026 | 17/07/2026 | Lot n°1 : Fourniture des modules et pièces de rechange pour les émetteurs FM de 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AONS05/2026/DRKK | 17/07/2026 | prestation d’entretien et de maintenance de l'ascenseur de l’immeuble abritant l
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   12/2026/ANDA | 17/07/2026 | Mise en place d’un système de gestion et dépôt des dossiers d’investissement en 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   26T033/PLGV | 17/07/2026 | Travaux de raccordement au réseau 60 kV ONEE de sous-stations ONCF de la ligne f
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   029/26/AOO/ONDA | 17/07/2026 | Fourniture et remplacement des batteries des onduleurs du Pôle Navigation Aérien
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   009/26/AOO/ONDA | 17/07/2026 | Entretien des espaces verts de l'Aéroport Tétouan Saniat R'Mel....Entretien des 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   097/26/AOO/ONDA | 17/07/2026 | Prestation de gestion, de recyclage des chariots à bagages et de shopping au niv
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   38/2026/SAD/GSTTTA | 17/07/2026 | La réparation de l’IRM de marque GE installée à l’Hôpital Universitaire Général 
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 5/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   25/2026/EACCE | 17/07/2026 | l’achat de voitures de service...l’achat de voitures de service
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   25/2026/EACCE | 17/07/2026 | l’achat de voitures de service...l’achat de voitures de service
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   12/BG/2026 | 17/07/2026 | ACHAT DE MATÉRIEL ET MOBILIER DE BUREAU, MATÉRIEL INFORMATIQUE ET TECHNIQUE POUR
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   142DR5/2025 | 17/07/2026 | Acquisition et installation des groupes de pompage pour les centres de productio
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   12/BG/2026 | 17/07/2026 | ACHAT DE MATÉRIEL ET MOBILIER DE BUREAU, MATÉRIEL INFORMATIQUE ET TECHNIQUE POUR
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/CAO/2026 | 17/07/2026 | Prestations de gardiennage et de surveillance des locaux administratifs de la Ch
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/CAO/2026 | 17/07/2026 | Prestations de gardiennage et de surveillance des locaux administratifs de la Ch
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   08/2026 | 17/07/2026 | l’achat de réactifs  et consommables de laboratoires avec mise à disposition au 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   32/2026/CMR | 17/07/2026 | Transport collectif du personnel de la Caisse Marocaine des Retraites...Transpor
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   08/2026 | 17/07/2026 | l’achat de réactifs  et consommables de laboratoires avec mise à disposition au 
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 6/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   32/2026/CMR | 17/07/2026 | Transport collectif du personnel de la Caisse Marocaine des Retraites...Transpor
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   05/2026 | 17/07/2026 | Achat de fourniture (toners) de matériel informatique pour le compte de  la comm
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   18/2026/APDS | 17/07/2026 | Travaux d’achèvement de la piscine à la commune de Fam El Hisn....Travaux d’achè
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   04/2026 | 17/07/2026 | L'entretien et le nettoyage des bâtiments administratifs des services extérieurs
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   04/2026 | 17/07/2026 | L'entretien et le nettoyage des bâtiments administratifs des services extérieurs
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   05/2026 | 17/07/2026 | Achat de fourniture (toners) de matériel informatique pour le compte de  la comm
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AO/105/2026 | 17/07/2026 | AMÉNAGEMENT DE LA PLACE PUBLIQUE N°01 DANS LA COMMUNE DE RIBAT ELKHEIR  DANS LE 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   06/rvv/2026 | 17/07/2026 | Entretien des Fontaines et leurs équipements au Parc Hassan II de Rabat - Marché
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   23/2026/SAD/GSTTTA | 17/07/2026 | l’achat d’outillage et quincaillerie de Maintenance biomédicale pour les besoins
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   06/rvv/2026 | 17/07/2026 | Entretien des Fontaines et leurs équipements au Parc Hassan II de Rabat - Marché
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 7/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   03/2026 | 17/07/2026 | Impression des articles personnalisés destinés au Ministère de la Solidarité, de
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   24/2026/BP | 17/07/2026 | Contrôle de qualité des travaux de construction de la piste reliant la rocade Fè
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/2026 | 17/07/2026 | Impression des articles personnalisés destinés au Ministère de la Solidarité, de
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   23/2026/BP | 17/07/2026 | Assistance technique aux travaux de construction de la piste reliant la rocade F
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   54/2026/DRSPSFM | 17/07/2026 | Prestation de laboratoire pour le contrôle de la qualité des travaux de construc
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   54/2026/DRSPSFM | 17/07/2026 | Prestation de laboratoire pour le contrôle de la qualité des travaux de construc
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   25/2026/BP | 17/07/2026 | Contrôle topographique des travaux de construction de la piste reliant la rocade
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   22/2026/BP | 17/07/2026 | Travaux de construction de la piste reliant la rocade Fès - Casablanca et le gro
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   39/2026/DRSPSFM | 17/07/2026 | Prestation de laboratoire pour le contrôle de la qualité des travaux de construc
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   39/2026/DRSPSFM | 17/07/2026 | Prestation de laboratoire pour le contrôle de la qualité des travaux de construc
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 8/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   18/2026 | 17/07/2026 | ETUDES TECHNIQUES ET SUIVI DES TRAVAUX D’AMENAGEMENT DU BÂTIMENT ANNEXE DU SIEGE
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/BI/2026/ENA | 17/07/2026 | Acquisition de rayonnage pour le compte de l’Ecole Nationale d’Agriculture de Me
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/CUI | 17/07/2026 | Gestion déléguée de l’abattoir communal à IMINTANOUT....Gestion déléguée de l’ab
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   14/2026 | 17/07/2026 | CONTROLE ET SUIVI DE LA QUALITE DES TRAVAUX DE CONSTRUCTION DES PISTES DANS PROV
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   01/2026 | 17/07/2026 | LA COLLECTE, L’ENLEVEMENT ET LE TRAITEMENT DES DECHETS MEDICAUX ET PHARMACEUTIQU
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026 | 17/07/2026 | PC 2026 : Acquisition d’habillement au profit des agents de l’entretien routier 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   12/2026 | 17/07/2026 | PC 2026 : Fourniture des produits d’alimentation pour le personnel de l’entretie
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   12/2026/CUI | 17/07/2026 | TRAVAUX D’AMENAGEMENT DES VOIES DE LA VILLE EN DEUX  (02) LOTS SEPARES :
+- LOT N
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   14/2023/SDRL | 17/07/2026 | Travaux d'aménagement extérieur du siège de la cour d’appel de Laâyoune en lot u
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   29/2026 | 17/07/2026 | Achat de matériel de bureau pour le compte du tribunal de famille d'Oujda...Acha
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 9/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   05/26/CAS | 17/07/2026 | Location de voiture utilitaires pour le compte de l'Arrondissement De Souissi...
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   7/2026CHPSEFROU | 17/07/2026 | l’achat de matériel de couchage pour le CHP Mohamed v sefrou...l’achat de matéri
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   7/2026CHPSEFROU | 17/07/2026 | l’achat de matériel de couchage pour le CHP Mohamed v sefrou...l’achat de matéri
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   18/SAM/BG/2026 | 17/07/2026 | CONCEPTION ET IMPRESSION D’AGENDA, DE CARTE DE VISITE , DE  VŒUX ET  DOCUMENTS A
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   18/SAM/BG/2026 | 17/07/2026 | CONCEPTION ET IMPRESSION D’AGENDA, DE CARTE DE VISITE , DE  VŒUX ET  DOCUMENTS A
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/2026/CFRN | 17/07/2026 | La réalisation des prestations de Restauration et Pause-Café dans le cadre de l’
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   16/2026 | 17/07/2026 | Travaux d'aménagement de l'agora et son environnement près du siège caïdat Aguel
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   093/26/AOO/ONDA | 17/07/2026 | Fourniture et équipement de bureau pour l’O.N.D.A....Fourniture et équipement de
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   05/2026 | 17/07/2026 | Achat de Matériel de Bureau pour l’extension de Tribunal de Première Instance Pé
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   22AOM/SNRT/2026 | 17/07/2026 | Lot N°01 : Fourniture et installation du matériel de bureau : Photocopieurs, Fax
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 10/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   32/INO/2026 | 17/07/2026 | L'ACQUISITION DES ÉQUIPEMENTS BIOMÉDICAUX au profit de l'Institut National d'Onc
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   06/2026/CHPKH | 17/07/2026 | L’achat des produits biologiques et chimiques pour l’automate Immunologie AIA 36
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   16/2026 | 17/07/2026 | Travaux d’aménagement du centre socio sportif de proximité type «A» à la Commune
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   16/2026 | 17/07/2026 | Travaux d’aménagement du centre socio sportif de proximité type «A» à la Commune
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AON23/2026/ | 17/07/2026 | ETUDE D’ELARGISSEMENT ET DU RENFORCEMENT ET DE RECTIFICATION DU TRACE DE LA RR70
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   06/2026/CHPKH | 17/07/2026 | L’achat des produits biologiques et chimiques pour l’automate Immunologie AIA 36
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/2025/DRA_ESSD | 17/07/2026 | Les prestations de gardiennage et de surveillance des bâtiments relevant de la D
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 11/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   17/2026/APDS | 17/07/2026 | Travaux d’achèvement du complexe touristique à la commune de Fam El Hisn ....Tra
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   85/ENSM/2026 | 17/07/2026 | -	Prestations de gardiennage et de surveillance des locaux de l’École Normale Su
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   15/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE LA PISCINE DU CENTRE SOCIO SPORTIF DE PROXIMITE EL FATH
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   07/2026/BG | 17/07/2026 | Entretien et maintenance préventive et curative des installations électriques et
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   15/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE LA PISCINE DU CENTRE SOCIO SPORTIF DE PROXIMITE EL FATH
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/2026/DRI/RABAT | 17/07/2026 | LA REALISATION DES TRAVAUX D’AMENAGEMENT DE L’IMMEUBLE DES IMPOTS DE TEMARA (LOT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 12/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   78/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT D’UN LYCEE COLLEGIAL PIONNIER A LA CT IMZOUREN RELEVANT DE
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   79/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT 02 DEUX LYCEES COLLEGIAUX PIONNIERS AUX CT AL HOCEIMA ET N
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   75/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 06 SIX ECOLES PIONNIERES AUX CT AL HOCEIMA , AIT KAMRA 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   76/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 02 DEUX LYCEES COLLEGIAUX PIONNIERS AUX CT IMZOUREN ET 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   77/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT D’UN LYCEE COLLEGIAL PIONNIER A LA CT BNI BOUFRAH RELEVANT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   71/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 05 CINQ ECOLES PIONNIERES AUX CT CHAKRANE, BNI ABDALLAH
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   72/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 04 QUATRE ECOLES PIONNIERES AUX CT AJDIR, IMRABTEN ET N
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   73/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 03 TROIS ECOLES PIONNIERES AUX CT IZEMMOUREN ET SENADA 
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 13/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   05/FSJESS/2026 | 17/07/2026 | Prestation d’entretien et de nettoyage des locaux de la Faculté des Sciences Jur
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   74/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 07 SEPT ECOLES PIONNIERES A LA CT ROUADI RELEVANT   DE 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   69/226 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 05 CINQ ECOLES PIONNIERES AUX CT BNI BOUFRAH, BNI GMIL 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   70/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 08 HUIT ECOLES PIONNIERES AUX CT ZAOUIAT SIDI ABDELKADE
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   67/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 03 TROIS ECOLES PIONNIERES AUX CT ABDELGHAYA SOUAHEL ET
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   68/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 05 CINQ ECOLES PIONNIERES AUX CT BNI BOUNSAR ET BNI AHM
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   64/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 02 DEUX ECOLES PIONNIERES A LA CT ISSAGUEN RELEVANT   D
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   65/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 05 CINQ ECOLES PIONNIERES AUX CT ISSAGUEN ET TAMSAOUT  
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AOO/09/ANEPCEST/2026 | 17/07/2026 | ETUDE GEOTECHNIQUE, RECEPTION DE FONDS DE FOUILLES ET CONTROLE DE QUALITE DES TR
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 14/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   66/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 04 QUATRE ECOLES PIONNIERES AUX CT MOULAY AHMED CHERIF 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   62/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 03 TROIS ECOLES PIONNIERES AUX CT IMZOUREN ET AIT YOUSS
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   63/2026 | 17/07/2026 | TRAVAUX D’AMENAGEMENT DE 02 DEUX ECOLES PIONNIERES AUX CT IMZOUREN ET BNI BOUCHI
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   129/2026/CHUIS | 17/07/2026 | l’externalisation de la collecte et le traitement des déchets médicaux et pharma
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 15/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   14/2026 | 17/07/2026 | CONTROLE ET OPTIMISATION DES ETUDES TECHNIQUES ET CONTROLE
+DES TRAVAUX DE CONSTR
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/C.S | 17/07/2026 | TRAVAUX D'AMENAGEMENT DES PLACES PUBLIQUE 01, 02, 03, 04 ET 05 AU QUARTIER ES -S
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   14/2026 | 17/07/2026 | CONTROLE ET OPTIMISATION DES ETUDES TECHNIQUES ET CONTROLE
+DES TRAVAUX DE CONSTR
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   16/2026 | 17/07/2026 | les prestations de la restauration pour les malades et le personnel de garde du 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AOOS09/2026/PSSKENITRA | 17/07/2026 | l’achat de consommables médicaux d’ophtalmologie en lot unique...l’achat de cons
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   16/2026 | 17/07/2026 | les prestations de la restauration pour les malades et le personnel de garde du 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   06/CPTT/2026 | 17/07/2026 | Etudes techniques et  suivi des travaux de construction d’un bureau communal d’h
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 16/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   06/CPTT/2026 | 17/07/2026 | Etudes techniques et  suivi des travaux de construction d’un bureau communal d’h
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   05/CPTT/2026 | 17/07/2026 | Etudes techniques et  suivi des travaux de construction d’un bureau communal d’h
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   05/CPTT/2026 | 17/07/2026 | Etudes techniques et  suivi des travaux de construction d’un bureau communal d’h
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   19/2026/DR5 | 17/07/2026 | RENFORCEMENT DE L'AEP D'EL HAJEB A PARTIR DU BARRAGE DRISS 1ER - LOT GENIE CIVIL
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026 | 17/07/2026 | Contrôle et optimisation des études techniques et contrôle des travaux de constr
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   23/2026/BG | 17/07/2026 | l’achèvement des travaux d'aménagement des bâtiments administratifs relevant de 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026 | 17/07/2026 | Contrôle et optimisation des études techniques et contrôle des travaux de constr
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   25/2026/BG | 17/07/2026 | Travaux d'entretien des logements administratifs à la Province de Tiznit....Trav
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/2026 | 17/07/2026 | Acquisition d’une  chargeuse-pelleteuse (Tractopelle) au profit de la Commune M’
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   55/2026/DRSPSFM | 17/07/2026 | Contrôle et optimisation des études techniques et contrôle des travaux de constr
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 17/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   55/2026/DRSPSFM | 17/07/2026 | Contrôle et optimisation des études techniques et contrôle des travaux de constr
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/2026 | 17/07/2026 | Acquisition d’une  chargeuse-pelleteuse (Tractopelle) au profit de la Commune M’
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   50/2026/DRSPSFM | 17/07/2026 | Contrôle et optimisation des études techniques et contrôle des travaux de constr
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   05/2026 | 17/07/2026 | travaux d’entretien et de renforcement des routes de la commune de Rislane Provi
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   50/2026/DRSPSFM | 17/07/2026 | Contrôle et optimisation des études techniques et contrôle des travaux de constr
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   04/2026/COM | 17/07/2026 | TRAVAUX DE TRANSFORMATION D UN FORAGE DE RECONNAISSANCE EN FORAGE
+D’EXPLOITATION
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   03/2026 | 17/07/2026 | Acquisition d’une  chargeuse-pelleteuse (Tractopelle) au profit de la Commune M’
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   17/2026 | 17/07/2026 | ETUDES TECHNIQUES ET SUIVI DES TRAVAUX DE CONSTRUCTION D'UN CENTRE D’ACCUEIL A M
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   16/DRAI/BG/2026 | 17/07/2026 | FOURNITURE DES MATERIELS AUDIOVISUELS À DES ECOLES D'ENSEIGNEMENT TRADITIONNEL D
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   15/2026 | 17/07/2026 | ETUDES TECHNIQUES ET SUIVI DES TRAVAUX DE CONSTRUCTION DE DEUX MAISONS DES JEUNE
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 18/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   28DR1/CI/2026 | 17/07/2026 | Mise à niveau de la station de reprise Tiwrar de refoulement des eaux à partir d
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   10/2026 | 17/07/2026 | organisation de la 10ème Edition du Carrefour d’Oulmès pour le Développement Loc
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   108/2026/ADHA | 17/07/2026 | TRAVAUX ALIMENTATION EN EAU POTABLE ET D’ASSAINISSEMENT DES GROUPEMENTS D’HABITA
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   10/2026 | 17/07/2026 | organisation de la 10ème Edition du Carrefour d’Oulmès pour le Développement Loc
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   23DR3/2026 | 17/07/2026 | Réalisation de panneaux thématiques d’inauguration des projets d’eau potable....
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   108/2026/CHUIS | 17/07/2026 | ACHAT DE FONGIBLES MEDICAUX DESTINES AUX DIVERS ETABLISSEMENTS RELEVENAT DU CHUI
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   38/2026/SAD/GSTTTA | 17/07/2026 | La réparation de l’IRM de marque GE installée à l’Hôpital Universitaire Général 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   31/2026 | 17/07/2026 | REALISATION D’UN LEVE DE GEOPHYSIQUE AEROPORTEE (MOBILE MT OU EQUIVALENT) DANS L
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   107/2026/CHUIS | 17/07/2026 | ACHAT DE  FONGIBLES MEDICAUX DESTINES  AUX DIVERS ETABLISSEMENTS RELEVENAT DU CH
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   12/2026/ANDA | 17/07/2026 | Mise en place d’un système de gestion et dépôt des dossiers d’investissement en 
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 19/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   49DR5/2026 | 17/07/2026 | ACQUISITION D’APPAREILS SCIENTIFIQUES DE LABORATOIRES RURAL...ACQUISITION D’APPA
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   O/192/26 | 17/07/2026 | Travaux divers d’exploitation du réseau de distribution d’eau potable de la SRM-
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   C/175/26 | 17/07/2026 | DETECTION DES FRAUDES AU NIVEAU DES RESEAUX DE DISTRIBUTION ET SYSTEMES DE COMPT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   C/175/26 | 17/07/2026 | DETECTION DES FRAUDES AU NIVEAU DES RESEAUX DE DISTRIBUTION ET SYSTEMES DE COMPT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   O/197/26 | 17/07/2026 | TRAVAUX DE RENFORCEMENT DE L’ALIMENTATION EN EAU POTABLE PAR BORNES FONTAINES DE
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   O/197/26 | 17/07/2026 | TRAVAUX DE RENFORCEMENT DE L’ALIMENTATION EN EAU POTABLE PAR BORNES FONTAINES DE
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   E/128/26 | 17/07/2026 | TRAVAUX DE FONÇAGE POUR LA MISE EN PLACE DE FOURREAUX DESTINES AU RESEAU D’ELECT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   25/AREPDT/2026 | 17/07/2026 | Programme de valorisation territoriale et paysagère des zones de montagnes de la
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   E/128/26 | 17/07/2026 | TRAVAUX DE FONÇAGE POUR LA MISE EN PLACE DE FOURREAUX DESTINES AU RESEAU D’ELECT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   O/182/26 | 17/07/2026 | Études techniques des projets d’alimentation en eau potable des communes de Zagg
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 20/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   O/182/26 | 17/07/2026 | Études techniques des projets d’alimentation en eau potable des communes de Zagg
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   C/184/26 | 17/07/2026 | TRAVAUX DE RENOUVELEMENT DU RESEAU D’EAU POTABLE ET D’ASSAINISSEMENT LIQUIDE SIT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   C/184/26 | 17/07/2026 | TRAVAUX DE RENOUVELEMENT DU RESEAU D’EAU POTABLE ET D’ASSAINISSEMENT LIQUIDE SIT
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   093/2017/ANCFCC/DC | 17/07/2026 | l’exécution des prestations de l’immatriculation foncière d’ensemble (reconnaiss
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   O/139/26 | 17/07/2026 | Travaux de construction d’un réservoir 15 000 m3 complexe hydraulique Mehdia Kas
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   O/139/26 | 17/07/2026 | Travaux de construction d’un réservoir 15 000 m3 complexe hydraulique Mehdia Kas
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   A/147/26 | 17/07/2026 | Travaux de réalisation du collecteur D1 amont (tranche 1) à Kénitra...Travaux de
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   A/147/26 | 17/07/2026 | Travaux de réalisation du collecteur D1 amont (tranche 1) à Kénitra...Travaux de
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   43/2026/ALOMRANE_SOUSS_MASSA | 17/07/2026 | L’Achèvement des travaux de réalisation de la station d’épuration « STEP » des e
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   43/2026/ALOMRANE_SOUSS_MASSA | 17/07/2026 | L’Achèvement des travaux de réalisation de la station d’épuration « STEP » des e
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 21/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   12/2026 | 17/07/2026 | Programme de mise à niveau des infrastructures routières dans la Région Souss Ma
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AO05/2026/DRCS | 17/07/2026 | Appel d’offres ouvert international à majoration pour la Réalisation des prestat
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/DPETLG | 17/07/2026 | Contrôle Extérieur Topographique des Travaux de Construction de la Déviation Déf
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AO05/2026/DRCS | 17/07/2026 | Appel d’offres ouvert international à majoration pour la Réalisation des prestat
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   19/2026/ANDA | 17/07/2026 | Réalisation de vidéos 3D immersives pour la communication institutionnelle de l’
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   36/2026/ORH/SEQ | 17/07/2026 | TRAVAUX D'AMENAGEMENT DE LA SEGUIA JDIDA TAKDIMT DANS LA COMMUNE TERRITORIALE AG
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   36/2026/ORH/SEQ | 17/07/2026 | TRAVAUX D'AMENAGEMENT DE LA SEGUIA JDIDA TAKDIMT DANS LA COMMUNE TERRITORIALE AG
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   01/2026 | 17/07/2026 | location piscine communal avec ses locaux du
+13/07/2026 au 13/07/2029...location
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   12/2026/CBG | 17/07/2026 | ACHAT DE MATERIEL INFORMATIQUE AU PROFIT DE LA COMMUNE DE BENGUERIR...ACHAT DE M
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   32/2026/ORH/SGRID | 17/07/2026 | ENTRETIEN DU MATERIEL HYDROMECANIQUE DES RESEAUX D’IRRIGATION SOUS-PRESSION DANS
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 22/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   32/2026/ORH/SGRID | 17/07/2026 | ENTRETIEN DU MATERIEL HYDROMECANIQUE DES RESEAUX D’IRRIGATION SOUS-PRESSION DANS
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   31/2026/ORH/SEQ | 17/07/2026 | TRAVAUX D’AMENAGEMENT DES POINTS D’EAU POUR L’IRRIGATION DANS LA ZONE D’ACTION D
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   31/2026/ORH/SEQ | 17/07/2026 | TRAVAUX D’AMENAGEMENT DES POINTS D’EAU POUR L’IRRIGATION DANS LA ZONE D’ACTION D
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   95/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK MOULAY HFID DANS LE CADRE DE LA CONVENTION
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   18/2026/DPAAG/SG | 17/07/2026 | Achat du matériel informatique pour CHU de Laayoune...Achat du matériel informat
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   12/2026 | 17/07/2026 | Programme de mise à niveau des infrastructures routières dans la Région Souss Ma
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   95/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK MOULAY HFID DANS LE CADRE DE LA CONVENTION
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   18/2026/DPAAG/SG | 17/07/2026 | Achat du matériel informatique pour CHU de Laayoune...Achat du matériel informat
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   94/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK AL KHADIR DANS LE CADRE DE LA CONVENTION R
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   94/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK AL KHADIR DANS LE CADRE DE LA CONVENTION R
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 23/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   123/2026 | 17/07/2026 | TRAVAUX D’ÉCLAIRAGE PUBLIC DE LA COMMUNE D’AGUELMOUS AU NIVEAU DES PÉNÉTRANTES (
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AO077/2024/ANCFCC/DLAG | 17/07/2026 | Assistance pour la gestion technique du siège de l’Agence Nationale de la Conser
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   124DR5/2025 | 17/07/2026 | FOURNITURE TRANSPORT ET POSE DE DEBITMETRES ET COMPTEURS MECANIQUES AU NIVEAU DE
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   AO085/2023/ANCFCC/DLAG | 17/07/2026 | Réalisation des travaux d’aménagement du Bloc Foncier d’Oujda...Réalisation des 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   96/2026 | 17/07/2026 | TRAVAUX DE RECONSTRUCTION DU FOUNDOUK AL MELLAK DANS LE CADRE DE LA CONVENTION R
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   06/M/DAAF/2026 | 17/07/2026 | la réalisation des travaux d’entretien et de maintenance des ascenseurs de l’ANP
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   06/M/DAAF/2026 | 17/07/2026 | la réalisation des travaux d’entretien et de maintenance des ascenseurs de l’ANP
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   21/DRC/CI/2026 | 17/07/2026 | ENTRETIEN ET REPARATION DES CONDUITES INFERIEURES OU EGALES A 400 MM EN PVC ET E
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   21/DRC/CI/2026 | 17/07/2026 | ENTRETIEN ET REPARATION DES CONDUITES INFERIEURES OU EGALES A 400 MM EN PVC ET E
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   06/2026/COM | 17/07/2026 | Travaux de reconstruction du mur de clôture de cimetière principal à la commune 
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 24/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+  ⏭️  [SKIP-DB]   13/2026/MTNRA | 17/07/2026 | Travaux de peinture du siège du ministère Délégué auprès du Chef du Gouvernement
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   07/2026/COM | 17/07/2026 | Travaux de dallage par béton de voie au douar Day commune Ouled M'barek Province
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   13/2026/MTNRA | 17/07/2026 | Travaux de peinture du siège du ministère Délégué auprès du Chef du Gouvernement
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   10/INDH/2026 | 17/07/2026 | ACQUISITION DE TROIS MOYENS DE TRANSPORTS POUR LES CENTRES D’ACCEUIL DES PERSONN
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   10/INDH/2026 | 17/07/2026 | ACQUISITION DE TROIS MOYENS DE TRANSPORTS POUR LES CENTRES D’ACCEUIL DES PERSONN
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   6/DAILEX2627 | 17/07/2026 | la fourniture à la SONACOS du matériel informatique...la fourniture à la SONACOS
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   68/2026/DRANEFRSK | 17/07/2026 | Achat de petit outillage et autre matériel (incendies) au profit de la Direction
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   20/2026/DRANEFMS/DPANEF_ES | 16/07/2026 | L’exécution des travaux de reboisement sur une superficie totale de 400 ha, dans
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   07/2026/dpa/es | 16/07/2026 | ACQUISITION DE 390 CITERNES SOUPLES DE 06 M3 POUR LE STOCKAGE DE L’EAU DESTINEE 
+       Raison: Déjà en base (results_ao)
+  ⏭️  [SKIP-DB]   07/2026/dpa/es | 16/07/2026 | ACQUISITION DE 390 CITERNES SOUPLES DE 06 M3 POUR LE STOCKAGE DE L’EAU DESTINEE 
+       Raison: Déjà en base (results_ao)
+  ┌─ PAGE 25/13338 ─────────────────────
+  │  ✅ Sauvegardés: 0
+  │  ⏭️  Skippés: 10
+  │  📊 Total: 0 | PDF: 0
+  └──────────────────────────────────────────────────
+
+  ⚠️ Interrompu par l'utilisateur
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-19 21:21:41,046 - INFO - ✅ Supabase: https://uxriscdyynjmhazmrvhr.supabase.co
+2026-07-19 21:21:41,047 - INFO - 📋 Table: results_ao | 📦 Bucket: pdf_ao
+2026-07-19 21:21:41,047 - INFO - 📅 Filtre date min: 01/01/2025
+2026-07-19 21:21:42,147 - INFO - 📊 160 références en base
+2026-07-19 21:21:42,148 - INFO - ============================================================
+2026-07-19 21:21:42,150 - INFO - 🚀 Scraping AO | Filtre: >= 01/01/2025
+2026-07-19 21:21:42,152 - INFO - ============================================================
+2026-07-19 21:21:44,177 - INFO - 🌐 Navigation...
+2026-07-19 21:22:01,725 - INFO - 🔍 Lancement recherche (sans filtre formulaire)...
+2026-07-19 21:22:29,875 - INFO - ✅ Résultats chargés
+2026-07-19 21:22:29,968 - INFO - 📊 Pages: 13338
+2026-07-19 21:22:29,968 - INFO - 
+📄 Scan de 13338 pages...
+
+2026-07-19 21:22:29,969 - INFO - 
+==================================================
+2026-07-19 21:22:29,969 - INFO - 📄 PAGE 1/13338
+2026-07-19 21:22:29,969 - INFO - ==================================================
+2026-07-19 21:22:52,572 - INFO -   [1] 📥 19/NARSA/2026 | 19/07/2026 | La maintenance des radars portables de contrôle de la vitess...
+2026-07-19 21:22:52,668 - INFO -   ✅ +1 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:23:06,643 - INFO - 
+==================================================
+2026-07-19 21:23:06,645 - INFO - 📄 PAGE 2/13338
+2026-07-19 21:23:06,646 - INFO - ==================================================
+2026-07-19 21:23:07,064 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:23:20,246 - INFO - 
+==================================================
+2026-07-19 21:23:20,247 - INFO - 📄 PAGE 3/13338
+2026-07-19 21:23:20,247 - INFO - ==================================================
+2026-07-19 21:23:20,523 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:23:33,213 - INFO - 
+==================================================
+2026-07-19 21:23:33,215 - INFO - 📄 PAGE 4/13338
+2026-07-19 21:23:33,216 - INFO - ==================================================
+2026-07-19 21:23:33,575 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:23:52,901 - INFO - 
+==================================================
+2026-07-19 21:23:52,903 - INFO - 📄 PAGE 5/13338
+2026-07-19 21:23:52,905 - INFO - ==================================================
+2026-07-19 21:23:53,300 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:24:10,531 - INFO - 
+==================================================
+2026-07-19 21:24:10,532 - INFO - 📄 PAGE 6/13338
+2026-07-19 21:24:10,533 - INFO - ==================================================
+2026-07-19 21:24:10,849 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:24:24,753 - INFO - 
+==================================================
+2026-07-19 21:24:24,755 - INFO - 📄 PAGE 7/13338
+2026-07-19 21:24:24,757 - INFO - ==================================================
+2026-07-19 21:24:25,347 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:24:40,801 - INFO - 
+==================================================
+2026-07-19 21:24:40,804 - INFO - 📄 PAGE 8/13338
+2026-07-19 21:24:40,805 - INFO - ==================================================
+2026-07-19 21:24:41,393 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:24:54,989 - INFO - 
+==================================================
+2026-07-19 21:24:54,990 - INFO - 📄 PAGE 9/13338
+2026-07-19 21:24:54,990 - INFO - ==================================================
+2026-07-19 21:24:55,523 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:25:08,940 - INFO - 
+==================================================
+2026-07-19 21:25:08,944 - INFO - 📄 PAGE 10/13338
+2026-07-19 21:25:08,945 - INFO - ==================================================
+2026-07-19 21:25:09,455 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:25:23,090 - INFO - 
+==================================================
+2026-07-19 21:25:23,100 - INFO - 📄 PAGE 11/13338
+2026-07-19 21:25:23,102 - INFO - ==================================================
+2026-07-19 21:25:23,634 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:25:37,898 - INFO - 
+==================================================
+2026-07-19 21:25:37,900 - INFO - 📄 PAGE 12/13338
+2026-07-19 21:25:37,902 - INFO - ==================================================
+2026-07-19 21:25:38,534 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:25:51,965 - INFO - 
+==================================================
+2026-07-19 21:25:51,969 - INFO - 📄 PAGE 13/13338
+2026-07-19 21:25:51,970 - INFO - ==================================================
+2026-07-19 21:25:52,533 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:26:05,276 - INFO - 
+==================================================
+2026-07-19 21:26:05,280 - INFO - 📄 PAGE 14/13338
+2026-07-19 21:26:05,282 - INFO - ==================================================
+2026-07-19 21:26:05,839 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:26:20,115 - INFO - 
+==================================================
+2026-07-19 21:26:20,119 - INFO - 📄 PAGE 15/13338
+2026-07-19 21:26:20,121 - INFO - ==================================================
+2026-07-19 21:26:20,718 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:26:33,168 - INFO - 
+==================================================
+2026-07-19 21:26:33,174 - INFO - 📄 PAGE 16/13338
+2026-07-19 21:26:33,175 - INFO - ==================================================
+2026-07-19 21:26:33,719 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:26:48,016 - INFO - 
+==================================================
+2026-07-19 21:26:48,016 - INFO - 📄 PAGE 17/13338
+2026-07-19 21:26:48,017 - INFO - ==================================================
+2026-07-19 21:26:48,450 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:27:01,138 - INFO - 
+==================================================
+2026-07-19 21:27:01,140 - INFO - 📄 PAGE 18/13338
+2026-07-19 21:27:01,141 - INFO - ==================================================
+2026-07-19 21:27:02,110 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:27:15,286 - INFO - 
+==================================================
+2026-07-19 21:27:15,287 - INFO - 📄 PAGE 19/13338
+2026-07-19 21:27:15,288 - INFO - ==================================================
+2026-07-19 21:27:15,833 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:27:28,969 - INFO - 
+==================================================
+2026-07-19 21:27:28,974 - INFO - 📄 PAGE 20/13338
+2026-07-19 21:27:28,977 - INFO - ==================================================
+2026-07-19 21:27:29,576 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:27:42,445 - INFO - 
+==================================================
+2026-07-19 21:27:42,448 - INFO - 📄 PAGE 21/13338
+2026-07-19 21:27:42,449 - INFO - ==================================================
+2026-07-19 21:27:42,971 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:27:55,862 - INFO - 
+==================================================
+2026-07-19 21:27:55,865 - INFO - 📄 PAGE 22/13338
+2026-07-19 21:27:55,866 - INFO - ==================================================
+2026-07-19 21:27:56,396 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:28:09,363 - INFO - 
+==================================================
+2026-07-19 21:28:09,367 - INFO - 📄 PAGE 23/13338
+2026-07-19 21:28:09,369 - INFO - ==================================================
+2026-07-19 21:28:09,919 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:28:22,726 - INFO - 
+==================================================
+2026-07-19 21:28:22,730 - INFO - 📄 PAGE 24/13338
+2026-07-19 21:28:22,736 - INFO - ==================================================
+2026-07-19 21:28:23,291 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:28:38,118 - INFO - 
+==================================================
+2026-07-19 21:28:38,133 - INFO - 📄 PAGE 25/13338
+2026-07-19 21:28:38,145 - INFO - ==================================================
+2026-07-19 21:28:38,685 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 1
+2026-07-19 21:28:51,389 - INFO - 
+==================================================
+2026-07-19 21:28:51,392 - INFO - 📄 PAGE 26/13338
+2026-07-19 21:28:51,395 - INFO - ==================================================
+2026-07-19 21:29:36,470 - INFO -   [2] 📥 06/2026/CARTTH | 16/07/2026 | Achat et livraison des outils et supports de communications ...
+2026-07-19 21:30:21,234 - INFO -   [3] 📥 05/2026/CARTTH | 16/07/2026 | Organisation de la foire de produit de terroir à Al Hoceima....
+2026-07-19 21:31:24,295 - ERROR - Upload erreur: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2026-07-19 21:31:26,890 - INFO -   [4] ❌ 04/2026/CARTTH | 16/07/2026 | Achat et livraison des bidons de lait au profit des organisa...
+2026-07-19 21:31:26,891 - INFO -   ✅ +3 | ⏭️ 0 hors dates | Total: 4
+2026-07-19 21:31:43,105 - INFO - 
+==================================================
+2026-07-19 21:31:43,108 - INFO - 📄 PAGE 27/13338
+2026-07-19 21:31:43,110 - INFO - ==================================================
+2026-07-19 21:33:03,779 - INFO -   [5] 📥 03/2026/CARTTH | 16/07/2026 | Achat et livraison du matériel d’élevage au profit des éleve...
+2026-07-19 21:33:52,142 - INFO -   [6] 📥 118/2026 | 16/07/2026 | TRAVAUX D'ENTERREMENT DES LIGNES HTA &amp; BT A LA PENETRANT...
+2026-07-19 21:34:16,726 - INFO -   [7] 📥 119/2026 | 16/07/2026 | TRAVAUX DE REALISATION DES FORAGES (RECONNAISSANCE ET EXPLOI...
+2026-07-19 21:34:34,959 - INFO -   [8] 📥 117/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE LA PISTE TALIOUINE-OUIRINE AU NIV...
+2026-07-19 21:34:54,795 - INFO -   [9] 📥 10008345 | 16/07/2026 | Étude APS – APD – DCE et Assistance Technique pour la Mise e...
+2026-07-19 21:35:24,654 - INFO -   [10] 📥 09/2026/2 | 16/07/2026 | Achat des tables de radiologie destinés à différentes format...
+2026-07-19 21:35:24,674 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 10
+2026-07-19 21:35:38,289 - INFO - 
+==================================================
+2026-07-19 21:35:38,290 - INFO - 📄 PAGE 28/13338
+2026-07-19 21:35:38,291 - INFO - ==================================================
+2026-07-19 21:35:53,594 - INFO -   [11] 📥 51/2026/S2A | 16/07/2026 | Contrôle technique des études et des travaux d’extension et ...
+2026-07-19 21:36:12,115 - INFO -   [12] 📥 115/2026 | 16/07/2026 | TRAVAUX D’ACHEVEMENT DE L’AMENAGEMENT DU BOULEVARD ZERKTOUNI...
+2026-07-19 21:36:22,648 - INFO -   [13] 📥 TC4130461/2026/ONEEBELEC | 16/07/2026 | Renforcement du réseau 225 kV de la région de Casablanca...R...
+2026-07-19 21:36:50,426 - INFO -   [14] 📥 12/2026/B.G. | 16/07/2026 | Etudes techniques et suivi des travaux de construction du si...
+2026-07-19 21:37:22,476 - INFO -   [15] 📥 03/2026/CUMFJ | 16/07/2026 | L’Acquisition d’un  Fourgon Nacelle au profit de la Commune ...
+2026-07-19 21:37:51,954 - INFO -   [16] 📥 16/2026/INDH | 16/07/2026 | Etudes techniques du projet de construction des pistes d’acc...
+2026-07-19 21:38:03,352 - INFO -   [17] 📥 33/2026/OFPPT | 16/07/2026 | La mesure d'impact du semestre 5 sur les trajectoires post-f...
+2026-07-19 21:38:17,505 - INFO -   [18] 📥 AO050/2026/ANCFCC/DLAG | 16/07/2026 | Acquisition du matériel de bureau pour les services centraux...
+2026-07-19 21:38:34,462 - INFO -   [19] 📥 AO045/2026/ANCFCC/DOSI | 16/07/2026 | Extension de la solution de protection contre la fuite des d...
+2026-07-19 21:38:34,465 - INFO -   ✅ +9 | ⏭️ 0 hors dates | Total: 19
+2026-07-19 21:38:47,910 - INFO - 
+==================================================
+2026-07-19 21:38:47,915 - INFO - 📄 PAGE 29/13338
+2026-07-19 21:38:47,917 - INFO - ==================================================
+2026-07-19 21:39:00,912 - INFO -   [20] ❌ 47/INO/2026 | 16/07/2026 | L’ACHAT DES FONGIBLES MEDICAUX POUR L'INSTITUT NATIONAL D'ON...
+2026-07-19 21:39:23,620 - INFO -   [21] 📥 03/FPSB/2026 | 16/07/2026 | PRESTATION DE RESTAURATION AU PROFIT DE LA Faculté Polydisci...
+2026-07-19 21:39:36,518 - INFO -   [22] 📥 1/INDH/2026 | 16/07/2026 | Formation et renforcement des compétences au profit des orga...
+2026-07-19 21:39:52,697 - INFO -   [23] 📥 44/2026 | 16/07/2026 | ACQUISITION DES ANTIVIRUS AU PROFIT DES TRIBUNAUX RELEVANT D...
+2026-07-19 21:40:08,419 - INFO -   [24] 📥 28/2026/TGR | 16/07/2026 | L’assistance technique pour les services informatiques de co...
+2026-07-19 21:41:05,097 - INFO -   [25] 📥 08/BAH/2026 | 16/07/2026 | Achat des Bacs à Ordures et Barrières Métallique au profit d...
+2026-07-19 21:41:22,311 - INFO -   [26] 📥 AOON05/2026/DPAK | 16/07/2026 | TRAVAUX D'AMENAGEMENT HYDRO-AGRICOLE DES SEGUIAS AU NIVEAU D...
+2026-07-19 21:41:48,631 - INFO -   [27] 📥 AOON04/2026/DPAK | 16/07/2026 | TRAVAUX D'AMENAGEMENT HYDRO-AGRICOLE DES SEGUIAS AU NIVEAU D...
+2026-07-19 21:42:10,017 - INFO -   [28] 📥 27/2026/B.G | 16/07/2026 | Etude architecturale et suivi des travaux de construction du...
+2026-07-19 21:42:10,020 - INFO -   ✅ +9 | ⏭️ 0 hors dates | Total: 28
+2026-07-19 21:42:23,928 - INFO - 
+==================================================
+2026-07-19 21:42:23,932 - INFO - 📄 PAGE 30/13338
+2026-07-19 21:42:23,934 - INFO - ==================================================
+2026-07-19 21:43:14,127 - INFO -   [29] 📥 20/2026/CHUMVIA | 16/07/2026 | ACHAT DES PRODUITS ET CONSOMMABLES DE STERILISATION ET DE DE...
+2026-07-19 21:43:43,763 - INFO -   [30] 📥 11/2026/TGR | 16/07/2026 | l’impression de documents pour le compte de la Trésorerie Gé...
+2026-07-19 21:44:13,560 - INFO -   [31] 📥 10/2026/B.G | 16/07/2026 | Etude architecturale et suivi des travaux de construction du...
+2026-07-19 21:44:31,179 - INFO -   [32] 📥 96/EL/26 | 16/07/2026 | Travaux d'injection des postes HTA-BT et d'aménagement du Ré...
+2026-07-19 21:44:56,214 - INFO -   [33] 📥 45/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES DE ...
+2026-07-19 21:45:21,887 - INFO -   [34] 📥 41/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES DE ...
+2026-07-19 21:45:21,904 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 34
+2026-07-19 21:45:34,480 - INFO - 
+==================================================
+2026-07-19 21:45:34,483 - INFO - 📄 PAGE 31/13338
+2026-07-19 21:45:34,485 - INFO - ==================================================
+2026-07-19 21:45:45,673 - INFO -   [35] 📥 40/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES D'O...
+2026-07-19 21:45:56,220 - INFO -   [36] 📥 40/DGPC/PF/2026 | 16/07/2026 | l'acquisition de conteneurs boulangerie destinés aux platefo...
+2026-07-19 21:46:07,563 - INFO -   [37] 📥 50/INO/2026 | 16/07/2026 | L’ACHAT DES MEDICAMENTS  AU PROFIT DE L’INSTITUT NATIONAL D’...
+2026-07-19 21:46:20,394 - INFO -   [38] 📥 39/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES DE ...
+2026-07-19 21:46:33,700 - INFO -   [39] 📥 DRETLMS/04/2026 | 16/07/2026 | Réalisation des actions de formation inscrites au plan de fo...
+2026-07-19 21:46:43,412 - INFO -   [40] 📥 21/2026/MEF/AC/INF | 16/07/2026 | l’acquisition, l’installation et la mise en œuvre de la solu...
+2026-07-19 21:46:54,076 - INFO -   [41] 📥 38/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES D'O...
+2026-07-19 21:47:06,671 - INFO -   [42] 📥 03/2026/DPJL | 16/07/2026 | Achat de fournitures de bureau, des boites d’archives et de ...
+2026-07-19 21:47:17,013 - INFO -   [43] 📥 36/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES D'O...
+2026-07-19 21:47:17,016 - INFO -   ✅ +9 | ⏭️ 0 hors dates | Total: 43
+2026-07-19 21:47:31,201 - INFO - 
+==================================================
+2026-07-19 21:47:31,205 - INFO - 📄 PAGE 32/13338
+2026-07-19 21:47:31,208 - INFO - ==================================================
+2026-07-19 21:47:42,306 - INFO -   [44] 📥 33/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE PISTES AU NIVEAU DES COMMUNES DE ...
+2026-07-19 21:47:54,046 - INFO -   [45] 📥 47/2026/TGR | 16/07/2026 | La réalisation des prestations de transport de fonds pour le...
+2026-07-19 21:48:06,385 - INFO -   [46] 📥 31/2026/TGR | 16/07/2026 | l’assistance technique pour les services informatiques des c...
+2026-07-19 21:48:17,486 - INFO -   [47] 📥 22/2026 | 16/07/2026 | Travaux de renouvelement de la couche de surface de la RNC r...
+2026-07-19 21:48:31,255 - INFO -   [48] 📥 12/2026/c.s | 16/07/2026 | Travaux de Mise à Niveau Urbaine du Boulevard HASSAN II à la...
+2026-07-19 21:48:43,291 - INFO -   [49] 📥 33/2026/TGR | 16/07/2026 | la maintenance des équipements informatiques installés dans ...
+2026-07-19 21:48:58,337 - INFO -   [50] 📥 56/2026 | 16/07/2026 | l'appel d'offres ouvert national sur offres de prix n°56/202...
+2026-07-19 21:48:58,342 - INFO -   ✅ +7 | ⏭️ 0 hors dates | Total: 50
+2026-07-19 21:49:11,199 - INFO - 
+==================================================
+2026-07-19 21:49:11,202 - INFO - 📄 PAGE 33/13338
+2026-07-19 21:49:11,207 - INFO - ==================================================
+2026-07-19 21:49:23,378 - INFO -   [51] 📥 09/2026 | 16/07/2026 | Maintenance préventive et corrective, y compris le changemen...
+2026-07-19 21:49:35,989 - INFO -   [52] 📥 20/2026/DGH | 16/07/2026 | Travaux d’aménagement de la salle d'annonce des crues abrita...
+2026-07-19 21:49:47,339 - INFO -   [53] 📥 02/2026 | 16/07/2026 | Entretien de la décharge publique de  la commune de khémisse...
+2026-07-19 21:49:58,883 - INFO -   [54] 📥 06/2026 | 16/07/2026 | la mise à disposition du personnel au profit des navires de ...
+2026-07-19 21:50:10,820 - INFO -   [55] 📥 RHA/03/2026 | 16/07/2026 | Fourniture des panneaux de signalisation pour le réseau rout...
+2026-07-19 21:50:27,686 - INFO -   [56] 📥 29/INO/2026 | 16/07/2026 | L’ACQUISITION DU MATERIEL INFORMATIQUE POUR...L’ACQUISITION ...
+2026-07-19 21:50:27,702 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 56
+2026-07-19 21:50:40,618 - INFO - 
+==================================================
+2026-07-19 21:50:40,622 - INFO - 📄 PAGE 34/13338
+2026-07-19 21:50:40,625 - INFO - ==================================================
+2026-07-19 21:50:54,736 - INFO -   [57] 📥 16/2025 | 16/07/2026 | TRAVAUX DE VIDANGE DES FOSSES SEPTIQUES AU CENTRE DE LA COMM...
+2026-07-19 21:51:06,430 - INFO -   [58] 📥 105/2026/CL | 16/07/2026 | PRESTATION D’ASSISTANCE TECHNIQUE POUR LA GESTION DES BORNES...
+2026-07-19 21:51:21,540 - INFO -   [59] 📥 46/2026/2 | 16/07/2026 | Achat de matériel médico-technique, mobilier hospitalier et ...
+2026-07-19 21:51:33,678 - INFO -   [60] 📥 07ASSIST/2026/FSA | 16/07/2026 | PRESTATIONS DE MISE A DISPOSITION DES AGENTS ASSISTANT AU PR...
+2026-07-19 21:51:44,744 - INFO -   [61] 📥 03REST/2026/FSA | 16/07/2026 | RESTAURATION DU PERSONNEL ET DES INVITES DE LA FACULTE DES S...
+2026-07-19 21:51:58,515 - INFO -   [62] 📥 5/CTAS/2026 | 16/07/2026 | TRAVAUX DE CONSTRUCTION DE SIX DALOTS SUR OUED TIFLET....TRA...
+2026-07-19 21:51:58,531 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 62
+2026-07-19 21:52:12,964 - INFO - 
+==================================================
+2026-07-19 21:52:12,966 - INFO - 📄 PAGE 35/13338
+2026-07-19 21:52:12,967 - INFO - ==================================================
+2026-07-19 21:52:24,199 - INFO -   [63] 📥 16/2026/BR | 16/07/2026 | MAINTENANCE ET ENTRETIEN DU RESEAU INFORMATIQUE, DU SYSTEME ...
+2026-07-19 21:52:35,764 - INFO -   [64] 📥 140/26/ASST | 16/07/2026 | Acquisition de deux véhicules 4x4 Pick up avec système compl...
+2026-07-19 21:52:49,178 - INFO -   [65] 📥 103/2026/SI | 16/07/2026 | FOURNITURE ET GESTION DES LICENCES LOGICIELS MICROSOFT POUR ...
+2026-07-19 21:52:49,184 - INFO -   ✅ +3 | ⏭️ 0 hors dates | Total: 65
+2026-07-19 21:53:03,038 - INFO - 
+==================================================
+2026-07-19 21:53:03,039 - INFO - 📄 PAGE 36/13338
+2026-07-19 21:53:03,039 - INFO - ==================================================
+2026-07-19 21:53:13,806 - INFO -   [66] 📥 06/2026/CBJ | 16/07/2026 | Travaux de restructuration des quartiers à la ville de BIR J...
+2026-07-19 21:53:27,887 - INFO -   [67] 📥 35/2026/2 | 16/07/2026 | Achat d’instrumentation pour les spécialités de chirurgie ca...
+2026-07-19 21:53:38,769 - INFO -   [68] 📥 05/2026/C.BJ | 16/07/2026 | Travaux d’aménagement de la voirie du BD HASSAN 2 (TRANCHE 2...
+2026-07-19 21:53:49,893 - INFO -   [69] 📥 DA/10/26 | 16/07/2026 | la prestation de location longue durée de véhicule utilitair...
+2026-07-19 21:54:02,454 - INFO -   [70] 📥 AO9/2026CHPI | 16/07/2026 | L’ Achat de réactifs d’hématologie, d'ionogramme et d'hémost...
+2026-07-19 21:54:15,348 - INFO -   [71] 📥 18DR3/2026 | 16/07/2026 | Entretien des conduites de production en BP par renforcement...
+2026-07-19 21:54:29,520 - INFO -   [72] 📥 34/CS/2026 | 16/07/2026 | ACHAT DE FOURNITURES DE BUREAU ET PRODUITS D'IMPRESSION-COMM...
+2026-07-19 21:54:29,527 - INFO -   ✅ +7 | ⏭️ 0 hors dates | Total: 72
+2026-07-19 21:54:42,204 - INFO - 
+==================================================
+2026-07-19 21:54:42,205 - INFO - 📄 PAGE 37/13338
+2026-07-19 21:54:42,206 - INFO - ==================================================
+2026-07-19 21:54:57,560 - INFO -   [73] 📥 26/BR/RGON/2026 | 16/07/2026 | CONTROLE ET SUIVI DE LA QUALITE DES TRAVAUX DE CONSTRUCTION ...
+2026-07-19 21:55:11,303 - INFO -   [74] 📥 19/CS/2026 | 16/07/2026 | ACHAT DE PETIT MATÉRIEL DE SIGNALISATION....ACHAT DE PETIT M...
+2026-07-19 21:55:25,218 - INFO -   [75] 📥 11/CS/2026 | 16/07/2026 | ACHAT D’IMPRIMES-COMMUNE DE SALE-...ACHAT D’IMPRIMES-COMMUNE...
+2026-07-19 21:55:37,202 - INFO -   [76] 📥 36/2026/CT | 16/07/2026 | Acquisition des véhicules pour la commune de Tétouan....Acqu...
+2026-07-19 21:55:48,686 - INFO -   [77] 📥 34/2026/2 | 16/07/2026 | Achat d’instrumentation pour les spécialités de chirurgie or...
+2026-07-19 21:55:48,687 - INFO -   ✅ +5 | ⏭️ 0 hors dates | Total: 77
+2026-07-19 21:56:01,339 - INFO - 
+==================================================
+2026-07-19 21:56:01,341 - INFO - 📄 PAGE 38/13338
+2026-07-19 21:56:01,344 - INFO - ==================================================
+2026-07-19 21:56:30,388 - INFO -   [78] 📥 13/2026/CBM | 16/07/2026 | Réalisation de missions d’audit technico-financière et clôtu...
+2026-07-19 21:56:42,667 - INFO -   [79] 📥 13/2026/DR9 | 16/07/2026 | Etude de transfert de l’eau brute du barrage Dar Khrofa à la...
+2026-07-19 21:56:57,134 - INFO -   [80] 📥 01/DRRSK/2026/SONARGES | 16/07/2026 | LA REALISATION DE LA PRESTATION DE NETTOYAGE A L’EVENEMENT A...
+2026-07-19 21:57:07,187 - INFO -   [81] 📥 48/2026/CH/INV | 16/07/2026 | Lot 01 : Les travaux d'extension des établissement primaires...
+2026-07-19 21:57:17,331 - INFO -   [82] 📥 17/2026/MODSAZ | 16/07/2026 | Travaux de construction de la maison des jeunes « Ain Harrou...
+2026-07-19 21:57:30,298 - INFO -   [83] 📥 45/2026/CH/INV | 16/07/2026 | Lot 01 : Les travaux d’extension du lycée collégial Afelayss...
+2026-07-19 21:57:51,269 - INFO -   [84] 📥 13/2026/HAO | 16/07/2026 | MISSION D’AUDIT FINANCIER DU CYCLE DE LA PAIE DES SOCIETES F...
+2026-07-19 21:57:51,270 - INFO -   ✅ +7 | ⏭️ 0 hors dates | Total: 84
+2026-07-19 21:58:05,711 - INFO - 
+==================================================
+2026-07-19 21:58:05,713 - INFO - 📄 PAGE 39/13338
+2026-07-19 21:58:05,716 - INFO - ==================================================
+2026-07-19 21:58:15,488 - INFO -   [85] 📥 04/CSEFRS/2026 | 16/07/2026 | La réalisation des prestations d’entretien et de maintenance...
+2026-07-19 21:58:26,479 - INFO -   [86] 📥 01/2026/CTTOUAMA | 16/07/2026 | L’achat d’un Camion Benne Au profit de la commune touama Pro...
+2026-07-19 21:58:39,020 - INFO -   [87] 📥 AOOI01/2026 | 16/07/2026 | la prestation de mise à disposition de ressources humaines e...
+2026-07-19 21:58:48,867 - INFO -   [88] 📥 35/2026/CT | 16/07/2026 | Gros travaux de maintenance des marchés couverts à la commun...
+2026-07-19 21:58:48,882 - INFO -   ✅ +4 | ⏭️ 0 hors dates | Total: 88
+2026-07-19 21:59:03,391 - INFO - 
+==================================================
+2026-07-19 21:59:03,391 - INFO - 📄 PAGE 40/13338
+2026-07-19 21:59:03,392 - INFO - ==================================================
+2026-07-19 21:59:14,178 - INFO -   [89] 📥 83/INV/2026 | 16/07/2026 | Travaux d'aménagement et réhabilitation du mur de clôture du...
+2026-07-19 21:59:26,613 - INFO -   [90] 📥 7/2026 | 16/07/2026 | Plan de campagne 2026 : travaux de traitement de la chaussée...
+2026-07-19 21:59:39,371 - INFO -   [91] 📥 120/2026 | 16/07/2026 | TRAVAUX D'AMENAGEMENT DE LA PISTE MLAKHFI A LA CT ISSEKSI-PR...
+2026-07-19 21:59:51,361 - INFO -   [92] 📥 12/RFM/2026 | 16/07/2026 | LA SELECTION D’UN ORGANISME ACCREDITE POUR LA CERTIFICATION ...
+2026-07-19 22:00:02,476 - INFO -   [93] 📥 04/2026/DRSPSMS | 16/07/2026 | l’exécution des prestations de nettoyage des bâtiments et ét...
+2026-07-19 22:00:13,009 - INFO -   [94] 📥 68/2015/ANCFCC/DC | 16/07/2026 | l’exécution des prestations de l’immatriculation foncière d’...
+2026-07-19 22:00:13,026 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 94
+2026-07-19 22:00:27,856 - INFO - 
+==================================================
+2026-07-19 22:00:27,857 - INFO - 📄 PAGE 41/13338
+2026-07-19 22:00:27,857 - INFO - ==================================================
+2026-07-19 22:00:38,541 - INFO -   [95] 📥 AOOI51/2026/CNSS | 16/07/2026 | La réalisation de la mission d’audit comptable et financier ...
+2026-07-19 22:00:48,963 - INFO -   [96] 📥 094/2019/ANCFCC/DOSI | 16/07/2026 | l’extension de la solution de gestion du contenu de l’entrep...
+2026-07-19 22:00:58,450 - INFO -   [97] 📥 15/MOD/2026/ALOMRANE_SOUSS_MASSA | 16/07/2026 | La réalisation des Travaux de mise à niveau  des quartiers s...
+2026-07-19 22:01:08,289 - INFO -   [98] 📥 02/2026/FMPO | 16/07/2026 | Achat d’une solution complète de simulation haute
+Fidélité d...
+2026-07-19 22:01:18,492 - INFO -   [99] 📥 091/2019/ANCFCC/DC | 16/07/2026 | l’exécution des prestations de l’immatriculation foncière d’...
+2026-07-19 22:01:38,045 - INFO -   [100] 📥 08/2026/CHUMVIA | 16/07/2026 | ACHAT DES DISPOSITIFS MEDICAUX VITAUX AU CENTRE HOSPITALO-UN...
+2026-07-19 22:01:38,048 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 100
+2026-07-19 22:01:50,519 - INFO - 
+==================================================
+2026-07-19 22:01:50,522 - INFO - 📄 PAGE 42/13338
+2026-07-19 22:01:50,524 - INFO - ==================================================
+2026-07-19 22:02:02,484 - INFO -   [101] 📥 17/2026/CHUMVIA | 16/07/2026 | ACHAT DE REACTIFS POUR LE LABORATOIRE DE PARASITOLOGIE-MYCOL...
+2026-07-19 22:02:12,499 - INFO -   [102] 📥 083/2019/ANCFCC/DCF | 16/07/2026 | la numérisation des dossiers fonciers, en six (06) lots....l...
+2026-07-19 22:02:22,706 - INFO -   [103] 📥 AO050/2023/ANCFCC/DOSI | 16/07/2026 | Accompagnement à l’homologation des SI sensibles (SIS) de l’...
+2026-07-19 22:02:31,858 - INFO -   [104] 📥 AO003/2024/ANCFCC/DOSI | 16/07/2026 | la location des licences d’utilisation de logiciels informat...
+2026-07-19 22:02:45,267 - INFO -   [105] 📥 07/2026/SNGFE | 16/07/2026 | Support et assistance au maintien de la sécurité et de l’inf...
+2026-07-19 22:02:54,742 - INFO -   [106] 📥 26/2026/DPETLM | 16/07/2026 | Réalisation des essais de contrôle et suivi de la qualité de...
+2026-07-19 22:02:54,744 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 106
+2026-07-19 22:03:08,248 - INFO - 
+==================================================
+2026-07-19 22:03:08,250 - INFO - 📄 PAGE 43/13338
+2026-07-19 22:03:08,253 - INFO - ==================================================
+2026-07-19 22:03:19,764 - INFO -   [107] 📥 37/2026 | 16/07/2026 | Acquisition de matériel informatique pour les Plateformes Ré...
+2026-07-19 22:03:36,346 - INFO -   [108] 📥 18/2026/BG | 17/07/2026 | Travaux d'aménagement d’un logement administratif du chef de...
+2026-07-19 22:03:58,374 - INFO -   [109] 📥 03/2026/FMSN | 16/07/2026 | l’achat de matériel de sport professionnel destiné aux salle...
+2026-07-19 22:03:58,377 - INFO -   ✅ +3 | ⏭️ 0 hors dates | Total: 109
+2026-07-19 22:04:10,647 - INFO - 
+==================================================
+2026-07-19 22:04:10,648 - INFO - 📄 PAGE 44/13338
+2026-07-19 22:04:10,649 - INFO - ==================================================
+2026-07-19 22:04:20,512 - INFO -   [110] 📥 03/2026/AREP/MS | 16/07/2026 | •Travaux de construction de La piste reliant la RN1 et les d...
+2026-07-19 22:04:29,854 - INFO -   [111] 📥 52/2026/ORSM | 16/07/2026 | Assistance technique pour le suivi des travaux et la mise en...
+2026-07-19 22:04:40,142 - INFO -   [112] 📥 68/26/EAU | 16/07/2026 | Etude d’Alimentation en Eau Potable des centres et douars de...
+2026-07-19 22:04:50,727 - INFO -   [113] 📥 61/26/EAU | 16/07/2026 | Réalisation d’une station de pompage au complexe hydraulique...
+2026-07-19 22:05:02,116 - INFO -   [114] 📥 28/2026/CHUMVIA | 16/07/2026 | ACHAT DE LINGE POUR LE CENTRE HOSPITALO-UNIVERSITAIRE MOHAMM...
+2026-07-19 22:05:02,118 - INFO -   ✅ +5 | ⏭️ 0 hors dates | Total: 114
+2026-07-19 22:05:15,792 - INFO - 
+==================================================
+2026-07-19 22:05:15,795 - INFO - 📄 PAGE 45/13338
+2026-07-19 22:05:15,796 - INFO - ==================================================
+2026-07-19 22:06:21,855 - ERROR - Upload erreur: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2026-07-19 22:06:22,974 - INFO -   [115] ❌ 15/26/EAU | 16/07/2026 | Fourniture, installation et mise en service du banc d’essai ...
+2026-07-19 22:06:44,869 - INFO -   [116] 📥 07/M/DAAF/2026 | 16/07/2026 | la mise à disposition des intérimaires pour le compte de l’A...
+2026-07-19 22:09:19,690 - ERROR - Upload erreur: ('Connection aborted.', TimeoutError('The write operation timed out'))
+2026-07-19 22:09:20,322 - INFO -   [117] ❌ 03/SM/2026 | 16/07/2026 | TRAVAUX D’ECLAIRAGE PUBLIC A L’ENERGIE SOLAIRE A LA COMMUNE ...
+2026-07-19 22:09:34,038 - INFO -   [118] 📥 152/26/EAU | 16/07/2026 | Surveillance et contrôle de la qualité de l’eau potable dist...
+2026-07-19 22:09:51,174 - INFO -   [119] 📥 56451/C3/PM | 16/07/2026 | FOURNITURE DES SOUTES A BAGAGES...FOURNITURE DES SOUTES A BA...
+2026-07-19 22:10:03,392 - INFO -   [120] 📥 05/2026/communeTighmi | 16/07/2026 | كراء واستغلال مقهى المركب التجاري "دار الطاجين" التابع للملك...
+2026-07-19 22:10:03,402 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 120
+2026-07-19 22:10:15,817 - INFO - 
+==================================================
+2026-07-19 22:10:15,819 - INFO - 📄 PAGE 46/13338
+2026-07-19 22:10:15,821 - INFO - ==================================================
+2026-07-19 22:10:28,052 - INFO -   [121] 📥 56/2026/CM | 16/07/2026 | Achat de peinture...Achat de peinture...
+2026-07-19 22:10:41,404 - INFO -   [122] 📥 46/2026/CM | 16/07/2026 | Assistance au maître d’ouvrage (AMO)pour l’évaluation du Con...
+2026-07-19 22:10:55,589 - INFO -   [123] 📥 071/2026/EL | 15/07/2026 | Extension et restructuration des tableaux 20 kv du poste sou...
+2026-07-19 22:11:17,762 - INFO -   [124] 📥 16/2026/DRATTH/DDFA | 15/07/2026 | Fourniture de 2000 ruches peuplées au profit des apiculteurs...
+2026-07-19 22:11:34,641 - INFO -   [125] 📥 15/2026/DRATTH/DDFA | 15/07/2026 | Achat et livraison d’emballage des produits de terroir desti...
+2026-07-19 22:11:45,217 - INFO -   [126] 📥 54/2026/S2A | 15/07/2026 | TRAVAUX D’EXTENSION ET DE MISE A NIVEAU DE PLUSIEURS ETABLIS...
+2026-07-19 22:12:12,178 - INFO -   [127] 📥 03/DPJKHOURIBGA/2026 | 15/07/2026 | TRAVAUX DE LA PEINTURE EXTERIEURE DE LA COUR D'APPEL ET DU T...
+2026-07-19 22:12:12,180 - INFO -   ✅ +7 | ⏭️ 0 hors dates | Total: 127
+2026-07-19 22:12:55,700 - INFO - 
+==================================================
+2026-07-19 22:12:55,701 - INFO - 📄 PAGE 47/13338
+2026-07-19 22:12:55,702 - INFO - ==================================================
+2026-07-19 22:12:55,768 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 127
+2026-07-19 22:13:35,864 - INFO - 
+==================================================
+2026-07-19 22:13:35,866 - INFO - 📄 PAGE 48/13338
+2026-07-19 22:13:35,867 - INFO - ==================================================
+2026-07-19 22:13:49,390 - INFO -   [128] 📥 04/2026/CA | 15/07/2026 | Étude architecturale et suivi des travaux pour la constructi...
+2026-07-19 22:14:01,001 - INFO -   [129] 📥 43/2026/CH/FCT | 15/07/2026 | les prestations de service de nettoyage des locaux des établ...
+2026-07-19 22:14:16,470 - INFO -   [130] 📥 67/26 | 15/07/2026 | TRAVAUX D’ACHEVEMENT DE LA VOIRIE, D’ASSAINISSEMENT, AEP, EL...
+2026-07-19 22:14:26,507 - INFO -   [131] 📥 44/2026/CH/INV | 15/07/2026 | Les travaux de construction d’un lycée collégial à la commun...
+2026-07-19 22:14:37,407 - INFO -   [132] 📥 42/2026/CH/FCT | 15/07/2026 | Lot 01 : L’achat de fournitures de bureau, de reprographie e...
+2026-07-19 22:14:47,325 - INFO -   [133] 📥 11/2026/CH/INV | 15/07/2026 | Les travaux de branchement en eau potable du lycée collégial...
+2026-07-19 22:16:11,975 - ERROR - Upload erreur: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2026-07-19 22:16:12,859 - INFO -   [134] ❌ 3/2026 | 15/07/2026 | Acquisition d’un véhicule de tourisme au profit du Conseil E...
+2026-07-19 22:16:23,492 - INFO -   [135] 📥 37/2026/CH/INV | 15/07/2026 | les études techniques et le suivi des travaux de mise à nive...
+2026-07-19 22:16:23,495 - INFO -   ✅ +8 | ⏭️ 0 hors dates | Total: 135
+2026-07-19 22:16:36,071 - INFO - 
+==================================================
+2026-07-19 22:16:36,072 - INFO - 📄 PAGE 49/13338
+2026-07-19 22:16:36,073 - INFO - ==================================================
+2026-07-19 22:16:46,723 - INFO -   [136] 📥 38/2026/CH/INV | 15/07/2026 | Le contrôle de la qualité des matériaux utilisés dans les tr...
+2026-07-19 22:16:56,447 - INFO -   [137] 📥 24/2026/DR9/C | 15/07/2026 | Réhabilitation d’un filtre à sable de la station de traiteme...
+2026-07-19 22:17:05,699 - INFO -   [138] 📥 21/2026/DR9/C | 15/07/2026 | Acquisition du DPD pour le contrôle du chlore résiduel par l...
+2026-07-19 22:17:14,846 - INFO -   [139] 📥 46/2026/DR9/C | 15/07/2026 | Construction d’un magasin et d’un atelier à la station de de...
+2026-07-19 22:17:48,284 - ERROR - Upload erreur: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2026-07-19 22:17:48,776 - INFO -   [140] ❌ GN3128940/2026/AGS/DXG | 15/07/2026 | Acquisition des équipements de contrôle des performances du ...
+2026-07-19 22:18:01,061 - INFO -   [141] 📥 18/AOO/DPJR/ANP/2026 | 15/07/2026 | REALISATION DES ESSAIS DE LABORATOIRE POUR LE CONTROLE LA QU...
+2026-07-19 22:18:21,133 - INFO -   [142] 📥 03/CA/UCA/2026 | 15/07/2026 | CONCEPTION ARCHITECTURALE ET SUIVI DES TRAVAUX DE CONSTRUCTI...
+2026-07-19 22:18:30,728 - INFO -   [143] 📥 GN2130591/2026/AGS/DXG | 15/07/2026 | Analyse de la qualité de l’eau des centrales relevant de la ...
+2026-07-19 22:18:41,335 - INFO -   [144] 📥 62/2026/SCP | 15/07/2026 | ACHAT DE PETIT MATERIEL ET OUTILLAGE...ACHAT DE PETIT MATERI...
+2026-07-19 22:18:53,854 - INFO -   [145] 📥 15/AOO/DPJR/ANP/2026 | 15/07/2026 | RENOUVELLEMENT DES EQUIPEMNTS DE SECURITE AU PORT DE JORF LA...
+2026-07-19 22:18:53,855 - INFO -   ✅ +10 | ⏭️ 0 hors dates | Total: 145
+2026-07-19 22:19:07,518 - INFO - 
+==================================================
+2026-07-19 22:19:07,520 - INFO - 📄 PAGE 50/13338
+2026-07-19 22:19:07,523 - INFO - ==================================================
+2026-07-19 22:19:20,191 - INFO -   [146] 📥 17/AOO/DPJR/ANP/2026 | 15/07/2026 | TRAVAUX DE RÉHABILITATION ET DE MISE À NIVEAU DU SYSTÈME D’A...
+2026-07-19 22:19:58,292 - INFO -   [147] 📥 118/2026/CHUIS | 15/07/2026 | Les travaux de rénovation de l’étanchéité des terrasses de L...
+2026-07-19 22:20:23,896 - INFO -   [148] 📥 069/2026/CHUIRC | 15/07/2026 | EXECUTION DES PRESTATIONS D’ACCUEIL ET D’ORIENTATION POUR LE...
+2026-07-19 22:20:37,296 - INFO -   [149] 📥 35/2026/SAPP | 15/07/2026 | Fourniture de fongibles médicaux et fils chirurgicaux IV...F...
+2026-07-19 22:20:57,265 - INFO -   [150] 📥 049/2026/CHUIRC | 15/07/2026 | MISE A NIVEAU DU PRECABLAGE INFORMATIQUE AU CENTRE HOSPITALO...
+2026-07-19 22:21:06,479 - INFO -   [151] 📥 19/2026/DR9/C/R | 15/07/2026 | Entretien des installations téléphoniques au niveau de la Di...
+2026-07-19 22:22:37,742 - ERROR - Upload erreur: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2026-07-19 22:23:00,126 - INFO -   [152] ❌ 79/2026/CHUIS | 15/07/2026 | Achat des fongibles dentaires destines aux divers établissem...
+2026-07-19 22:23:17,250 - INFO -   [153] 📥 23/2026/INDH | 15/07/2026 | TRAVAUX D’EQUIPEMENT DE L’ECOLE FOWARAT HANCHA EN ENERGIE SO...
+2026-07-19 22:23:17,270 - INFO -   ✅ +8 | ⏭️ 0 hors dates | Total: 153
+2026-07-19 22:23:29,845 - INFO - 
+==================================================
+2026-07-19 22:23:29,847 - INFO - 📄 PAGE 51/13338
+2026-07-19 22:23:29,849 - INFO - ==================================================
+2026-07-19 22:23:44,172 - INFO -   [154] 📥 07/2026/SAP | 15/07/2026 | TRAVAUX D’AMENAGEMENT ET DE REFECTION DES BATIMENTS ADMINIST...
+2026-07-19 22:23:58,407 - INFO -   [155] 📥 06/SIA/2026 | 15/07/2026 | Achat et fourniture des quincailleries, articles de plomberi...
+2026-07-19 22:24:40,879 - INFO -   [156] 📥 67/2026/CHUIS | 15/07/2026 | Achat des accessoires des équipements biomédicaux et de la s...
+2026-07-19 22:24:51,207 - INFO -   [157] 📥 52/2026 | 15/07/2026 | TRAVAUX D’ENTRETIEN GENERAL DES BATIMENTS RELEVANT
+DE LA CIR...
+2026-07-19 22:25:09,752 - INFO -   [158] 📥 GN3128874/2025/AGS/DXG | 15/07/2026 | Réhabilitation des espaces et locaux des centrales DAKHLA et...
+2026-07-19 22:25:22,327 - INFO -   [159] 📥 04/AON/PT/2026 | 15/07/2026 | achat de matériel informatique pour le compte de la Province...
+2026-07-19 22:25:59,998 - INFO -   [160] 📥 29/2026/CHUIS | 15/07/2026 | ACHAT D'INSTRUMENTATION DENTAIRE POUR CENTRE DE CONSULTATION...
+2026-07-19 22:26:13,150 - INFO -   [161] 📥 02/AON/PT/2026 | 15/07/2026 | travaux de construction d'une annexe administrative et son l...
+2026-07-19 22:26:13,152 - INFO -   ✅ +8 | ⏭️ 0 hors dates | Total: 161
+2026-07-19 22:26:25,834 - INFO - 
+==================================================
+2026-07-19 22:26:25,835 - INFO - 📄 PAGE 52/13338
+2026-07-19 22:26:25,836 - INFO - ==================================================
+2026-07-19 22:26:37,228 - INFO -   [162] 📥 08/2026/dpa/es | 15/07/2026 | TRAVAUX D’AMENAGEMENT HYDRO-AGRICOLE DU PERIMETRE AIN NAKHLA...
+2026-07-19 22:26:48,606 - INFO -   [163] 📥 27/SMTF/DM/BG/2026 | 15/07/2026 | LES TRAVAUX DE RESTAURATION DE LA MOSQUEE CHARRAFA ET SES DE...
+2026-07-19 22:27:01,911 - INFO -   [164] 📥 06/AON/PT/2026 | 15/07/2026 | travaux d’aménagement du parc provincial relevant de la Prov...
+2026-07-19 22:27:15,117 - INFO -   [165] 📥 28/SMTF/DM/BG/2026 | 15/07/2026 | LES TRAVAUX DE RESTAURATION DE LA MOSQUEE ATIQ 3 DE KSAR LOU...
+2026-07-19 22:27:45,802 - INFO -   [166] 📥 11/2026/CUA | 15/07/2026 | Travaux d'aménagement des voies urbaines à la commune d'Ahfi...
+2026-07-19 22:27:45,810 - INFO -   ✅ +5 | ⏭️ 0 hors dates | Total: 166
+2026-07-19 22:27:58,177 - INFO - 
+==================================================
+2026-07-19 22:27:58,180 - INFO - 📄 PAGE 53/13338
+2026-07-19 22:27:58,182 - INFO - ==================================================
+2026-07-19 22:28:09,599 - INFO -   [167] 📥 111/26/ELEC | 15/07/2026 | Fourniture, installation et mise en service des batteries d'...
+2026-07-19 22:28:20,098 - INFO -   [168] 📥 105/26/ELEC | 15/07/2026 | Fourniture des disjoncteurs BT haut poteau- Ville de Marrake...
+2026-07-19 22:28:30,162 - INFO -   [169] 📥 1/2026/AUT | 15/07/2026 | Exécution des prestations de nettoyage des locaux de l’Agenc...
+2026-07-19 22:28:40,481 - INFO -   [170] 📥 104/26/ELEC | 15/07/2026 | Fourniture de boites de jonction et d'Extrémité -Ville de Ma...
+2026-07-19 22:28:40,503 - INFO -   ✅ +4 | ⏭️ 0 hors dates | Total: 170
+2026-07-19 22:28:53,000 - INFO - 
+==================================================
+2026-07-19 22:28:53,001 - INFO - 📄 PAGE 54/13338
+2026-07-19 22:28:53,001 - INFO - ==================================================
+2026-07-19 22:29:10,368 - INFO -   [171] 📥 07/2026/BR | 15/07/2026 | ETUDES GEOTECHNIQUES ET ESSAIS DE CONTROLE DE LA QUALITE DES...
+2026-07-19 22:29:21,941 - INFO -   [172] 📥 94/26/ELEC | 15/07/2026 | Aménagement du réseau BT souterrain dégradé – PROVINCE AL HA...
+2026-07-19 22:29:37,102 - INFO -   [173] 📥 96/2025/2 | 15/07/2026 | ACHAT DU MATERIEL INFORMATIQUE ET AUDIOVISUEL DESTINÉ AU CHU...
+2026-07-19 22:29:49,370 - INFO -   [174] 📥 01/2026/DSS | 15/07/2026 | Conception, développement et déploiement d’une plateforme in...
+2026-07-19 22:30:01,532 - INFO -   [175] 📥 07/2026 | 15/07/2026 | Travaux de construction et d’Installation de barrières de pr...
+2026-07-19 22:30:14,929 - INFO -   [176] 📥 01/AOO/DRID/DG/ANP/2026 | 15/07/2026 | ELABORATION DU BILAN CARBONE DE L'ANP...ELABORATION DU BILAN...
+2026-07-19 22:30:14,932 - INFO -   ✅ +6 | ⏭️ 0 hors dates | Total: 176
+2026-07-19 22:30:27,385 - INFO - 
+==================================================
+2026-07-19 22:30:27,388 - INFO - 📄 PAGE 55/13338
+2026-07-19 22:30:27,390 - INFO - ==================================================
+2026-07-19 22:30:39,084 - INFO -   [177] 📥 13/ASB/2026 | 15/07/2026 | ACHAT DE PETIT MATERIEL POUR LES BMH POUR L’ARRONDISSEMENT D...
+2026-07-19 22:30:49,491 - INFO -   [178] 📥 12/ASB/2026 | 15/07/2026 | ACHAT MATERIEL DES FÊTES ET DE PAVOISEMENT....ACHAT MATERIEL...
+2026-07-19 22:31:48,971 - ERROR - Upload erreur: ('Connection aborted.', ConnectionResetError(10054, 'Une connexion existante a dû être fermée par l’hôte distant', None, 10054, None))
+2026-07-19 22:32:00,124 - ERROR - ❌ Insert erreur: HTTPSConnectionPool(host='uxriscdyynjmhazmrvhr.supabase.co', port=443): Max retries exceeded with url: /rest/v1/results_ao?on_conflict=reference (Caused by NameResolutionError("HTTPSConnection(host='uxriscdyynjmhazmrvhr.supabase.co', port=443): Failed to resolve 'uxriscdyynjmhazmrvhr.supabase.co' ([Errno 11001] getaddrinfo failed)"))
+2026-07-19 22:32:00,127 - INFO -   [179] ❌ 06/2026eljadida | 15/07/2026 | L’ENTRETIEN COURANT DES VOIES...L’ENTRETIEN COURANT DES VOIE...
+2026-07-19 22:32:00,208 - ERROR - ❌ Insert erreur: HTTPSConnectionPool(host='uxriscdyynjmhazmrvhr.supabase.co', port=443): Max retries exceeded with url: /rest/v1/results_ao?on_conflict=reference (Caused by NameResolutionError("HTTPSConnection(host='uxriscdyynjmhazmrvhr.supabase.co', port=443): Failed to resolve 'uxriscdyynjmhazmrvhr.supabase.co' ([Errno 11001] getaddrinfo failed)"))
+2026-07-19 22:32:00,210 - INFO -   [180] ❌ 026/2026/CHUIRC | 15/07/2026 | ACHAT DE MATERIEL MÉDICO-TECHNIQUE (ACCELERATEUR) POUR L’HOP...
+2026-07-19 22:32:00,861 - ERROR - ❌ Insert erreur: HTTPSConnectionPool(host='uxriscdyynjmhazmrvhr.supabase.co', port=443): Max retries exceeded with url: /rest/v1/results_ao?on_conflict=reference (Caused by NameResolutionError("HTTPSConnection(host='uxriscdyynjmhazmrvhr.supabase.co', port=443): Failed to resolve 'uxriscdyynjmhazmrvhr.supabase.co' ([Errno 11001] getaddrinfo failed)"))
+2026-07-19 22:32:00,865 - INFO -   [181] ❌ 23/AOON/DPSR/ANP/2026 | 15/07/2026 | ETUDE TECHNIQUE POUR LA REALISATION DES APPONTEMENTS FLOTTAN...
+2026-07-19 22:32:00,868 - INFO -   ✅ +5 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:32:38,048 - INFO - 
+==================================================
+2026-07-19 22:32:38,050 - INFO - 📄 PAGE 56/13338
+2026-07-19 22:32:38,053 - INFO - ==================================================
+2026-07-19 22:32:38,080 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:33:10,107 - INFO - 
+==================================================
+2026-07-19 22:33:10,110 - INFO - 📄 PAGE 57/13338
+2026-07-19 22:33:10,114 - INFO - ==================================================
+2026-07-19 22:33:10,157 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:33:42,226 - INFO - 
+==================================================
+2026-07-19 22:33:42,229 - INFO - 📄 PAGE 58/13338
+2026-07-19 22:33:42,231 - INFO - ==================================================
+2026-07-19 22:33:42,254 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:34:14,324 - INFO - 
+==================================================
+2026-07-19 22:34:14,329 - INFO - 📄 PAGE 59/13338
+2026-07-19 22:34:14,331 - INFO - ==================================================
+2026-07-19 22:34:14,369 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:34:46,434 - INFO - 
+==================================================
+2026-07-19 22:34:46,436 - INFO - 📄 PAGE 60/13338
+2026-07-19 22:34:46,438 - INFO - ==================================================
+2026-07-19 22:34:46,475 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:35:18,526 - INFO - 
+==================================================
+2026-07-19 22:35:18,529 - INFO - 📄 PAGE 61/13338
+2026-07-19 22:35:18,531 - INFO - ==================================================
+2026-07-19 22:35:18,572 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:35:50,623 - INFO - 
+==================================================
+2026-07-19 22:35:50,626 - INFO - 📄 PAGE 62/13338
+2026-07-19 22:35:50,629 - INFO - ==================================================
+2026-07-19 22:35:50,658 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:36:22,693 - INFO - 
+==================================================
+2026-07-19 22:36:22,694 - INFO - 📄 PAGE 63/13338
+2026-07-19 22:36:22,695 - INFO - ==================================================
+2026-07-19 22:36:22,714 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:36:54,774 - INFO - 
+==================================================
+2026-07-19 22:36:54,776 - INFO - 📄 PAGE 64/13338
+2026-07-19 22:36:54,778 - INFO - ==================================================
+2026-07-19 22:36:54,816 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:37:26,846 - INFO - 
+==================================================
+2026-07-19 22:37:26,848 - INFO - 📄 PAGE 65/13338
+2026-07-19 22:37:26,851 - INFO - ==================================================
+2026-07-19 22:37:26,895 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:37:58,934 - INFO - 
+==================================================
+2026-07-19 22:37:58,936 - INFO - 📄 PAGE 66/13338
+2026-07-19 22:37:58,937 - INFO - ==================================================
+2026-07-19 22:37:58,956 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:38:31,009 - INFO - 
+==================================================
+2026-07-19 22:38:31,012 - INFO - 📄 PAGE 67/13338
+2026-07-19 22:38:31,014 - INFO - ==================================================
+2026-07-19 22:38:31,044 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:39:03,125 - INFO - 
+==================================================
+2026-07-19 22:39:03,128 - INFO - 📄 PAGE 68/13338
+2026-07-19 22:39:03,130 - INFO - ==================================================
+2026-07-19 22:39:03,164 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:39:35,226 - INFO - 
+==================================================
+2026-07-19 22:39:35,231 - INFO - 📄 PAGE 69/13338
+2026-07-19 22:39:35,233 - INFO - ==================================================
+2026-07-19 22:39:35,273 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:40:07,334 - INFO - 
+==================================================
+2026-07-19 22:40:07,336 - INFO - 📄 PAGE 70/13338
+2026-07-19 22:40:07,338 - INFO - ==================================================
+2026-07-19 22:40:07,373 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:40:39,432 - INFO - 
+==================================================
+2026-07-19 22:40:39,434 - INFO - 📄 PAGE 71/13338
+2026-07-19 22:40:39,436 - INFO - ==================================================
+2026-07-19 22:40:39,467 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:41:11,520 - INFO - 
+==================================================
+2026-07-19 22:41:11,523 - INFO - 📄 PAGE 72/13338
+2026-07-19 22:41:11,526 - INFO - ==================================================
+2026-07-19 22:41:11,561 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:41:43,614 - INFO - 
+==================================================
+2026-07-19 22:41:43,616 - INFO - 📄 PAGE 73/13338
+2026-07-19 22:41:43,619 - INFO - ==================================================
+2026-07-19 22:41:43,651 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:42:15,702 - INFO - 
+==================================================
+2026-07-19 22:42:15,706 - INFO - 📄 PAGE 74/13338
+2026-07-19 22:42:15,708 - INFO - ==================================================
+2026-07-19 22:42:15,742 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:42:47,794 - INFO - 
+==================================================
+2026-07-19 22:42:47,796 - INFO - 📄 PAGE 75/13338
+2026-07-19 22:42:47,799 - INFO - ==================================================
+2026-07-19 22:42:47,836 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:43:19,896 - INFO - 
+==================================================
+2026-07-19 22:43:19,897 - INFO - 📄 PAGE 76/13338
+2026-07-19 22:43:19,897 - INFO - ==================================================
+2026-07-19 22:43:19,906 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:43:51,958 - INFO - 
+==================================================
+2026-07-19 22:43:51,960 - INFO - 📄 PAGE 77/13338
+2026-07-19 22:43:51,963 - INFO - ==================================================
+2026-07-19 22:43:51,992 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:44:24,036 - INFO - 
+==================================================
+2026-07-19 22:44:24,037 - INFO - 📄 PAGE 78/13338
+2026-07-19 22:44:24,038 - INFO - ==================================================
+2026-07-19 22:44:24,044 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:44:56,077 - INFO - 
+==================================================
+2026-07-19 22:44:56,078 - INFO - 📄 PAGE 79/13338
+2026-07-19 22:44:56,080 - INFO - ==================================================
+2026-07-19 22:44:56,108 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:45:28,148 - INFO - 
+==================================================
+2026-07-19 22:45:28,151 - INFO - 📄 PAGE 80/13338
+2026-07-19 22:45:28,155 - INFO - ==================================================
+2026-07-19 22:45:28,172 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:46:00,207 - INFO - 
+==================================================
+2026-07-19 22:46:00,208 - INFO - 📄 PAGE 81/13338
+2026-07-19 22:46:00,208 - INFO - ==================================================
+2026-07-19 22:46:00,215 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:46:32,448 - INFO - 
+==================================================
+2026-07-19 22:46:32,450 - INFO - 📄 PAGE 82/13338
+2026-07-19 22:46:32,452 - INFO - ==================================================
+2026-07-19 22:46:32,463 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:47:04,481 - INFO - 
+==================================================
+2026-07-19 22:47:04,481 - INFO - 📄 PAGE 83/13338
+2026-07-19 22:47:04,482 - INFO - ==================================================
+2026-07-19 22:47:04,489 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:47:36,513 - INFO - 
+==================================================
+2026-07-19 22:47:36,514 - INFO - 📄 PAGE 84/13338
+2026-07-19 22:47:36,515 - INFO - ==================================================
+2026-07-19 22:47:36,528 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:48:08,551 - INFO - 
+==================================================
+2026-07-19 22:48:08,552 - INFO - 📄 PAGE 85/13338
+2026-07-19 22:48:08,552 - INFO - ==================================================
+2026-07-19 22:48:08,564 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:48:40,581 - INFO - 
+==================================================
+2026-07-19 22:48:40,583 - INFO - 📄 PAGE 86/13338
+2026-07-19 22:48:40,585 - INFO - ==================================================
+2026-07-19 22:48:40,614 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:49:12,677 - INFO - 
+==================================================
+2026-07-19 22:49:12,689 - INFO - 📄 PAGE 87/13338
+2026-07-19 22:49:12,689 - INFO - ==================================================
+2026-07-19 22:49:12,719 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:49:44,748 - INFO - 
+==================================================
+2026-07-19 22:49:44,749 - INFO - 📄 PAGE 88/13338
+2026-07-19 22:49:44,750 - INFO - ==================================================
+2026-07-19 22:49:44,756 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:50:16,901 - INFO - 
+==================================================
+2026-07-19 22:50:16,901 - INFO - 📄 PAGE 89/13338
+2026-07-19 22:50:16,901 - INFO - ==================================================
+2026-07-19 22:50:16,911 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:50:48,954 - INFO - 
+==================================================
+2026-07-19 22:50:48,959 - INFO - 📄 PAGE 90/13338
+2026-07-19 22:50:48,963 - INFO - ==================================================
+2026-07-19 22:50:48,988 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:51:21,024 - INFO - 
+==================================================
+2026-07-19 22:51:21,024 - INFO - 📄 PAGE 91/13338
+2026-07-19 22:51:21,025 - INFO - ==================================================
+2026-07-19 22:51:21,030 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:51:53,051 - INFO - 
+==================================================
+2026-07-19 22:51:53,053 - INFO - 📄 PAGE 92/13338
+2026-07-19 22:51:53,054 - INFO - ==================================================
+2026-07-19 22:51:53,071 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:52:25,124 - INFO - 
+==================================================
+2026-07-19 22:52:25,127 - INFO - 📄 PAGE 93/13338
+2026-07-19 22:52:25,129 - INFO - ==================================================
+2026-07-19 22:52:25,160 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:52:57,217 - INFO - 
+==================================================
+2026-07-19 22:52:57,220 - INFO - 📄 PAGE 94/13338
+2026-07-19 22:52:57,221 - INFO - ==================================================
+2026-07-19 22:52:57,256 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:53:29,309 - INFO - 
+==================================================
+2026-07-19 22:53:29,312 - INFO - 📄 PAGE 95/13338
+2026-07-19 22:53:29,314 - INFO - ==================================================
+2026-07-19 22:53:29,347 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:54:01,402 - INFO - 
+==================================================
+2026-07-19 22:54:01,405 - INFO - 📄 PAGE 96/13338
+2026-07-19 22:54:01,407 - INFO - ==================================================
+2026-07-19 22:54:01,443 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:54:33,493 - INFO - 
+==================================================
+2026-07-19 22:54:33,496 - INFO - 📄 PAGE 97/13338
+2026-07-19 22:54:33,498 - INFO - ==================================================
+2026-07-19 22:54:33,531 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:55:05,579 - INFO - 
+==================================================
+2026-07-19 22:55:05,582 - INFO - 📄 PAGE 98/13338
+2026-07-19 22:55:05,584 - INFO - ==================================================
+2026-07-19 22:55:05,621 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:55:37,671 - INFO - 
+==================================================
+2026-07-19 22:55:37,673 - INFO - 📄 PAGE 99/13338
+2026-07-19 22:55:37,675 - INFO - ==================================================
+2026-07-19 22:55:37,710 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:56:09,767 - INFO - 
+==================================================
+2026-07-19 22:56:09,770 - INFO - 📄 PAGE 100/13338
+2026-07-19 22:56:09,772 - INFO - ==================================================
+2026-07-19 22:56:09,795 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:56:41,867 - INFO - 
+==================================================
+2026-07-19 22:56:41,868 - INFO - 📄 PAGE 101/13338
+2026-07-19 22:56:41,869 - INFO - ==================================================
+2026-07-19 22:56:41,878 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:57:13,929 - INFO - 
+==================================================
+2026-07-19 22:57:13,932 - INFO - 📄 PAGE 102/13338
+2026-07-19 22:57:13,934 - INFO - ==================================================
+2026-07-19 22:57:13,973 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:57:46,023 - INFO - 
+==================================================
+2026-07-19 22:57:46,025 - INFO - 📄 PAGE 103/13338
+2026-07-19 22:57:46,027 - INFO - ==================================================
+2026-07-19 22:57:46,065 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:58:18,113 - INFO - 
+==================================================
+2026-07-19 22:58:18,116 - INFO - 📄 PAGE 104/13338
+2026-07-19 22:58:18,118 - INFO - ==================================================
+2026-07-19 22:58:18,151 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:58:50,237 - INFO - 
+==================================================
+2026-07-19 22:58:50,239 - INFO - 📄 PAGE 105/13338
+2026-07-19 22:58:50,242 - INFO - ==================================================
+2026-07-19 22:58:50,271 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:59:22,340 - INFO - 
+==================================================
+2026-07-19 22:59:22,343 - INFO - 📄 PAGE 106/13338
+2026-07-19 22:59:22,345 - INFO - ==================================================
+2026-07-19 22:59:22,383 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 22:59:54,450 - INFO - 
+==================================================
+2026-07-19 22:59:54,452 - INFO - 📄 PAGE 107/13338
+2026-07-19 22:59:54,454 - INFO - ==================================================
+2026-07-19 22:59:54,495 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:00:26,545 - INFO - 
+==================================================
+2026-07-19 23:00:26,547 - INFO - 📄 PAGE 108/13338
+2026-07-19 23:00:26,549 - INFO - ==================================================
+2026-07-19 23:00:26,585 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:00:58,650 - INFO - 
+==================================================
+2026-07-19 23:00:58,654 - INFO - 📄 PAGE 109/13338
+2026-07-19 23:00:58,656 - INFO - ==================================================
+2026-07-19 23:00:58,699 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:01:30,725 - INFO - 
+==================================================
+2026-07-19 23:01:30,728 - INFO - 📄 PAGE 110/13338
+2026-07-19 23:01:30,730 - INFO - ==================================================
+2026-07-19 23:01:30,760 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:02:02,822 - INFO - 
+==================================================
+2026-07-19 23:02:02,824 - INFO - 📄 PAGE 111/13338
+2026-07-19 23:02:02,826 - INFO - ==================================================
+2026-07-19 23:02:02,870 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:02:34,916 - INFO - 
+==================================================
+2026-07-19 23:02:34,919 - INFO - 📄 PAGE 112/13338
+2026-07-19 23:02:34,921 - INFO - ==================================================
+2026-07-19 23:02:34,951 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:03:07,004 - INFO - 
+==================================================
+2026-07-19 23:03:07,007 - INFO - 📄 PAGE 113/13338
+2026-07-19 23:03:07,009 - INFO - ==================================================
+2026-07-19 23:03:07,047 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:03:39,103 - INFO - 
+==================================================
+2026-07-19 23:03:39,105 - INFO - 📄 PAGE 114/13338
+2026-07-19 23:03:39,106 - INFO - ==================================================
+2026-07-19 23:03:39,127 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:04:11,166 - INFO - 
+==================================================
+2026-07-19 23:04:11,168 - INFO - 📄 PAGE 115/13338
+2026-07-19 23:04:11,171 - INFO - ==================================================
+2026-07-19 23:04:11,202 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:04:43,270 - INFO - 
+==================================================
+2026-07-19 23:04:43,271 - INFO - 📄 PAGE 116/13338
+2026-07-19 23:04:43,272 - INFO - ==================================================
+2026-07-19 23:04:43,288 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:05:15,338 - INFO - 
+==================================================
+2026-07-19 23:05:15,341 - INFO - 📄 PAGE 117/13338
+2026-07-19 23:05:15,343 - INFO - ==================================================
+2026-07-19 23:05:15,371 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:05:47,420 - INFO - 
+==================================================
+2026-07-19 23:05:47,422 - INFO - 📄 PAGE 118/13338
+2026-07-19 23:05:47,425 - INFO - ==================================================
+2026-07-19 23:05:47,462 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:06:19,525 - INFO - 
+==================================================
+2026-07-19 23:06:19,544 - INFO - 📄 PAGE 119/13338
+2026-07-19 23:06:19,547 - INFO - ==================================================
+2026-07-19 23:06:19,593 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:06:51,631 - INFO - 
+==================================================
+2026-07-19 23:06:51,633 - INFO - 📄 PAGE 120/13338
+2026-07-19 23:06:51,635 - INFO - ==================================================
+2026-07-19 23:06:51,669 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:07:23,727 - INFO - 
+==================================================
+2026-07-19 23:07:23,729 - INFO - 📄 PAGE 121/13338
+2026-07-19 23:07:23,732 - INFO - ==================================================
+2026-07-19 23:07:23,769 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:07:55,831 - INFO - 
+==================================================
+2026-07-19 23:07:55,833 - INFO - 📄 PAGE 122/13338
+2026-07-19 23:07:55,836 - INFO - ==================================================
+2026-07-19 23:07:55,878 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:08:27,915 - INFO - 
+==================================================
+2026-07-19 23:08:27,918 - INFO - 📄 PAGE 123/13338
+2026-07-19 23:08:27,919 - INFO - ==================================================
+2026-07-19 23:08:27,945 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:09:00,029 - INFO - 
+==================================================
+2026-07-19 23:09:00,043 - INFO - 📄 PAGE 124/13338
+2026-07-19 23:09:00,046 - INFO - ==================================================
+2026-07-19 23:09:00,075 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:09:32,114 - INFO - 
+==================================================
+2026-07-19 23:09:32,115 - INFO - 📄 PAGE 125/13338
+2026-07-19 23:09:32,115 - INFO - ==================================================
+2026-07-19 23:09:32,122 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:10:04,139 - INFO - 
+==================================================
+2026-07-19 23:10:04,139 - INFO - 📄 PAGE 126/13338
+2026-07-19 23:10:04,140 - INFO - ==================================================
+2026-07-19 23:10:04,149 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:10:36,190 - INFO - 
+==================================================
+2026-07-19 23:10:36,191 - INFO - 📄 PAGE 127/13338
+2026-07-19 23:10:36,196 - INFO - ==================================================
+2026-07-19 23:10:36,208 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:11:08,263 - INFO - 
+==================================================
+2026-07-19 23:11:08,263 - INFO - 📄 PAGE 128/13338
+2026-07-19 23:11:08,263 - INFO - ==================================================
+2026-07-19 23:11:08,268 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 181
+2026-07-19 23:11:37,113 - WARNING - 
+⚠️ Interrompu par l'utilisateur
+2026-07-19 23:11:39,929 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-19 23:11:39,933 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-19 23:11:39,984 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-19 23:11:44,720 - INFO - ✅ Supabase: https://uxriscdyynjmhazmrvhr.supabase.co
+2026-07-19 23:11:44,720 - INFO - 📋 Table: results_ao | 📦 Bucket: pdf_ao
+2026-07-19 23:11:44,721 - INFO - 📅 Filtre date min: 01/01/2025
+2026-07-19 23:11:45,731 - INFO - 📊 338 références en base
+2026-07-19 23:11:45,731 - INFO - ============================================================
+2026-07-19 23:11:45,732 - INFO - 🚀 Scraping AO | Filtre: >= 01/01/2025
+2026-07-19 23:11:45,732 - INFO - ============================================================
+2026-07-19 23:11:51,026 - INFO - 🌐 Navigation...
+2026-07-19 23:12:12,227 - INFO - 🔍 Lancement recherche (sans filtre formulaire)...
+2026-07-19 23:12:27,414 - INFO - ✅ Résultats chargés
+2026-07-19 23:12:27,454 - INFO - 📊 Pages: 13338
+2026-07-19 23:12:27,455 - INFO - 
+📄 Scan de 13338 pages...
+
+2026-07-19 23:12:27,455 - INFO - 
+==================================================
+2026-07-19 23:12:27,455 - INFO - 📄 PAGE 1/13338
+2026-07-19 23:12:27,456 - INFO - ==================================================
+2026-07-19 23:12:27,790 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:12:39,773 - INFO - 
+==================================================
+2026-07-19 23:12:39,776 - INFO - 📄 PAGE 2/13338
+2026-07-19 23:12:39,778 - INFO - ==================================================
+2026-07-19 23:12:40,328 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:12:52,335 - INFO - 
+==================================================
+2026-07-19 23:12:52,339 - INFO - 📄 PAGE 3/13338
+2026-07-19 23:12:52,341 - INFO - ==================================================
+2026-07-19 23:12:52,693 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:13:05,813 - INFO - 
+==================================================
+2026-07-19 23:13:05,814 - INFO - 📄 PAGE 4/13338
+2026-07-19 23:13:05,814 - INFO - ==================================================
+2026-07-19 23:13:06,268 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:13:18,775 - INFO - 
+==================================================
+2026-07-19 23:13:18,775 - INFO - 📄 PAGE 5/13338
+2026-07-19 23:13:18,776 - INFO - ==================================================
+2026-07-19 23:13:19,071 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:13:32,783 - INFO - 
+==================================================
+2026-07-19 23:13:32,784 - INFO - 📄 PAGE 6/13338
+2026-07-19 23:13:32,788 - INFO - ==================================================
+2026-07-19 23:13:33,194 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:13:47,552 - INFO - 
+==================================================
+2026-07-19 23:13:47,554 - INFO - 📄 PAGE 7/13338
+2026-07-19 23:13:47,556 - INFO - ==================================================
+2026-07-19 23:13:47,895 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:14:00,102 - INFO - 
+==================================================
+2026-07-19 23:14:00,102 - INFO - 📄 PAGE 8/13338
+2026-07-19 23:14:00,103 - INFO - ==================================================
+2026-07-19 23:14:00,393 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:14:12,806 - INFO - 
+==================================================
+2026-07-19 23:14:12,806 - INFO - 📄 PAGE 9/13338
+2026-07-19 23:14:12,807 - INFO - ==================================================
+2026-07-19 23:14:13,128 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:14:25,181 - INFO - 
+==================================================
+2026-07-19 23:14:25,181 - INFO - 📄 PAGE 10/13338
+2026-07-19 23:14:25,182 - INFO - ==================================================
+2026-07-19 23:14:25,501 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:14:37,597 - INFO - 
+==================================================
+2026-07-19 23:14:37,599 - INFO - 📄 PAGE 11/13338
+2026-07-19 23:14:37,600 - INFO - ==================================================
+2026-07-19 23:14:37,979 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:14:50,556 - INFO - 
+==================================================
+2026-07-19 23:14:50,559 - INFO - 📄 PAGE 12/13338
+2026-07-19 23:14:50,561 - INFO - ==================================================
+2026-07-19 23:14:50,879 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:15:03,960 - INFO - 
+==================================================
+2026-07-19 23:15:03,967 - INFO - 📄 PAGE 13/13338
+2026-07-19 23:15:03,968 - INFO - ==================================================
+2026-07-19 23:15:04,339 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:15:16,847 - INFO - 
+==================================================
+2026-07-19 23:15:16,847 - INFO - 📄 PAGE 14/13338
+2026-07-19 23:15:16,847 - INFO - ==================================================
+2026-07-19 23:15:17,216 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:15:30,991 - INFO - 
+==================================================
+2026-07-19 23:15:30,992 - INFO - 📄 PAGE 15/13338
+2026-07-19 23:15:30,993 - INFO - ==================================================
+2026-07-19 23:15:31,348 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:15:45,445 - INFO - 
+==================================================
+2026-07-19 23:15:45,448 - INFO - 📄 PAGE 16/13338
+2026-07-19 23:15:45,451 - INFO - ==================================================
+2026-07-19 23:15:45,762 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:15:57,953 - INFO - 
+==================================================
+2026-07-19 23:15:57,954 - INFO - 📄 PAGE 17/13338
+2026-07-19 23:15:57,955 - INFO - ==================================================
+2026-07-19 23:15:58,313 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:16:11,363 - INFO - 
+==================================================
+2026-07-19 23:16:11,364 - INFO - 📄 PAGE 18/13338
+2026-07-19 23:16:11,365 - INFO - ==================================================
+2026-07-19 23:16:11,982 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:16:25,163 - INFO - 
+==================================================
+2026-07-19 23:16:25,234 - INFO - 📄 PAGE 19/13338
+2026-07-19 23:16:25,236 - INFO - ==================================================
+2026-07-19 23:16:25,576 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:16:39,024 - INFO - 
+==================================================
+2026-07-19 23:16:39,025 - INFO - 📄 PAGE 20/13338
+2026-07-19 23:16:39,025 - INFO - ==================================================
+2026-07-19 23:16:39,370 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:16:51,925 - INFO - 
+==================================================
+2026-07-19 23:16:51,927 - INFO - 📄 PAGE 21/13338
+2026-07-19 23:16:51,928 - INFO - ==================================================
+2026-07-19 23:16:52,505 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:17:04,723 - INFO - 
+==================================================
+2026-07-19 23:17:04,724 - INFO - 📄 PAGE 22/13338
+2026-07-19 23:17:04,727 - INFO - ==================================================
+2026-07-19 23:17:05,118 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:17:18,116 - INFO - 
+==================================================
+2026-07-19 23:17:18,117 - INFO - 📄 PAGE 23/13338
+2026-07-19 23:17:18,118 - INFO - ==================================================
+2026-07-19 23:17:18,455 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:17:31,339 - INFO - 
+==================================================
+2026-07-19 23:17:31,343 - INFO - 📄 PAGE 24/13338
+2026-07-19 23:17:31,345 - INFO - ==================================================
+2026-07-19 23:17:31,660 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:17:47,983 - INFO - 
+==================================================
+2026-07-19 23:17:47,988 - INFO - 📄 PAGE 25/13338
+2026-07-19 23:17:47,989 - INFO - ==================================================
+2026-07-19 23:17:48,414 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:18:02,487 - INFO - 
+==================================================
+2026-07-19 23:18:02,493 - INFO - 📄 PAGE 26/13338
+2026-07-19 23:18:02,500 - INFO - ==================================================
+2026-07-19 23:18:02,936 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:18:15,949 - INFO - 
+==================================================
+2026-07-19 23:18:15,949 - INFO - 📄 PAGE 27/13338
+2026-07-19 23:18:15,950 - INFO - ==================================================
+2026-07-19 23:18:16,432 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:18:30,121 - INFO - 
+==================================================
+2026-07-19 23:18:30,125 - INFO - 📄 PAGE 28/13338
+2026-07-19 23:18:30,126 - INFO - ==================================================
+2026-07-19 23:18:30,455 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:18:44,168 - INFO - 
+==================================================
+2026-07-19 23:18:44,170 - INFO - 📄 PAGE 29/13338
+2026-07-19 23:18:44,171 - INFO - ==================================================
+2026-07-19 23:18:44,523 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:18:57,075 - INFO - 
+==================================================
+2026-07-19 23:18:57,076 - INFO - 📄 PAGE 30/13338
+2026-07-19 23:18:57,076 - INFO - ==================================================
+2026-07-19 23:18:57,431 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:19:11,112 - INFO - 
+==================================================
+2026-07-19 23:19:11,115 - INFO - 📄 PAGE 31/13338
+2026-07-19 23:19:11,117 - INFO - ==================================================
+2026-07-19 23:19:11,455 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:19:25,144 - INFO - 
+==================================================
+2026-07-19 23:19:25,151 - INFO - 📄 PAGE 32/13338
+2026-07-19 23:19:25,154 - INFO - ==================================================
+2026-07-19 23:19:25,469 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:19:37,842 - INFO - 
+==================================================
+2026-07-19 23:19:37,845 - INFO - 📄 PAGE 33/13338
+2026-07-19 23:19:37,847 - INFO - ==================================================
+2026-07-19 23:19:38,208 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:19:50,647 - INFO - 
+==================================================
+2026-07-19 23:19:50,648 - INFO - 📄 PAGE 34/13338
+2026-07-19 23:19:50,650 - INFO - ==================================================
+2026-07-19 23:19:51,013 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:20:03,276 - INFO - 
+==================================================
+2026-07-19 23:20:03,276 - INFO - 📄 PAGE 35/13338
+2026-07-19 23:20:03,276 - INFO - ==================================================
+2026-07-19 23:20:03,632 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:20:15,900 - INFO - 
+==================================================
+2026-07-19 23:20:15,901 - INFO - 📄 PAGE 36/13338
+2026-07-19 23:20:15,902 - INFO - ==================================================
+2026-07-19 23:20:16,240 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:20:28,427 - INFO - 
+==================================================
+2026-07-19 23:20:28,428 - INFO - 📄 PAGE 37/13338
+2026-07-19 23:20:28,429 - INFO - ==================================================
+2026-07-19 23:20:28,821 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:20:41,764 - INFO - 
+==================================================
+2026-07-19 23:20:41,766 - INFO - 📄 PAGE 38/13338
+2026-07-19 23:20:41,767 - INFO - ==================================================
+2026-07-19 23:20:42,176 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:20:56,048 - INFO - 
+==================================================
+2026-07-19 23:20:56,050 - INFO - 📄 PAGE 39/13338
+2026-07-19 23:20:56,051 - INFO - ==================================================
+2026-07-19 23:20:56,471 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:21:08,868 - INFO - 
+==================================================
+2026-07-19 23:21:08,869 - INFO - 📄 PAGE 40/13338
+2026-07-19 23:21:08,870 - INFO - ==================================================
+2026-07-19 23:21:09,354 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:21:23,028 - INFO - 
+==================================================
+2026-07-19 23:21:23,029 - INFO - 📄 PAGE 41/13338
+2026-07-19 23:21:23,031 - INFO - ==================================================
+2026-07-19 23:21:23,478 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:21:36,054 - INFO - 
+==================================================
+2026-07-19 23:21:36,055 - INFO - 📄 PAGE 42/13338
+2026-07-19 23:21:36,056 - INFO - ==================================================
+2026-07-19 23:21:37,158 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:21:51,362 - INFO - 
+==================================================
+2026-07-19 23:21:51,363 - INFO - 📄 PAGE 43/13338
+2026-07-19 23:21:51,364 - INFO - ==================================================
+2026-07-19 23:21:51,649 - INFO -   ✅ +0 | ⏭️ 0 hors dates | Total: 0
+2026-07-19 23:22:01,653 - WARNING - 
+⚠️ Interrompu par l'utilisateur
+2026-07-19 23:22:02,886 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-19 23:22:02,886 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed
+2026-07-19 23:22:02,944 - ERROR - Future exception was never retrieved
+future: <Future finished exception=TargetClosedError('Target page, context or browser has been closed')>
+playwright._impl._errors.TargetClosedError: Target page, context or browser has been closed

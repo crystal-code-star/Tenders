@@ -1,0 +1,3 @@
+2026-07-08 14:41:54,842 - tender_scanner - INFO -   ✅ [DOCLING] Initialisé avec succès
+2026-07-08 14:41:55,218 - tender_scanner - INFO -   ✅ [PDF] PyMuPDF disponible
+2026-07-08 14:41:56,621 - tender_scanner - INFO -   [DB] 45 offres existantes chargées

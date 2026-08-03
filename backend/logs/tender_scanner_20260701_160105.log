@@ -1,0 +1,94 @@
+2026-07-01 16:01:27,908 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-01 16:01:27,913 - tender_scanner - WARNING -   [OCR] Module paddleocr non installe ou casse: No module named 'paddleocr'
+2026-07-01 16:02:03,161 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees (tenders_3)...
+2026-07-01 16:02:03,859 - tender_scanner - INFO -   0 AO deja en base (tenders_3)
+2026-07-01 16:02:56,572 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 16:02:56,574 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-01 16:02:56,575 - tender_scanner - INFO -   [TENDER #1/6] AEP de la ville de Souk larbaa à partir de la ST de Loukkos - Lot : Télegestion....
+2026-07-01 16:02:56,576 - tender_scanner - INFO -   [REF] 06/2026/DR4
+2026-07-01 16:02:57,764 - tender_scanner - INFO -   [DOWNLOAD] DCE: 06/2026/DR4
+2026-07-01 16:03:16,841 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-01 16:03:38,513 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-01 16:03:46,147 - tender_scanner - INFO -   [OK] ZIP received: 1372290 bytes in 48.38s
+2026-07-01 16:04:01,644 - tender_scanner - INFO -   [TIMING] Download: 48.38s | Upload: 15.50s | Total: 63.88s
+2026-07-01 16:04:02,000 - tender_scanner - INFO -   [COMPLETE] Tender #1 in 65.42s
+2026-07-01 16:04:02,004 - tender_scanner - INFO -   [AVG] Average extraction time: 65.42s
+2026-07-01 16:04:02,066 - tender_scanner - INFO - ──────────────────────────────────────────────────
+
+2026-07-01 16:04:19,135 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 16:04:19,137 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-01 16:04:19,138 - tender_scanner - INFO -   [TENDER #2/6] AEP d’Agadir à partir du barrage Tamri - Lot n°1: Conduites - Equipements- Génie...
+2026-07-01 16:04:19,139 - tender_scanner - INFO -   [REF] 27/DAM/ET/2026
+2026-07-01 16:04:20,023 - tender_scanner - INFO -   [DOWNLOAD] DCE: 27/DAM/ET/2026
+2026-07-01 16:04:39,730 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-01 16:05:04,845 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-01 16:08:20,537 - tender_scanner - INFO -   [OK] ZIP received: 153963073 bytes in 240.51s
+2026-07-01 16:08:20,539 - tender_scanner - ERROR -   [ZIP] Fichier trop volumineux (>50MB) pour 27/DAM/ET/2026
+2026-07-01 16:08:20,541 - tender_scanner - INFO -   [TIMING] Download: 240.51s | Upload: 0.00s | Total: 240.52s
+2026-07-01 16:08:20,547 - tender_scanner - INFO -   [COMPLETE] Tender #2 in 241.40s
+2026-07-01 16:08:20,555 - tender_scanner - INFO -   [AVG] Average extraction time: 153.41s
+2026-07-01 16:08:20,608 - tender_scanner - INFO - ──────────────────────────────────────────────────
+
+2026-07-01 16:09:09,683 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 16:09:09,684 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-01 16:09:09,685 - tender_scanner - INFO -   [TENDER #3/6] Achat des imprimés pour le compte de la Direction Transport Région Centre-Casabl...
+2026-07-01 16:09:09,686 - tender_scanner - INFO -   [REF] TC1130459/2026/ONEEBELEC
+2026-07-01 16:09:10,445 - tender_scanner - INFO -   [DOWNLOAD] DCE: TC1130459/2026/ONEEBELEC
+2026-07-01 16:09:27,952 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-01 16:09:47,332 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-01 16:09:53,080 - tender_scanner - INFO -   [OK] ZIP received: 2678016 bytes in 42.64s
+2026-07-01 16:10:20,035 - tender_scanner - INFO -   [TIMING] Download: 42.64s | Upload: 26.95s | Total: 69.59s
+2026-07-01 16:10:20,756 - tender_scanner - INFO -   [COMPLETE] Tender #3 in 71.07s
+2026-07-01 16:10:20,758 - tender_scanner - INFO -   [AVG] Average extraction time: 125.97s
+2026-07-01 16:10:20,791 - tender_scanner - INFO - ──────────────────────────────────────────────────
+
+2026-07-01 16:10:32,473 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 16:10:32,475 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-01 16:10:32,476 - tender_scanner - INFO -   [TENDER #4/6] Dégagement des dunes de sable du poste 400/225KV BOUJDOUR (Marché-cadre)...Dégag...
+2026-07-01 16:10:32,477 - tender_scanner - INFO -   [REF] TL1130674/2026/04/ONEEBELEC
+2026-07-01 16:10:32,834 - tender_scanner - INFO -   [DOWNLOAD] DCE: TL1130674/2026/04/ONEEBELEC
+2026-07-01 16:10:51,340 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-01 16:11:11,944 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-01 16:11:19,832 - tender_scanner - INFO -   [OK] ZIP received: 2757442 bytes in 47.00s
+2026-07-01 16:11:52,134 - tender_scanner - INFO -   [TIMING] Download: 47.00s | Upload: 32.27s | Total: 79.30s
+2026-07-01 16:11:52,454 - tender_scanner - INFO -   [COMPLETE] Tender #4 in 79.98s
+2026-07-01 16:11:52,455 - tender_scanner - INFO -   [AVG] Average extraction time: 114.47s
+2026-07-01 16:11:52,474 - tender_scanner - INFO - ──────────────────────────────────────────────────
+
+2026-07-01 16:11:52,784 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 16:11:52,786 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-01 16:11:52,787 - tender_scanner - INFO -   [TENDER #5/6] Acquisition de la graisse silicone pour la Division Exploitation Transport Dakhl...
+2026-07-01 16:11:52,788 - tender_scanner - INFO -   [REF] TL2130734/2026/05/ONEEBELEC
+2026-07-01 16:11:53,238 - tender_scanner - INFO -   [DOWNLOAD] DCE: TL2130734/2026/05/ONEEBELEC
+2026-07-01 16:12:11,913 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-01 16:12:32,132 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-01 16:12:41,554 - tender_scanner - INFO -   [OK] ZIP received: 2622281 bytes in 48.32s
+2026-07-01 16:13:15,556 - tender_scanner - INFO -   [TIMING] Download: 48.32s | Upload: 34.00s | Total: 82.32s
+2026-07-01 16:13:16,234 - tender_scanner - INFO -   [COMPLETE] Tender #5 in 83.45s
+2026-07-01 16:13:16,236 - tender_scanner - INFO -   [AVG] Average extraction time: 108.26s
+2026-07-01 16:13:16,268 - tender_scanner - INFO - ──────────────────────────────────────────────────
+
+2026-07-01 16:13:16,629 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-01 16:13:16,631 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-01 16:13:16,633 - tender_scanner - INFO -   [TENDER #6/6] Travaux d’entretien et maintenance du réseau d’eau potable dans la ville de Fès....
+2026-07-01 16:13:16,634 - tender_scanner - INFO -   [REF] 264/2026/SRMFM
+2026-07-01 16:13:17,145 - tender_scanner - INFO -   [DOWNLOAD] DCE: 264/2026/SRMFM
+2026-07-01 16:13:35,555 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-01 16:13:55,756 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-01 16:14:23,063 - tender_scanner - INFO -   [OK] ZIP received: 8156949 bytes in 65.92s
+2026-07-01 16:15:55,994 - tender_scanner - INFO -   [TIMING] Download: 65.92s | Upload: 92.93s | Total: 158.85s
+2026-07-01 16:15:56,325 - tender_scanner - INFO -   [COMPLETE] Tender #6 in 159.69s
+2026-07-01 16:15:56,325 - tender_scanner - INFO -   [AVG] Average extraction time: 116.83s
+2026-07-01 16:15:56,345 - tender_scanner - INFO - ──────────────────────────────────────────────────
+
+2026-07-01 16:15:56,347 - tender_scanner - INFO - 
+======================================================================
+2026-07-01 16:15:56,348 - tender_scanner - INFO -   [LIMIT] Reached 6 tenders. Stopping extraction.
+2026-07-01 16:15:56,355 - tender_scanner - INFO - ======================================================================
+

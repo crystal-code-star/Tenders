@@ -1,0 +1,65 @@
+2026-07-06 11:29:31,403 - tender_scanner - INFO -   [DOCLING] Initialise avec succes
+2026-07-06 11:29:31,405 - tender_scanner - WARNING -   [OCR] Module paddleocr non installe ou casse: No module named 'paddleocr'
+2026-07-06 11:30:54,561 - tender_scanner - INFO -   [CLEAN] Nettoyage de la base de donnees (tenders_3)...
+2026-07-06 11:30:54,901 - tender_scanner - INFO -   [CLEAN] 0 doublons, 0 faux positifs supprimes
+2026-07-06 11:30:55,136 - tender_scanner - INFO -   2 AO deja en base (tenders_3)
+2026-07-06 11:31:28,692 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-06 11:31:28,694 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-06 11:31:28,695 - tender_scanner - INFO -   [TENDER #1/6] Etudes d’exécution, fourniture des équipements, construction, installation et mi...
+2026-07-06 11:31:28,696 - tender_scanner - INFO -   [REF] SP4130189
+2026-07-06 11:31:28,864 - tender_scanner - INFO -   [DOWNLOAD] DCE: SP4130189
+2026-07-06 11:31:45,812 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-06 11:32:05,747 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-06 11:34:20,154 - tender_scanner - INFO -   [OK] ZIP received: 83636401 bytes in 171.29s
+2026-07-06 11:34:20,154 - tender_scanner - ERROR -   [ZIP] Fichier trop volumineux (>50MB) pour SP4130189
+2026-07-06 11:34:20,154 - tender_scanner - INFO -   [CHUNKS] Traitement du DCE pour : SP4130189
+2026-07-06 11:34:25,120 - tender_scanner - INFO -   [EMBEDDING] Modèle chargé : all-MiniLM-L6-v2 (384 dimensions)
+2026-07-06 11:34:25,125 - tender_scanner - INFO -   [CHUNKS] 4 fichier(s) dans le ZIP
+2026-07-06 11:34:26,505 - tender_scanner - INFO -   [DOCLING] 'BdP STEP El Menzel.xlsx' : 188698 caracteres
+2026-07-06 11:34:26,508 - tender_scanner - INFO -   [CHUNKS] Traitement : AO SP4130189/BdP STEP El Menzel.xlsx (188692 caractères)
+2026-07-06 11:38:43,654 - tender_scanner - WARNING -   [PDF] PyMuPDF: aucun texte dans 'DAO SP4130189 STEP EL Menzel final.pdf' - PDF scanne detecte
+2026-07-06 11:38:51,922 - tender_scanner - WARNING -   [DOCLING] Erreur PDF 'AO SP4130189/DAO SP4130189 STEP EL Menzel final.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-06 11:38:57,001 - tender_scanner - INFO -   [DOCLING] 'STEP EL MENZEL Calcul CMA kWh.xlsx' : 30426 caracteres
+2026-07-06 11:38:57,003 - tender_scanner - INFO -   [CHUNKS] Traitement : AO SP4130189/STEP EL MENZEL Calcul CMA kWh.xlsx (30421 caractères)
+2026-07-06 11:39:01,185 - tender_scanner - WARNING -   [PDF] PyMuPDF: aucun texte dans 'STEP EL MENZEL_plans.pdf' - PDF scanne detecte
+2026-07-06 11:39:01,456 - tender_scanner - WARNING -   [DOCLING] Erreur PDF 'AO SP4130189/STEP EL MENZEL_plans.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-06 11:39:03,810 - tender_scanner - INFO -   [CHUNKS] 72/72 chunks insérés
+2026-07-06 11:39:03,816 - tender_scanner - INFO -   [CHUNKS] 72 chunks stockés avec embeddings
+2026-07-06 11:39:03,886 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 2000/30479 caracteres
+2026-07-06 11:39:03,887 - tender_scanner - INFO -   [GROQ] Envoi au LLM (2000 caracteres)...
+2026-07-06 11:39:05,023 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-06 11:39:05,077 - tender_scanner - INFO -   [TIMING] Download: 171.29s | Upload: 0.00s | Chunks: 284.92s (72 chunks) | Total: 456.21s
+2026-07-06 11:39:05,079 - tender_scanner - INFO -   [COMPLETE] Tender #1 in 456.38s (72 chunks)
+2026-07-06 11:39:05,079 - tender_scanner - INFO -   [AVG] Average extraction time: 456.38s
+2026-07-06 11:39:05,474 - tender_scanner - INFO - ──────────────────────────────────────────────────
+
+2026-07-06 11:39:17,027 - tender_scanner - INFO -   [OK] Supabase tenders_3: 1/1 rows
+2026-07-06 11:39:17,028 - tender_scanner - INFO - 
+──────────────────────────────────────────────────
+2026-07-06 11:39:17,028 - tender_scanner - INFO -   [TENDER #2/6] Acquisition des accessoires pour appareils scientifiques : Accessoires pour chro...
+2026-07-06 11:39:17,029 - tender_scanner - INFO -   [REF] 36/DAM/CE/2026
+2026-07-06 11:39:17,722 - tender_scanner - INFO -   [DOWNLOAD] DCE: 36/DAM/CE/2026
+2026-07-06 11:39:34,049 - tender_scanner - INFO -   [FORM] Filling form...
+2026-07-06 11:39:53,447 - tender_scanner - INFO -   [WAIT] Waiting for ZIP...
+2026-07-06 11:39:57,342 - tender_scanner - INFO -   [OK] ZIP received: 821087 bytes in 39.62s
+2026-07-06 11:39:58,457 - tender_scanner - INFO -   [CHUNKS] Traitement du DCE pour : 36/DAM/CE/2026
+2026-07-06 11:39:58,459 - tender_scanner - INFO -   [CHUNKS] 5 fichier(s) dans le ZIP
+2026-07-06 11:39:58,465 - tender_scanner - WARNING -   [PDF] PyMuPDF: aucun texte dans 'AVIS FR 36-DAM-CE-2026.pdf' - PDF scanne detecte
+2026-07-06 11:39:58,575 - tender_scanner - WARNING -   [DOCLING] Erreur PDF 'AO 36-DAM-CE-2026-DCE/AVIS FR 36-DAM-CE-2026.pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-06 11:39:58,819 - tender_scanner - INFO -   [DOCLING] 'BP PEQ AO 36-DAM-CE-2026.xlsm' : 977 caracteres
+2026-07-06 11:39:58,820 - tender_scanner - INFO -   [CHUNKS] Traitement : AO 36-DAM-CE-2026-DCE/BP PEQ AO 36-DAM-CE-2026.xlsm (968 caractères)
+2026-07-06 11:40:00,604 - tender_scanner - INFO -   [DOCLING] 'Cps  AO 36-DAM-CE-2026.docx' : 20633 caracteres
+2026-07-06 11:40:00,606 - tender_scanner - INFO -   [CHUNKS] Traitement : AO 36-DAM-CE-2026-DCE/Cps  AO 36-DAM-CE-2026.docx (20633 caractères)
+2026-07-06 11:43:37,042 - tender_scanner - WARNING -   [PDF] PyMuPDF: aucun texte dans 'RCDG Fournitures ONEE (Avril 2021).pdf' - PDF scanne detecte
+2026-07-06 11:43:38,007 - tender_scanner - WARNING -   [DOCLING] Erreur PDF 'AO 36-DAM-CE-2026-DCE/RCDG Fournitures ONEE (Avril 2021).pdf': Unsupported configuration: torch.PP-OCRv6.det.small
+2026-07-06 11:43:40,924 - tender_scanner - INFO -   [DOCLING] 'RCDP AO 36-DAM-CE-2026.docx' : 36687 caracteres
+2026-07-06 11:43:40,927 - tender_scanner - INFO -   [CHUNKS] Traitement : AO 36-DAM-CE-2026-DCE/RCDP AO 36-DAM-CE-2026.docx (36685 caractères)
+2026-07-06 11:47:12,878 - tender_scanner - INFO -   [CHUNKS] 4/4 chunks insérés
+2026-07-06 11:47:12,883 - tender_scanner - INFO -   [CHUNKS] 4 chunks stockés avec embeddings
+2026-07-06 11:47:12,890 - tender_scanner - INFO -   [GROQ] Extrait intelligent: 1030/1030 caracteres
+2026-07-06 11:47:12,893 - tender_scanner - INFO -   [GROQ] Envoi au LLM (1030 caracteres)...
+2026-07-06 11:47:13,925 - tender_scanner - INFO -   [GROQ] Resume genere avec succes
+2026-07-06 11:47:13,944 - tender_scanner - INFO -   [TIMING] Download: 39.62s | Upload: 1.11s | Chunks: 435.48s (4 chunks) | Total: 476.22s
+2026-07-06 11:47:14,190 - tender_scanner - INFO -   [COMPLETE] Tender #2 in 477.16s (4 chunks)
+2026-07-06 11:47:14,191 - tender_scanner - INFO -   [AVG] Average extraction time: 466.77s

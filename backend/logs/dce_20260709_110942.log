@@ -1,0 +1,16 @@
+
+  🔄 PIPELINE: 12/2026/DR4
+  ──────────────────────────────────────────────────
+  📦 8 fichiers
+    RCDP.docx: 29,146 chars 📜
+    Avis AO 12 DR4 2026.docx: 5,172 chars 📢
+    BP .xlsm: 13,372 chars
+    CCAFP.docx: 10,410 chars
+    CCTP .doc: 784,384 chars
+    Définition Prix .xls: 16,435 chars
+    Modeles BEI.docx: 14,478 chars
+    RCDG Travaux ONEE (Avril 2021).pdf: 69,367 chars
+
+  📢 1 AAO | 📜 RC: oui
+    🤖 Envoi LLM: 1 AAO + RC = 5,780 chars
+    📊 LLM: {"estimation": 516000.0, "caution_provisoire": 5200.0, "caution_definitive": null, "visite_lieux_obligatoire": null, "classe_demandee": null, "attestation_reference_demandee": null}

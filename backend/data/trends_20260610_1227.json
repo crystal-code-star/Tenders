@@ -1,0 +1,171 @@
+{
+  "trends": [
+    {
+      "rank": 1,
+      "trend_name": "Desalination Projects",
+      "category": "Water Treatment",
+      "strength": 80,
+      "article_count": 3,
+      "evidence": "Desalination projects are being announced in São Paulo and Chile, indicating a growing trend towards desalination as a means of expanding water supply",
+      "why_matters": "CrystalWater cares about desalination projects as they can provide a new source of water for treatment, potentially increasing demand for their services",
+      "linkedin_post_ideas": [
+        "Desalination: The Future of Water Supply?",
+        "How Desalination Can Help Address Water Scarcity",
+        "The Role of Desalination in Water Treatment"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "São Paulo state announces desalination project to expand water supply",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxPanNvaktnTDBKWEpGSHR0YVpHbm9OOExBOTNhU3BOeks2UXowdkZxUnZZQVlOREdnSEZ5NVpFaXhkenJsSG1WVndkWU9XS0Z5dzdzN3Z2NTVUS3VmZWJFMmR0N0ZBWHIwdGxoc3NfTVNac1dGdjBZNzB6RzhfVmFsaEI2LVppRHEwTkZYaENJNGhZTnRHWGZLcTU3UnZzOUFqdDl0blFXcw?oc=5",
+          "source": "BNamericas",
+          "published": "Wed, 10 Jun 2026 10:58:44 GMT"
+        },
+        {
+          "title": "Early-stage Chile desalination project seeks grid authorization",
+          "url": "https://news.google.com/rss/articles/CBMinwFBVV95cUxNUU5uS3NzMUoxcWc0S19TWWdGa0xfbnBUd1JHTW0ya2NHTUlwczQydDhJdndGWDU1TnBCQ1QyUVVRX3dHdDU0a2E3UnRXQVBQMHJfTGpQNHk3cHN0b0djYlpteTNqOGs1b3FHLVVYVVVNb011ZFJpX2QzOFlNR0hSUDhFQ2dKTWk2NXloS3ZLcGhsOXZRT1BaUmVIS21IWFE?oc=5",
+          "source": "BNamericas",
+          "published": "Tue, 09 Jun 2026 16:54:36 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "trend_name": "Water Management Innovation",
+      "category": "Water Treatment",
+      "strength": 70,
+      "article_count": 4,
+      "evidence": "Innovation prizes, new technologies, and smart water management solutions are being developed and implemented, indicating a growing focus on innovation in the water treatment industry",
+      "why_matters": "CrystalWater cares about water management innovation as it can help them stay ahead of the competition and provide more effective solutions for their clients",
+      "linkedin_post_ideas": [
+        "The Future of Water Management: Innovation and Technology",
+        "How Innovation is Changing the Water Treatment Industry",
+        "The Importance of Water Management Innovation in Morocco"
+      ],
+      "suggested_posts": 5,
+      "source_articles": [
+        {
+          "title": "TAQA Morocco Launches 300,000-Dirham Innovation Prize for Water Management Solutions",
+          "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxPSnFCTWVFRlRySUV5M2JkaHdVcXpmYUg0djVpYVRpWEJSMGxETE1RMS1kclgyNVdLLUY4ZmZqQ3BGNFhhaHVHT2VmUzBnU09yMndOdFBRUXFVbkRia0F0NFJhQm5vXzRaWlYzUTlzWXhQOW1JdmJ6Sk9PZlJpc0ZCRGd3eFA5Z3QwXzNJeS1Zdmh5UmRnY0pqNENtenJDaDhHaG1fQ2JCNEpxLVdKaTBlWVJFODcxaGpNbnphNWFoZw?oc=5",
+          "source": "The North Africa Post",
+          "published": "Tue, 09 Jun 2026 10:05:38 GMT"
+        },
+        {
+          "title": "Eau potable et assainissement: L’AMEPA tient son assemblée générale mixte et élit son nouveau président",
+          "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNb1pMNjl0TmlSTzdqSkJKeDlDZHJ1Wl9Hd2V1Rm96cWVqdjRsUldLWjh1Y0ZobTFROTloSEtMd1lzaTJVUjZLc3J5SXhDTHJLWXd5OExiazMzcTVodC1wZnZmZHRjZkMwT3BpMEJhVF9KM1F5c0tDbE5yNHJFWkl5bnRtekR3MjV6N0xWMklROUJyVjNzZkoydnN6aVBHaDVLOV95S2Utdmk5NnRyU3c1emViN0dMbk0wZVJuVlFwZnZqZVVLc1AxeU5teTg?oc=5",
+          "source": "Aujourd'hui le Maroc",
+          "published": "Tue, 09 Jun 2026 08:44:20 GMT"
+        },
+        {
+          "title": "Conductivity sensing as a cornerstone of South Africa’s water smart industry - June 2026 - ifm - South Africa",
+          "url": "https://news.google.com/rss/articles/CBMiUkFVX3lxTFB0WnVRdWdaal9GTm9INW1xdFktdlJCMk9lVXFBcHJuaDhoelp5TjFYQmNDTEhSVW9RMGFzUl9DaUVUSEEtTzJyMzdidGFxVEZNY0E?oc=5",
+          "source": "SA Instrumentation & Control",
+          "published": "Tue, 09 Jun 2026 08:01:30 GMT"
+        },
+        {
+          "title": "Hach | Water monitoring and analysis done smartly",
+          "url": "https://news.google.com/rss/articles/CBMipwFBVV95cUxQUmF0YkdhR3pTeE1WOC1LWmhRMi0ydVp1aXNGWW9yTnFmUzVvcjNQUnFKdk9wbWNuUE13dHAzYmkxckJUeXM3d0lUWXVUOG1ZRzUxbXFZS0dvYTZzMFR5RGhOQTVaZ1FLeVVydTh6MFFjUHVCWTRSVWwtLWlwMnhDVlY0eUViRExqUG9iNHIzXzJkYVpsNEdEeUN4bVFoQlRXaXBhZ2Rmd9IBpwFBVV95cUxQUmF0YkdhR3pTeE1WOC1LWmhRMi0ydVp1aXNGWW9yTnFmUzVvcjNQUnFKdk9wbWNuUE13dHAzYmkxckJUeXM3d0lUWXVUOG1ZRzUxbXFZS0dvYTZzMFR5RGhOQTVaZ1FLeVVydTh6MFFjUHVCWTRSVWwtLWlwMnhDVlY0eUViRExqUG9iNHIzXzJkYVpsNEdEeUN4bVFoQlRXaXBhZ2Rmdw?oc=5",
+          "source": "ESI-Africa.com",
+          "published": "Mon, 08 Jun 2026 08:25:42 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "trend_name": "Wastewater Treatment Expansion",
+      "category": "Water Treatment",
+      "strength": 60,
+      "article_count": 3,
+      "evidence": "Wastewater treatment services are being expanded in various regions, including South Africa and Nebraska, indicating a growing focus on wastewater treatment",
+      "why_matters": "CrystalWater cares about wastewater treatment expansion as it can provide new opportunities for them to offer their services and help address water scarcity issues",
+      "linkedin_post_ideas": [
+        "The Importance of Wastewater Treatment in Addressing Water Scarcity",
+        "Wastewater Treatment: A Growing Opportunity for Water Treatment Companies",
+        "Expanding Wastewater Treatment Services in Morocco"
+      ],
+      "suggested_posts": 4,
+      "source_articles": [
+        {
+          "title": "CFPs: Host Institution for a Wastewater Biorefinery Innovation Cluster (South Africa)",
+          "url": "https://news.google.com/rss/articles/CBMixwFBVV95cUxQMEtsXzFqUWhsUUxYTUxhZ0Q1dW0zWURadDgtUmt3eXM5WGpGX3JXV2EtVlU4UUM4Y1dQWWg2Wmhqci00ZWNteUxxekY0c3hCUkFpSldzU29tNU03NkxERmhyb1RNMXZsZDhuLVFhR0s3Y3NTb0Vxd1MyRFpqcmxFUGNzYTZObEV4NzRmVWV4WkN3bTlZN2hnUkVtZnJqVGJXN2l4ekcxcFM1Z21mYmNHTF85cGlVblJLM2FSdVNZd09Xb0FDaXR30gHHAUFVX3lxTFAwS2xfMWpRaGxRTFhNTGFnRDV1bTNZRFp0OC1Sa3d5czlYakZfcldXYS1WVThRQzhjV1BZaDZaaGpyLTRlY215THF6RjRzeEJSQWlKV3NTb201TTc2TERGaHJvVE0xdmxkOG4tUWFHSzdjc1NvRXF3UzJEWmpybEVQY3NhNk5sRXg3NGZVZXhaQ3dtOVk3aGdSRW1mcmpUYlc3aXh6RzFwUzVnbWZiY0dMXzlwaVVuUkszYVJ1U1l3T1dvQUNpdHc?oc=5",
+          "source": "fundsforNGOs",
+          "published": "Wed, 10 Jun 2026 06:56:31 GMT"
+        },
+        {
+          "title": "Nebraska city uses $40 million WIFIA loan to expand wastewater services",
+          "url": "https://waterfm.com/nebraska-city-uses-40-million-wifia-loan-to-expand-wastewater-services/",
+          "source": "Water Finance & Management",
+          "published": "Tue, 09 Jun 2026 13:15:00 +0000"
+        },
+        {
+          "title": "Sydney sewage upgrade to treat 24.8M liters a day, protect rivers",
+          "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxOS2p4TzJpOWp1UVR6eGVzUHVDSC0wVnp0dGNNa3puQ2ZKRmU2enZtMU9BTmdfM3VEbDBfVDVhZTItUzN6Ry1SakJYcHdQU1BGZVpaYU9PaFc5NDBwbDNtUEZ6WEx2Ym5wdFNVSFhXYnF5SWpBYWxmM2hTRWp5cUZSNDZHc1ljSFdNY193T0lrQzFZRzg4Q2djamlCMWNkRlJhVC12TldEbGpqZG9NVDBPVnM1V0c5UnUxTVBLNFNB?oc=5",
+          "source": "Stock Titan",
+          "published": "Tue, 09 Jun 2026 13:00:00 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "trend_name": "Digitalization in Water Treatment",
+      "category": "Water Treatment",
+      "strength": 50,
+      "article_count": 2,
+      "evidence": "Digital twin innovation and smart water management solutions are being developed and implemented, indicating a growing trend towards digitalization in the water treatment industry",
+      "why_matters": "CrystalWater cares about digitalization in water treatment as it can help them improve their services and stay competitive in the market",
+      "linkedin_post_ideas": [
+        "The Role of Digitalization in Water Treatment",
+        "How Digitalization is Changing the Water Treatment Industry",
+        "The Benefits of Digitalization in Water Treatment"
+      ],
+      "suggested_posts": 3,
+      "source_articles": [
+        {
+          "title": "Digital twin innovation cuts energy costs in water purification",
+          "url": "https://news.google.com/rss/articles/CBMipAFBVV95cUxPWmF1alNhd21zNzRqdWJZZUUzZE5pRDlzRGdrY19aOWxoQkQ0a21UZXdlVEY0OG5UdER5VkRpRVpfTElyUWlxeHQ3MXktbW83MnN0WDVPMDJCUDBQZ3d2Y2p6UkdGcUFfOWQ3a05kU2Q5MWFXZ1VmalJkTnhYM05QaTVCd3h6WWtCTlh3SmtjYmNqMzJub2FjS1Yzclp1N041ZmtEZA?oc=5",
+          "source": "Technology Org",
+          "published": "Mon, 08 Jun 2026 11:00:20 GMT"
+        },
+        {
+          "title": "Water reuse – waiting for change is not a strategy",
+          "url": "https://news.google.com/rss/articles/CBMiiAFBVV95cUxPTG9henRrdm1lRHdkSm5rMWQxdG5ReUNGNkROdFpBMUxGQ3BSZ3FJdE1fYXZscW9ORE1kRjJBVko1Z0tuUUxEc3pYcTJOckM3Mk5VWnB3OFZJWnhxYU4zZGpabXJnLVZDWG55ZDh6VFZlVnMzZFZTck5jeGU3VGlqVzkzQWhNcV9O?oc=5",
+          "source": "Smart Water Magazine",
+          "published": "Mon, 08 Jun 2026 09:55:13 GMT"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "trend_name": "Mergers and Acquisitions in Water Treatment",
+      "category": "Water Treatment",
+      "strength": 40,
+      "article_count": 2,
+      "evidence": "Mergers and acquisitions are taking place in the water treatment industry, indicating a growing trend towards consolidation",
+      "why_matters": "CrystalWater cares about mergers and acquisitions in water treatment as they can impact the competitive landscape and provide new opportunities for growth",
+      "linkedin_post_ideas": [
+        "The Impact of Mergers and Acquisitions on the Water Treatment Industry",
+        "Consolidation in the Water Treatment Industry: What it Means for CrystalWater"
+      ],
+      "suggested_posts": 2,
+      "source_articles": [
+        {
+          "title": "Sylmar Group Acquires Tower Water, Building the Leading Water Treatment Platform in the Northeast",
+          "url": "https://news.google.com/rss/articles/CBMiigFBVV95cUxQYllyZGNwYW1vdTRURjFzOFBxbGU1dUo5c3JIRXlnQ2NqR1o3X0tjcnZhaGd2bHFYSUdWOGlIYXdUTklhOGJaam93NEt6UFdJem1RTExiQXdndXJGaDJCUmFFQXh1YmFDRTZCbkVrelVVUThlb2xld2pWamV6a1hyRUJEcEJfaVYtSmc?oc=5",
+          "source": "Yahoo Finance Singapore",
+          "published": "Tue, 09 Jun 2026 19:30:00 GMT"
+        },
+        {
+          "title": "American Water acquires systems from Nexus Regulated Utilities",
+          "url": "https://waterfm.com/american-water-acquires-nexus-systems/",
+          "source": "Water Finance & Management",
+          "published": "Mon, 08 Jun 2026 12:30:00 +0000"
+        }
+      ]
+    }
+  ],
+  "engine": "Groq",
+  "total_fetched": 16,
+  "week": "Week-24-2026",
+  "week_label": "Week 24, June 2026",
+  "research_date": "2026-06-10"
+}

@@ -1,0 +1,17 @@
+
+  🔄 PIPELINE: 05/INDH/2026
+  ──────────────────────────────────────────────────
+  📦 7 fichiers
+    D.A.O. 05-INDH-2026/A. d'Eng. 05-INDH-2026.docx: 4,980 chars
+    D.A.O. 05-INDH-2026/Avis 05-INDH-2026 AR.docx: 1,153 chars 📢
+    D.A.O. 05-INDH-2026/Avis 05-INDH-2026 FR.docx: 1,369 chars 📢
+    D.A.O. 05-INDH-2026/B. Prix 05-INDH-2026.xlsx: 157,877 chars
+    D.A.O. 05-INDH-2026/CPS 05-INDH-2026.docx: 95,894 chars 📜
+    D.A.O. 05-INDH-2026/D.H. 05-INDH-2026.docx: 9,718 chars
+    D.A.O. 05-INDH-2026/R.C 05-INDH-2026.docx: 19,209 chars
+
+  📢 2 AAO | 📜 RC: oui
+    🏗️ Visite trouvée dans D.A.O. 05-INDH-2026/CPS 05-INDH-2026.docx: "s de la province d’El Hajeb.  L’entrepreneur sera tenu de faire une visite tous les quinze jours dans les bureaux du Maître d’ouvrage pour discuter l’..."
+    🏗️ Phrase visite ajoutée au prompt
+    🤖 Envoi LLM: 2 AAO + RC + Visite = 6,624 chars
+    📊 LLM: {"estimation": 1694200, "caution_provisoire": 33000, "caution_definitive": null, "visite_lieux_obligatoire": true, "classe_demandee": null, "attestation_reference_demandee": null}
