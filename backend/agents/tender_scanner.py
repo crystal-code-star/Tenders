@@ -9,6 +9,7 @@ SKIP EXISTING: Skip tenders already in database.
 ENHANCED FILTERS: Strict false positive detection for cleaning/IT/electricity.
 VISUAL TERMINAL: Icons for better readability.
 ROBUST NAVIGATION: Auto-retry on page timeout, progressive wait, session reset.
+SCORING ENGINE: Rule-based scoring using scoring_criteria table (score normalisé 0-100).
 """
 
 import os
@@ -74,10 +75,10 @@ ICON_RESET = "🔃"
 # ─── SCAN CONFIGURATION ───────────────────────────────────────
 SCAN_ALL = True
 MAX_TEST_TENDERS = float('inf')
-MAX_CONSECUTIVE_ERRORS = 10     # Arrêter après 10 erreurs consécutives (plus tolérant)
-PAGE_RETRY_ATTEMPTS = 3         # Tentatives par page
-ERROR_WAIT_BASE = 15            # Secondes d'attente de base après une erreur
-SESSION_RESET_AFTER_ERRORS = 3  # Reset la session après 3 erreurs consécutives
+MAX_CONSECUTIVE_ERRORS = 10
+PAGE_RETRY_ATTEMPTS = 3
+ERROR_WAIT_BASE = 15
+SESSION_RESET_AFTER_ERRORS = 3
 # ────────────────────────────────────────────────────────────────
 
 logger = logging.getLogger("tender_scanner")
@@ -540,83 +541,260 @@ def is_false_positive(title: str, description: str) -> bool:
                 return True
     return False
 
-def _load_scoring_criteria() -> Dict[str, List[dict]]:
-    """Charge les critères de scoring depuis la base de données"""
-    try:
-        criteria_list = _sb_get_criteria({"is_active": "eq.true"})
-        criteria_by_category = {}
-        for c in criteria_list:
-            cat = c.get("category", "keyword")
-            if cat not in criteria_by_category:
-                criteria_by_category[cat] = []
-            criteria_by_category[cat].append(c)
-        return criteria_by_category
-    except:
-        # Fallback : utiliser les critères codés en dur
-        return {
-            "strong_keyword": [{"value": kw, "weight": 10 if i < 10 else 8 if i < 20 else 6} for i, kw in enumerate(STRONG_KEYWORDS)],
-            "medium_keyword": [{"value": kw, "weight": 3} for kw in MEDIUM_KEYWORDS],
-            "specific_keyword": [{"value": kw, "weight": 5} for kw in ["vannes", "clapets", "vanne", "clapet", "debitmetre", "debitmetres", "station de traitement", "station d'epuration", "step", "reservoir d'eau", "chateau d'eau", "tour de refroidissement", "refroidissement industriel", "dessalement", "osmose inverse", "forage", "captage", "puits", "materiel hydromecanique"]],
-            "strategic_client": [{"value": kw, "weight": 8} for kw in ["onee", "onep", "onas", "abhoer", "abht", "regie autonome", "srm", "amendis", "agence du bassin", "direction de l'eau", "ministere de l'equipement", "direction provinciale", "direction regionale", "conseil regional", "commune", "municipalite", "province", "ormva"]],
-        }
 
-def compute_score(title: str, description: str, country: str, deadline: str, acheteur: str = "") -> int:
-    """Calcule le score de pertinence en utilisant les critères de la BD."""
-    full_text = f"{title} {description} {acheteur}".lower()
-    full_text = full_text.replace('é','e').replace('è','e').replace('ê','e').replace('ë','e')
-    full_text = full_text.replace('à','a').replace('â','a').replace('ä','a')
-    full_text = full_text.replace('ù','u').replace('û','u').replace('ü','u')
-    full_text = full_text.replace('ô','o').replace('ö','o')
-    full_text = full_text.replace('î','i').replace('ï','i')
-    full_text = full_text.replace('ç','c')
+# ═══════════════ SCORING ENGINE ═══════════════
+
+def _sb_get_criteria(params: dict = None) -> List[dict]:
+    """Récupère les critères de scoring depuis la table scoring_criteria."""
+    if not SUPABASE_URL or not SUPABASE_KEY:
+        return []
+    try:
+        r = requests.get(
+            f"{SUPABASE_URL}/rest/v1/scoring_criteria",
+            headers=_sb_headers(),
+            params=params or {},
+            timeout=15
+        )
+        r.raise_for_status()
+        return r.json() or []
+    except:
+        return []
+
+
+def _get_tender_field_value(tender: dict, field_name: str) -> str:
+    """
+    Extrait la valeur d'un champ de l'AO pour la comparaison.
+    Gère le mapping entre les field_name logiques et les colonnes réelles de tenders_3.
+    """
+    import re as _re
+
+    if field_name in tender:
+        val = tender[field_name]
+        if val is None: return "0"
+        if isinstance(val, (int, float)): return str(val)
+        return str(val)
+
+    if field_name == "turnover":
+        val = tender.get("chiffre_affaires", "0")
+        return str(val) if val else "0"
     
-    # Charger les critères depuis la BD
-    criteria = _load_scoring_criteria()
+    if field_name == "experience":
+        val = tender.get("nombre_references", "0")
+        return str(val) if val else "0"
     
-    # Calculer le score basé sur les mots-clés forts
-    strong_keywords = criteria.get("strong_keyword", [])
-    strong_hits = []
-    for c in strong_keywords:
-        if c.get("value", "") in full_text:
-            strong_hits.append(c)
+    if field_name == "estimated_amount":
+        val = tender.get("avis_estimation_ttc", "0")
+        if val:
+            cleaned = _re.sub(r'[^\d.]', '', str(val))
+            return cleaned if cleaned else "0"
+        val = tender.get("estimation", "0")
+        if val:
+            cleaned = _re.sub(r'[^\d.]', '', str(val))
+            return cleaned if cleaned else "0"
+        return "0"
+
+    if field_name == "city":
+        val = tender.get("lieu_execution", "")
+        return str(val) if val else ""
+
+    if field_name == "region":
+        val = tender.get("lieu_execution", "")
+        return str(val) if val else ""
+
+    if field_name == "acheteur":
+        val = tender.get("acheteur_public", "") or tender.get("acheteur_detecte", "")
+        return str(val) if val else ""
+
+    for key in ["objet", "categorie", "procedure", "lieu_execution"]:
+        if field_name == key:
+            val = tender.get(key, "")
+            return str(val) if val else ""
+
+    return str(tender.get(field_name, "0") or "0")
+
+
+def _compare_values(ao_value: str, operator: str, target_value: str) -> bool:
+    """
+    Compare deux valeurs selon l'opérateur.
+    Nettoie les valeurs pour permettre la comparaison numérique même avec du texte (DHS, espaces, etc.).
+    """
+    import re as _re
+
+    ao_clean = _re.sub(r'[^\d.]', '', str(ao_value))
+    target_clean = _re.sub(r'[^\d.]', '', str(target_value))
+
+    try:
+        ao_num = float(ao_clean) if ao_clean else 0
+        target_num = float(target_clean) if target_clean else 0
+        
+        if operator == '=':   return ao_num == target_num
+        if operator == '<':   return ao_num < target_num
+        if operator == '<=':  return ao_num <= target_num
+        if operator == '>':   return ao_num > target_num
+        if operator == '>=':  return ao_num >= target_num
+    except (ValueError, TypeError):
+        pass
+
+    ao_str = str(ao_value).lower().strip()
+    target_str = str(target_value).lower().strip()
     
-    if not strong_hits: return 0
+    for char in "éèêëàâäùûüôöîïç":
+        replacement = {'é':'e','è':'e','ê':'e','ë':'e','à':'a','â':'a','ä':'a',
+                       'ù':'u','û':'u','ü':'u','ô':'o','ö':'o','î':'i','ï':'i','ç':'c'}[char]
+        ao_str = ao_str.replace(char, replacement)
+        target_str = target_str.replace(char, replacement)
+
+    if operator == '=':   return ao_str == target_str
+    if operator == '<':   return ao_str < target_str
+    if operator == '<=':  return ao_str <= target_str
+    if operator == '>':   return ao_str > target_str
+    if operator == '>=':  return ao_str >= target_str
+
+    return False
+
+
+def compute_score(title: str = "", description: str = "", country: str = "",
+                  deadline: str = "", acheteur: str = "", tender_data: dict = None) -> int:
+    """
+    Calcule le score d'un AO en pourcentage (0-100) selon les critères actifs.
     
-    # Score de base selon le nombre de hits
-    n = len(strong_hits)
-    base_score = sum(c.get("weight", 1) for c in strong_hits)
+    Formule : (points_obtenus / points_max_possibles) * 100
     
-    # Bonus pour les mots-clés moyens
-    medium_keywords = criteria.get("medium_keyword", [])
-    medium_score = sum(c.get("weight", 1) for c in medium_keywords if c.get("value", "") in full_text)
+    Si aucun critère en base, fallback sur STRONG_KEYWORDS.
+    """
+    if tender_data is None:
+        tender_data = {}
+
+    try:
+        criteria = _sb_get_criteria({"is_active": "eq.true", "order": "weight.desc"})
+    except:
+        criteria = []
+
+    # Fallback keywords si pas de critères en BD
+    if not criteria:
+        full_text = f"{title} {description} {acheteur}".lower()
+        full_text = full_text.replace('é','e').replace('è','e').replace('ê','e').replace('ë','e')
+        full_text = full_text.replace('à','a').replace('â','a').replace('ä','a')
+        full_text = full_text.replace('ù','u').replace('û','u').replace('ü','u')
+        full_text = full_text.replace('ô','o').replace('ö','o')
+        full_text = full_text.replace('î','i').replace('ï','i')
+        full_text = full_text.replace('ç','c')
+        
+        score = 0
+        max_possible = 0
+        for i, kw in enumerate(STRONG_KEYWORDS):
+            weight = 10 if i < 10 else 8 if i < 20 else 6
+            max_possible += weight
+            if kw in full_text:
+                score += weight
+        
+        if max_possible > 0:
+            score = int((score / max_possible) * 100)
+        
+        dl_date = parse_deadline(deadline)
+        if dl_date:
+            days_left = (dl_date - datetime.now()).days
+            if days_left < 0:
+                score = max(0, score - 10)
+            elif days_left <= 7:
+                score = min(100, score + 5)
+            elif days_left <= 30:
+                score = min(100, score + 3)
+        
+        return max(0, min(100, score))
+
+    # Scoring basé sur les critères de la BD
+    score = 0
+    max_possible = 0
+    matched = []
     
-    # Bonus pour les mots-clés spécifiques
-    specific_keywords = criteria.get("specific_keyword", [])
-    specific_score = sum(c.get("weight", 1) for c in specific_keywords if c.get("value", "") in full_text)
+    for c in criteria:
+        field_name = c.get("field_name", "")
+        operator = c.get("operator", "=")
+        target_value = c.get("value", "")
+        weight = c.get("weight", 1)
+        
+        max_possible += weight
+        
+        ao_value = _get_tender_field_value(tender_data, field_name)
+        
+        if _compare_values(ao_value, operator, target_value):
+            score += weight
+            matched.append(f"{field_name} {operator} {target_value} (+{weight})")
     
-    # Score deadline
+    # Normaliser le score sur 100 (pourcentage)
+    if max_possible > 0:
+        percentage = int((score / max_possible) * 100)
+    else:
+        percentage = 0
+    
+    # Bonus/Malus deadline
     dl_date = parse_deadline(deadline)
-    deadline_score = 5
     if dl_date:
         days_left = (dl_date - datetime.now()).days
-        deadline_score = -10 if days_left < 0 else 3 if days_left <= 7 else 6 if days_left <= 14 else 9 if days_left <= 30 else 12
+        if days_left < 0:
+            percentage = max(0, percentage - 10)
+        elif days_left <= 7:
+            percentage = min(100, percentage + 5)
+        elif days_left <= 14:
+            percentage = min(100, percentage + 3)
+        elif days_left <= 30:
+            percentage = min(100, percentage + 2)
     
-    # Bonus clients stratégiques
-    strategic_clients = criteria.get("strategic_client", [])
-    client_bonus = sum(c.get("weight", 1) for c in strategic_clients if c.get("value", "") in full_text)
-    if client_bonus == 0:
-        client_bonus = 3  # Bonus minimum
+    final_score = max(0, min(100, percentage))
     
-    # Bonus prestation
-    prestation_keywords = ["fourniture", "installation", "travaux"]
-    prestation_bonus = 3 if any(kw in full_text for kw in prestation_keywords) else 0
+    if matched:
+        logger.debug(f"[Scoring] {tender_data.get('reference', '?')}: {score}/{max_possible} = {final_score}%, matched={matched}")
     
-    # Calcul final
-    relevance = min(base_score, 70)
-    relevance += min(medium_score, 15)
-    relevance += min(specific_score, 20)
+    return final_score
+
+
+def recalculate_all_scores() -> int:
+    """
+    Recalcule le score de tous les AO en base.
+    À appeler après chaque modification des critères.
+    """
+    logger.info(f"{ICON_SCORE} Recalcul des scores pour tous les AO...")
     
-    return max(0, min(100, relevance + deadline_score + client_bonus + prestation_bonus))
+    try:
+        tenders = _sb_get_tenders_2({
+            "select": "*",
+            "limit": "10000",
+            "order": "reference"
+        })
+
+        if not tenders:
+            logger.info("Aucun AO à mettre à jour")
+            return 0
+
+        updated = 0
+        for tender in tenders:
+            try:
+                new_score = compute_score(
+                    title=tender.get("objet", ""),
+                    description=f"{tender.get('categorie', '')} {tender.get('procedure', '')} {tender.get('lieu_execution', '')}",
+                    country="Morocco",
+                    deadline=str(tender.get("date_limite_remise_plis", "")),
+                    acheteur=tender.get("acheteur_public", ""),
+                    tender_data=tender
+                )
+
+                old_score = tender.get("relevance_score", 0)
+                if new_score != old_score:
+                    success = _sb_patch_tenders_2(tender["reference"], {"relevance_score": new_score})
+                    if success:
+                        updated += 1
+                        logger.debug(f"[Scoring] {tender['reference']}: {old_score} → {new_score}")
+            except Exception as e:
+                logger.debug(f"Erreur recalcul pour {tender.get('reference')}: {e}")
+                continue
+
+        logger.info(f"{ICON_SUCCESS} Scores recalculés : {updated} AO mis à jour sur {len(tenders)}")
+        return updated
+    except Exception as e:
+        logger.error(f"Erreur lors du recalcul des scores: {e}")
+        return 0
+
 
 def make_tender_key(title: str, reference: str = "") -> str:
     if reference: return f"ref:{reference}"
@@ -737,7 +915,18 @@ def _extract_row_data(row, page_url, seen_refs, existing_refs, existing_referenc
             description=f"{categorie} {procedure} {lieu_exec}",
             country="Morocco",
             deadline=deadline,
-            acheteur=acheteur or ""
+            acheteur=acheteur or "",
+            tender_data={
+                "objet": objet_text or "",
+                "categorie": categorie or "",
+                "procedure": procedure or "",
+                "lieu_execution": lieu_exec or "",
+                "acheteur_public": acheteur or "",
+                "chiffre_affaires": "0",
+                "nombre_references": "0",
+                "estimation": "0",
+                "avis_estimation_ttc": "0",
+            }
         )
         
         tender_data = {
@@ -777,7 +966,6 @@ def _extract_row_data(row, page_url, seen_refs, existing_refs, existing_referenc
 # ═══════════════ AUTO-INDEXATION ═══════════════
 
 def auto_index_tender(tender_ref: str):
-    """Lance l'indexation chatbot en arrière-plan après upload du DCE."""
     try:
         from agents.zip_chatbot import index_tender_documents
         tender = get_tender_row(tender_ref)
@@ -985,7 +1173,6 @@ def scan_single_page_modified(page, context, page_num, existing_keys, existing_r
 
 
 def _reset_search_session(page):
-    """Réinitialise la session de recherche après des erreurs."""
     try:
         print(f"  {ICON_RESET} Réinitialisation de la session de recherche...")
         page.goto(SEARCH_URL, wait_until="networkidle", timeout=60000)
@@ -1028,7 +1215,6 @@ def run_tender_scan():
         context = browser.new_context(viewport={"width": 1366, "height": 768}, locale="fr-FR", timezone_id="Africa/Casablanca", accept_downloads=True)
         page = context.new_page()
         
-        # Navigation initiale
         print(f"  {ICON_SEARCH} Navigation vers le site...")
         for attempt in range(3):
             try: page.goto(SEARCH_URL, wait_until="networkidle", timeout=60000); break
@@ -1038,7 +1224,6 @@ def run_tender_scan():
         print(f"  {ICON_SUCCESS} Site chargé\n")
         page.wait_for_timeout(5000)
         
-        # Lancement recherche
         try: page.click("#ctl0_CONTENU_PAGE_AdvancedSearch_lancerRecherche", timeout=15000)
         except:
             try: page.click("input[value='Lancer la recherche']", timeout=10000)
@@ -1066,7 +1251,6 @@ def run_tender_scan():
                 print(f"\n  {ICON_STOP} Trop d'erreurs consécutives ({MAX_CONSECUTIVE_ERRORS}). Arrêt du scan.")
                 break
             
-            # 🔄 Reset session après 3 erreurs consécutives
             if consecutive_errors > 0 and consecutive_errors % SESSION_RESET_AFTER_ERRORS == 0:
                 wait_time = ERROR_WAIT_BASE * consecutive_errors
                 print(f"\n  {ICON_RESET} {consecutive_errors} erreurs - Reset session (pause {wait_time}s)...")
@@ -1078,9 +1262,7 @@ def run_tender_scan():
                 else:
                     consecutive_errors += 1
             
-            # 🔄 Navigation vers la page
             if page_num > 1:
-                # Pause progressive selon le nombre d'erreurs
                 if consecutive_errors > 0:
                     wait_time = ERROR_WAIT_BASE * consecutive_errors
                     print(f"  {ICON_PAUSE} Pause de {wait_time}s avant page {page_num}...")
@@ -1091,13 +1273,11 @@ def run_tender_scan():
                 
                 for retry in range(PAGE_RETRY_ATTEMPTS):
                     try:
-                        # Méthode 1: Remplir le champ numéro de page
                         page.fill("#ctl0_CONTENU_PAGE_resultSearch_numPageTop", str(page_num))
                         page.wait_for_timeout(1000)
                         page.press("#ctl0_CONTENU_PAGE_resultSearch_numPageTop", "Enter")
-                        page.wait_for_timeout(8000)  # Attendre plus longtemps
+                        page.wait_for_timeout(8000)
                         
-                        # Vérifier que la page a chargé
                         try: 
                             page.wait_for_selector("tr:has(td.col-450)", timeout=30000)
                             nav_success = True
@@ -1109,7 +1289,6 @@ def run_tender_scan():
                                 page.wait_for_timeout(5000)
                             else:
                                 print(f"  {ICON_WARN} Page {page_num}/{total_pages} - Timeout après {PAGE_RETRY_ATTEMPTS} tentatives")
-                                # Essayer de cliquer directement sur le lien de page suivante
                                 try:
                                     next_link = page.query_selector("a[href*='page='] >> text=Suivant")
                                     if next_link:
@@ -1120,7 +1299,7 @@ def run_tender_scan():
                                         break
                                 except:
                                     pass
-                                nav_success = True  # Skip
+                                nav_success = True
                                 break
                     except Exception as e:
                         last_error = str(e)[:100]
@@ -1140,7 +1319,6 @@ def run_tender_scan():
                 last_successful_page = page_num
                 consecutive_errors = 0
             
-            # Extraire les lignes
             rows = BeautifulSoup(page.content(), "html.parser").select("tr:has(td.col-450)")
             
             if not rows:
@@ -1168,7 +1346,6 @@ def run_tender_scan():
         
         browser.close()
     
-    # Résumé final (inchangé)
     print("\n" + "=" * 70)
     print(f"  {ICON_STATS} RÉSUMÉ DU SCAN")
     print("=" * 70)
@@ -1189,6 +1366,7 @@ def run_tender_scan():
         print(f"  {ICON_CLOCK} Temps moyen par offre: {avg_time:.1f}s")
     print(f"  {ICON_CLOCK} Fin: {datetime.now().strftime('%Y-%m-%d %H:%M')}")
     print("=" * 70 + "\n")
+
 
 # ═══════════════ PUBLIC API ═══════════════
 
