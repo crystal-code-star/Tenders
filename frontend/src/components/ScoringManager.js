@@ -4,20 +4,28 @@ import {
 } from 'lucide-react';
 import { API_URL, authHeaders } from './tenderUtils';
 
-const CATEGORIES = {
-  strong_keyword: { label: 'Mot-clé fort', color: '#D6572E', bg: '#FBEAE6' },
-  medium_keyword: { label: 'Mot-clé moyen', color: '#C7913F', bg: '#FBF3E6' },
-  specific_keyword: { label: 'Mot-clé spécifique', color: '#0E93A1', bg: '#E6F5F6' },
-  strategic_client: { label: 'Client stratégique', color: '#4A6B72', bg: '#EEF4F3' },
-  exclusion: { label: 'Exclusion', color: '#9BB5B1', bg: '#F1F6F5' },
-};
+const CW_THEME_STYLE = `
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+  
+  .cw-theme { 
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, ui-sans-serif, sans-serif; 
+    background-color: #F8FAFC;
+  }
+  
+  * {
+    transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+`;
 
 export default function ScoringManager({ isOpen, onClose }) {
   const [criteria, setCriteria] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [newCriteria, setNewCriteria] = useState({ name: '', category: 'strong_keyword', value: '', weight: 1 });
+  const [newCriteria, setNewCriteria] = useState({ name: '', value: '', weight: 1 });
   const [editingId, setEditingId] = useState(null);
   const [editValues, setEditValues] = useState({});
+  const [showAddModal, setShowAddModal] = useState(false);
 
   const fetchCriteria = useCallback(async () => {
     try {
@@ -38,7 +46,8 @@ export default function ScoringManager({ isOpen, onClose }) {
         headers: { ...authHeaders(), 'Content-Type': 'application/json' },
         body: JSON.stringify(newCriteria)
       });
-      setNewCriteria({ name: '', category: 'strong_keyword', value: '', weight: 1 });
+      setNewCriteria({ name: '', value: '', weight: 1 });
+      setShowAddModal(false);
       fetchCriteria();
     } catch (error) { console.error(error); }
   };
@@ -78,122 +87,192 @@ export default function ScoringManager({ isOpen, onClose }) {
     } catch (error) { console.error(error); }
   };
 
-  const groupedCriteria = criteria.reduce((acc, c) => {
-    const cat = c.category || 'strong_keyword';
-    if (!acc[cat]) acc[cat] = [];
-    acc[cat].push(c);
-    return acc;
-  }, {});
-
   if (!isOpen) return null;
 
   return (
-    <div className="cw-theme min-h-screen bg-white">
-      <style>{`
-        @import url('https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
-        .cw-theme { font-family: 'Space Grotesk', ui-sans-serif, sans-serif; }
-        .cw-serif { font-family: 'Newsreader', serif; }
-        .cw-mono { font-family: 'IBM Plex Mono', monospace; }
-      `}</style>
-      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-6">
-        {/* Header */}
-        <div className="bg-white rounded-2xl border border-[#DCE8E5] shadow-lg shadow-[#123338]/5 overflow-hidden mb-4">
-          <div className="p-5 border-b border-[#DCE8E5] bg-gradient-to-b from-[#F7FAF9] to-[#F1F6F5]">
-            <div className="flex items-center justify-between">
-              <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#0E93A1] to-[#0C7C88] flex items-center justify-center shadow-lg shadow-[#0E93A1]/20">
-                  <Sliders size={18} className="text-white" />
-                </div>
-                <div>
-                  <h3 className="font-bold text-[#123338] cw-serif text-base">Critères de Scoring</h3>
-                  <p className="text-xs text-[#7FA09B]">{criteria.length} critères · Personnalisez le calcul du score de pertinence</p>
-                </div>
+    <div className="cw-theme min-h-screen">
+      <style>{CW_THEME_STYLE}</style>
+      <div className="max-w-[1200px] mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        {/* Search bar + Add button */}
+        <div className="bg-white rounded-3xl border border-[#E2E8F0] shadow-sm overflow-hidden mb-6">
+          <div className="p-4">
+            <div className="flex gap-3">
+              <div className="relative flex-1">
+                <input 
+                  type="text" 
+                  placeholder="Rechercher un critère..." 
+                  className="w-full pl-4 pr-4 py-3 text-sm border border-[#E2E8F0] rounded-2xl focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] outline-none text-[#0F172A] placeholder-[#94A3B8] bg-[#F8FAFC]" 
+                />
               </div>
-            </div>
-          </div>
-
-          {/* Add new criteria */}
-          <div className="p-4 border-b border-[#DCE8E5] bg-white">
-            <div className="flex gap-2 flex-wrap">
-              <input type="text" value={newCriteria.name} onChange={e => setNewCriteria({ ...newCriteria, name: e.target.value })}
-                placeholder="Nom du critère..." className="flex-1 min-w-[120px] px-3 py-2 text-xs border border-[#DCE8E5] rounded-lg focus:ring-2 focus:ring-[#0E93A1]/20 outline-none text-[#123338]" />
-              <select value={newCriteria.category} onChange={e => setNewCriteria({ ...newCriteria, category: e.target.value })}
-                className="px-3 py-2 text-xs border border-[#DCE8E5] rounded-lg focus:ring-2 focus:ring-[#0E93A1]/20 outline-none text-[#123338]">
-                {Object.entries(CATEGORIES).map(([key, val]) => (
-                  <option key={key} value={key}>{val.label}</option>
-                ))}
-              </select>
-              <input type="text" value={newCriteria.value} onChange={e => setNewCriteria({ ...newCriteria, value: e.target.value })}
-                placeholder="Mot-clé..." className="w-32 px-3 py-2 text-xs border border-[#DCE8E5] rounded-lg focus:ring-2 focus:ring-[#0E93A1]/20 outline-none text-[#123338]" />
-              <input type="number" value={newCriteria.weight} onChange={e => setNewCriteria({ ...newCriteria, weight: parseInt(e.target.value) || 1 })}
-                min="1" max="100" className="w-16 px-2 py-2 text-xs border border-[#DCE8E5] rounded-lg focus:ring-2 focus:ring-[#0E93A1]/20 outline-none text-[#123338]" />
-              <button onClick={addCriteria}
-                className="px-4 py-2 bg-[#0E93A1] text-white rounded-lg text-xs font-bold hover:bg-[#0C7C88] transition-all flex items-center gap-1 shadow-sm">
-                <Plus size={12} />Ajouter
+              <button 
+                onClick={() => setShowAddModal(true)}
+                className="px-6 py-3 bg-[#111827] text-white rounded-2xl text-sm font-medium hover:bg-[#1E293B] transition-all duration-200 flex items-center gap-2 shadow-sm active:scale-95"
+              >
+                <Plus size={14} />Ajouter un critère
               </button>
             </div>
           </div>
         </div>
 
         {/* Criteria list */}
-        <div className="bg-white rounded-2xl border border-[#DCE8E5] shadow-lg shadow-[#123338]/5 overflow-hidden">
+        <div className="bg-white rounded-3xl border border-[#E2E8F0] shadow-sm overflow-hidden">
           {loading ? (
-            <div className="p-10 text-center"><RefreshCw size={24} className="text-[#0E93A1] animate-spin mx-auto mb-2" /><p className="text-xs text-[#9BB5B1]">Chargement des critères...</p></div>
-          ) : Object.keys(groupedCriteria).length === 0 ? (
-            <div className="p-10 text-center"><Sliders size={32} className="text-[#9BB5B1] mx-auto mb-2" /><p className="text-sm font-bold text-[#4F6E69]">Aucun critère</p><p className="text-xs text-[#9BB5B1]">Ajoutez des critères pour personnaliser le scoring</p></div>
+            <div className="p-12 text-center">
+              <RefreshCw size={28} className="text-[#2563EB] animate-spin mx-auto mb-3" />
+              <p className="text-sm font-medium text-[#64748B]">Chargement des critères...</p>
+            </div>
+          ) : criteria.length === 0 ? (
+            <div className="p-12 text-center">
+              <div className="w-14 h-14 rounded-2xl bg-[#F8FAFC] flex items-center justify-center mx-auto mb-3">
+                <Sliders size={24} className="text-[#94A3B8]" />
+              </div>
+              <p className="text-sm font-semibold text-[#475569]">Aucun critère</p>
+              <p className="text-xs text-[#94A3B8] mt-1">Ajoutez des critères pour personnaliser le scoring</p>
+            </div>
           ) : (
-            <div className="divide-y divide-[#DCE8E5]">
-              {Object.entries(groupedCriteria).map(([category, items]) => {
-                const catInfo = CATEGORIES[category] || CATEGORIES.strong_keyword;
-                return (
-                  <div key={category}>
-                    <div className="px-4 py-2.5 bg-[#F7FAF9] flex items-center gap-2">
-                      <span className="w-2 h-2 rounded-full" style={{ backgroundColor: catInfo.color }} />
-                      <span className="text-[10px] font-extrabold uppercase tracking-wider text-[#4F6E69]">{catInfo.label}s ({items.length})</span>
+            <div className="divide-y divide-[#E2E8F0]">
+              {criteria.map(item => (
+                <div key={item.id} className={`px-5 py-3.5 flex items-center gap-3 hover:bg-[#F8FAFC]/50 transition-colors ${!item.is_active ? 'opacity-40' : ''}`}>
+                  {editingId === item.id ? (
+                    <div className="flex items-center gap-2 flex-1 flex-wrap">
+                      <input 
+                        type="text" 
+                        value={editValues.name || ''} 
+                        onChange={e => setEditValues({ ...editValues, name: e.target.value })}
+                        className="flex-1 min-w-[120px] px-3 py-2 text-xs border border-[#E2E8F0] rounded-xl focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] outline-none text-[#0F172A]" 
+                      />
+                      <input 
+                        type="text" 
+                        value={editValues.value || ''} 
+                        onChange={e => setEditValues({ ...editValues, value: e.target.value })}
+                        className="w-28 px-3 py-2 text-xs border border-[#E2E8F0] rounded-xl focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] outline-none text-[#0F172A]" 
+                      />
+                      <input 
+                        type="number" 
+                        value={editValues.weight || 1} 
+                        onChange={e => setEditValues({ ...editValues, weight: parseInt(e.target.value) || 1 })}
+                        min="1" max="100" 
+                        className="w-16 px-2 py-2 text-xs border border-[#E2E8F0] rounded-xl focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] outline-none text-[#0F172A]" 
+                      />
+                      <button onClick={saveEdit} className="p-2 text-[#16A34A] hover:bg-[#DCFCE7] rounded-xl transition-all">
+                        <Check size={14} />
+                      </button>
+                      <button onClick={() => setEditingId(null)} className="p-2 text-[#DC2626] hover:bg-[#FEE2E2] rounded-xl transition-all">
+                        <X size={14} />
+                      </button>
                     </div>
-                    {items.map(item => (
-                      <div key={item.id} className={`px-4 py-2.5 flex items-center gap-3 hover:bg-[#F7FAF9]/50 transition-colors ${!item.is_active ? 'opacity-40' : ''}`}>
-                        {editingId === item.id ? (
-                          <div className="flex items-center gap-2 flex-1 flex-wrap">
-                            <input type="text" value={editValues.name || ''} onChange={e => setEditValues({ ...editValues, name: e.target.value })}
-                              className="flex-1 min-w-[100px] px-2 py-1 text-xs border border-[#DCE8E5] rounded focus:ring-2 focus:ring-[#0E93A1]/20 outline-none" />
-                            <input type="text" value={editValues.value || ''} onChange={e => setEditValues({ ...editValues, value: e.target.value })}
-                              className="w-24 px-2 py-1 text-xs border border-[#DCE8E5] rounded focus:ring-2 focus:ring-[#0E93A1]/20 outline-none" />
-                            <input type="number" value={editValues.weight || 1} onChange={e => setEditValues({ ...editValues, weight: parseInt(e.target.value) || 1 })}
-                              min="1" max="100" className="w-14 px-2 py-1 text-xs border border-[#DCE8E5] rounded focus:ring-2 focus:ring-[#0E93A1]/20 outline-none" />
-                            <button onClick={saveEdit} className="p-1.5 text-emerald-500 hover:bg-emerald-50 rounded transition-all"><Check size={14} /></button>
-                            <button onClick={() => setEditingId(null)} className="p-1.5 text-red-400 hover:bg-red-50 rounded transition-all"><X size={14} /></button>
-                          </div>
-                        ) : (
-                          <>
-                            <button onClick={() => toggleActive(item.id, item.is_active)}
-                              className={`flex-shrink-0 w-4 h-4 rounded border-2 transition-all flex items-center justify-center ${item.is_active ? 'bg-[#0E93A1] border-[#0E93A1]' : 'border-[#C3D6D2]'}`}>
-                              {item.is_active && <Check size={10} className="text-white" strokeWidth={3} />}
-                            </button>
-                            <div className="flex-1 min-w-0 flex items-center gap-2">
-                              <span className="text-xs font-semibold text-[#123338] truncate">{item.name}</span>
-                              <span className="cw-mono text-[10px] text-[#9BB5B1] bg-[#F1F6F5] px-1.5 py-0.5 rounded">{item.value}</span>
-                              <span className="cw-mono text-[10px] font-bold text-[#0E93A1]">×{item.weight}</span>
-                            </div>
-                            <div className="flex items-center gap-1">
-                              <button onClick={() => startEdit(item)} className="p-1 text-[#9BB5B1] hover:text-[#0E93A1] hover:bg-[#E6F5F6] rounded transition-all">
-                                <Settings size={12} />
-                              </button>
-                              <button onClick={() => deleteCriteria(item.id)} className="p-1 text-[#9BB5B1] hover:text-red-500 hover:bg-red-50 rounded transition-all">
-                                <Trash2 size={12} />
-                              </button>
-                            </div>
-                          </>
-                        )}
+                  ) : (
+                    <>
+                      <button 
+                        onClick={() => toggleActive(item.id, item.is_active)}
+                        className={`flex-shrink-0 w-5 h-5 rounded-lg border-2 transition-all flex items-center justify-center ${
+                          item.is_active ? 'bg-[#2563EB] border-[#2563EB]' : 'border-[#CBD5E1] hover:border-[#2563EB]/40'
+                        }`}
+                      >
+                        {item.is_active && <Check size={11} className="text-white" strokeWidth={3} />}
+                      </button>
+                      <div className="flex-1 min-w-0 flex items-center gap-2.5">
+                        <span className="text-sm font-medium text-[#0F172A] truncate">{item.name}</span>
+                        <span className="text-[11px] font-medium text-[#64748B] bg-[#F8FAFC] px-2 py-0.5 rounded-lg border border-[#E2E8F0]">{item.value}</span>
+                        <span className="text-[11px] font-semibold text-[#2563EB] bg-[#EFF6FF] px-2 py-0.5 rounded-lg border border-[#BFDBFE]">×{item.weight}</span>
                       </div>
-                    ))}
-                  </div>
-                );
-              })}
+                      <div className="flex items-center gap-1">
+                        <button 
+                          onClick={() => startEdit(item)} 
+                          className="p-2 text-[#94A3B8] hover:text-[#2563EB] hover:bg-[#EFF6FF] rounded-xl transition-all"
+                        >
+                          <Settings size={13} />
+                        </button>
+                        <button 
+                          onClick={() => deleteCriteria(item.id)} 
+                          className="p-2 text-[#94A3B8] hover:text-[#DC2626] hover:bg-[#FEE2E2] rounded-xl transition-all"
+                        >
+                          <Trash2 size={13} />
+                        </button>
+                      </div>
+                    </>
+                  )}
+                </div>
+              ))}
             </div>
           )}
         </div>
       </div>
+
+      {/* Add Criteria Modal */}
+      {showAddModal && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-[#0F172A]/40 backdrop-blur-sm">
+          <div className="bg-white rounded-3xl shadow-2xl w-full max-w-lg mx-4 overflow-hidden border border-[#E2E8F0] transform transition-all duration-200 scale-100">
+            <div className="p-6 border-b border-[#E2E8F0]">
+              <div className="flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <div className="w-10 h-10 rounded-2xl bg-[#111827] flex items-center justify-center shadow-sm">
+                    <Plus size={18} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-[#0F172A] text-base">Ajouter un critère</h3>
+                    <p className="text-xs text-[#64748B]">Définissez un nouveau critère de scoring</p>
+                  </div>
+                </div>
+                <button onClick={() => setShowAddModal(false)} className="p-2 text-[#94A3B8] hover:text-[#0F172A] hover:bg-[#F8FAFC] rounded-xl transition-colors">
+                  <X size={18} />
+                </button>
+              </div>
+            </div>
+            
+            <div className="p-6 space-y-4">
+              <div>
+                <label className="block text-xs font-semibold text-[#64748B] mb-1.5">Nom du critère</label>
+                <input 
+                  type="text" 
+                  value={newCriteria.name} 
+                  onChange={e => setNewCriteria({ ...newCriteria, name: e.target.value })}
+                  placeholder="Ex: Certification ISO" 
+                  className="w-full px-4 py-3 text-sm border border-[#E2E8F0] rounded-2xl focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] outline-none text-[#0F172A] placeholder-[#94A3B8] bg-[#F8FAFC]" 
+                />
+              </div>
+              
+              <div className="grid grid-cols-2 gap-4">
+                <div>
+                  <label className="block text-xs font-semibold text-[#64748B] mb-1.5">Mot-clé / Valeur</label>
+                  <input 
+                    type="text" 
+                    value={newCriteria.value} 
+                    onChange={e => setNewCriteria({ ...newCriteria, value: e.target.value })}
+                    placeholder="Ex: ISO 9001" 
+                    className="w-full px-4 py-3 text-sm border border-[#E2E8F0] rounded-2xl focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] outline-none text-[#0F172A] placeholder-[#94A3B8] bg-[#F8FAFC]" 
+                  />
+                </div>
+                <div>
+                  <label className="block text-xs font-semibold text-[#64748B] mb-1.5">Poids (×)</label>
+                  <input 
+                    type="number" 
+                    value={newCriteria.weight} 
+                    onChange={e => setNewCriteria({ ...newCriteria, weight: parseInt(e.target.value) || 1 })}
+                    min="1" max="100" 
+                    className="w-full px-4 py-3 text-sm border border-[#E2E8F0] rounded-2xl focus:ring-2 focus:ring-[#2563EB]/20 focus:border-[#2563EB] outline-none text-[#0F172A] bg-[#F8FAFC]" 
+                  />
+                </div>
+              </div>
+            </div>
+            
+            <div className="p-6 border-t border-[#E2E8F0] bg-[#F8FAFC] flex gap-3">
+              <button 
+                onClick={() => setShowAddModal(false)}
+                className="flex-1 py-3 bg-white border border-[#E2E8F0] text-[#475569] rounded-2xl text-sm font-medium hover:bg-[#F8FAFC] transition-all duration-200"
+              >
+                Annuler
+              </button>
+              <button 
+                onClick={addCriteria}
+                className="flex-1 py-3 bg-[#111827] text-white rounded-2xl text-sm font-medium hover:bg-[#1E293B] transition-all duration-200 shadow-sm active:scale-[0.98]"
+              >
+                Ajouter le critère
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

@@ -1,5 +1,5 @@
 """
-main.py  —  FastAPI Backend (v6.8 — Tenders + Keywords + Seen + ZIP Viewer + Chatbot + BP Items)
+main.py  —  FastAPI Backend (v6.8 — Tenders + Keywords + Scoring + ZIP Viewer + Chatbot + BP Items)
 ═══════════════════════════════════════════════════════════════════════════════
 Entreprise: CrystalWater (crystalwater.ma)
   - Intégrateur de solutions de traitement d'eau et refroidissement industriel
@@ -8,27 +8,17 @@ Entreprise: CrystalWater (crystalwater.ma)
 ═══════════════════════════════════════════════════════════════════════════════
 """
 import os
-import json
-import glob
 import threading
 import time
-import tempfile
-import shutil
 import traceback
 import logging
-import signal
 from datetime import datetime
 from pathlib import Path
 from typing import List, Optional
-from fastapi import FastAPI, HTTPException, BackgroundTasks, UploadFile, File, Depends, Query
+from fastapi import FastAPI, HTTPException, BackgroundTasks, Depends
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
-from agents.scheduler import run as scheduler_run
-from utils import storage
-from utils.image_storage import upload_image as supabase_upload
 from auth_routes import router as auth_router, get_current_user
-from agents.campaign_planner import plan_campaign
 
 from agents.zip_viewer import (
     list_files_in_dce,
@@ -39,17 +29,6 @@ from agents.zip_viewer import (
     get_tender_row,
     fetch_zip_bytes,
     open_zip,
-)
-
-from agents.linkedin_outreach import (
-    search_profiles,
-    send_invitations,
-    get_outreach_status,
-    load_profiles,
-    save_profiles,
-    load_stats,
-    save_stats,
-    delete_invited_profiles,
 )
 
 from agents.tender_scanner import (
@@ -63,7 +42,6 @@ from agents.tender_scanner import (
     generate_email,
     send_email_via_resend,
     get_active_keywords,
-    filter_tenders_by_keywords,
     _sb_get_keywords,
     _sb_add_keyword,
     _sb_delete_keyword,
@@ -82,7 +60,6 @@ from agents.zip_chatbot import (
     get_chatbot_status,
 )
 
-# Supabase client for BP items
 from dotenv import load_dotenv
 load_dotenv(Path(__file__).resolve().parent.parent / ".env")
 
@@ -97,95 +74,18 @@ else:
 
 logger = logging.getLogger("main")
 
-app = FastAPI(title="CrystalWater AI Agent API", version="6.8.0")
+app = FastAPI(title="CrystalWater Tenders API", version="6.8.0")
 
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 
-os.makedirs("static/images", exist_ok=True)
-app.mount("/static", StaticFiles(directory="static"), name="static")
 app.include_router(auth_router)
 
-_trend_generation_running = False
-_last_trend_generation = None
-_outreach_search_running = False
 _tender_scan_running = False
 
 
 # ═══════════════════════════════════════════════════════════
 #  PYDANTIC MODELS
 # ═══════════════════════════════════════════════════════════
-
-class DayConfig(BaseModel):
-    day_number: int = Field(..., ge=1, le=14)
-    angle: str = Field(...)
-    custom_text: str = Field(default="")
-    enabled: bool = Field(default=True)
-    day_products: List[str] = Field(default=[])
-    scheduled_for: Optional[str] = Field(default=None)
-
-class ScheduleConfig(BaseModel):
-    start_date: str = Field(...)
-    start_time: str = Field(default="09:00")
-    interval_hours: int = Field(default=24)
-
-class CampaignRequest(BaseModel):
-    product_query: str = Field(...)
-    language: str = Field(default="english")
-    days: List[DayConfig] = Field(...)
-    schedule_config: Optional[ScheduleConfig] = Field(default=None)
-
-class LegacyProductCampaignRequest(BaseModel):
-    product_name: str = ""
-    language: str = "english"
-    user_request: str = ""
-
-class LegacyCampaignRequest(BaseModel):
-    topic: str
-
-class PostUpdate(BaseModel):
-    post_text: str
-    status: str
-
-class ScheduleRequest(BaseModel):
-    start_date: str
-    hour: int
-    minute: int = 0
-
-class PlanCampaignRequest(BaseModel):
-    brief: str = Field(...)
-    language: str = Field(default="english")
-    angle_keys: Optional[List[str]] = Field(default=None)
-
-class RegenerateImageWebRequest(BaseModel):
-    topic: str = Field(...)
-    angle_key: str = Field(default="Education")
-
-class RegenerateImageAIRequest(BaseModel):
-    topic: str = Field(...)
-    angle_key: str = Field(default="Education")
-    day_number: int = Field(default=1)
-
-class TrendToPostGenerateRequest(BaseModel):
-    trend_name: str = Field(...)
-    category: str = Field(default="")
-    evidence: str = Field(default="")
-    why_matters: str = Field(default="")
-    post_ideas: List[str] = Field(default=[])
-    source_articles: List[dict] = Field(default=[])
-    language: str = Field(default="english")
-    schedule_date: Optional[str] = Field(default=None)
-    schedule_time: Optional[str] = Field(default=None)
-
-class OutreachSearchRequest(BaseModel):
-    keywords: Optional[List[str]] = Field(default=None)
-    locations: Optional[List[str]] = Field(default=None)
-    max_per_search: int = Field(default=10, ge=1, le=50)
-    language: str = Field(default="french")
-
-class OutreachSendRequest(BaseModel):
-    max_invitations: int = Field(default=10, ge=1, le=50)
-    language: str = Field(default="french")
-    headless: bool = Field(default=False)
 
 class TenderEmailRequest(BaseModel):
     tender_id: str
@@ -212,344 +112,20 @@ class KeywordUpdate(BaseModel):
     category: Optional[str] = Field(default=None)
     is_active: Optional[bool] = Field(default=None)
 
-class KeywordFilterRequest(BaseModel):
-    keywords: Optional[List[str]] = Field(default=None)
-    match_all: bool = Field(default=False)
-
 
 # ═══════════════════════════════════════════════════════════
-#  BACKGROUND THREADS
-# ═══════════════════════════════════════════════════════════
-
-def run_scheduler_loop():
-    while True:
-        try: scheduler_run()
-        except Exception as e: print(f"[Scheduler] Error: {e}")
-        time.sleep(60)
-
-@app.on_event("startup")
-def on_startup():
-    threading.Thread(target=run_scheduler_loop, daemon=True).start()
-
-
-# ═══════════════════════════════════════════════════════════
-#  5. HEALTH / ROOT / ANGLES
+#  HEALTH / ROOT
 # ═══════════════════════════════════════════════════════════
 
 @app.get("/health")
 def health_check(): return {"status": "ok", "version": "6.8.0"}
 
 @app.get("/")
-def root(): return {"message": "CrystalWater AI Agent API v6.8", "docs": "/docs"}
-
-@app.get("/angles")
-def get_available_angles():
-    from agents import bulk_generator
-    return {"angles": [{"key": k, "name": v["name"], "description": v["instruction"][:100] + "..."} for k, v in bulk_generator.ALL_DAY_ANGLES.items()]}
+def root(): return {"message": "CrystalWater Tenders API v6.8", "docs": "/docs"}
 
 
 # ═══════════════════════════════════════════════════════════
-#  6. CAMPAIGN ENDPOINTS
-# ═══════════════════════════════════════════════════════════
-
-@app.post("/plan-campaign")
-def plan_campaign_endpoint(req: PlanCampaignRequest, current_user: dict = Depends(get_current_user)):
-    if req.language not in ["english", "french"]: raise HTTPException(400)
-    if not req.brief or not req.brief.strip(): raise HTTPException(400)
-    if len(req.brief) > 500: raise HTTPException(400)
-    return plan_campaign(brief=req.brief, language=req.language, angle_keys=req.angle_keys)
-
-@app.post("/generate-campaign")
-def generate_campaign_flexible(req: CampaignRequest, background_tasks: BackgroundTasks, current_user: dict = Depends(get_current_user)):
-    from agents import bulk_generator
-    if req.language not in ["english", "french"]: raise HTTPException(400)
-    enabled_count = len([d for d in req.days if d.enabled])
-    if enabled_count == 0: raise HTTPException(400)
-    days_config = [d.model_dump() for d in req.days]
-    schedule_config = req.schedule_config.model_dump() if req.schedule_config else None
-    background_tasks.add_task(bulk_generator.run_campaign, days_config, req.product_query, req.language, schedule_config)
-    response = {"message": f"Campaign started: {enabled_count} days for '{req.product_query}'", "product": req.product_query, "language": req.language, "days_enabled": enabled_count, "days_total": len(req.days)}
-    if schedule_config: response["schedule"] = {"start_date": schedule_config["start_date"], "start_time": schedule_config["start_time"], "first_post": f"{schedule_config['start_date']} {schedule_config['start_time']}"}
-    return response
-
-@app.post("/generate-product")
-def generate_product_campaign(req: LegacyProductCampaignRequest, background_tasks: BackgroundTasks, current_user: dict = Depends(get_current_user)):
-    from agents import bulk_generator
-    background_tasks.add_task(bulk_generator.run, req.product_name, req.language, req.user_request)
-    return {"message": f"7-day campaign started for: {req.product_name}"}
-
-@app.post("/generate")
-def generate_legacy(req: LegacyCampaignRequest, background_tasks: BackgroundTasks, current_user: dict = Depends(get_current_user)):
-    from agents import bulk_generator
-    background_tasks.add_task(bulk_generator.run_legacy, req.topic)
-    return {"message": f"Campaign started for topic: {req.topic}"}
-
-
-# ═══════════════════════════════════════════════════════════
-#  7. POSTS ENDPOINTS
-# ═══════════════════════════════════════════════════════════
-
-@app.get("/posts")
-def get_posts(current_user: dict = Depends(get_current_user)):
-    posts = storage.get_all_posts()
-    for post in posts:
-        if 'created_at' not in post or not post['created_at']: post['created_at'] = datetime.now().isoformat()
-    return posts
-
-@app.get("/posts/{day_id}")
-def get_single_post(day_id: int, current_user: dict = Depends(get_current_user)):
-    post = storage.get_post(day_id)
-    if not post: raise HTTPException(404)
-    return post
-
-@app.put("/posts/{day_id}")
-def update_post(day_id: int, update: PostUpdate, current_user: dict = Depends(get_current_user)):
-    if update.status == "rejected": storage.delete_post(day_id); return {"message": "Post rejected and deleted."}
-    post = storage.get_post(day_id)
-    if not post: raise HTTPException(404)
-    post["post_text"] = update.post_text; post["status"] = update.status; storage.save_post(post)
-    return post
-
-@app.post("/posts/{day_id}/approve")
-def approve_post(day_id: int, current_user: dict = Depends(get_current_user)):
-    post = storage.get_post(day_id)
-    if not post: raise HTTPException(404)
-    post["status"] = "approved"; storage.save_post(post); return post
-
-@app.post("/posts/{day_id}/reject")
-def reject_post(day_id: int, current_user: dict = Depends(get_current_user)):
-    storage.delete_post(day_id); return {"message": f"Post {day_id} rejected and deleted."}
-
-@app.post("/posts/{day_id}/edit")
-def edit_post(day_id: int, update: PostUpdate, current_user: dict = Depends(get_current_user)):
-    post = storage.get_post(day_id)
-    if not post: raise HTTPException(404)
-    post["post_text"] = update.post_text; post["status"] = "approved"; storage.save_post(post); return post
-
-@app.post("/posts/{day_id}/upload-image")
-async def upload_image(day_id: int, file: UploadFile = File(...), current_user: dict = Depends(get_current_user)):
-    with tempfile.NamedTemporaryFile(delete=False, suffix=".png") as tmp:
-        shutil.copyfileobj(file.file, tmp); tmp_path = tmp.name
-    try:
-        public_url = supabase_upload(tmp_path, day_id)
-        if not public_url: raise HTTPException(500)
-        post = storage.get_post(day_id)
-        if not post: raise HTTPException(404)
-        post["image_url"] = public_url; storage.save_post(post)
-        return {"message": "Image uploaded", "url": public_url}
-    finally:
-        if os.path.exists(tmp_path): os.remove(tmp_path)
-
-@app.post("/posts/{day_id}/regenerate-image-web")
-def regenerate_image_web(day_id: int, req: RegenerateImageWebRequest, current_user: dict = Depends(get_current_user)):
-    from agents import bulk_generator
-    post = storage.get_post(day_id)
-    if not post: raise HTTPException(404)
-    if post.get("status") == "posted": raise HTTPException(400)
-    result = bulk_generator.regenerate_image_web(post_id=day_id, topic=req.topic, angle_key=req.angle_key)
-    if not result.get("success"): raise HTTPException(500, detail=result.get("error"))
-    return {"success": True, "image_url": result.get("image_url"), "source": result.get("source")}
-
-@app.post("/posts/{day_id}/regenerate-image-ai")
-def regenerate_image_ai(day_id: int, req: RegenerateImageAIRequest, current_user: dict = Depends(get_current_user)):
-    from agents import bulk_generator
-    post = storage.get_post(day_id)
-    if not post: raise HTTPException(404)
-    if post.get("status") == "posted": raise HTTPException(400)
-    result = bulk_generator.regenerate_image_ai(post_id=day_id, topic=req.topic, angle_key=req.angle_key, day_number=req.day_number)
-    if not result.get("success"): raise HTTPException(500, detail=result.get("error"))
-    return {"success": True, "image_url": result.get("image_url"), "source": result.get("source")}
-
-
-# ═══════════════════════════════════════════════════════════
-#  8. PRODUCT ENDPOINTS
-# ═══════════════════════════════════════════════════════════
-
-@app.get("/products")
-def get_products(current_user: dict = Depends(get_current_user)):
-    from agents import bulk_generator
-    products = bulk_generator.list_products(); return {"products": products, "total": len(products)}
-
-@app.get("/products/search")
-def search_products(query: str, current_user: dict = Depends(get_current_user)):
-    from agents import bulk_generator
-    return {"products": bulk_generator.search_products(query), "query": query, "count": len(bulk_generator.search_products(query))}
-
-@app.get("/products/{product_name}")
-def get_product(product_name: str, current_user: dict = Depends(get_current_user)):
-    from agents import bulk_generator
-    p = bulk_generator.get_product_details(product_name)
-    if not p: raise HTTPException(404)
-    return p
-
-
-# ═══════════════════════════════════════════════════════════
-#  9. TRENDS ENDPOINTS
-# ═══════════════════════════════════════════════════════════
-
-def _get_trends_from_db(params: dict = None) -> List[dict]:
-    """Récupère les trends depuis la table Supabase 'trends'"""
-    if not supabase_client:
-        return []
-    try:
-        query = supabase_client.table("trends").select("*")
-        if params:
-            if params.get("order"):
-                query = query.order(*params["order"].split(","))
-            if params.get("limit"):
-                query = query.limit(params["limit"])
-        response = query.execute()
-        return response.data if response.data else []
-    except Exception as e:
-        logger.error(f"Error fetching trends from DB: {e}")
-        return []
-
-def _group_trends_by_week(trends: List[dict]) -> List[dict]:
-    """Groupe les trends par week_key"""
-    groups = {}
-    for trend in trends:
-        week_key = trend.get("week_key") or trend.get("month") or "unknown"
-        if week_key not in groups:
-            groups[week_key] = {
-                "week_key": week_key,
-                "week_label": trend.get("week_label") or trend.get("month") or week_key,
-                "is_current": _is_current_week(week_key),
-                "trends": []
-            }
-        groups[week_key]["trends"].append(trend)
-    
-    # Trier par week_key décroissant (plus récent en premier)
-    result = list(groups.values())
-    result.sort(key=lambda x: x["week_key"], reverse=True)
-    return result
-
-def _is_current_week(week_key: str) -> bool:
-    """Vérifie si la week_key correspond à la semaine actuelle"""
-    now = datetime.now()
-    year = now.year
-    week_num = now.isocalendar()[1]
-    current_week_key = f"{year}-W{week_num:02d}"
-    return week_key == current_week_key
-
-@app.get("/trends")
-def get_all_trends(current_user: dict = Depends(get_current_user)):
-    """Récupère tous les trends depuis Supabase"""
-    try:
-        trends = _get_trends_from_db({"order": "created_at.desc", "limit": "1000"})
-        
-        if not trends:
-            return {
-                "status": "ok",
-                "grouped_by_week": [],
-                "weeks_count": 0,
-                "trends_count": 0,
-                "message": "No trends in database"
-            }
-        
-        grouped = _group_trends_by_week(trends)
-        
-        return {
-            "status": "ok",
-            "grouped_by_week": grouped,
-            "weeks_count": len(grouped),
-            "trends_count": len(trends),
-            "current_week_label": datetime.now().strftime("%Y-W%W")
-        }
-    except Exception as e:
-        logger.error(f"Error in /trends: {e}")
-        traceback.print_exc()
-        raise HTTPException(500, detail=str(e))
-
-@app.get("/trends/current")
-def get_current_trends(current_user: dict = Depends(get_current_user)):
-    """Récupère les trends depuis Supabase (endpoint maintenu pour compatibilité)"""
-    try:
-        trends = _get_trends_from_db({"order": "created_at.desc", "limit": "1000"})
-        
-        if not trends:
-            return {
-                "status": "ok",
-                "grouped_by_week": [],
-                "weeks_count": 0,
-                "trends_count": 0,
-                "message": "No trends in database"
-            }
-        
-        grouped = _group_trends_by_week(trends)
-        
-        return {
-            "status": "ok",
-            "grouped_by_week": grouped,
-            "weeks_count": len(grouped),
-            "trends_count": len(trends),
-            "current_week_label": datetime.now().strftime("%Y-W%W")
-        }
-    except Exception as e:
-        logger.error(f"Error in /trends/current: {e}")
-        traceback.print_exc()
-        raise HTTPException(500, detail=str(e))
-
-@app.get("/trends/stats")
-def get_trends_stats(current_user: dict = Depends(get_current_user)):
-    """Récupère les statistiques des trends"""
-    try:
-        trends = _get_trends_from_db()
-        
-        stats = {
-            "total": len(trends),
-            "dominant": len([t for t in trends if t.get("strength", 0) >= 80]),
-            "strong": len([t for t in trends if 60 <= t.get("strength", 0) < 80]),
-            "emerging": len([t for t in trends if 40 <= t.get("strength", 0) < 60]),
-            "weak": len([t for t in trends if t.get("strength", 0) < 40]),
-            "categories": {}
-        }
-        
-        for t in trends:
-            cat = t.get("category", "uncategorized")
-            stats["categories"][cat] = stats["categories"].get(cat, 0) + 1
-        
-        return {"success": True, "stats": stats}
-    except Exception as e:
-        logger.error(f"Error in /trends/stats: {e}")
-        raise HTTPException(500, detail=str(e))
-
-
-# ═══════════════════════════════════════════════════════════
-#  10. LINKEDIN OUTREACH ENDPOINTS
-# ═══════════════════════════════════════════════════════════
-
-@app.get("/outreach/status")
-def outreach_status(current_user: dict = Depends(get_current_user)):
-    try: return get_outreach_status()
-    except Exception as e: raise HTTPException(500, detail=str(e))
-
-@app.get("/outreach/profiles")
-def outreach_profiles(limit: int = 50, status_filter: Optional[str] = None, current_user: dict = Depends(get_current_user)):
-    try:
-        profiles = load_profiles()
-        if status_filter: profiles = [p for p in profiles if p.get("status") == status_filter]
-        return {"total": len(profiles[-limit:]), "profiles": profiles[-limit:]}
-    except Exception as e: raise HTTPException(500, detail=str(e))
-
-@app.delete("/outreach/profiles")
-def outreach_clear_profiles(current_user: dict = Depends(get_current_user)):
-    try:
-        save_profiles([])
-        stats = load_stats(); stats["profiles_found"] = 0; stats["invitations_sent"] = 0; stats["daily_count"] = 0; save_stats(stats)
-        return {"success": True, "message": "All profiles cleared"}
-    except Exception as e: raise HTTPException(500, detail=str(e))
-
-@app.delete("/outreach/profiles/invited")
-def outreach_clear_invited_profiles(current_user: dict = Depends(get_current_user)):
-    try:
-        deleted = delete_invited_profiles()
-        stats = load_stats(); stats["profiles_found"] = 0; stats["invitations_sent"] = 0; stats["daily_count"] = 0; save_stats(stats)
-        return {"success": True, "message": f"All {deleted} profiles deleted, stats reset", "deleted": deleted}
-    except Exception as e: raise HTTPException(500, detail=str(e))
-
-
-# ═══════════════════════════════════════════════════════════
-#  ★ 11. TENDERS / SUPPLIERS / SECTORS
+#  TENDERS / SUPPLIERS / SECTORS
 # ═══════════════════════════════════════════════════════════
 
 def _build_stats(items):
@@ -569,8 +145,6 @@ def _build_stats(items):
         "high_priority": high_priority,
         "medium_priority": medium_priority
     }
-
-# ─── ROUTES SANS PATH PARAMETER ──────────────────────────
 
 @app.get("/tenders")
 def get_tenders(status: Optional[str] = None, current_user: dict = Depends(get_current_user)):
@@ -626,7 +200,6 @@ def scan_tenders(background_tasks: BackgroundTasks, current_user: dict = Depends
 
 @app.put("/tenders/mark-all-seen")
 def mark_all_tenders_seen(current_user: dict = Depends(get_current_user)):
-    """Mark all tenders as seen"""
     try:
         tenders = _sb_get_tenders_2({"select": "reference,seen", "seen": "eq.false"})
         count = 0
@@ -659,16 +232,11 @@ def send_tender_email(req: TenderSendEmailRequest, current_user: dict = Depends(
 
 
 # ═══════════════════════════════════════════════════════════
-#  ★ 11d. TENDER QUALIFICATION STATUS ENDPOINTS
-#  (AVANT les routes /bp-items, /status, /seen)
+#  TENDER QUALIFICATION STATUS
 # ═══════════════════════════════════════════════════════════
 
 @app.put("/tenders/{tender_id:path}/qualify")
 def set_tender_qualification(tender_id: str, status: str = "preselected", current_user: dict = Depends(get_current_user)):
-    """
-    Met à jour le statut de qualification d'un appel d'offre.
-    Statuts valides: unseen, seen, preselected, qualified
-    """
     if status not in ["unseen", "seen", "preselected", "qualified"]:
         raise HTTPException(400, detail="Statut invalide. Valeurs acceptées: unseen, seen, preselected, qualified")
     
@@ -688,9 +256,7 @@ def set_tender_qualification(tender_id: str, status: str = "preselected", curren
 
 @app.get("/tenders/preselected")
 def get_preselected_tenders(current_user: dict = Depends(get_current_user)):
-    """Récupère tous les appels d'offre présélectionnés ET qualifiés"""
     try:
-        # Récupérer les preselected
         params_preselected = {
             "qualification_status": "eq.preselected",
             "order": "relevance_score.desc",
@@ -698,7 +264,6 @@ def get_preselected_tenders(current_user: dict = Depends(get_current_user)):
         }
         preselected = _sb_get_tenders_2(params_preselected)
         
-        # Récupérer les qualified
         params_qualified = {
             "qualification_status": "eq.qualified",
             "order": "relevance_score.desc",
@@ -706,10 +271,8 @@ def get_preselected_tenders(current_user: dict = Depends(get_current_user)):
         }
         qualified = _sb_get_tenders_2(params_qualified)
         
-        # Fusionner les deux listes
         all_tenders = (preselected or []) + (qualified or [])
         
-        # Dédupliquer par référence
         seen_refs = set()
         unique_tenders = []
         for t in all_tenders:
@@ -718,7 +281,6 @@ def get_preselected_tenders(current_user: dict = Depends(get_current_user)):
                 seen_refs.add(ref)
                 unique_tenders.append(t)
         
-        # Trier par relevance_score décroissant
         unique_tenders.sort(key=lambda t: t.get("relevance_score", 0), reverse=True)
         
         return {
@@ -733,7 +295,6 @@ def get_preselected_tenders(current_user: dict = Depends(get_current_user)):
 
 @app.get("/tenders/qualified")
 def get_qualified_tenders(current_user: dict = Depends(get_current_user)):
-    """Récupère tous les appels d'offre qualifiés"""
     try:
         params = {
             "qualification_status": "eq.qualified",
@@ -753,13 +314,12 @@ def get_qualified_tenders(current_user: dict = Depends(get_current_user)):
 
 
 # ═══════════════════════════════════════════════════════════
-#  ★ 11c. BP ITEMS ENDPOINT
+#  BP ITEMS
 # ═══════════════════════════════════════════════════════════
 
 @app.get("/api/tenders/{tender_id:path}/bp-items")
 @app.get("/tenders/{tender_id:path}/bp-items")
 def get_bp_items(tender_id: str, current_user: dict = Depends(get_current_user)):
-    """Récupère les items du Bordereau des Prix (BP) pour un appel d'offre."""
     if not supabase_client:
         raise HTTPException(500, detail="Supabase client not configured")
     
@@ -807,7 +367,6 @@ def get_bp_items(tender_id: str, current_user: dict = Depends(get_current_user))
 @app.get("/api/tenders/{tender_id:path}/bp-status")
 @app.get("/tenders/{tender_id:path}/bp-status")
 def get_bp_status(tender_id: str, current_user: dict = Depends(get_current_user)):
-    """Vérifie le statut d'extraction BP pour un appel d'offre."""
     if not supabase_client:
         raise HTTPException(500, detail="Supabase client not configured")
     
@@ -835,7 +394,9 @@ def get_bp_status(tender_id: str, current_user: dict = Depends(get_current_user)
         raise HTTPException(500, detail=str(e))
 
 
-# ─── ROUTES AVEC {tender_id:path} EN DERNIER ─────────────
+# ═══════════════════════════════════════════════════════════
+#  TENDER STATUS / SEEN
+# ═══════════════════════════════════════════════════════════
 
 @app.put("/tenders/{tender_id:path}/status")
 def set_tender_status(tender_id: str, status: str = "contacted", current_user: dict = Depends(get_current_user)):
@@ -869,7 +430,6 @@ def set_sector_status(sector_id: str, status: str = "contacted", current_user: d
 
 @app.put("/tenders/{tender_id:path}/seen")
 def mark_tender_seen(tender_id: str, current_user: dict = Depends(get_current_user)):
-    """Mark a tender as seen"""
     try:
         success = _sb_patch_tenders_2(tender_id, {"seen": True})
         if success: return {"success": True, "message": "Tender marked as seen"}
@@ -878,7 +438,9 @@ def mark_tender_seen(tender_id: str, current_user: dict = Depends(get_current_us
     except Exception as e: raise HTTPException(500, detail=str(e))
 
 
-# ─── EMAIL HELPER ──────────────────────────────────────
+# ═══════════════════════════════════════════════════════════
+#  EMAIL HELPER
+# ═══════════════════════════════════════════════════════════
 
 def _find_item_by_id(item_id: str, item_type: Optional[str] = None):
     item = None; table_used = None
@@ -898,7 +460,7 @@ def _find_item_by_id(item_id: str, item_type: Optional[str] = None):
 
 
 # ═══════════════════════════════════════════════════════════
-#  11b. KEYWORDS MANAGEMENT
+#  KEYWORDS MANAGEMENT
 # ═══════════════════════════════════════════════════════════
 
 @app.get("/keywords")
@@ -958,16 +520,15 @@ def update_keyword(keyword_id: int, req: KeywordUpdate, current_user: dict = Dep
 
 
 # ═══════════════════════════════════════════════════════════
-#  11e. SCORING CRITERIA MANAGEMENT
+#  SCORING CRITERIA MANAGEMENT
 # ═══════════════════════════════════════════════════════════
 
 SCORING_TABLE = "scoring_criteria"
 
-# Remplacer SUPABASE_KEY par SUPABASE_SERVICE_KEY dans ces fonctions :
-
 def _sb_get_criteria(params: dict = None) -> List[dict]:
     if not SUPABASE_URL or not SUPABASE_SERVICE_KEY: return []
     try:
+        import requests
         r = requests.get(f"{SUPABASE_URL}/rest/v1/{SCORING_TABLE}", 
                         headers={
                             "apikey": SUPABASE_SERVICE_KEY, 
@@ -981,6 +542,7 @@ def _sb_get_criteria(params: dict = None) -> List[dict]:
 def _sb_add_criteria(data: dict) -> Optional[dict]:
     if not SUPABASE_URL or not SUPABASE_SERVICE_KEY: return None
     try:
+        import requests
         headers = {
             "apikey": SUPABASE_SERVICE_KEY, 
             "Authorization": f"Bearer {SUPABASE_SERVICE_KEY}",
@@ -995,6 +557,7 @@ def _sb_add_criteria(data: dict) -> Optional[dict]:
 def _sb_delete_criteria(criteria_id: int) -> bool:
     if not SUPABASE_URL or not SUPABASE_SERVICE_KEY: return False
     try:
+        import requests
         headers = {
             "apikey": SUPABASE_SERVICE_KEY, 
             "Authorization": f"Bearer {SUPABASE_SERVICE_KEY}"
@@ -1006,6 +569,7 @@ def _sb_delete_criteria(criteria_id: int) -> bool:
 def _sb_update_criteria(criteria_id: int, data: dict) -> bool:
     if not SUPABASE_URL or not SUPABASE_SERVICE_KEY: return False
     try:
+        import requests
         headers = {
             "apikey": SUPABASE_SERVICE_KEY, 
             "Authorization": f"Bearer {SUPABASE_SERVICE_KEY}",
@@ -1018,7 +582,6 @@ def _sb_update_criteria(criteria_id: int, data: dict) -> bool:
 
 @app.get("/scoring-criteria")
 def get_scoring_criteria(category: Optional[str] = None, is_active: Optional[bool] = None, current_user: dict = Depends(get_current_user)):
-    """Récupère tous les critères de scoring"""
     try:
         params = {"order": "category.asc,weight.desc"}
         if category: params["category"] = f"eq.{category}"
@@ -1031,7 +594,6 @@ def get_scoring_criteria(category: Optional[str] = None, is_active: Optional[boo
 
 @app.get("/scoring-criteria/active")
 def get_active_scoring_criteria(current_user: dict = Depends(get_current_user)):
-    """Récupère les critères de scoring actifs"""
     try:
         criteria = _sb_get_criteria({"is_active": "eq.true", "order": "category.asc,weight.desc"})
         return {"success": True, "criteria": criteria, "total": len(criteria)}
@@ -1041,7 +603,6 @@ def get_active_scoring_criteria(current_user: dict = Depends(get_current_user)):
 
 @app.post("/scoring-criteria")
 def create_scoring_criteria(req: dict, current_user: dict = Depends(get_current_user)):
-    """Crée un nouveau critère de scoring"""
     try:
         name = req.get("name", "").strip()
         category = req.get("category", "keyword")
@@ -1071,7 +632,6 @@ def create_scoring_criteria(req: dict, current_user: dict = Depends(get_current_
 
 @app.delete("/scoring-criteria/{criteria_id}")
 def delete_scoring_criteria(criteria_id: int, current_user: dict = Depends(get_current_user)):
-    """Supprime un critère de scoring"""
     try:
         success = _sb_delete_criteria(criteria_id)
         if success: return {"success": True, "message": f"Criteria #{criteria_id} deleted"}
@@ -1083,7 +643,6 @@ def delete_scoring_criteria(criteria_id: int, current_user: dict = Depends(get_c
 
 @app.patch("/scoring-criteria/{criteria_id}")
 def update_scoring_criteria(criteria_id: int, req: dict, current_user: dict = Depends(get_current_user)):
-    """Met à jour un critère de scoring"""
     try:
         update_data = {}
         if "name" in req: update_data["name"] = req["name"].strip()
@@ -1104,9 +663,8 @@ def update_scoring_criteria(criteria_id: int, req: dict, current_user: dict = De
         raise HTTPException(500, detail=str(e))
 
 
-
 # ═══════════════════════════════════════════════════════════
-#  12. ZIP VIEWER
+#  ZIP VIEWER
 # ═══════════════════════════════════════════════════════════
 
 def _get_extractor_for_file(file_path: str):
@@ -1188,7 +746,7 @@ def get_dce_raw_file(tender_id: str, file_path: str, download: bool = False): re
 
 
 # ═══════════════════════════════════════════════════════════
-#  13. STRUCTURED EXTRACTION & ANALYSIS
+#  STRUCTURED EXTRACTION & ANALYSIS
 # ═══════════════════════════════════════════════════════════
 
 @app.get("/api/tenders/{tender_id:path}/extract/docx/{file_path:path}")
@@ -1236,7 +794,7 @@ def analyze_document_endpoint(tender_id: str, file_path: str):
 
 
 # ═══════════════════════════════════════════════════════════
-#  13b. CHATBOT RAG ENDPOINTS
+#  CHATBOT RAG
 # ═══════════════════════════════════════════════════════════
 
 @app.post("/api/tenders/{tender_id:path}/chat/index")
@@ -1268,38 +826,11 @@ def get_chat_status(tender_id: str):
 
 
 # ═══════════════════════════════════════════════════════════
-#  14. SCHEDULE / STATS / CLEAR
-# ═══════════════════════════════════════════════════════════
-
-@app.post("/schedule")
-def set_schedule(req: ScheduleRequest, current_user: dict = Depends(get_current_user)):
-    try: storage.build_schedule(datetime.fromisoformat(req.start_date.replace("Z", "+00:00")), req.hour, req.minute); return {"message": "Schedule built."}
-    except Exception as e: raise HTTPException(400, str(e))
-
-@app.post("/scheduler/run")
-def trigger_scheduler(current_user: dict = Depends(get_current_user)):
-    result = scheduler_run(dry_run=False); return {"message": "Post published" if result else "Nothing due", "posted": result}
-
-@app.post("/scheduler/dry-run")
-def dry_run_scheduler(current_user: dict = Depends(get_current_user)):
-    result = scheduler_run(dry_run=True); return {"message": "Dry run complete", "would_post": result}
-
-@app.get("/stats")
-def get_stats(current_user: dict = Depends(get_current_user)):
-    posts = storage.get_all_posts()
-    return {"total": len(posts), "pending": len([p for p in posts if p["status"]=="pending"]), "approved": len([p for p in posts if p["status"]=="approved"]), "posted": len([p for p in posts if p["status"]=="posted"]), "rejected": len([p for p in posts if p["status"]=="rejected"])}
-
-@app.delete("/posts")
-def clear_all_posts(current_user: dict = Depends(get_current_user)):
-    storage.clear_all(); return {"message": "All posts cleared."}
-
-
-# ═══════════════════════════════════════════════════════════
-#  15. MAIN ENTRY POINT
+#  MAIN ENTRY POINT
 # ═══════════════════════════════════════════════════════════
 
 if __name__ == "__main__":
     import uvicorn
     port = int(os.environ.get("PORT", 8000))
-    print(f"\n{'='*60}\n  CrystalWater AI Agent API v6.8\n  http://0.0.0.0:{port}\n  ZIP Viewer: /tenders/{{tender_id}}/files\n  BP Items: /tenders/{{tender_id}}/bp-items\n  Qualification: /tenders/{{tender_id}}/qualify\n  Chatbot: /tenders/{{tender_id}}/chat/query\n  Keywords: /keywords\n{'='*60}\n")
+    print(f"\n{'='*60}\n  CrystalWater Tenders API v6.8\n  http://0.0.0.0:{port}\n  Tenders | Keywords | Scoring | ZIP Viewer | Chatbot | BP Items\n{'='*60}\n")
     uvicorn.run(app, host="0.0.0.0", port=port)
