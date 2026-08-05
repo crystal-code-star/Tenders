@@ -6,12 +6,12 @@ import {
   Activity,
   Download, FileArchive, Wifi, WifiOff,
   X, Target, Calendar, Clock,
-  Info, Monitor,
+  Monitor,
   Plus, Trash2, Tag, Filter, SlidersHorizontal, FileText, Check,
-  ChevronRight, MapPin, Shield, Users,
+  ChevronRight, Shield, Users,
   DollarSign, FileCheck, Briefcase, ClipboardList,
   Truck, Wrench, Beaker, PenTool,
-  BarChart3, Award, Eye, Hash, Laptop,
+  BarChart3, Award, Eye, Laptop,
   Table, ChevronDown, ChevronUp, Star, UserCheck, AlertTriangle,
   RotateCcw,
 } from 'lucide-react';
@@ -20,9 +20,6 @@ import {
 } from './tenderUtils';
 import ZipViewerModal from './ZipViewerModal';
 
-// ═══════════════════════════════════════════════════════════
-// THEME
-// ═══════════════════════════════════════════════════════════
 const CW_THEME_STYLE = `
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
   .cw-theme { 
@@ -50,90 +47,25 @@ const HashIcon = (props) => (
   <span {...props} style={{ fontSize: '14px', fontWeight: 'bold', lineHeight: 1 }}>#</span>
 );
 
-// ═══════════════════════════════════════════════════════════
-// Fonction utilitaire pour tronquer le titre avant les "..."
-// ═══════════════════════════════════════════════════════════
 function truncateTitleBeforeDots(title) {
   if (!title) return 'Untitled';
-  
-  // Chercher la première occurrence de "..." ou "…" (points de suspension)
   const dotsIndex = title.search(/\.\.\.|…/);
-  
-  if (dotsIndex > 0) {
-    // Retourner la partie avant les points de suspension
-    return title.substring(0, dotsIndex).trim();
-  }
-  
-  // Si pas de points de suspension, retourner le titre complet
+  if (dotsIndex > 0) return title.substring(0, dotsIndex).trim();
   return title;
 }
 
-// ═══════════════════════════════════════════════════════════
-// Fonction utilitaire pour formater la date de publication
-// ═══════════════════════════════════════════════════════════
 function formatPublicationDate(dateString) {
   if (!dateString) return null;
   const date = new Date(dateString);
-  
-  // Format jour/mois abrégé + année (ex: 15 jan 2024, 3 fév 2024, 22 déc 2023)
   return date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'short', year: 'numeric' });
 }
 
-// ═══════════════════════════════════════════════════════════
-// Fonction utilitaire pour abréger l'acheteur public
-// ═══════════════════════════════════════════════════════════
-function abbreviateBuyer(buyerName) {
-  if (!buyerName || buyerName === '—') return '—';
-  
-  // Liste des mots à ignorer pour l'abréviation
-  const ignoreWords = ['de', 'des', 'du', 'd', 'le', 'la', 'les', 'l', 'et', 'en', 'au', 'aux', 'a', 'sur', 'sous'];
-  
-  const words = buyerName.split(/\s+/).filter(w => w.length > 0);
-  
-  if (words.length === 1) {
-    return words[0].length > 8 ? words[0].substring(0, 7) + '...' : words[0];
-  }
-  
-  // Prendre les premières lettres des mots significatifs
-  const significantWords = words.filter(w => !ignoreWords.includes(w.toLowerCase()));
-  
-  if (significantWords.length === 0) {
-    // Si tous les mots sont ignorés, prendre les premières lettres de tous les mots
-    return words.map(w => w.charAt(0).toUpperCase()).join('');
-  }
-  
-  // Si un seul mot significatif, le retourner (tronqué si trop long)
-  if (significantWords.length === 1) {
-    const word = significantWords[0];
-    return word.length > 12 ? word.substring(0, 11) + '...' : word;
-  }
-  
-  // Prendre les premières lettres des mots significatifs
-  return significantWords.map(w => w.charAt(0).toUpperCase()).join('');
+function truncateText(text, maxLen = 25) {
+  if (!text || text === '—') return '—';
+  if (text.length <= maxLen) return text;
+  return text.substring(0, maxLen) + '...';
 }
 
-// ═══════════════════════════════════════════════════════════
-// Fonction utilitaire pour abréger le lieu d'exécution
-// ═══════════════════════════════════════════════════════════
-function abbreviateLocation(location) {
-  if (!location || location === '—') return '—';
-  
-  // Si c'est déjà court, le retourner tel quel
-  if (location.length <= 15) return location;
-  
-  // Prendre les premiers mots
-  const words = location.split(/\s+/);
-  if (words.length <= 2) {
-    return location.substring(0, 14) + '...';
-  }
-  
-  // Prendre les 2 premiers mots
-  return words.slice(0, 2).join(' ') + '...';
-}
-
-// ═══════════════════════════════════════════════════════════
-// QUALIFICATION ICON
-// ═══════════════════════════════════════════════════════════
 function QualificationIcon({ status, size = 20 }) {
   const colors = {
     unseen: { bg: '#F1F5F9', fg: '#94A3B8' },
@@ -142,7 +74,6 @@ function QualificationIcon({ status, size = 20 }) {
     qualified: { bg: '#DCFCE7', fg: '#16A34A' },
   };
   const c = colors[status] || colors.unseen;
-  
   return (
     <div 
       className="relative flex-shrink-0 rounded-full flex items-center justify-center font-bold text-[10px] cw-mono"
@@ -162,9 +93,6 @@ function QualificationIcon({ status, size = 20 }) {
   );
 }
 
-// ═══════════════════════════════════════════════════════════
-// SIGNATURE ELEMENT
-// ═══════════════════════════════════════════════════════════
 function GaugeDial({ score, size = 44, thickness = 4 }) {
   const r = (size - thickness) / 2;
   const c = 2 * Math.PI * r;
@@ -265,9 +193,6 @@ function DetailField({ icon: Icon, label, value }) {
   );
 }
 
-// ═══════════════════════════════════════════════════════════
-// QUALIFICATION FILTER DROPDOWN
-// ═══════════════════════════════════════════════════════════
 const QUALIFICATION_OPTIONS = [
   { value: 'preselected', label: 'Présélectionnés', icon: Star, color: '#CA8A04' },
   { value: 'qualified', label: 'Qualifiés', icon: UserCheck, color: '#16A34A' },
@@ -332,9 +257,6 @@ function QualificationFilterDropdown({ selected, onToggle, onClear }) {
   );
 }
 
-// ═══════════════════════════════════════════════════════════
-// KEYWORD MANAGER
-// ═══════════════════════════════════════════════════════════
 function KeywordManager({ isOpen, onClose, keywords, onAdd, onDelete, onToggle }) {
   const [newKeyword, setNewKeyword] = useState('');
   const [error, setError] = useState('');
@@ -429,9 +351,6 @@ function KeywordManager({ isOpen, onClose, keywords, onAdd, onDelete, onToggle }
   );
 }
 
-// ═══════════════════════════════════════════════════════════
-// BP ITEMS MODAL
-// ═══════════════════════════════════════════════════════════
 function BPItemsModal({ tenderReference, onClose }) {
   const [bpData, setBpData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -548,9 +467,6 @@ function BPItemsModal({ tenderReference, onClose }) {
   );
 }
 
-// ═══════════════════════════════════════════════════════════
-// Tender Card
-// ═══════════════════════════════════════════════════════════
 function TenderCard({ item, active, onClick, onQualify }) {
   const score = getScore(item);
   const hasDCE = item.dce_resume || item.dce_zip_url;
@@ -566,11 +482,10 @@ function TenderCard({ item, active, onClick, onQualify }) {
   const qStatus = item.qualification_status || 'unseen';
   const isUnseen = qStatus === 'unseen';
 
-  // Abréviations et titre tronqué
-  const abbreviatedBuyer = abbreviateBuyer(buyer);
-  const abbreviatedLocation = abbreviateLocation(location);
   const truncatedTitle = truncateTitleBeforeDots(item.objet || item.title || 'Untitled');
   const formattedPubDate = formatPublicationDate(publicationDate);
+  const truncatedBuyer = truncateText(buyer, 30);
+  const truncatedLocation = truncateText(location, 25);
 
   const handleQualifyClick = (e) => {
     e.stopPropagation();
@@ -595,30 +510,19 @@ function TenderCard({ item, active, onClick, onQualify }) {
           <div className="flex-1 min-w-0">
             <div className="flex items-start justify-between gap-4">
               <div className="flex-1 min-w-0">
-                {/* Ligne des métadonnées : Référence, Acheteur, Lieu */}
-                <div className="flex items-center gap-2 mb-1.5 flex-wrap">
+                <div className="flex items-center gap-2 mb-1.5 flex-wrap text-[11px] text-[#64748B]">
                   {item.reference && (
-                    <span className="cw-mono inline-flex items-center gap-1 text-[11px] font-medium text-[#2563EB] bg-[#EFF6FF] px-2 py-0.5 rounded-lg border border-[#BFDBFE]">
-                      <Hash size={10} />{item.reference}
-                    </span>
+                    <span className="font-medium text-[#2563EB]">{item.reference}</span>
                   )}
-                  <span className="inline-flex items-center gap-1 text-[11px] font-medium text-[#475569] bg-[#F8FAFC] px-2 py-0.5 rounded-lg border border-[#E2E8F0]" title={buyer}>
-                    <Building2 size={10} className="text-[#94A3B8]" />
-                    <span className="truncate max-w-[100px]">{abbreviatedBuyer}</span>
-                  </span>
-                  <span className="inline-flex items-center gap-1 text-[11px] font-medium text-[#475569] bg-[#F8FAFC] px-2 py-0.5 rounded-lg border border-[#E2E8F0]" title={location}>
-                    <MapPin size={10} className="text-[#94A3B8]" />
-                    <span className="truncate max-w-[100px]">{abbreviatedLocation}</span>
-                  </span>
+                  {item.reference && (buyer !== '—' || location !== '—') && <span>•</span>}
+                  {buyer !== '—' && <span title={buyer}>{truncatedBuyer}</span>}
+                  {buyer !== '—' && location !== '—' && <span>•</span>}
+                  {location !== '—' && <span title={location}>{truncatedLocation}</span>}
                 </div>
-                
-                {/* Titre sur 2 lignes maximum - tronqué avant les "..." */}
                 <h3 className={`text-[13px] font-semibold leading-snug line-clamp-2 transition-colors duration-200 ${active ? 'text-[#0F172A]' : 'text-[#0F172A] group-hover:text-[#2563EB]'}`}
                     title={item.objet || item.title || 'Untitled'}>
                   {truncatedTitle}
                 </h3>
-                
-                {/* Badges supplémentaires en bas */}
                 <div className="flex items-center gap-2 mt-2 flex-wrap">
                   {item.avis_estimation_ttc && (
                     <span className="cw-mono inline-flex items-center gap-1 text-[11px] font-medium text-[#2563EB] bg-[#EFF6FF] px-2 py-0.5 rounded-lg border border-[#BFDBFE]">
@@ -640,7 +544,6 @@ function TenderCard({ item, active, onClick, onQualify }) {
                       <Award size={10} />{item.classe_qualification}
                     </span>
                   )}
-                  {/* Type de réponse : icône uniquement */}
                   {isElectronic !== null && isElectronic !== undefined && (
                     <span className={`inline-flex items-center justify-center w-6 h-6 rounded-lg border ${
                       isElectronic 
@@ -652,25 +555,18 @@ function TenderCard({ item, active, onClick, onQualify }) {
                   )}
                 </div>
               </div>
-              
-              {/* Score, dates et actions à droite */}
               <div className="flex items-center gap-3 flex-shrink-0">
                 <div className="flex items-center gap-2">
                   <GaugeDial score={score} size={42} thickness={3.5} />
-                  
-                  {/* Cellule 1 : Date de publication + Date limite */}
                   <div className="bg-[#F8FAFC] rounded-xl px-3 py-1.5 min-w-[85px]">
-                    {/* Date de publication */}
                     {formattedPubDate && (
                       <div className="flex items-center gap-1 mb-1">
                         <Calendar size={10} className="text-[#94A3B8] flex-shrink-0" />
-                        <span className="text-[10px] font-medium text-[#94A3B8] truncate" title={item.date_publication ? new Date(item.date_publication).toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' }) : ''}>
+                        <span className="text-[10px] font-medium text-[#94A3B8] truncate">
                           {formattedPubDate}
                         </span>
                       </div>
                     )}
-                    
-                    {/* Date limite */}
                     {deadline && (
                       <div className={`flex items-center gap-1 ${isExpired ? 'opacity-50' : ''}`}>
                         <Clock size={10} className={`flex-shrink-0 ${isUrgent ? 'text-[#DC2626]' : 'text-[#94A3B8]'}`} />
@@ -681,13 +577,10 @@ function TenderCard({ item, active, onClick, onQualify }) {
                         </span>
                       </div>
                     )}
-                    
                     {!deadline && !formattedPubDate && (
                       <span className="text-[10px] text-[#94A3B8] italic">—</span>
                     )}
                   </div>
-                  
-                  {/* Cellule 2 : Nombre de jours restants */}
                   {deadline && daysLeft !== null && !isExpired && (
                     <div className={`rounded-xl px-3 py-1.5 min-w-[55px] text-center ${
                       isUrgent ? 'bg-[#FEE2E2]' : daysLeft <= 3 ? 'bg-[#FEF9C3]/50' : 'bg-[#F8FAFC]'
@@ -705,7 +598,6 @@ function TenderCard({ item, active, onClick, onQualify }) {
                     </div>
                   )}
                 </div>
-                
                 <div className="flex items-center gap-2">
                   <StatusBadge status={item.status} onClick={(e) => { e.stopPropagation(); }} />
                   {hasDCE && (
@@ -726,9 +618,6 @@ function TenderCard({ item, active, onClick, onQualify }) {
   );
 }
 
-// ═══════════════════════════════════════════════════════════
-// Tender Side Panel Content
-// ═══════════════════════════════════════════════════════════
 function TenderSidePanelContent({ item, onClose, onStatusChange, onQualify, itemType }) {
   const score = getScore(item);
   const tenderId = item.reference || item.id;
@@ -869,7 +758,7 @@ function TenderSidePanelContent({ item, onClose, onStatusChange, onQualify, item
         <div>
           <div className="flex items-center gap-2 mb-4">
             <div className="w-8 h-8 rounded-xl bg-[#EFF6FF] flex items-center justify-center">
-              <Info size={15} className="text-[#2563EB]" />
+              <FileText size={15} className="text-[#2563EB]" />
             </div>
             <h3 className="font-semibold text-base text-[#0F172A]">Key Information</h3>
           </div>
@@ -964,9 +853,6 @@ function TenderSidePanel({ item, onClose, onStatusChange, onQualify, itemType })
   );
 }
 
-// ═══════════════════════════════════════════════════════════
-//  MAIN COMPONENT
-// ═══════════════════════════════════════════════════════════
 const POLL_ACTIVE = 10000;
 const POLL_IDLE = 60000;
 
@@ -1027,18 +913,14 @@ export default function Tenders({ showOnlyPreselected = false }) {
 
   const sortItems = useCallback((items) => { return [...items].sort((a, b) => { if (deadlineSort === 'nearest') { const da = a.date_limite_remise_plis ? new Date(a.date_limite_remise_plis).getTime() : Infinity; const db = b.date_limite_remise_plis ? new Date(b.date_limite_remise_plis).getTime() : Infinity; if (da !== db) return da - db; } const sb = getScore(b), sa = getScore(a); if (sb !== sa) return sb - sa; const da = a.date_limite_remise_plis ? new Date(a.date_limite_remise_plis).getTime() : Infinity; const db = b.date_limite_remise_plis ? new Date(b.date_limite_remise_plis).getTime() : Infinity; return da - db; }); }, [deadlineSort]);
 
-  // ✅ FILTRAGE DES APPELS D'OFFRES EXPIRÉS
   const filterItems = useCallback((items) => {
     let f = items;
-    
-    // Filtrer les appels d'offres expirés
     f = f.filter(t => {
       const deadline = t.date_limite_remise_plis;
       if (!deadline) return true;
       const daysLeft = Math.ceil((new Date(deadline) - new Date()) / (1000 * 60 * 60 * 24));
       return daysLeft >= 0;
     });
-    
     if (qualificationFilters.length > 0) f = f.filter(t => qualificationFilters.includes(t.qualification_status || 'unseen'));
     if (search) { const q = search.toLowerCase(); f = f.filter(t => (t.objet || t.title || '').toLowerCase().includes(q) || (t.lieu_execution || '').toLowerCase().includes(q) || (t.acheteur_public || '').toLowerCase().includes(q) || (t.reference || '').toLowerCase().includes(q)); }
     if (useKeywordFilter && keywords.length > 0) { const activeKeywords = keywords.filter(k => k.is_active).map(k => k.keyword); if (activeKeywords.length > 0) { f = f.filter(tender => { const txt = [tender.objet || '', tender.acheteur_public || '', tender.lieu_execution || '', tender.categorie || '', tender.procedure || '', tender.reference || ''].join(' ').toLowerCase().replace(/[éèêë]/g, 'e').replace(/[àâä]/g, 'a').replace(/[ùûü]/g, 'u').replace(/[ôö]/g, 'o').replace(/[îï]/g, 'i').replace(/ç/g, 'c'); return activeKeywords.some(kw => txt.includes(kw.toLowerCase().replace(/[éèêë]/g, 'e').replace(/[àâä]/g, 'a').replace(/[ùûü]/g, 'u').replace(/[ôö]/g, 'o').replace(/[îï]/g, 'i').replace(/ç/g, 'c'))); }); } }
