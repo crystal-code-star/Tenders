@@ -19,6 +19,7 @@ from dotenv import load_dotenv
 from colorama import init, Fore, Style, Back
 import supabase
 from groq import Groq
+import time 
 
 init(autoreset=True)
 
@@ -231,6 +232,7 @@ RÉPONDS UNIQUEMENT AVEC CE JSON (sans texte avant/après) :
             max_tokens=500,
             top_p=0.95
         )
+        time.sleep(2)  # Délai pour éviter rate limit
         
         result_text = response.choices[0].message.content.strip()
         
