@@ -16,16 +16,19 @@ from pydantic import BaseModel, Field
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
 from dotenv import load_dotenv
-load_dotenv(Path(__file__).resolve().parent.parent / ".env")
+load_dotenv(Path(__file__).resolve().parent / ".env")
 
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip("/")
 SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 
+# Change 1: Added warning logs when supabase_client is None
 if SUPABASE_URL and SUPABASE_SERVICE_KEY:
     import supabase
     supabase_client = supabase.create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
+    print(f"✅ Supabase client created — URL: {SUPABASE_URL[:30]}...")
 else:
     supabase_client = None
+    print(f"❌ Supabase NOT configured — SUPABASE_URL={'set' if SUPABASE_URL else 'MISSING'}, SUPABASE_SERVICE_KEY={'set' if SUPABASE_SERVICE_KEY else 'MISSING'}")
 
 logger = logging.getLogger("main")
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
@@ -244,7 +247,9 @@ def get_bp_items(tender_id: str, current_user=Depends(get_current_user)):
     decoded_ref = tender_id.replace('___', '/')
     logger.info(f"🔍 BP items for: '{decoded_ref}'")
     
+    # Change 2: Added logging when supabase_client is None
     if not supabase_client:
+        logger.error("⚠️ supabase_client is None — cannot fetch BP items!")
         return {"success": True, "items": [], "total_items": 0, "summary": {"total_ht": 0, "total_qty": 0, "avg_price": 0}, "tender_reference": decoded_ref}
     
     try:
