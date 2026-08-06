@@ -1,5 +1,5 @@
 """
-main.py  —  FastAPI Backend (v7.5 — BP Items Fix avec ___)
+main.py  —  FastAPI Backend (v7.6 — DAILY SCAN)
 ═══════════════════════════════════════════════════════════════════════════════
 CrystalWater — Traitement d'eau & Refroidissement industriel
 https://crystalwater.ma/
@@ -21,7 +21,6 @@ load_dotenv(Path(__file__).resolve().parent / ".env")
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip("/")
 SUPABASE_SERVICE_KEY = os.getenv("SUPABASE_SERVICE_KEY")
 
-# Change 1: Added warning logs when supabase_client is None
 if SUPABASE_URL and SUPABASE_SERVICE_KEY:
     import supabase
     supabase_client = supabase.create_client(SUPABASE_URL, SUPABASE_SERVICE_KEY)
@@ -36,7 +35,9 @@ logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(
 SCANNER_AVAILABLE = False
 try:
     from agents.tender_scanner import (
-        run_backfill, RealtimeScanner, load_tenders, load_suppliers, load_sectors,
+        run_daily_scan,          # ← MODIFIÉ: run_backfill → run_daily_scan
+        RealtimeScanner, 
+        load_tenders, load_suppliers, load_sectors,
         update_tender_status, update_supplier_status, update_sector_status,
         generate_email, send_email_via_resend, get_active_keywords,
         _sb_get_keywords, _sb_add_keyword, _sb_delete_keyword, _sb_update_keyword,
@@ -46,6 +47,7 @@ try:
     logger.info("✅ Scanner module loaded")
 except ImportError as e:
     logger.warning(f"Scanner module not available: {e}")
+    def run_daily_scan(): pass     # ← AJOUTÉ: stub pour daily scan
     def load_tenders(s=None): return []
     def load_suppliers(s=None): return []
     def load_sectors(s=None): return []
@@ -63,7 +65,6 @@ except ImportError as e:
     def _sb_patch_tenders_2(r,d): return False
     def recalculate_all_scores(): return 0
     def _sb_get_refs(): return set()
-    def run_backfill(): pass
     class RealtimeScanner:
         def run(self): pass
 
@@ -82,39 +83,49 @@ except ImportError:
     async def get_current_user(request: Request = None):
         return {"id":"default","email":"admin@crystalwater.ma"}
 
-app = FastAPI(title="CrystalWater Tenders API", version="7.5.0")
+app = FastAPI(title="CrystalWater Tenders API", version="7.6.0")
 app.add_middleware(CORSMiddleware, allow_origins=["*"], allow_credentials=True, allow_methods=["*"], allow_headers=["*"])
 if AUTH_AVAILABLE:
     app.include_router(auth_router)
 
 _scanner_running = False
-_scanner_status = {"is_running":False,"mode":"stopped","started_at":None,"backfill_completed":False,"realtime_active":False,"tenders_found":0,"dce_downloaded":0}
+_scanner_status = {
+    "is_running": False,
+    "mode": "stopped",
+    "started_at": None,
+    "daily_scan_completed": False,
+    "realtime_active": False,
+    "tenders_found": 0,
+    "dce_downloaded": 0
+}
 
 def start_scanner_automatically():
+    """Démarre le scanner quotidien automatiquement"""
     global _scanner_running, _scanner_status
     if not SCANNER_AVAILABLE or _scanner_running:
         return
-    logger.info("🚀 AUTO-STARTING SCANNER")
+    logger.info("🚀 AUTO-STARTING DAILY SCANNER")
     _scanner_running = True
     _scanner_status["is_running"] = True
-    _scanner_status["mode"] = "full"
+    _scanner_status["mode"] = "daily"
     _scanner_status["started_at"] = datetime.now().isoformat()
+    
     def run():
         try:
             existing = _sb_get_refs()
             logger.info(f"📊 {len(existing)} offres déjà en base")
-            run_backfill()
-            _scanner_status["backfill_completed"] = True
-            _scanner_status["mode"] = "realtime"
-            _scanner_status["realtime_active"] = True
-            RealtimeScanner().run()
+            # Exécuter le scan quotidien
+            run_daily_scan()
+            _scanner_status["daily_scan_completed"] = True
+            _scanner_status["mode"] = "completed"
         except Exception as e:
             logger.error(f"Scanner error: {e}")
+            _scanner_status["mode"] = "error"
         finally:
             _scanner_status["is_running"] = False
-            _scanner_status["realtime_active"] = False
             global _scanner_running
             _scanner_running = False
+    
     threading.Thread(target=run, daemon=True).start()
 
 @app.on_event("startup")
@@ -123,31 +134,50 @@ async def startup():
 
 @app.get("/")
 def root():
-    return {"message":"CrystalWater Tenders API v7.5","scanner":{"auto_start":True,"status":_scanner_status},"docs":"/docs"}
+    return {
+        "message": "CrystalWater Tenders API v7.6",
+        "scanner": {
+            "auto_start": True,
+            "status": _scanner_status,
+            "mode": "daily_scan"
+        },
+        "docs": "/docs"
+    }
 
 @app.get("/health")
 def health():
-    return {"status":"ok","version":"7.5.0","scanner_running":_scanner_running,"scanner_status":_scanner_status}
+    return {
+        "status": "ok",
+        "version": "7.6.0",
+        "scanner_running": _scanner_running,
+        "scanner_status": _scanner_status
+    }
 
 def _build_stats(items):
     t = len(items)
     return {
-        "total":t,
-        "unseen":len([i for i in items if i.get("qualification_status")=="unseen"]),
-        "seen":len([i for i in items if i.get("qualification_status")=="seen"]),
-        "preselected":len([i for i in items if i.get("qualification_status")=="preselected"]),
-        "qualified":len([i for i in items if i.get("qualification_status")=="qualified"]),
-        "high_priority":len([i for i in items if i.get("relevance_score",0)>=70]),
-        "medium_priority":len([i for i in items if 45<=i.get("relevance_score",0)<70])
+        "total": t,
+        "unseen": len([i for i in items if i.get("qualification_status") == "unseen"]),
+        "seen": len([i for i in items if i.get("qualification_status") == "seen"]),
+        "preselected": len([i for i in items if i.get("qualification_status") == "preselected"]),
+        "qualified": len([i for i in items if i.get("qualification_status") == "qualified"]),
+        "high_priority": len([i for i in items if i.get("relevance_score", 0) >= 70]),
+        "medium_priority": len([i for i in items if 45 <= i.get("relevance_score", 0) < 70])
     }
 
 @app.get("/tenders")
-def get_tenders(status:Optional[str]=None, current_user=Depends(get_current_user)):
+def get_tenders(status: Optional[str] = None, current_user=Depends(get_current_user)):
     try:
         tenders = load_tenders(status_filter=status) if status else load_tenders()
-        return {"success":True,"total":len(tenders or []),"tenders":tenders or [],"stats":_build_stats(tenders or []),"scanner_status":_scanner_status}
+        return {
+            "success": True,
+            "total": len(tenders or []),
+            "tenders": tenders or [],
+            "stats": _build_stats(tenders or []),
+            "scanner_status": _scanner_status
+        }
     except Exception as e:
-        return {"success":True,"total":0,"tenders":[],"stats":_build_stats([])}
+        return {"success": True, "total": 0, "tenders": [], "stats": _build_stats([])}
 
 @app.get("/tenders/preselected")
 def get_preselected(current_user=Depends(get_current_user)):
@@ -239,7 +269,6 @@ def update_kw(kid:int, req:KeywordUpdate, current_user=Depends(get_current_user)
     if _sb_update_keyword(kid,data):
         return {"success":True}
     raise HTTPException(404)
-
 
 # ═══════════════ SCORING CRITERIA ═══════════════
 class ScoringCriteriaCreate(BaseModel):
@@ -361,16 +390,13 @@ def recalculate_scores(current_user=Depends(get_current_user)):
         logger.error(f"❌ Error recalculating scores: {e}")
         raise HTTPException(500, str(e))
 
-
-        
-# ═══════════════ BP ITEMS - CORRIGÉ AVEC ___ ═══════════════
+# ═══════════════ BP ITEMS ═══════════════
 @app.get("/tenders/{tender_id:path}/bp-items")
 def get_bp_items(tender_id: str, current_user=Depends(get_current_user)):
-    # ⚠️ Décoder la référence : remplacer ___ par /
+    # Décoder la référence : remplacer ___ par /
     decoded_ref = tender_id.replace('___', '/')
     logger.info(f"🔍 BP items for: '{decoded_ref}'")
     
-    # Change 2: Added logging when supabase_client is None
     if not supabase_client:
         logger.error("⚠️ supabase_client is None — cannot fetch BP items!")
         return {"success": True, "items": [], "total_items": 0, "summary": {"total_ht": 0, "total_qty": 0, "avg_price": 0}, "tender_reference": decoded_ref}
@@ -413,5 +439,10 @@ def get_preview(tender_id:str, file_path:str):
 if __name__=="__main__":
     import uvicorn
     port = int(os.environ.get("PORT",8000))
-    print(f"\n{'='*60}\n  💧 CrystalWater Tenders API v7.5\n  🚀 AUTO-START SCANNER\n  🌐 http://0.0.0.0:{port}\n{'='*60}\n")
-    uvicorn.run(app,host="0.0.0.0",port=port)
+    print(f"\n{'='*60}")
+    print(f"  💧 CrystalWater Tenders API v7.6")
+    print(f"  📅 SCAN QUOTIDIEN — 6h-6h")
+    print(f"  🚀 AUTO-START SCANNER")
+    print(f"  🌐 http://0.0.0.0:{port}")
+    print(f"{'='*60}\n")
+    uvicorn.run(app, host="0.0.0.0", port=port)

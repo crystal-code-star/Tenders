@@ -1,13 +1,13 @@
 """
-tender_scanner.py — Africa Tenders Intelligence Module (v12.0 - FINAL)
+tender_scanner.py — Africa Tenders Intelligence Module (v12.1 - DAILY SCAN)
 ========================================================================
 CrystalWater — Traitement d'eau & Refroidissement industriel
 https://crystalwater.ma/
 
-PIPELINE SÉQUENTIEL:
-1. Scan page → trouve les AO
-2. Pour chaque AO: Télécharge DCE → Extrait Avis → Extrait RC → Extrait BP
-3. Passe à l'AO suivant
+SCAN QUOTIDIEN:
+1. Scan les pages du site
+2. Filtre les AO publiés entre 6h hier et 6h aujourd'hui
+3. Pour chaque AO: Télécharge DCE → Extrait Avis → Extrait RC → Extrait BP
 """
 
 import os, re, sys, json, uuid, time, logging, warnings, zipfile, io, tempfile
@@ -46,10 +46,13 @@ ICON_PAGE = "📄"
 ICON_STATS = "📈"
 ICON_SKIP = "⏭️"
 ICON_EXTRACT = "📦"
+ICON_START = "🚀"
+ICON_FINISH = "🏁"
+ICON_PROGRESS = "📊"
 
-BACKFILL_MONTHS = 3
-POLL_INTERVAL = 300
-MAX_PAGES_PER_POLL = 3
+# Configuration du scan quotidien
+DAILY_SCAN_HOUR = 6  # Heure de scan (6h du matin)
+MAX_PAGES_PER_DAY = 200  # Pages max à scanner par jour
 
 SUPABASE_URL = os.getenv("SUPABASE_URL", "").rstrip("/")
 SUPABASE_KEY = os.getenv("SUPABASE_SERVICE_KEY", "") or os.getenv("SUPABASE_KEY", "")
@@ -84,7 +87,8 @@ scan_stats = {
     "rc_extracted": 0,
     "bp_extracted": 0,
     "start_time": None,
-    "skipped": {"deja_en_base": 0, "non_pertinent": 0, "date_depassee": 0, "titre_court": 0, "erreur": 0}
+    "end_time": None,
+    "skipped": {"deja_en_base": 0, "non_pertinent": 0, "date_depassee": 0, "titre_court": 0, "hors_periode": 0, "erreur": 0}
 }
 
 STRONG_KEYWORDS = ["station de traitement","station d'epuration","step","eau potable","aep","adduction d'eau","potabilisation","assainissement","eaux usees","eaux pluviales","reservoir d'eau","chateau d'eau","dessalement","osmose inverse","traitement des eaux","surpression","forage d'eau","captage","puits","vannes","clapets","debitmetre","pompe immergee","tour de refroidissement","refroidissement industriel","chloration","desinfection","filtration","lagunage","station de pompage","irrigation"]
@@ -96,8 +100,25 @@ SKIP_REASONS = {
     "not_related": "Non pertinent",
     "deadline_passed": "Date dépassée",
     "title_too_short": "Titre trop court",
+    "outside_time_window": "Hors période (6h-6h)",
     "error": "Erreur extraction"
 }
+
+def get_daily_time_window():
+    """Retourne la fenêtre de temps [6h hier, 6h aujourd'hui]"""
+    now = datetime.now()
+    today_6am = datetime(now.year, now.month, now.day, DAILY_SCAN_HOUR, 0, 0)
+    
+    if now < today_6am:
+        # Avant 6h aujourd'hui => on scanne de 6h avant-hier à 6h hier
+        end_time = today_6am - timedelta(days=1)
+        start_time = end_time - timedelta(days=1)
+    else:
+        # Après 6h aujourd'hui => on scanne de 6h hier à 6h aujourd'hui
+        end_time = today_6am
+        start_time = end_time - timedelta(days=1)
+    
+    return start_time, end_time
 
 def _sb_headers(): return {"apikey":SUPABASE_KEY,"Authorization":f"Bearer {SUPABASE_KEY}","Content-Type":"application/json","Prefer":"return=representation"}
 
@@ -154,6 +175,16 @@ def parse_deadline(s):
     except: pass
     return None
 
+def parse_date(s):
+    """Parse une date au format jj/mm/aaaa"""
+    if not s: return None
+    try:
+        for fmt in ("%d/%m/%Y","%d-%m-%Y","%Y-%m-%d"):
+            try: return datetime.strptime(s.strip()[:10],fmt)
+            except: continue
+    except: pass
+    return None
+
 def is_cw_related(title,desc,acheteur=""):
     t=f"{title} {desc} {acheteur}".lower()
     for a,b in [('é','e'),('è','e'),('ê','e'),('à','a'),('â','a'),('ù','u'),('û','u'),('ô','o'),('î','i'),('ç','c')]: t=t.replace(a,b)
@@ -179,7 +210,8 @@ def compute_score(title,desc,deadline,acheteur=""):
     cb=8 if any(c in t for c in ["onee","onep","onas","amendis","commune","province"]) else 3
     return max(0,min(100,base+ds+cb))
 
-def _extract_row(row,page_url,existing_refs):
+def _extract_row(row, page_url, existing_refs, time_window_start, time_window_end):
+    """Extrait les données d'une ligne avec filtrage par période"""
     try:
         ref=(row.select_one("input[name*='refCons']") or {}).get("value","")
         rs=row.select_one("span.ref"); rv=rs.get_text(strip=True) if rs else ""
@@ -218,13 +250,22 @@ def _extract_row(row,page_url,existing_refs):
         if not is_cw_related(title,f"{ct} {pr} {le}",ac): return None,"not_related"
         fr=rv or ref
         if fr and fr in existing_refs: return None,"already_in_db"
+        
+        # Vérification de la date de publication
         dpp=None
+        pub_date = None
         if dp:
-            try:
-                for f in ("%d/%m/%Y","%d-%m-%Y","%Y-%m-%d"):
-                    try: dpp=datetime.strptime(dp.strip()[:10],f).date().isoformat(); break
-                    except: continue
-            except: pass
+            pub_date = parse_date(dp)
+            if pub_date:
+                dpp = pub_date.date().isoformat()
+                # Vérifier si la date est dans la fenêtre temporelle
+                if not (time_window_start <= pub_date < time_window_end):
+                    return None, "outside_time_window"
+        
+        # Si pas de date de publication trouvée, on ignore (hors période)
+        if not dpp:
+            return None, "outside_time_window"
+            
         score=compute_score(ot or "",f"{ct} {pr} {le}",dl_str,ac)
         return {"reference":fr or str(uuid.uuid4()),"procedure":pr[:100] if pr else None,"categorie":ct[:200] if ct else None,"date_publication":dpp,"objet":ot[:500] if ot else None,"acheteur_public":ac[:300] if ac else None,"lieu_execution":le[:300] if le else None,"date_limite_remise_plis":dl_parsed,"reponse_electronique_obligatoire":re_elec,"source_url":detail_url or page_url,"dce_zip_url":None,"status":"new","qualification_status":"unseen","seen":False,"relevance_score":score},"success"
     except Exception as e:
@@ -407,7 +448,7 @@ def _do_extract_bp(tender_ref,zip_path):
 
 def navigate_to_results(page):
     try:
-        logger.info(f"  🌐 Navigation vers {BASE_URL}...")
+        logger.info(f"  🌐 Connexion au site des marchés publics...")
         page.goto(SEARCH_URL, wait_until="networkidle", timeout=60000)
         page.wait_for_timeout(5000)
         try:
@@ -417,13 +458,13 @@ def navigate_to_results(page):
         page.wait_for_timeout(5000)
         try:
             page.wait_for_selector("tr:has(td.col-450)", timeout=45000)
-            logger.info(f"  ✅ Site atteint, résultats chargés")
+            logger.info(f"  ✅ Site atteint avec succès")
             return True
         except:
-            logger.info(f"  ❌ Impossible de charger les résultats")
+            logger.info(f"  ❌ Erreur: Impossible de charger les résultats")
             return False
     except Exception as e:
-        logger.info(f"  ❌ Erreur de navigation: {e}")
+        logger.info(f"  ❌ Erreur de connexion: {e}")
         return False
 
 def navigate_to_page(page,page_num):
@@ -436,6 +477,18 @@ def navigate_to_page(page,page_num):
     except: return False
 
 # ═══════════════ AFFICHAGE ═══════════════
+
+def print_banner():
+    """Affiche la bannière de démarrage"""
+    logger.info(f"""
+╔════════════════════════════════════════════════════════════════════════════════╗
+║                                                                                ║
+║  {ICON_START} CRYSTALWATER - SCAN QUOTIDIEN DES APPELS D'OFFRES                ║
+║                                                                                ║
+║  📅 {datetime.now().strftime('%A %d %B %Y %H:%M:%S')}                          ║
+║                                                                                ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+""")
 
 def print_tender_compact(tender, index, extract_status=""):
     """Affiche un AO sur une ligne avec statut d'extraction"""
@@ -453,19 +506,22 @@ def print_tender_compact(tender, index, extract_status=""):
         except:
             dl_disp = ""
     
-    logger.info(f"  #{index:<4} {ICON_AO} {objet:<75} {stars} {score:>3}%  {dl_disp:<10} {extract_status}")
+    pub_date = tender.get("date_publication", "")
+    pub_disp = f"📅 {pub_date}" if pub_date else ""
+    
+    logger.info(f"  #{index:<4} {ICON_AO} {objet:<70} {stars} {score:>3}%  {dl_disp:<10} {pub_disp:<12} {extract_status}")
 
-def print_page_header(page_num, total_pages):
+def print_page_header(page_num, total_pages, start_time, end_time):
     """Affiche l'en-tête d'une page"""
-    logger.info(f"\n{'─'*90}")
-    logger.info(f"  {ICON_PAGE} PAGE {page_num}/{total_pages}")
-    logger.info(f"{'─'*90}")
+    logger.info(f"\n{'─'*110}")
+    logger.info(f"  {ICON_PAGE} PAGE {page_num}/{total_pages}  |  Période: {start_time.strftime('%d/%m/%Y %H:%M')} → {end_time.strftime('%d/%m/%Y %H:%M')}")
+    logger.info(f"{'─'*110}")
 
 def print_page_footer(page_num, rows, new_count, skipped):
     """Affiche le résumé d'une page avec les raisons des skip"""
     total_skipped = sum(skipped.values())
-    logger.info(f"  {'─'*70}")
-    logger.info(f"  📊 Page {page_num}: {rows} lignes | {new_count} nouveaux | {total_skipped} ignorés")
+    logger.info(f"  {'─'*90}")
+    logger.info(f"  📊 Page {page_num}: {rows} lignes analysées | {new_count} nouveaux AO | {total_skipped} ignorés")
     if total_skipped > 0:
         skip_details = []
         for reason, count in skipped.items():
@@ -473,43 +529,90 @@ def print_page_footer(page_num, rows, new_count, skipped):
                 label = SKIP_REASONS.get(reason, reason)
                 skip_details.append(f"{label}: {count}")
         logger.info(f"     {ICON_SKIP} Raisons: {', '.join(skip_details)}")
-    logger.info(f"  {'─'*70}")
+    logger.info(f"  {'─'*90}")
 
-def print_final_summary():
-    """Affiche le résumé final"""
+def print_progress():
+    """Affiche la progression du scan en temps réel"""
     elapsed = (datetime.now() - scan_stats["start_time"]).total_seconds() if scan_stats["start_time"] else 0
+    h, m, s = int(elapsed // 3600), int((elapsed % 3600) // 60), int(elapsed % 60)
+    
+    logger.info(f"\n  {ICON_PROGRESS} PROGRESSION DU SCAN")
+    logger.info(f"  {'─'*50}")
+    logger.info(f"  📄 Pages: {scan_stats['pages_scanned']}/{scan_stats['total_pages']}")
+    logger.info(f"  📋 Nouveaux AO: {scan_stats['new_tenders']}")
+    logger.info(f"  📥 DCE téléchargés: {scan_stats['dce_downloaded']}")
+    logger.info(f"  ⏱️  Temps écoulé: {h}h {m}m {s}s")
+    logger.info(f"  {'─'*50}")
+
+def print_final_summary(start_time, end_time):
+    """Affiche le résumé final"""
+    elapsed = (scan_stats["end_time"] - scan_stats["start_time"]).total_seconds() if scan_stats["end_time"] and scan_stats["start_time"] else 0
     h, m, s = int(elapsed // 3600), int((elapsed % 3600) // 60), int(elapsed % 60)
     total_skipped = sum(scan_stats["skipped"].values())
     
-    logger.info(f"\n{'═'*70}")
-    logger.info(f"  {ICON_STATS} SCAN TERMINÉ")
-    logger.info(f"{'═'*70}")
-    logger.info(f"  📄 Pages scannées    : {scan_stats['pages_scanned']}/{scan_stats['total_pages']}")
-    logger.info(f"  📋 Nouveaux AO       : {scan_stats['new_tenders']}")
-    logger.info(f"  📥 DCE téléchargés   : {scan_stats['dce_downloaded']}")
-    logger.info(f"  📦 Avis extraits     : {scan_stats['avis_extracted']}")
-    logger.info(f"  📜 RC extraits       : {scan_stats['rc_extracted']}")
-    logger.info(f"  📊 BP extraits       : {scan_stats['bp_extracted']}")
-    logger.info(f"  {ICON_SKIP} AO ignorés       : {total_skipped}")
+    logger.info(f"""
+╔════════════════════════════════════════════════════════════════════════════════╗
+║  {ICON_FINISH} SCAN QUOTIDIEN TERMINÉ AVEC SUCCÈS                               ║
+╚════════════════════════════════════════════════════════════════════════════════╝
+
+  📅 Période scannée    : {start_time.strftime('%d/%m/%Y %H:%M')} → {end_time.strftime('%d/%m/%Y %H:%M')}
+  
+  📊 STATISTIQUES DÉTAILLÉES:
+  {'─'*50}
+  📄 Pages scannées     : {scan_stats['pages_scanned']}/{scan_stats['total_pages']}
+  📋 Nouveaux AO        : {scan_stats['new_tenders']}
+  📥 DCE téléchargés    : {scan_stats['dce_downloaded']}
+  📦 Avis extraits      : {scan_stats['avis_extracted']}
+  📜 RC extraits        : {scan_stats['rc_extracted']}
+  📊 BP extraits        : {scan_stats['bp_extracted']}
+  
+  {ICON_SKIP} AO ignorés        : {total_skipped}""")
+    
     if total_skipped > 0:
         for reason, count in scan_stats["skipped"].items():
             if count > 0:
                 label = SKIP_REASONS.get(reason, reason)
                 logger.info(f"     └─ {label}: {count}")
-    logger.info(f"  ⏱️  Durée totale      : {h}h {m}m {s}s")
-    logger.info(f"{'═'*70}\n")
-
-# ═══════════════ BACKFILL ═══════════════
-
-def run_backfill():
-    scan_stats["start_time"] = datetime.now()
-    # Réinitialiser les compteurs de skip
-    scan_stats["skipped"] = {"already_in_db": 0, "not_related": 0, "deadline_passed": 0, "title_too_short": 0, "error": 0}
     
-    logger.info(f"\n{'═'*70}")
-    logger.info(f"  {ICON_SCAN} BACKFILL - {BACKFILL_MONTHS} DERNIERS MOIS")
-    logger.info(f"  ⏱️  Début: {scan_stats['start_time'].strftime('%Y-%m-%d %H:%M:%S')}")
-    logger.info(f"{'═'*70}")
+    logger.info(f"""
+  ⏱️  Durée totale       : {h}h {m}m {s}s
+  🏁 Fin du scan        : {scan_stats['end_time'].strftime('%Y-%m-%d %H:%M:%S') if scan_stats['end_time'] else 'N/A'}
+  
+{'═'*70}
+""")
+
+# ═══════════════ SCAN QUOTIDIEN ═══════════════
+
+def run_daily_scan():
+    """Exécute le scan quotidien des AO publiés entre 6h hier et 6h aujourd'hui"""
+    
+    # Afficher la bannière de démarrage
+    print_banner()
+    
+    # Déterminer la fenêtre temporelle
+    start_time, end_time = get_daily_time_window()
+    
+    # Réinitialiser les statistiques
+    scan_stats["start_time"] = datetime.now()
+    scan_stats["end_time"] = None
+    scan_stats["skipped"] = {"already_in_db": 0, "not_related": 0, "deadline_passed": 0, "title_too_short": 0, "outside_time_window": 0, "error": 0}
+    scan_stats["pages_scanned"] = 0
+    scan_stats["new_tenders"] = 0
+    scan_stats["dce_downloaded"] = 0
+    scan_stats["dce_failed"] = 0
+    scan_stats["avis_extracted"] = 0
+    scan_stats["rc_extracted"] = 0
+    scan_stats["bp_extracted"] = 0
+    
+    logger.info(f"""
+  📋 CONFIGURATION DU SCAN:
+  {'─'*50}
+  📅 Période: {start_time.strftime('%d/%m/%Y %H:%M')} → {end_time.strftime('%d/%m/%Y %H:%M')}
+  ⏱️  Début: {scan_stats['start_time'].strftime('%Y-%m-%d %H:%M:%S')}
+  📄 Pages max: {MAX_PAGES_PER_DAY}
+  🎯 Filtre: Mots-clés CrystalWater
+  {'─'*50}
+""")
     
     existing_refs = _sb_get_refs()
     logger.info(f"  🗄️  {len(existing_refs)} AO déjà en base\n")
@@ -525,57 +628,59 @@ def run_backfill():
             browser.close()
             return
         
-        total_pages = 200
+        # Récupérer le nombre total de pages
+        total_pages = MAX_PAGES_PER_DAY
         try:
             nb = page.query_selector("#ctl0_CONTENU_PAGE_resultSearch_nombrePageTop")
-            if nb: total_pages = int(nb.inner_text().strip())
+            if nb: 
+                total_pages = min(int(nb.inner_text().strip()), MAX_PAGES_PER_DAY)
         except: pass
         
         scan_stats["total_pages"] = total_pages
-        logger.info(f"  📚 {total_pages} pages à scanner\n")
+        logger.info(f"  📚 {total_pages} pages disponibles à scanner\n")
+        logger.info(f"  {ICON_SCAN} LANCEMENT DU SCAN...\n")
         
-        cutoff_date = datetime.now() - timedelta(days=BACKFILL_MONTHS * 30)
         dce_page = context.new_page()
+        found_any = False
+        page_counter = 0
         
         for page_num in range(1, total_pages + 1):
             if page_num > 1:
                 if not navigate_to_page(page, page_num):
-                    logger.info(f"  ⚠️ Page {page_num} inaccessible, passage à la suite...")
-                    continue
+                    logger.info(f"  ⚠️ Page {page_num} inaccessible, arrêt du scan.")
+                    break
                 time.sleep(1)
             
             rows = BeautifulSoup(page.content(), "html.parser").select("tr:has(td.col-450)")
             if not rows:
-                logger.info(f"  📄 Page {page_num}: vide")
-                continue
+                logger.info(f"  📄 Page {page_num}: vide, fin des résultats.")
+                break
             
             scan_stats["pages_scanned"] += 1
             scan_stats["rows_checked"] += len(rows)
+            page_counter += 1
             
             page_new = []
-            page_skipped = {"already_in_db": 0, "not_related": 0, "deadline_passed": 0, "title_too_short": 0, "error": 0}
+            page_skipped = {"already_in_db": 0, "not_related": 0, "deadline_passed": 0, "title_too_short": 0, "outside_time_window": 0, "error": 0}
             
             for row in rows:
-                result, status = _extract_row(row, page.url, existing_refs)
+                result, status = _extract_row(row, page.url, existing_refs, start_time, end_time)
                 if result is None:
                     if status in page_skipped:
                         page_skipped[status] += 1
                         scan_stats["skipped"][status] += 1
                     continue
-                if result.get("date_publication"):
-                    try:
-                        if datetime.fromisoformat(result["date_publication"]) < cutoff_date: continue
-                    except: pass
                 page_new.append(result)
                 existing_refs.add(result.get("reference", ""))
             
             if page_new:
-                print_page_header(page_num, total_pages)
+                found_any = True
+                print_page_header(page_num, total_pages, start_time, end_time)
             else:
                 # Afficher quand même si des AO ont été skipés
                 total_skipped = sum(page_skipped.values())
                 if total_skipped > 0:
-                    print_page_header(page_num, total_pages)
+                    print_page_header(page_num, total_pages, start_time, end_time)
                     logger.info(f"     Tous ignorés ({total_skipped} AO)")
             
             for i, tender in enumerate(page_new, 1):
@@ -620,123 +725,24 @@ def run_backfill():
             if page_new or sum(page_skipped.values()) > 0:
                 print_page_footer(page_num, len(rows), len(page_new), page_skipped)
             
-            # Progression toutes les 10 pages
-            if page_num % 10 == 0:
-                elapsed = (datetime.now() - scan_stats["start_time"]).total_seconds()
-                logger.info(f"\n  ⏱️  Progression: {page_num}/{total_pages} pages | {scan_stats['new_tenders']} AO | {scan_stats['dce_downloaded']} DCE | {int(elapsed // 60)} min\n")
+            # Afficher la progression toutes les 5 pages
+            if page_num % 5 == 0:
+                print_progress()
+            
+            # Si on a atteint la fin des résultats
+            if not rows or len(rows) < 10:
+                break
         
         dce_page.close()
         browser.close()
     
-    print_final_summary()
-
-# ═══════════════ REALTIME SCANNER ═══════════════
-
-class RealtimeScanner:
-    def __init__(self):
-        self.existing_refs = _sb_get_refs()
-        self.running = True
-        self.poll_count = 0
-        self.new_count = 0
-        signal.signal(signal.SIGINT, self._handler)
-        signal.signal(signal.SIGTERM, self._handler)
+    # Enregistrer la fin du scan
+    scan_stats["end_time"] = datetime.now()
     
-    def _handler(self, signum, frame):
-        logger.info(f"\n  {ICON_SCAN} Arrêt demandé...")
-        self.running = False
+    if not found_any:
+        logger.info(f"\n  {ICON_WARN} Aucun nouvel AO trouvé dans la période.")
     
-    def run(self):
-        logger.info(f"\n  {ICON_SCAN} SURVEILLANCE - Intervalle: {POLL_INTERVAL}s | {len(self.existing_refs)} AO en base\n")
-        
-        from playwright.sync_api import sync_playwright
-        with sync_playwright() as p:
-            browser = p.chromium.launch(headless=True, args=['--no-sandbox'])
-            context = browser.new_context(viewport={"width": 1366, "height": 768}, accept_downloads=True)
-            page = context.new_page()
-            dce_page = context.new_page()
-            
-            if not navigate_to_results(page):
-                browser.close()
-                return
-            
-            while self.running:
-                self.poll_count += 1
-                poll_start = datetime.now()
-                logger.info(f"\n  {ICON_SCAN} Poll #{self.poll_count} - {poll_start.strftime('%H:%M:%S')}")
-                
-                poll_new = 0
-                poll_skipped = {"already_in_db": 0, "not_related": 0, "deadline_passed": 0}
-                
-                try:
-                    navigate_to_page(page, 1)
-                    for pg in range(1, MAX_PAGES_PER_POLL + 1):
-                        if pg > 1:
-                            if not navigate_to_page(page, pg): break
-                            time.sleep(1)
-                        
-                        rows = BeautifulSoup(page.content(), "html.parser").select("tr:has(td.col-450)")
-                        page_new = []
-                        
-                        for row in rows:
-                            result, status = _extract_row(row, page.url, self.existing_refs)
-                            if result:
-                                page_new.append(result)
-                                self.existing_refs.add(result.get("reference", ""))
-                            elif status in poll_skipped:
-                                poll_skipped[status] += 1
-                        
-                        if page_new:
-                            logger.info(f"  📄 Page {pg}: {len(page_new)} nouveaux")
-                            for tender in page_new:
-                                poll_new += 1
-                                self.new_count += 1
-                                
-                                dce_status = ""
-                                extract_status = ""
-                                detail_url = tender.get("source_url", "")
-                                if detail_url:
-                                    dce_result = download_dce_sync(dce_page, detail_url, tender["reference"])
-                                    if dce_result and dce_result.get("dce_zip_url"):
-                                        tender["dce_zip_url"] = dce_result["dce_zip_url"]
-                                        _sb_patch(tender["reference"], {"dce_zip_url": dce_result["dce_zip_url"]})
-                                        dce_status = "📥"
-                                        if dce_result.get("zip_content"):
-                                            ext = extract_all_from_zip(tender["reference"], dce_result["zip_content"])
-                                            parts = []
-                                            if ext.get("avis"): parts.append("Avis")
-                                            if ext.get("rc"): parts.append("RC")
-                                            if ext.get("bp"): parts.append("BP")
-                                            extract_status = f"📦 {', '.join(parts)}" if parts else ""
-                                
-                                _sb_upsert([tender])
-                                status_combo = f"{dce_status} {extract_status}".strip()
-                                print_tender_compact(tender, self.new_count, status_combo)
-                    
-                    total_skipped = sum(poll_skipped.values())
-                    if poll_new == 0:
-                        if total_skipped > 0:
-                            skip_details = [f"{SKIP_REASONS.get(k, k)}: {v}" for k, v in poll_skipped.items() if v > 0]
-                            logger.info(f"  ✅ Aucun nouveau ({', '.join(skip_details)})")
-                        else:
-                            logger.info(f"  ✅ Aucun nouveau")
-                    
-                    if self.poll_count % 12 == 0:
-                        self.existing_refs = _sb_get_refs()
-                
-                except Exception as ex:
-                    logger.error(f"  ❌ Erreur: {ex}")
-                    try: navigate_to_results(page)
-                    except: pass
-                
-                if self.running:
-                    wait = max(0, POLL_INTERVAL - (datetime.now() - poll_start).total_seconds())
-                    logger.info(f"  ⏱️  Prochain poll dans {int(wait)}s")
-                    for _ in range(int(wait)):
-                        if not self.running: break
-                        time.sleep(1)
-            
-            dce_page.close()
-            browser.close()
+    print_final_summary(start_time, end_time)
 
 # ═══════════════ FONCTIONS API ═══════════════
 
@@ -873,3 +879,9 @@ def scrape_southafrica(): return []
 def scrape_nigeria(): return []
 def scrape_suppliers(): return []
 def build_sector_intelligence(): return []
+
+# ═══════════════ POINT D'ENTRÉE ═══════════════
+
+if __name__ == "__main__":
+    # Exécuter le scan quotidien
+    run_daily_scan()
