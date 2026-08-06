@@ -279,7 +279,7 @@ def _do_extract_avis(tender_ref,zip_path):
             with open(zip_path,'rb') as f: zb=f.read()
             files=mod.extract_files_from_zip(zb)
             if files:
-                for fd in files[:3]:  # Limiter à 3 fichiers
+                for fd in files[:3]:
                     try:
                         r=mod.process_avis_file(fd["filename"],fd["file_bytes"])
                         if r.get("success") and r.get("avis_fields"):
@@ -613,17 +613,172 @@ def send_email_via_resend(email_data):
         return {"success":r.status_code in (200,201)}
     except: return {"success":False}
 
-def get_active_keywords(): return []
-def _sb_get_keywords(params=None): return []
-def _sb_add_keyword(data): return None
-def _sb_delete_keyword(kid): return False
-def _sb_update_keyword(kid,data): return False
-def _sb_get_tenders_2(params=None): return _sb_get(TENDERS_TABLE,params)
-def _sb_patch_tenders_2(ref,data): return _sb_patch(ref,data)
-def _sb_get_criteria(params=None): return []
-def _sb_add_criteria(data): return None
-def _sb_delete_criteria(cid): return False
-def recalculate_all_scores(): return 0
+# ═══════════════ KEYWORDS MANAGEMENT ═══════════════
+def get_active_keywords():
+    """Récupère uniquement les mots-clés actifs"""
+    return _sb_get_keywords({"is_active": "eq.true", "order": "keyword.asc"})
+
+def _sb_get_keywords(params=None):
+    """Récupère tous les mots-clés depuis Supabase"""
+    if not SUPABASE_URL:
+        return []
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/tender_keywords"
+        headers = _sb_headers()
+        response = requests.get(url, headers=headers, params=params or {"order": "keyword.asc"}, timeout=15)
+        response.raise_for_status()
+        return response.json() or []
+    except Exception as e:
+        logger.error(f"❌ Error fetching keywords: {e}")
+        return []
+
+def _sb_add_keyword(data):
+    """Ajoute un nouveau mot-clé"""
+    if not SUPABASE_URL:
+        return None
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/tender_keywords"
+        headers = {**_sb_headers(), "Prefer": "return=representation"}
+        response = requests.post(url, headers=headers, json=data, timeout=15)
+        response.raise_for_status()
+        result = response.json()
+        return result[0] if result else None
+    except Exception as e:
+        logger.error(f"❌ Error adding keyword: {e}")
+        return None
+
+def _sb_delete_keyword(kid):
+    """Supprime un mot-clé par ID"""
+    if not SUPABASE_URL:
+        return False
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/tender_keywords?id=eq.{kid}"
+        headers = _sb_headers()
+        response = requests.delete(url, headers=headers, timeout=15)
+        return response.status_code in (200, 204)
+    except Exception as e:
+        logger.error(f"❌ Error deleting keyword: {e}")
+        return False
+
+def _sb_update_keyword(kid, data):
+    """Met à jour un mot-clé par ID"""
+    if not SUPABASE_URL:
+        return False
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/tender_keywords?id=eq.{kid}"
+        headers = {**_sb_headers(), "Prefer": "return=minimal"}
+        response = requests.patch(url, headers=headers, json=data, timeout=15)
+        return response.status_code in (200, 204)
+    except Exception as e:
+        logger.error(f"❌ Error updating keyword: {e}")
+        return False
+
+# ═══════════════ SCORING CRITERIA MANAGEMENT ═══════════════
+def _sb_get_criteria(params=None):
+    """Récupère tous les critères de scoring"""
+    if not SUPABASE_URL:
+        return []
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/scoring_criteria"
+        headers = _sb_headers()
+        response = requests.get(url, headers=headers, params=params or {"order": "created_at"}, timeout=15)
+        response.raise_for_status()
+        return response.json() or []
+    except Exception as e:
+        logger.error(f"❌ Error fetching scoring criteria: {e}")
+        return []
+
+def _sb_add_criteria(data):
+    """Ajoute un nouveau critère de scoring"""
+    if not SUPABASE_URL:
+        return None
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/scoring_criteria"
+        headers = {**_sb_headers(), "Prefer": "return=representation"}
+        response = requests.post(url, headers=headers, json=data, timeout=15)
+        response.raise_for_status()
+        result = response.json()
+        return result[0] if result else None
+    except Exception as e:
+        logger.error(f"❌ Error adding scoring criteria: {e}")
+        return None
+
+def _sb_delete_criteria(cid):
+    """Supprime un critère de scoring par ID"""
+    if not SUPABASE_URL:
+        return False
+    try:
+        url = f"{SUPABASE_URL}/rest/v1/scoring_criteria?id=eq.{cid}"
+        headers = _sb_headers()
+        response = requests.delete(url, headers=headers, timeout=15)
+        return response.status_code in (200, 204)
+    except Exception as e:
+        logger.error(f"❌ Error deleting scoring criteria: {e}")
+        return False
+
+def _sb_get_tenders_2(params=None):
+    return _sb_get(TENDERS_TABLE, params)
+
+def _sb_patch_tenders_2(ref, data):
+    return _sb_patch(ref, data)
+
+def recalculate_all_scores():
+    """Recalcule tous les scores de pertinence"""
+    if not SUPABASE_URL:
+        return 0
+    
+    try:
+        # Récupérer tous les critères actifs
+        criteria = _sb_get_criteria({"is_active": "eq.true"})
+        if not criteria:
+            logger.info("Aucun critère de scoring actif trouvé")
+            return 0
+        
+        # Récupérer tous les tenders
+        tenders = _sb_get(TENDERS_TABLE, {"select": "reference,objet,categorie,procedure,lieu_execution,acheteur_public,date_limite_remise_plis", "limit": "10000"})
+        
+        updated = 0
+        for tender in tenders:
+            score = 0
+            for criterion in criteria:
+                field_value = str(tender.get(criterion["field_name"], "")).lower()
+                criterion_value = str(criterion["value"]).lower()
+                
+                if criterion["operator"] == "=":
+                    if criterion_value in field_value:
+                        score += criterion["weight"]
+                elif criterion["operator"] == ">":
+                    try:
+                        if float(field_value) > float(criterion_value):
+                            score += criterion["weight"]
+                    except: pass
+                elif criterion["operator"] == ">=":
+                    try:
+                        if float(field_value) >= float(criterion_value):
+                            score += criterion["weight"]
+                    except: pass
+                elif criterion["operator"] == "<":
+                    try:
+                        if float(field_value) < float(criterion_value):
+                            score += criterion["weight"]
+                    except: pass
+                elif criterion["operator"] == "<=":
+                    try:
+                        if float(field_value) <= float(criterion_value):
+                            score += criterion["weight"]
+                    except: pass
+            
+            score = min(100, score)
+            if _sb_patch(tender["reference"], {"relevance_score": score}):
+                updated += 1
+        
+        logger.info(f"✅ Scores recalculés: {updated} tenders mis à jour")
+        return updated
+    except Exception as e:
+        logger.error(f"❌ Error recalculating scores: {e}")
+        return 0
+
+# Stubs pour les fonctions de scraping non implémentées
 def scrape_kenya(): return []
 def scrape_ghana(): return []
 def scrape_rwanda(): return []

@@ -1,10 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react';
 import {
-  Search, RefreshCw, Globe, Building2,
+  Search, Globe, Building2,
   ExternalLink, CheckCircle,
   Loader, Zap,
-  Activity,
-  Download, FileArchive, Wifi, WifiOff,
+  Download, FileArchive,
   X, Target, Calendar, Clock,
   Monitor,
   Plus, Trash2, Tag, Filter, SlidersHorizontal, FileText, Check,
@@ -950,8 +949,6 @@ export default function Tenders({ showOnlyPreselected = false }) {
   const [qualificationFilters, setQualificationFilters] = useState([]);
   const [search, setSearch] = useState('');
   const [lastScan, setLastScan] = useState(null);
-  const [lastUpdate, setLastUpdate] = useState(null);
-  const [autoRefresh, setAutoRefresh] = useState(true);
   const [selected, setSelected] = useState(null);
   const [deadlineSort, setDeadlineSort] = useState('default');
   const [keywords, setKeywords] = useState([]);
@@ -976,7 +973,6 @@ export default function Tenders({ showOnlyPreselected = false }) {
       if (total > prevCount.current && prevCount.current > 0) console.log(`[Poll] ${total - prevCount.current} new items`);
       prevCount.current = total;
       setTenders(filteredTenders);
-      setLastUpdate(new Date());
     } catch (e) { console.error(e); }
     if (showLoad) setLoading(false);
   }, [apiEndpoint, showOnlyPreselected]);
@@ -1038,9 +1034,9 @@ export default function Tenders({ showOnlyPreselected = false }) {
 
   useEffect(() => {
     if (pollingRef.current) clearInterval(pollingRef.current);
-    if (autoRefresh) pollingRef.current = setInterval(() => fetchAll(false), scanning ? POLL_ACTIVE : POLL_IDLE);
+    pollingRef.current = setInterval(() => fetchAll(false), scanning ? POLL_ACTIVE : POLL_IDLE);
     return () => { if (pollingRef.current) clearInterval(pollingRef.current); };
-  }, [scanning, autoRefresh, fetchAll]);
+  }, [scanning, fetchAll]);
 
   const handleScan = async () => {
     setScanning(true);
@@ -1111,41 +1107,6 @@ export default function Tenders({ showOnlyPreselected = false }) {
     <div className="cw-theme min-h-screen">
       <style>{CW_THEME_STYLE}</style>
       <div className="max-w-[1440px] mx-auto px-4 sm:px-6 lg:px-8 py-8 space-y-6">
-        {!showOnlyPreselected && (
-          <div className="bg-white rounded-3xl border border-[#E2E8F0] shadow-sm overflow-hidden">
-            <div className="p-4 sm:p-5">
-              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-                <div className="flex items-center gap-3">
-                  <button onClick={() => setAutoRefresh(r => !r)} className={`flex items-center gap-2 px-4 py-2 rounded-2xl text-xs font-medium transition-all duration-200 active:scale-95 ${
-                    autoRefresh ? 'bg-[#EFF6FF] text-[#2563EB] border border-[#2563EB]/20 shadow-sm' : 'bg-[#F1F5F9] text-[#94A3B8] border border-[#E2E8F0]'
-                  }`}>
-                    {autoRefresh ? (<><Wifi size={12} /><span className="hidden sm:inline">Live</span><span className="flex h-1.5 w-1.5"><span className="animate-ping absolute inline-flex h-1.5 w-1.5 rounded-full bg-[#2563EB] opacity-75"></span><span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#2563EB]"></span></span></>) : (<><WifiOff size={12} /><span className="hidden sm:inline">Paused</span></>)}
-                  </button>
-                  {lastUpdate && (
-                    <span className="hidden lg:flex items-center gap-1.5 text-[11px] text-[#94A3B8] cw-mono">
-                      <Clock size={11} />Updated {lastUpdate.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
-                    </span>
-                  )}
-                </div>
-                <div className="flex items-center gap-3">
-                  <button onClick={() => fetchAll(true)} disabled={loading} className="flex items-center gap-2 px-4 py-2 rounded-2xl text-xs font-medium border border-[#E2E8F0] bg-white text-[#475569] hover:bg-[#F8FAFC] hover:text-[#0F172A] transition-all duration-200 shadow-sm">
-                    <RefreshCw size={12} className={loading ? 'animate-spin' : ''} /><span className="hidden sm:inline">Refresh</span>
-                  </button>
-                  <button onClick={handleScan} disabled={scanning} className="flex items-center gap-2 px-5 py-2 rounded-2xl text-xs font-medium text-white bg-[#111827] hover:bg-[#1E293B] disabled:opacity-50 disabled:cursor-not-allowed transition-all duration-200 shadow-sm active:scale-95">
-                    {scanning ? (<><Loader size={12} className="animate-spin" />Scanning...</>) : (<><Zap size={12} />Launch scan</>)}
-                  </button>
-                </div>
-              </div>
-              {scanning && (
-                <div className="mt-4 flex items-center gap-3 px-4 py-3 bg-[#EFF6FF] border border-[#2563EB]/20 rounded-2xl">
-                  <Activity size={14} className="text-[#2563EB] animate-pulse flex-shrink-0" />
-                  <div className="flex-1"><p className="text-xs font-medium text-[#0F172A]">Scan in progress…</p><p className="text-[11px] text-[#64748B]">New tenders will appear automatically</p></div>
-                  <span className="text-[11px] text-[#94A3B8] cw-mono">{lastScan ? `Last: ${lastScan.toLocaleTimeString()}` : 'Scanning...'}</span>
-                </div>
-              )}
-            </div>
-          </div>
-        )}
 
         <div className="sticky top-0 z-20 bg-[#F8FAFC]/95 backdrop-blur-sm pb-4 -mt-2 pt-2">
           <div className="bg-white rounded-3xl border border-[#E2E8F0] shadow-sm p-4">

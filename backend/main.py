@@ -240,6 +240,129 @@ def update_kw(kid:int, req:KeywordUpdate, current_user=Depends(get_current_user)
         return {"success":True}
     raise HTTPException(404)
 
+
+# ═══════════════ SCORING CRITERIA ═══════════════
+class ScoringCriteriaCreate(BaseModel):
+    field_name: str = Field(..., min_length=1)
+    operator: str = Field(..., min_length=1)
+    value: str = Field(..., min_length=1)
+    weight: int = Field(default=1, ge=1, le=100)
+
+class ScoringCriteriaUpdate(BaseModel):
+    field_name: Optional[str] = None
+    operator: Optional[str] = None
+    value: Optional[str] = None
+    weight: Optional[int] = Field(None, ge=1, le=100)
+    is_active: Optional[bool] = None
+
+@app.get("/scoring-criteria")
+def get_scoring_criteria(current_user=Depends(get_current_user)):
+    """Récupère tous les critères de scoring"""
+    if not supabase_client:
+        return {"success": True, "criteria": []}
+    
+    try:
+        response = supabase_client.table("scoring_criteria").select("*").order("created_at").execute()
+        criteria = response.data if response.data else []
+        return {"success": True, "criteria": criteria}
+    except Exception as e:
+        logger.error(f"❌ Error fetching scoring criteria: {e}")
+        return {"success": True, "criteria": []}
+
+@app.post("/scoring-criteria")
+def create_scoring_criteria(req: ScoringCriteriaCreate, current_user=Depends(get_current_user)):
+    """Ajoute un nouveau critère de scoring"""
+    if not supabase_client:
+        raise HTTPException(500, "Database not available")
+    
+    try:
+        data = {
+            "field_name": req.field_name,
+            "operator": req.operator,
+            "value": req.value,
+            "weight": req.weight,
+            "is_active": True,
+            "created_at": datetime.now().isoformat()
+        }
+        response = supabase_client.table("scoring_criteria").insert(data).execute()
+        
+        # Recalculer les scores après ajout
+        if SCANNER_AVAILABLE:
+            threading.Thread(target=recalculate_all_scores, daemon=True).start()
+        
+        return {"success": True, "criteria": response.data[0] if response.data else None}
+    except Exception as e:
+        logger.error(f"❌ Error creating scoring criteria: {e}")
+        raise HTTPException(500, str(e))
+
+@app.patch("/scoring-criteria/{criteria_id}")
+def update_scoring_criteria(criteria_id: int, req: ScoringCriteriaUpdate, current_user=Depends(get_current_user)):
+    """Met à jour un critère de scoring"""
+    if not supabase_client:
+        raise HTTPException(500, "Database not available")
+    
+    try:
+        data = {}
+        if req.field_name is not None:
+            data["field_name"] = req.field_name
+        if req.operator is not None:
+            data["operator"] = req.operator
+        if req.value is not None:
+            data["value"] = req.value
+        if req.weight is not None:
+            data["weight"] = req.weight
+        if req.is_active is not None:
+            data["is_active"] = req.is_active
+        
+        if not data:
+            raise HTTPException(400, "No fields to update")
+        
+        data["updated_at"] = datetime.now().isoformat()
+        
+        response = supabase_client.table("scoring_criteria").update(data).eq("id", criteria_id).execute()
+        
+        # Recalculer les scores après modification
+        if SCANNER_AVAILABLE:
+            threading.Thread(target=recalculate_all_scores, daemon=True).start()
+        
+        return {"success": True, "criteria": response.data[0] if response.data else None}
+    except Exception as e:
+        logger.error(f"❌ Error updating scoring criteria: {e}")
+        raise HTTPException(500, str(e))
+
+@app.delete("/scoring-criteria/{criteria_id}")
+def delete_scoring_criteria(criteria_id: int, current_user=Depends(get_current_user)):
+    """Supprime un critère de scoring"""
+    if not supabase_client:
+        raise HTTPException(500, "Database not available")
+    
+    try:
+        supabase_client.table("scoring_criteria").delete().eq("id", criteria_id).execute()
+        
+        # Recalculer les scores après suppression
+        if SCANNER_AVAILABLE:
+            threading.Thread(target=recalculate_all_scores, daemon=True).start()
+        
+        return {"success": True}
+    except Exception as e:
+        logger.error(f"❌ Error deleting scoring criteria: {e}")
+        raise HTTPException(500, str(e))
+
+@app.post("/scoring/recalculate")
+def recalculate_scores(current_user=Depends(get_current_user)):
+    """Force le recalcul de tous les scores"""
+    if not SCANNER_AVAILABLE:
+        raise HTTPException(500, "Scanner not available")
+    
+    try:
+        count = recalculate_all_scores()
+        return {"success": True, "tenders_updated": count}
+    except Exception as e:
+        logger.error(f"❌ Error recalculating scores: {e}")
+        raise HTTPException(500, str(e))
+
+
+        
 # ═══════════════ BP ITEMS - CORRIGÉ AVEC ___ ═══════════════
 @app.get("/tenders/{tender_id:path}/bp-items")
 def get_bp_items(tender_id: str, current_user=Depends(get_current_user)):

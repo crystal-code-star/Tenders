@@ -1,11 +1,18 @@
-import React, { useState } from 'react';
-import { LogIn, AlertCircle, Sparkles, Droplets } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { LogIn, AlertCircle, Sparkles } from 'lucide-react';
 
-const Login = ({ onLoginSuccess }) => {
+const Login = ({ onLoginSuccess, initialError = '' }) => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState(initialError);
+
+  // Mettre à jour l'erreur si initialError change
+  useEffect(() => {
+    if (initialError) {
+      setError(initialError);
+    }
+  }, [initialError]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -41,7 +48,7 @@ const Login = ({ onLoginSuccess }) => {
         className="hidden lg:flex w-[460px] flex-col justify-between p-12 flex-shrink-0"
         style={{ background: 'linear-gradient(160deg, #2D2CF0 0%, #1a19b8 100%)' }}
       >
-        {/* Logo */}
+        {/* Logo en haut */}
         <div className="flex items-center gap-3">
           <div className="w-10 h-10 rounded-xl bg-white/20 flex items-center justify-center">
             <Sparkles size={20} className="text-white" />
@@ -49,8 +56,8 @@ const Login = ({ onLoginSuccess }) => {
           <span className="font-bold text-white text-xl tracking-tight">CrystalWater</span>
         </div>
 
-        {/* Copy */}
-        <div>
+        {/* Texte centré au milieu */}
+        <div className="flex-1 flex flex-col justify-center -mt-16">
           <p className="text-white/40 text-xs font-bold uppercase tracking-widest mb-3">
             Procurement Intelligence
           </p>
@@ -59,24 +66,12 @@ const Login = ({ onLoginSuccess }) => {
           </h2>
           <p className="text-white/55 text-sm leading-relaxed">
             AI-powered tender tracking, DCE analysis, and real-time scoring
-            for water and cooling projects across Africa.
+            for water and cooling projects.
           </p>
         </div>
 
-        {/* Stats grid */}
-        <div className="grid grid-cols-2 gap-3">
-          {[
-            { label: 'Tenders tracked',  value: '2,400+' },
-            { label: 'Countries covered', value: '18'     },
-            { label: 'Avg. match score',  value: '82%'    },
-            { label: 'DCE analysed',      value: '940+'   },
-          ].map(s => (
-            <div key={s.label} className="bg-white/10 rounded-xl p-4">
-              <p className="text-white font-bold text-xl">{s.value}</p>
-              <p className="text-white/45 text-xs mt-0.5">{s.label}</p>
-            </div>
-          ))}
-        </div>
+        {/* Espace vide en bas pour équilibrer */}
+        <div className="h-10" />
       </div>
 
       {/* ── Right form panel ── */}
@@ -100,7 +95,12 @@ const Login = ({ onLoginSuccess }) => {
             {error && (
               <div className="mb-5 bg-red-50 border border-red-200 rounded-xl p-3.5 flex items-start gap-3">
                 <AlertCircle size={18} className="text-red-500 flex-shrink-0 mt-0.5" />
-                <p className="text-sm text-red-700">{error}</p>
+                <div>
+                  <p className="text-sm text-red-700">{error}</p>
+                  {error.includes('expired') && (
+                    <p className="text-xs text-red-500 mt-1">Your session has expired for security reasons. Please login again.</p>
+                  )}
+                </div>
               </div>
             )}
 

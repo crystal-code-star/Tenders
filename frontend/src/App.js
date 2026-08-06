@@ -120,17 +120,87 @@ function Shell() {
   const [email, setEmail] = useState('');
   const [tab, setTab] = useState('tenders');
   const [collapsed, setCollapsed] = useState(false);
+  const [sessionExpired, setSessionExpired] = useState(false);
+  const toast = useToast();
 
-  const loginOk = (e) => { setEmail(e); setAuth(true); };
-  const logout  = () => { localStorage.removeItem('access_token'); localStorage.removeItem('user_email'); setAuth(false); setEmail(''); };
+  const loginOk = useCallback((e) => { 
+    setEmail(e); 
+    setAuth(true); 
+    setSessionExpired(false);
+  }, []);
+  
+  const logout = useCallback((expired = false) => { 
+    localStorage.removeItem('access_token'); 
+    localStorage.removeItem('user_email'); 
+    setAuth(false); 
+    setEmail(''); 
+    if (expired) {
+      setSessionExpired(true);
+      if (toast) {
+        toast.warning('Votre session a expiré. Veuillez vous reconnecter.', 5000);
+      }
+    }
+  }, [toast]);
 
+  // Écouter l'événement d'expiration de session
+  useEffect(() => {
+    const handleSessionExpired = () => {
+      logout(true);
+    };
+
+    window.addEventListener('session-expired', handleSessionExpired);
+    return () => window.removeEventListener('session-expired', handleSessionExpired);
+  }, [logout]); // ← Ajout de logout dans les dépendances
+
+  // Vérifier périodiquement la validité du token
+  useEffect(() => {
+    if (!auth) return;
+
+    const checkToken = async () => {
+      try {
+        const apiUrl = process.env.REACT_APP_API_URL || 'http://localhost:8000';
+        const response = await fetch(`${apiUrl}/api/auth/verify-token`, {
+          method: 'POST',
+          headers: {
+            'Authorization': `Bearer ${localStorage.getItem('access_token')}`,
+            'Content-Type': 'application/json',
+          },
+        });
+        
+        if (!response.ok) {
+          logout(true);
+        }
+      } catch (error) {
+        // Si l'API n'est pas accessible, on ignore l'erreur
+        console.debug('Token verification failed:', error);
+      }
+    };
+
+    // Vérifier au montage et toutes les 5 minutes
+    checkToken();
+    const interval = setInterval(checkToken, 5 * 60 * 1000);
+    
+    return () => clearInterval(interval);
+  }, [auth, logout]); // ← Ajout de logout dans les dépendances
+
+  // Vérifier le token au chargement initial
   useEffect(() => {
     const t = localStorage.getItem('access_token');
     const e = localStorage.getItem('user_email');
-    if (t && e) { setEmail(e); setAuth(true); }
+    if (t && e) { 
+      setEmail(e); 
+      setAuth(true); 
+    }
   }, []);
 
-  if (!auth) return <Login onLoginSuccess={loginOk} />;
+  if (!auth) {
+    return (
+      <Login 
+        onLoginSuccess={loginOk} 
+        initialError={sessionExpired ? 'Session expired. Please login again.' : ''} 
+      />
+    );
+  }
 
   const initials = email ? email[0].toUpperCase() : '?';
 
@@ -186,7 +256,7 @@ function Shell() {
         </nav>
 
         <div className="px-3 pb-3 border-t border-[#E2E8F0] pt-2">
-          <button onClick={logout} title={collapsed ? 'Logout' : undefined}
+          <button onClick={() => logout(false)} title={collapsed ? 'Logout' : undefined}
             className="w-full flex items-center gap-3 px-3 py-2 rounded-2xl text-xs font-medium text-[#94A3B8] hover:bg-[#FEE2E2] hover:text-[#DC2626] transition-all">
             <LogOut size={15} className="flex-shrink-0" />
             {!collapsed && <span>Logout</span>}
@@ -196,7 +266,6 @@ function Shell() {
 
       {/* MAIN */}
       <div className="flex-1 flex flex-col min-w-0">
-        {/* HEADER - sans background, design épuré */}
         <header className="h-14 flex items-center justify-between px-6 flex-shrink-0">
           <h1 className="text-lg font-semibold text-[#0F172A]">{PAGE_TITLES[tab] || 'Tenders'}</h1>
           <div className="flex items-center gap-3">

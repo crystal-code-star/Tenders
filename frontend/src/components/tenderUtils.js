@@ -6,6 +6,45 @@ export const authHeaders = () => ({
   'Content-Type': 'application/json',
 });
 
+// Fonction helper pour les appels API avec gestion automatique de l'expiration
+export const apiFetch = async (url, options = {}) => {
+  const token = localStorage.getItem('access_token');
+  if (!token) {
+    handleSessionExpired();
+    throw new Error('No token found');
+  }
+
+  const headers = {
+    ...authHeaders(),
+    ...options.headers,
+  };
+
+  try {
+    const response = await fetch(url, { ...options, headers });
+    
+    if (response.status === 401) {
+      handleSessionExpired();
+      throw new Error('Session expired');
+    }
+    
+    return response;
+  } catch (error) {
+    if (error.message === 'Session expired' || error.message === 'No token found') {
+      throw error;
+    }
+    throw error;
+  }
+};
+
+// Fonction pour gérer l'expiration de session
+const handleSessionExpired = () => {
+  localStorage.removeItem('access_token');
+  localStorage.removeItem('user_email');
+  
+  // Dispatch un événement personnalisé que l'App peut écouter
+  window.dispatchEvent(new CustomEvent('session-expired'));
+};
+
 export const SCORE_TIER = (s) => {
   if (s >= 70) return { label: 'High', bg: 'bg-emerald-100', text: 'text-emerald-700', dot: 'bg-emerald-500', bar: '#10B981' };
   if (s >= 45) return { label: 'Med',  bg: 'bg-amber-100',   text: 'text-amber-700',   dot: 'bg-amber-500',   bar: '#F59E0B' };
