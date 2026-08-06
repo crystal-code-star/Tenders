@@ -34,12 +34,18 @@ urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 load_dotenv()
 
-ICON_SCAN = "🔍"; ICON_AO = "📋"; ICON_DCE = "📥"; ICON_ZIP = "📦"
-ICON_OK = "✅"; ICON_ERR = "❌"; ICON_WARN = "⚠️"
-ICON_AVIS = "📢"; ICON_RC = "📜"; ICON_BP = "📊"; ICON_DB = "🗄️"
-ICON_CLOCK = "🕐"; ICON_PAGE = "📄"; ICON_STATS = "📈"
-ICON_MONEY = "💰"; ICON_VISIT = "🏗️"; ICON_CAUTION = "🔒"
-ICON_REF = "🔖"; ICON_SCORE = "⭐"; ICON_DEADLINE = "⏰"
+# Icônes
+ICON_SCAN = "🔍"
+ICON_AO = "📋"
+ICON_DCE = "📥"
+ICON_OK = "✅"
+ICON_ERR = "❌"
+ICON_WARN = "⚠️"
+ICON_CLOCK = "🕐"
+ICON_PAGE = "📄"
+ICON_STATS = "📈"
+ICON_SKIP = "⏭️"
+ICON_EXTRACT = "📦"
 
 BACKFILL_MONTHS = 3
 POLL_INTERVAL = 300
@@ -53,29 +59,55 @@ TENDERS_TABLE = os.getenv("TENDERS_TABLE", "tenders_3")
 
 CRYSTAL_FORM_DATA = {"nom":"Crystal","prenom":"Water","email":"marketing@crystalwater.ma","raisonSocial":"CrystalWater","address":"Adresse CrystalWater"}
 
+# ═══════════════ LOGGING ═══════════════
 logger = logging.getLogger("tender_scanner")
 logger.setLevel(logging.INFO)
 if not logger.handlers:
-    ch = logging.StreamHandler(sys.stdout); ch.setLevel(logging.INFO)
-    ch.setFormatter(logging.Formatter('%(message)s')); logger.addHandler(ch)
+    ch = logging.StreamHandler(sys.stdout)
+    ch.setLevel(logging.INFO)
+    ch.setFormatter(logging.Formatter('%(message)s'))
+    logger.addHandler(ch)
     if not os.path.exists('logs'): os.makedirs('logs')
     fh = logging.FileHandler(f'logs/scanner_{datetime.now().strftime("%Y%m%d_%H%M%S")}.log', encoding='utf-8')
-    fh.setLevel(logging.DEBUG); fh.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
+    fh.setLevel(logging.DEBUG)
+    fh.setFormatter(logging.Formatter('%(asctime)s - %(levelname)s - %(message)s'))
     logger.addHandler(fh)
 
-scan_stats = {"pages_scanned":0,"total_pages":0,"rows_checked":0,"new_tenders":0,"dce_downloaded":0,"dce_failed":0,"avis_extracted":0,"rc_extracted":0,"bp_extracted":0,"start_time":None}
+scan_stats = {
+    "pages_scanned": 0,
+    "total_pages": 0,
+    "rows_checked": 0,
+    "new_tenders": 0,
+    "dce_downloaded": 0,
+    "dce_failed": 0,
+    "avis_extracted": 0,
+    "rc_extracted": 0,
+    "bp_extracted": 0,
+    "start_time": None,
+    "skipped": {"deja_en_base": 0, "non_pertinent": 0, "date_depassee": 0, "titre_court": 0, "erreur": 0}
+}
 
 STRONG_KEYWORDS = ["station de traitement","station d'epuration","step","eau potable","aep","adduction d'eau","potabilisation","assainissement","eaux usees","eaux pluviales","reservoir d'eau","chateau d'eau","dessalement","osmose inverse","traitement des eaux","surpression","forage d'eau","captage","puits","vannes","clapets","debitmetre","pompe immergee","tour de refroidissement","refroidissement industriel","chloration","desinfection","filtration","lagunage","station de pompage","irrigation"]
 MEDIUM_KEYWORDS = ["travaux","reseaux","canalisation","genie civil","fourniture","installation","rehabilitation","extension","construction","renouvellement","renforcement"]
 STRICT_EXCLUSIONS = ["nettoyage des locaux","entretien des locaux","informatique","logiciel","site web","photovoltaique","solaire","dechets solides","gardiennage","restauration","cantine","fournitures de bureau","mobilier","climatiseurs","vehicule","voiture","ambulance"]
 
+SKIP_REASONS = {
+    "already_in_db": "Déjà en base",
+    "not_related": "Non pertinent",
+    "deadline_passed": "Date dépassée",
+    "title_too_short": "Titre trop court",
+    "error": "Erreur extraction"
+}
+
 def _sb_headers(): return {"apikey":SUPABASE_KEY,"Authorization":f"Bearer {SUPABASE_KEY}","Content-Type":"application/json","Prefer":"return=representation"}
+
 def _sb_get(table,params=None):
     if not SUPABASE_URL: return []
     try:
         r=requests.get(f"{SUPABASE_URL}/rest/v1/{table}",headers=_sb_headers(),params=params or {},timeout=15)
         r.raise_for_status(); return r.json() or []
     except: return []
+
 def _sb_upsert(rows):
     if not SUPABASE_URL or not rows: return False
     url=f"{SUPABASE_URL}/rest/v1/{TENDERS_TABLE}"
@@ -87,6 +119,7 @@ def _sb_upsert(rows):
             if r.status_code in (200,201,204): ok+=len(rows[i:i+50])
         except: pass
     return ok>0
+
 def _sb_patch(ref,data):
     if not SUPABASE_URL: return False
     try:
@@ -94,6 +127,7 @@ def _sb_patch(ref,data):
         r=requests.patch(f"{SUPABASE_URL}/rest/v1/{TENDERS_TABLE}?reference=eq.{ref}",headers=h,json=data,timeout=60)
         return r.status_code in (200,204)
     except: return False
+
 def _sb_get_refs():
     refs=set()
     try:
@@ -101,6 +135,7 @@ def _sb_get_refs():
             if t.get("reference"): refs.add(t["reference"])
     except: pass
     return refs
+
 def _sb_upload_zip(zip_content,tender_ref):
     if not SUPABASE_URL or len(zip_content)>50*1024*1024: return None
     try:
@@ -193,11 +228,9 @@ def _extract_row(row,page_url,existing_refs):
         score=compute_score(ot or "",f"{ct} {pr} {le}",dl_str,ac)
         return {"reference":fr or str(uuid.uuid4()),"procedure":pr[:100] if pr else None,"categorie":ct[:200] if ct else None,"date_publication":dpp,"objet":ot[:500] if ot else None,"acheteur_public":ac[:300] if ac else None,"lieu_execution":le[:300] if le else None,"date_limite_remise_plis":dl_parsed,"reponse_electronique_obligatoire":re_elec,"source_url":detail_url or page_url,"dce_zip_url":None,"status":"new","qualification_status":"unseen","seen":False,"relevance_score":score},"success"
     except Exception as e:
-        logger.error(f"  {ICON_ERR} Extract error: {e}"); return None,"error"
+        return None,"error"
 
 def download_dce_sync(page,detail_url,tender_ref):
-    start=time.time()
-    logger.info(f"     {ICON_DCE} Téléchargement DCE...")
     try:
         page.goto(detail_url,wait_until="domcontentloaded",timeout=30000); page.wait_for_timeout(5000)
         clicked=False
@@ -207,7 +240,7 @@ def download_dce_sync(page,detail_url,tender_ref):
                     if el.is_visible(): el.click(); clicked=True; break
                 if clicked: break
             except: continue
-        if not clicked: logger.info(f"     {ICON_WARN} Aucun lien DCE trouvé"); return None
+        if not clicked: return None
         page.wait_for_timeout(5000)
         for sel,val in [("#ctl0_CONTENU_PAGE_EntrepriseFormulaireDemande_nom",CRYSTAL_FORM_DATA["nom"]),("#ctl0_CONTENU_PAGE_EntrepriseFormulaireDemande_prenom",CRYSTAL_FORM_DATA["prenom"]),("#ctl0_CONTENU_PAGE_EntrepriseFormulaireDemande_email",CRYSTAL_FORM_DATA["email"])]:
             try:
@@ -220,7 +253,7 @@ def download_dce_sync(page,detail_url,tender_ref):
         except: pass
         page.wait_for_timeout(1000)
         vb=page.query_selector("#ctl0_CONTENU_PAGE_validateButton")
-        if not vb: logger.info(f"     {ICON_ERR} Bouton validation introuvable"); return None
+        if not vb: return None
         vb.click(); page.wait_for_timeout(5000)
         db=None
         for sel in ["#ctl0_CONTENU_PAGE_EntrepriseDownloadDce_completeDownload","a.bouton-telecharger-long230"]:
@@ -228,50 +261,48 @@ def download_dce_sync(page,detail_url,tender_ref):
                 b=page.query_selector(sel)
                 if b and b.is_visible(): db=b; break
             except: continue
-        if not db: logger.info(f"     {ICON_ERR} Bouton download introuvable"); return None
+        if not db: return None
         with page.expect_download(timeout=300000) as di: db.click()
         dl=di.value
         try: zp=dl.path()
-        except: logger.info(f"     {ICON_WARN} Download annulé"); return None
-        if not zp: logger.info(f"     {ICON_ERR} Chemin vide"); return None
+        except: return None
+        if not zp: return None
         with open(zp,'rb') as f: zc=f.read()
-        if not zc or len(zc)<100: logger.info(f"     {ICON_ERR} ZIP vide"); return None
+        if not zc or len(zc)<100: return None
         sup_url=_sb_upload_zip(zc,tender_ref)
-        dt=time.time()-start
-        if sup_url:
-            logger.info(f"     {ICON_OK} DCE téléchargé ({dt:.1f}s, {len(zc)//1024} KB)")
-            return {"dce_zip_url":sup_url,"zip_content":zc,"download_time":dt}
-        else: logger.info(f"     {ICON_ERR} Échec upload Supabase"); return None
-    except Exception as e: logger.error(f"     {ICON_ERR} DCE error: {e}"); return None
+        if sup_url: return {"dce_zip_url":sup_url,"zip_content":zc}
+        return None
+    except: return None
 
 def extract_all_from_zip(tender_ref,zip_content):
-    logger.info(f"  ┌─ EXTRACTION ─────────────────────────────")
     tmp_path=None
     try:
         with tempfile.NamedTemporaryFile(suffix='.zip',delete=False) as tmp:
             tmp.write(zip_content); tmp_path=tmp.name
-        _do_extract_avis(tender_ref,tmp_path)
-        _do_extract_rc(tender_ref,tmp_path)
-        _do_extract_bp(tender_ref,tmp_path)
-    except Exception as e: logger.error(f"  │ {ICON_ERR} Extraction error: {e}")
+        avis_ok = _do_extract_avis(tender_ref,tmp_path)
+        rc_ok = _do_extract_rc(tender_ref,tmp_path)
+        bp_ok = _do_extract_bp(tender_ref,tmp_path)
+        if avis_ok: scan_stats["avis_extracted"] += 1
+        if rc_ok: scan_stats["rc_extracted"] += 1
+        if bp_ok: scan_stats["bp_extracted"] += 1
+        return {"avis": avis_ok, "rc": rc_ok, "bp": bp_ok}
+    except: return {"avis": False, "rc": False, "bp": False}
     finally:
         if tmp_path and os.path.exists(tmp_path):
             try: os.unlink(tmp_path)
             except: pass
-    logger.info(f"  └──────────────────────────────────────────")
 
 def _load_module(name,rel_path):
     mp=Path(__file__).resolve().parent/rel_path
-    if not mp.exists(): logger.info(f"  │ {ICON_WARN} Module {name} introuvable: {mp}"); return None
+    if not mp.exists(): return None
     try:
         spec=importlib.util.spec_from_file_location(name,mp)
         mod=importlib.util.module_from_spec(spec)
         spec.loader.exec_module(mod)
         return mod
-    except Exception as e: logger.error(f"  │ {ICON_ERR} Erreur chargement {name}: {e}"); return None
+    except: return None
 
 def _do_extract_avis(tender_ref,zip_path):
-    logger.info(f"  │ {ICON_AVIS} Avis...")
     mod=_load_module('avis_ext','document/00_avis_Extraction.py')
     result={}
     if mod:
@@ -288,15 +319,12 @@ def _do_extract_avis(tender_ref,zip_path):
                             if fs.get("Caution Provisoire"): result["avis_caution_dhs"]=fs["Caution Provisoire"]
                             if fs.get("Date et Heure Visite des Lieux"): result["avis_visite_lieux"]=fs["Date et Heure Visite des Lieux"]
                     except: pass
-        except Exception as e: logger.debug(f"  │   Avis module error: {e}")
+        except: pass
     if not result: result=_avis_fallback(zip_path)
     if result:
-        _sb_patch(tender_ref,result); scan_stats["avis_extracted"]+=1
-        logger.info(f"  │   {ICON_OK} {len(result)} champ(s) extrait(s)")
-        if result.get("avis_estimation_ttc"): logger.info(f"  │     {ICON_MONEY} Estimation: {result['avis_estimation_ttc']}")
-        if result.get("avis_caution_dhs"): logger.info(f"  │     {ICON_CAUTION} Caution: {result['avis_caution_dhs']}")
-        if result.get("avis_visite_lieux"): logger.info(f"  │     {ICON_VISIT} Visite: {result['avis_visite_lieux']}")
-    else: logger.info(f"  │   {ICON_WARN} Aucune info Avis trouvée")
+        _sb_patch(tender_ref,result)
+        return True
+    return False
 
 def _avis_fallback(zip_path):
     try:
@@ -330,23 +358,12 @@ def _avis_fallback(zip_path):
                     v=float(m.group(1).replace(' ','').replace(',','.'))
                     if v>100: r["avis_estimation_ttc"]=f"{v:,.0f} DHS".replace(',',' '); break
                 except: pass
-        for pat in [r"caution(?:nement)?\s+provisoire[\s\w]{0,40}?:?\s*\(?([\d]{1,3}(?:[.\s]\d{3})*(?:,\d{2})?)\)?"]:
-            m=re.search(pat,all_text,re.IGNORECASE)
-            if m:
-                try:
-                    v=float(m.group(1).replace(' ','').replace(',','.'))
-                    if v>0: r["avis_caution_dhs"]=f"{v}%" if '%' in m.group(0) else f"{v:,.0f} DHS".replace(',',' '); break
-                except: pass
-        m=re.search(r'[Vv]isite\s*(?:des|de)\s*lieux.*?(\d{1,2}[/.-]\d{1,2}[/.-]\d{2,4})',all_text,re.DOTALL)
-        if m: r["avis_visite_lieux"]=m.group(1)
-        if re.search(r"tenu[e]?\s+(de|d')\s+(faire|effectuer)\s+une\s+visite",all_text,re.IGNORECASE): r["visite_lieux_obligatoire"]=True
         return r
     except: return {}
 
 def _do_extract_rc(tender_ref,zip_path):
-    logger.info(f"  │ {ICON_RC} RC...")
     mod=_load_module('rc_ext','document/00_rc_Extraction.py')
-    if not mod: logger.info(f"  │   {ICON_WARN} Module RC non disponible"); return
+    if not mod: return False
     try:
         with open(zip_path,'rb') as f: zb=f.read()
         rc_files=[]
@@ -355,7 +372,7 @@ def _do_extract_rc(tender_ref,zip_path):
                 if fn.endswith('/'): continue
                 if mod.is_rc_file(fn) and mod.is_supported_format(fn):
                     rc_files.append({"filename":Path(fn).name,"file_bytes":zf.read(fn)})
-        if not rc_files: logger.info(f"  │   {ICON_WARN} Aucun fichier RC trouvé"); return
+        if not rc_files: return False
         results=[]
         for rc in rc_files:
             try:
@@ -363,27 +380,18 @@ def _do_extract_rc(tender_ref,zip_path):
                 if r and "error" not in r: results.append(r)
             except: pass
         if results:
-            mod.save_rc_extraction_to_supabase(tender_ref,results); scan_stats["rc_extracted"]+=1
-            merged={}
-            for r in results:
-                if "error" in r: continue
-                for k,v in r.items():
-                    if k not in ['filename','text_length','extraction_diag','acheteur','method','is_scanned','total_pages']:
-                        if v and not merged.get(k): merged[k]=v
-            logger.info(f"  │   {ICON_OK} RC: {len(merged)} champs extraits")
-            for k in ['attestations_demandees','nombre_references','classe_qualification','caution_provisoire']:
-                if k in merged: logger.info(f"  │     {k}: {merged[k]}")
-        else: logger.info(f"  │   {ICON_WARN} Aucune info RC extraite")
-    except Exception as e: logger.error(f"  │   {ICON_ERR} RC error: {e}")
+            mod.save_rc_extraction_to_supabase(tender_ref,results)
+            return True
+        return False
+    except: return False
 
 def _do_extract_bp(tender_ref,zip_path):
-    logger.info(f"  │ {ICON_BP} BP...")
     mod=_load_module('bp_ext','document/BP_Extractor.py')
-    if not mod: logger.info(f"  │   {ICON_WARN} Module BP non disponible"); return
+    if not mod: return False
     try:
         with open(zip_path,'rb') as f: zb=f.read()
         bp_files=mod.extract_files_from_zip(zb)
-        if not bp_files: logger.info(f"  │   {ICON_WARN} Aucun fichier BP trouvé"); return
+        if not bp_files: return False
         best,max_items=None,0
         for fd in bp_files:
             try:
@@ -392,22 +400,31 @@ def _do_extract_bp(tender_ref,zip_path):
             except: pass
         if best:
             bp_result=best["bp_result"]
-            mod.save_bp_to_supabase(tender_ref,bp_result,best["filename"]); scan_stats["bp_extracted"]+=1
-            dl=bp_result.get("document_level",{}); th=dl.get("Total_HT")
-            logger.info(f"  │   {ICON_OK} BP: {max_items} items extraits")
-            if th: logger.info(f"  │     {ICON_MONEY} Total HT: {th:,.2f} DHS")
-        else: logger.info(f"  │   {ICON_WARN} Aucun item BP extrait")
-    except Exception as e: logger.error(f"  │   {ICON_ERR} BP error: {e}")
+            mod.save_bp_to_supabase(tender_ref,bp_result,best["filename"])
+            return True
+        return False
+    except: return False
 
 def navigate_to_results(page):
     try:
-        page.goto(SEARCH_URL,wait_until="networkidle",timeout=60000); page.wait_for_timeout(5000)
-        try: page.click("#ctl0_CONTENU_PAGE_AdvancedSearch_lancerRecherche",timeout=15000)
-        except: page.evaluate("document.querySelector('form').submit()")
+        logger.info(f"  🌐 Navigation vers {BASE_URL}...")
+        page.goto(SEARCH_URL, wait_until="networkidle", timeout=60000)
         page.wait_for_timeout(5000)
-        try: page.wait_for_selector("tr:has(td.col-450)",timeout=45000); return True
-        except: return False
-    except: return False
+        try:
+            page.click("#ctl0_CONTENU_PAGE_AdvancedSearch_lancerRecherche", timeout=15000)
+        except:
+            page.evaluate("document.querySelector('form').submit()")
+        page.wait_for_timeout(5000)
+        try:
+            page.wait_for_selector("tr:has(td.col-450)", timeout=45000)
+            logger.info(f"  ✅ Site atteint, résultats chargés")
+            return True
+        except:
+            logger.info(f"  ❌ Impossible de charger les résultats")
+            return False
+    except Exception as e:
+        logger.info(f"  ❌ Erreur de navigation: {e}")
+        return False
 
 def navigate_to_page(page,page_num):
     if page_num==1: return True
@@ -418,160 +435,310 @@ def navigate_to_page(page,page_num):
         except: return False
     except: return False
 
-def print_tender_header(tender,index):
-    ref=tender.get("reference","N/A"); objet=(tender.get("objet","") or "")[:100]
-    score=tender.get("relevance_score",0); acheteur=(tender.get("acheteur_public","") or "")[:60]
-    deadline=tender.get("date_limite_remise_plis",""); dl_disp="N/A"
+# ═══════════════ AFFICHAGE ═══════════════
+
+def print_tender_compact(tender, index, extract_status=""):
+    """Affiche un AO sur une ligne avec statut d'extraction"""
+    objet = (tender.get("objet", "") or "")[:75]
+    score = tender.get("relevance_score", 0)
+    stars = "⭐" * min(5, score // 20)
+    
+    deadline = tender.get("date_limite_remise_plis", "")
+    dl_disp = ""
     if deadline:
         try:
-            d=datetime.fromisoformat(deadline.replace('Z','+00:00'))
-            days=(d-datetime.now()).days
-            if days<0: dl_disp=f"EXPIRÉ"
-            elif days<=7: dl_disp=f"{d.strftime('%d/%m/%Y')} ({days}j) 🔴"
-            elif days<=30: dl_disp=f"{d.strftime('%d/%m/%Y')} ({days}j) 🟡"
-            else: dl_disp=f"{d.strftime('%d/%m/%Y')} ({days}j) 🟢"
-        except: dl_disp=deadline[:10]
-    stars="⭐"*min(5,score//20)
-    logger.info(f"\n  ╔{'═'*70}╗")
-    logger.info(f"  ║ {ICON_AO} AO #{index}  |  {ICON_SCORE} {score}/100 {stars}  |  {ICON_REF} {ref}")
-    logger.info(f"  ╠{'═'*70}╣")
-    logger.info(f"  ║ 📝 {objet}")
-    logger.info(f"  ║ 🏢 {acheteur}")
-    logger.info(f"  ║ {ICON_DEADLINE} {dl_disp}")
-    logger.info(f"  ╚{'═'*70}╝")
+            d = datetime.fromisoformat(deadline.replace('Z', '+00:00'))
+            days = (d - datetime.now()).days
+            dl_disp = f"⏰ {days}j" if days >= 0 else "⏰ EXP"
+        except:
+            dl_disp = ""
+    
+    logger.info(f"  #{index:<4} {ICON_AO} {objet:<75} {stars} {score:>3}%  {dl_disp:<10} {extract_status}")
 
-def print_page_summary(page_num,total_pages,rows,new_found,skipped):
-    logger.info(f"\n  ┌─ {ICON_PAGE} PAGE {page_num}/{total_pages} ──────────────────────────────")
-    logger.info(f"  │  Lignes: {rows}  |  {ICON_AO} Nouveaux AO: {new_found}  |  Ignorés: {sum(skipped.values())}")
-    logger.info(f"  └{'─'*50}")
+def print_page_header(page_num, total_pages):
+    """Affiche l'en-tête d'une page"""
+    logger.info(f"\n{'─'*90}")
+    logger.info(f"  {ICON_PAGE} PAGE {page_num}/{total_pages}")
+    logger.info(f"{'─'*90}")
 
-def print_scan_summary():
-    e=(datetime.now()-scan_stats["start_time"]).total_seconds() if scan_stats["start_time"] else 0
-    h,m,s=int(e//3600),int((e%3600)//60),int(e%60)
+def print_page_footer(page_num, rows, new_count, skipped):
+    """Affiche le résumé d'une page avec les raisons des skip"""
+    total_skipped = sum(skipped.values())
+    logger.info(f"  {'─'*70}")
+    logger.info(f"  📊 Page {page_num}: {rows} lignes | {new_count} nouveaux | {total_skipped} ignorés")
+    if total_skipped > 0:
+        skip_details = []
+        for reason, count in skipped.items():
+            if count > 0:
+                label = SKIP_REASONS.get(reason, reason)
+                skip_details.append(f"{label}: {count}")
+        logger.info(f"     {ICON_SKIP} Raisons: {', '.join(skip_details)}")
+    logger.info(f"  {'─'*70}")
+
+def print_final_summary():
+    """Affiche le résumé final"""
+    elapsed = (datetime.now() - scan_stats["start_time"]).total_seconds() if scan_stats["start_time"] else 0
+    h, m, s = int(elapsed // 3600), int((elapsed % 3600) // 60), int(elapsed % 60)
+    total_skipped = sum(scan_stats["skipped"].values())
+    
     logger.info(f"\n{'═'*70}")
-    logger.info(f"  {ICON_STATS} RÉSUMÉ DU SCAN")
+    logger.info(f"  {ICON_STATS} SCAN TERMINÉ")
     logger.info(f"{'═'*70}")
-    logger.info(f"  {ICON_PAGE} Pages: {scan_stats['pages_scanned']}/{scan_stats['total_pages']}")
-    logger.info(f"  {ICON_AO} Nouveaux: {scan_stats['new_tenders']}")
-    logger.info(f"  {ICON_ZIP} DCE: {scan_stats['dce_downloaded']}")
-    logger.info(f"  {ICON_AVIS} Avis: {scan_stats['avis_extracted']} | {ICON_RC} RC: {scan_stats['rc_extracted']} | {ICON_BP} BP: {scan_stats['bp_extracted']}")
-    logger.info(f"  {ICON_CLOCK} Durée: {h}h {m}m {s}s")
-    logger.info(f"{'═'*70}")
+    logger.info(f"  📄 Pages scannées    : {scan_stats['pages_scanned']}/{scan_stats['total_pages']}")
+    logger.info(f"  📋 Nouveaux AO       : {scan_stats['new_tenders']}")
+    logger.info(f"  📥 DCE téléchargés   : {scan_stats['dce_downloaded']}")
+    logger.info(f"  📦 Avis extraits     : {scan_stats['avis_extracted']}")
+    logger.info(f"  📜 RC extraits       : {scan_stats['rc_extracted']}")
+    logger.info(f"  📊 BP extraits       : {scan_stats['bp_extracted']}")
+    logger.info(f"  {ICON_SKIP} AO ignorés       : {total_skipped}")
+    if total_skipped > 0:
+        for reason, count in scan_stats["skipped"].items():
+            if count > 0:
+                label = SKIP_REASONS.get(reason, reason)
+                logger.info(f"     └─ {label}: {count}")
+    logger.info(f"  ⏱️  Durée totale      : {h}h {m}m {s}s")
+    logger.info(f"{'═'*70}\n")
+
+# ═══════════════ BACKFILL ═══════════════
 
 def run_backfill():
-    scan_stats["start_time"]=datetime.now()
-    logger.info(f"\n{'═'*70}\n  {ICON_SCAN} BACKFILL - {BACKFILL_MONTHS} DERNIERS MOIS\n  {ICON_CLOCK} Début: {scan_stats['start_time'].strftime('%Y-%m-%d %H:%M:%S')}\n{'═'*70}")
-    existing_refs=_sb_get_refs()
-    logger.info(f"  {ICON_DB} {len(existing_refs)} AO déjà en base\n")
+    scan_stats["start_time"] = datetime.now()
+    # Réinitialiser les compteurs de skip
+    scan_stats["skipped"] = {"already_in_db": 0, "not_related": 0, "deadline_passed": 0, "title_too_short": 0, "error": 0}
+    
+    logger.info(f"\n{'═'*70}")
+    logger.info(f"  {ICON_SCAN} BACKFILL - {BACKFILL_MONTHS} DERNIERS MOIS")
+    logger.info(f"  ⏱️  Début: {scan_stats['start_time'].strftime('%Y-%m-%d %H:%M:%S')}")
+    logger.info(f"{'═'*70}")
+    
+    existing_refs = _sb_get_refs()
+    logger.info(f"  🗄️  {len(existing_refs)} AO déjà en base\n")
+    
     from playwright.sync_api import sync_playwright
     with sync_playwright() as p:
-        browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
-        context=browser.new_context(viewport={"width":1366,"height":768},accept_downloads=True)
-        page=context.new_page()
-        if not navigate_to_results(page): browser.close(); return
-        total_pages=200
+        browser = p.chromium.launch(headless=True, args=['--no-sandbox'])
+        context = browser.new_context(viewport={"width": 1366, "height": 768}, accept_downloads=True)
+        page = context.new_page()
+        
+        if not navigate_to_results(page):
+            logger.info(f"  ❌ Impossible d'accéder au site. Arrêt.")
+            browser.close()
+            return
+        
+        total_pages = 200
         try:
-            nb=page.query_selector("#ctl0_CONTENU_PAGE_resultSearch_nombrePageTop")
-            if nb: total_pages=int(nb.inner_text().strip())
+            nb = page.query_selector("#ctl0_CONTENU_PAGE_resultSearch_nombrePageTop")
+            if nb: total_pages = int(nb.inner_text().strip())
         except: pass
-        scan_stats["total_pages"]=total_pages
-        logger.info(f"  {ICON_PAGE} Pages à scanner: {total_pages}\n")
-        cutoff_date=datetime.now()-timedelta(days=BACKFILL_MONTHS*30)
-        dce_page=context.new_page()
-        for page_num in range(1,total_pages+1):
-            if page_num>1:
-                if not navigate_to_page(page,page_num): continue
+        
+        scan_stats["total_pages"] = total_pages
+        logger.info(f"  📚 {total_pages} pages à scanner\n")
+        
+        cutoff_date = datetime.now() - timedelta(days=BACKFILL_MONTHS * 30)
+        dce_page = context.new_page()
+        
+        for page_num in range(1, total_pages + 1):
+            if page_num > 1:
+                if not navigate_to_page(page, page_num):
+                    logger.info(f"  ⚠️ Page {page_num} inaccessible, passage à la suite...")
+                    continue
                 time.sleep(1)
-            rows=BeautifulSoup(page.content(),"html.parser").select("tr:has(td.col-450)")
-            if not rows: continue
-            scan_stats["pages_scanned"]+=1; scan_stats["rows_checked"]+=len(rows)
-            page_new=[]; page_skipped={"already_in_db":0,"not_related":0,"deadline_passed":0}
+            
+            rows = BeautifulSoup(page.content(), "html.parser").select("tr:has(td.col-450)")
+            if not rows:
+                logger.info(f"  📄 Page {page_num}: vide")
+                continue
+            
+            scan_stats["pages_scanned"] += 1
+            scan_stats["rows_checked"] += len(rows)
+            
+            page_new = []
+            page_skipped = {"already_in_db": 0, "not_related": 0, "deadline_passed": 0, "title_too_short": 0, "error": 0}
+            
             for row in rows:
-                result,status=_extract_row(row,page.url,existing_refs)
+                result, status = _extract_row(row, page.url, existing_refs)
                 if result is None:
-                    if status in page_skipped: page_skipped[status]+=1
+                    if status in page_skipped:
+                        page_skipped[status] += 1
+                        scan_stats["skipped"][status] += 1
                     continue
                 if result.get("date_publication"):
                     try:
-                        if datetime.fromisoformat(result["date_publication"])<cutoff_date: continue
+                        if datetime.fromisoformat(result["date_publication"]) < cutoff_date: continue
                     except: pass
-                page_new.append(result); existing_refs.add(result.get("reference",""))
-            if page_new: print_page_summary(page_num,total_pages,len(rows),len(page_new),page_skipped)
-            for tender in page_new:
-                scan_stats["new_tenders"]+=1; print_tender_header(tender,scan_stats["new_tenders"])
-                _sb_upsert([tender])
-                detail_url=tender.get("source_url","")
+                page_new.append(result)
+                existing_refs.add(result.get("reference", ""))
+            
+            if page_new:
+                print_page_header(page_num, total_pages)
+            else:
+                # Afficher quand même si des AO ont été skipés
+                total_skipped = sum(page_skipped.values())
+                if total_skipped > 0:
+                    print_page_header(page_num, total_pages)
+                    logger.info(f"     Tous ignorés ({total_skipped} AO)")
+            
+            for i, tender in enumerate(page_new, 1):
+                scan_stats["new_tenders"] += 1
+                
+                # Télécharger DCE
+                dce_status = ""
+                extract_status = ""
+                detail_url = tender.get("source_url", "")
+                
                 if detail_url:
-                    dce_result=download_dce_sync(dce_page,detail_url,tender["reference"])
+                    dce_result = download_dce_sync(dce_page, detail_url, tender["reference"])
                     if dce_result and dce_result.get("dce_zip_url"):
-                        tender["dce_zip_url"]=dce_result["dce_zip_url"]
-                        _sb_patch(tender["reference"],{"dce_zip_url":dce_result["dce_zip_url"]})
-                        scan_stats["dce_downloaded"]+=1
-                        if dce_result.get("zip_content"): extract_all_from_zip(tender["reference"],dce_result["zip_content"])
-                    else: scan_stats["dce_failed"]+=1; logger.info(f"     {ICON_WARN} Pas de DCE disponible")
-                else: logger.info(f"     {ICON_WARN} Pas d'URL de détail")
-            if page_num%50==0:
-                e=(datetime.now()-scan_stats["start_time"]).total_seconds()
-                logger.info(f"\n  {ICON_STATS} Page {page_num}/{total_pages} | {scan_stats['new_tenders']} AO | {scan_stats['dce_downloaded']} DCE | {int(e//60)}min\n")
-        dce_page.close(); browser.close()
-    print_scan_summary()
+                        tender["dce_zip_url"] = dce_result["dce_zip_url"]
+                        _sb_patch(tender["reference"], {"dce_zip_url": dce_result["dce_zip_url"]})
+                        scan_stats["dce_downloaded"] += 1
+                        dce_status = "📥"
+                        
+                        # Extraction
+                        if dce_result.get("zip_content"):
+                            ext = extract_all_from_zip(tender["reference"], dce_result["zip_content"])
+                            parts = []
+                            if ext.get("avis"): parts.append("Avis")
+                            if ext.get("rc"): parts.append("RC")
+                            if ext.get("bp"): parts.append("BP")
+                            extract_status = f"{ICON_EXTRACT} {', '.join(parts)}" if parts else f"{ICON_EXTRACT} —"
+                        else:
+                            extract_status = ""
+                    else:
+                        scan_stats["dce_failed"] += 1
+                        dce_status = "⚠️"
+                else:
+                    dce_status = "—"
+                
+                # Sauvegarder
+                _sb_upsert([tender])
+                
+                # Afficher
+                status_combo = f"{dce_status} {extract_status}".strip()
+                print_tender_compact(tender, scan_stats["new_tenders"], status_combo)
+            
+            if page_new or sum(page_skipped.values()) > 0:
+                print_page_footer(page_num, len(rows), len(page_new), page_skipped)
+            
+            # Progression toutes les 10 pages
+            if page_num % 10 == 0:
+                elapsed = (datetime.now() - scan_stats["start_time"]).total_seconds()
+                logger.info(f"\n  ⏱️  Progression: {page_num}/{total_pages} pages | {scan_stats['new_tenders']} AO | {scan_stats['dce_downloaded']} DCE | {int(elapsed // 60)} min\n")
+        
+        dce_page.close()
+        browser.close()
+    
+    print_final_summary()
+
+# ═══════════════ REALTIME SCANNER ═══════════════
 
 class RealtimeScanner:
     def __init__(self):
-        self.existing_refs=_sb_get_refs(); self.running=True
-        self.poll_count=0; self.new_count=0; self.dce_count=0
-        self.start_time=datetime.now()
-        signal.signal(signal.SIGINT,self._handler); signal.signal(signal.SIGTERM,self._handler)
-    def _handler(self,signum,frame): logger.info(f"\n  {ICON_SCAN} Arrêt..."); self.running=False
+        self.existing_refs = _sb_get_refs()
+        self.running = True
+        self.poll_count = 0
+        self.new_count = 0
+        signal.signal(signal.SIGINT, self._handler)
+        signal.signal(signal.SIGTERM, self._handler)
+    
+    def _handler(self, signum, frame):
+        logger.info(f"\n  {ICON_SCAN} Arrêt demandé...")
+        self.running = False
+    
     def run(self):
-        logger.info(f"\n{'═'*70}\n  {ICON_SCAN} SURVEILLANCE TEMPS RÉEL\n  Intervalle: {POLL_INTERVAL}s | {ICON_DB} {len(self.existing_refs)} en base\n{'═'*70}")
+        logger.info(f"\n  {ICON_SCAN} SURVEILLANCE - Intervalle: {POLL_INTERVAL}s | {len(self.existing_refs)} AO en base\n")
+        
         from playwright.sync_api import sync_playwright
         with sync_playwright() as p:
-            browser=p.chromium.launch(headless=True,args=['--no-sandbox'])
-            context=browser.new_context(viewport={"width":1366,"height":768},accept_downloads=True)
-            page=context.new_page(); dce_page=context.new_page()
-            if not navigate_to_results(page): browser.close(); return
+            browser = p.chromium.launch(headless=True, args=['--no-sandbox'])
+            context = browser.new_context(viewport={"width": 1366, "height": 768}, accept_downloads=True)
+            page = context.new_page()
+            dce_page = context.new_page()
+            
+            if not navigate_to_results(page):
+                browser.close()
+                return
+            
             while self.running:
-                self.poll_count+=1; poll_start=datetime.now()
-                logger.info(f"\n  {ICON_SCAN} POLL #{self.poll_count} - {poll_start.strftime('%H:%M:%S')}")
-                poll_new=0
+                self.poll_count += 1
+                poll_start = datetime.now()
+                logger.info(f"\n  {ICON_SCAN} Poll #{self.poll_count} - {poll_start.strftime('%H:%M:%S')}")
+                
+                poll_new = 0
+                poll_skipped = {"already_in_db": 0, "not_related": 0, "deadline_passed": 0}
+                
                 try:
-                    navigate_to_page(page,1)
-                    for pg in range(1,MAX_PAGES_PER_POLL+1):
-                        if pg>1:
-                            if not navigate_to_page(page,pg): break
+                    navigate_to_page(page, 1)
+                    for pg in range(1, MAX_PAGES_PER_POLL + 1):
+                        if pg > 1:
+                            if not navigate_to_page(page, pg): break
                             time.sleep(1)
-                        rows=BeautifulSoup(page.content(),"html.parser").select("tr:has(td.col-450)")
-                        page_new=[]
+                        
+                        rows = BeautifulSoup(page.content(), "html.parser").select("tr:has(td.col-450)")
+                        page_new = []
+                        
                         for row in rows:
-                            result,_=_extract_row(row,page.url,self.existing_refs)
-                            if result: page_new.append(result); self.existing_refs.add(result.get("reference",""))
+                            result, status = _extract_row(row, page.url, self.existing_refs)
+                            if result:
+                                page_new.append(result)
+                                self.existing_refs.add(result.get("reference", ""))
+                            elif status in poll_skipped:
+                                poll_skipped[status] += 1
+                        
                         if page_new:
-                            logger.info(f"  {ICON_AO} Page {pg}: {len(page_new)} NOUVEAU(X) !")
+                            logger.info(f"  📄 Page {pg}: {len(page_new)} nouveaux")
                             for tender in page_new:
-                                poll_new+=1; self.new_count+=1; print_tender_header(tender,self.new_count)
-                                _sb_upsert([tender])
-                                detail_url=tender.get("source_url","")
+                                poll_new += 1
+                                self.new_count += 1
+                                
+                                dce_status = ""
+                                extract_status = ""
+                                detail_url = tender.get("source_url", "")
                                 if detail_url:
-                                    dce_result=download_dce_sync(dce_page,detail_url,tender["reference"])
+                                    dce_result = download_dce_sync(dce_page, detail_url, tender["reference"])
                                     if dce_result and dce_result.get("dce_zip_url"):
-                                        tender["dce_zip_url"]=dce_result["dce_zip_url"]
-                                        _sb_patch(tender["reference"],{"dce_zip_url":dce_result["dce_zip_url"]})
-                                        self.dce_count+=1
-                                        if dce_result.get("zip_content"): extract_all_from_zip(tender["reference"],dce_result["zip_content"])
-                    if poll_new==0: logger.info(f"  {ICON_OK} Aucun nouveau")
-                    if self.poll_count%12==0: self.existing_refs=_sb_get_refs()
+                                        tender["dce_zip_url"] = dce_result["dce_zip_url"]
+                                        _sb_patch(tender["reference"], {"dce_zip_url": dce_result["dce_zip_url"]})
+                                        dce_status = "📥"
+                                        if dce_result.get("zip_content"):
+                                            ext = extract_all_from_zip(tender["reference"], dce_result["zip_content"])
+                                            parts = []
+                                            if ext.get("avis"): parts.append("Avis")
+                                            if ext.get("rc"): parts.append("RC")
+                                            if ext.get("bp"): parts.append("BP")
+                                            extract_status = f"📦 {', '.join(parts)}" if parts else ""
+                                
+                                _sb_upsert([tender])
+                                status_combo = f"{dce_status} {extract_status}".strip()
+                                print_tender_compact(tender, self.new_count, status_combo)
+                    
+                    total_skipped = sum(poll_skipped.values())
+                    if poll_new == 0:
+                        if total_skipped > 0:
+                            skip_details = [f"{SKIP_REASONS.get(k, k)}: {v}" for k, v in poll_skipped.items() if v > 0]
+                            logger.info(f"  ✅ Aucun nouveau ({', '.join(skip_details)})")
+                        else:
+                            logger.info(f"  ✅ Aucun nouveau")
+                    
+                    if self.poll_count % 12 == 0:
+                        self.existing_refs = _sb_get_refs()
+                
                 except Exception as ex:
-                    logger.error(f"  {ICON_ERR} Erreur: {ex}")
+                    logger.error(f"  ❌ Erreur: {ex}")
                     try: navigate_to_results(page)
                     except: pass
+                
                 if self.running:
-                    wait=max(0,POLL_INTERVAL-(datetime.now()-poll_start).total_seconds())
-                    logger.info(f"  {ICON_CLOCK} Prochain poll dans {int(wait)}s")
+                    wait = max(0, POLL_INTERVAL - (datetime.now() - poll_start).total_seconds())
+                    logger.info(f"  ⏱️  Prochain poll dans {int(wait)}s")
                     for _ in range(int(wait)):
                         if not self.running: break
                         time.sleep(1)
-            dce_page.close(); browser.close()
+            
+            dce_page.close()
+            browser.close()
+
+# ═══════════════ FONCTIONS API ═══════════════
 
 def load_tenders(status_filter=None):
     params={"order":"relevance_score.desc","limit":"10000"}
@@ -613,172 +780,88 @@ def send_email_via_resend(email_data):
         return {"success":r.status_code in (200,201)}
     except: return {"success":False}
 
-# ═══════════════ KEYWORDS MANAGEMENT ═══════════════
-def get_active_keywords():
-    """Récupère uniquement les mots-clés actifs"""
-    return _sb_get_keywords({"is_active": "eq.true", "order": "keyword.asc"})
-
+# ═══════════════ KEYWORDS ═══════════════
+def get_active_keywords(): return _sb_get_keywords({"is_active": "eq.true", "order": "keyword.asc"})
 def _sb_get_keywords(params=None):
-    """Récupère tous les mots-clés depuis Supabase"""
-    if not SUPABASE_URL:
-        return []
+    if not SUPABASE_URL: return []
     try:
-        url = f"{SUPABASE_URL}/rest/v1/tender_keywords"
-        headers = _sb_headers()
-        response = requests.get(url, headers=headers, params=params or {"order": "keyword.asc"}, timeout=15)
-        response.raise_for_status()
-        return response.json() or []
-    except Exception as e:
-        logger.error(f"❌ Error fetching keywords: {e}")
-        return []
-
+        r=requests.get(f"{SUPABASE_URL}/rest/v1/tender_keywords",headers=_sb_headers(),params=params or {"order":"keyword.asc"},timeout=15)
+        r.raise_for_status(); return r.json() or []
+    except: return []
 def _sb_add_keyword(data):
-    """Ajoute un nouveau mot-clé"""
-    if not SUPABASE_URL:
-        return None
+    if not SUPABASE_URL: return None
     try:
-        url = f"{SUPABASE_URL}/rest/v1/tender_keywords"
-        headers = {**_sb_headers(), "Prefer": "return=representation"}
-        response = requests.post(url, headers=headers, json=data, timeout=15)
-        response.raise_for_status()
-        result = response.json()
-        return result[0] if result else None
-    except Exception as e:
-        logger.error(f"❌ Error adding keyword: {e}")
-        return None
-
+        r=requests.post(f"{SUPABASE_URL}/rest/v1/tender_keywords",headers={**_sb_headers(),"Prefer":"return=representation"},json=data,timeout=15)
+        r.raise_for_status(); result=r.json(); return result[0] if result else None
+    except: return None
 def _sb_delete_keyword(kid):
-    """Supprime un mot-clé par ID"""
-    if not SUPABASE_URL:
-        return False
+    if not SUPABASE_URL: return False
     try:
-        url = f"{SUPABASE_URL}/rest/v1/tender_keywords?id=eq.{kid}"
-        headers = _sb_headers()
-        response = requests.delete(url, headers=headers, timeout=15)
-        return response.status_code in (200, 204)
-    except Exception as e:
-        logger.error(f"❌ Error deleting keyword: {e}")
-        return False
-
-def _sb_update_keyword(kid, data):
-    """Met à jour un mot-clé par ID"""
-    if not SUPABASE_URL:
-        return False
+        r=requests.delete(f"{SUPABASE_URL}/rest/v1/tender_keywords?id=eq.{kid}",headers=_sb_headers(),timeout=15)
+        return r.status_code in (200,204)
+    except: return False
+def _sb_update_keyword(kid,data):
+    if not SUPABASE_URL: return False
     try:
-        url = f"{SUPABASE_URL}/rest/v1/tender_keywords?id=eq.{kid}"
-        headers = {**_sb_headers(), "Prefer": "return=minimal"}
-        response = requests.patch(url, headers=headers, json=data, timeout=15)
-        return response.status_code in (200, 204)
-    except Exception as e:
-        logger.error(f"❌ Error updating keyword: {e}")
-        return False
+        r=requests.patch(f"{SUPABASE_URL}/rest/v1/tender_keywords?id=eq.{kid}",headers={**_sb_headers(),"Prefer":"return=minimal"},json=data,timeout=15)
+        return r.status_code in (200,204)
+    except: return False
 
-# ═══════════════ SCORING CRITERIA MANAGEMENT ═══════════════
+# ═══════════════ SCORING ═══════════════
 def _sb_get_criteria(params=None):
-    """Récupère tous les critères de scoring"""
-    if not SUPABASE_URL:
-        return []
+    if not SUPABASE_URL: return []
     try:
-        url = f"{SUPABASE_URL}/rest/v1/scoring_criteria"
-        headers = _sb_headers()
-        response = requests.get(url, headers=headers, params=params or {"order": "created_at"}, timeout=15)
-        response.raise_for_status()
-        return response.json() or []
-    except Exception as e:
-        logger.error(f"❌ Error fetching scoring criteria: {e}")
-        return []
-
+        r=requests.get(f"{SUPABASE_URL}/rest/v1/scoring_criteria",headers=_sb_headers(),params=params or {"order":"created_at"},timeout=15)
+        r.raise_for_status(); return r.json() or []
+    except: return []
 def _sb_add_criteria(data):
-    """Ajoute un nouveau critère de scoring"""
-    if not SUPABASE_URL:
-        return None
+    if not SUPABASE_URL: return None
     try:
-        url = f"{SUPABASE_URL}/rest/v1/scoring_criteria"
-        headers = {**_sb_headers(), "Prefer": "return=representation"}
-        response = requests.post(url, headers=headers, json=data, timeout=15)
-        response.raise_for_status()
-        result = response.json()
-        return result[0] if result else None
-    except Exception as e:
-        logger.error(f"❌ Error adding scoring criteria: {e}")
-        return None
-
+        r=requests.post(f"{SUPABASE_URL}/rest/v1/scoring_criteria",headers={**_sb_headers(),"Prefer":"return=representation"},json=data,timeout=15)
+        r.raise_for_status(); result=r.json(); return result[0] if result else None
+    except: return None
 def _sb_delete_criteria(cid):
-    """Supprime un critère de scoring par ID"""
-    if not SUPABASE_URL:
-        return False
+    if not SUPABASE_URL: return False
     try:
-        url = f"{SUPABASE_URL}/rest/v1/scoring_criteria?id=eq.{cid}"
-        headers = _sb_headers()
-        response = requests.delete(url, headers=headers, timeout=15)
-        return response.status_code in (200, 204)
-    except Exception as e:
-        logger.error(f"❌ Error deleting scoring criteria: {e}")
-        return False
-
-def _sb_get_tenders_2(params=None):
-    return _sb_get(TENDERS_TABLE, params)
-
-def _sb_patch_tenders_2(ref, data):
-    return _sb_patch(ref, data)
-
+        r=requests.delete(f"{SUPABASE_URL}/rest/v1/scoring_criteria?id=eq.{cid}",headers=_sb_headers(),timeout=15)
+        return r.status_code in (200,204)
+    except: return False
+def _sb_get_tenders_2(params=None): return _sb_get(TENDERS_TABLE,params)
+def _sb_patch_tenders_2(ref,data): return _sb_patch(ref,data)
 def recalculate_all_scores():
-    """Recalcule tous les scores de pertinence"""
-    if not SUPABASE_URL:
-        return 0
-    
+    if not SUPABASE_URL: return 0
     try:
-        # Récupérer tous les critères actifs
-        criteria = _sb_get_criteria({"is_active": "eq.true"})
-        if not criteria:
-            logger.info("Aucun critère de scoring actif trouvé")
-            return 0
-        
-        # Récupérer tous les tenders
-        tenders = _sb_get(TENDERS_TABLE, {"select": "reference,objet,categorie,procedure,lieu_execution,acheteur_public,date_limite_remise_plis", "limit": "10000"})
-        
-        updated = 0
+        criteria=_sb_get_criteria({"is_active":"eq.true"})
+        if not criteria: return 0
+        tenders=_sb_get(TENDERS_TABLE,{"select":"reference,objet,categorie,procedure,lieu_execution,acheteur_public,date_limite_remise_plis","limit":"10000"})
+        updated=0
         for tender in tenders:
-            score = 0
-            for criterion in criteria:
-                field_value = str(tender.get(criterion["field_name"], "")).lower()
-                criterion_value = str(criterion["value"]).lower()
-                
-                if criterion["operator"] == "=":
-                    if criterion_value in field_value:
-                        score += criterion["weight"]
-                elif criterion["operator"] == ">":
+            score=0
+            for c in criteria:
+                fv=str(tender.get(c["field_name"],"")).lower(); cv=str(c["value"]).lower()
+                if c["operator"]=="=" and cv in fv: score+=c["weight"]
+                elif c["operator"]==">":
                     try:
-                        if float(field_value) > float(criterion_value):
-                            score += criterion["weight"]
+                        if float(fv)>float(cv): score+=c["weight"]
                     except: pass
-                elif criterion["operator"] == ">=":
+                elif c["operator"]==">=":
                     try:
-                        if float(field_value) >= float(criterion_value):
-                            score += criterion["weight"]
+                        if float(fv)>=float(cv): score+=c["weight"]
                     except: pass
-                elif criterion["operator"] == "<":
+                elif c["operator"]=="<":
                     try:
-                        if float(field_value) < float(criterion_value):
-                            score += criterion["weight"]
+                        if float(fv)<float(cv): score+=c["weight"]
                     except: pass
-                elif criterion["operator"] == "<=":
+                elif c["operator"]=="<=":
                     try:
-                        if float(field_value) <= float(criterion_value):
-                            score += criterion["weight"]
+                        if float(fv)<=float(cv): score+=c["weight"]
                     except: pass
-            
-            score = min(100, score)
-            if _sb_patch(tender["reference"], {"relevance_score": score}):
-                updated += 1
-        
-        logger.info(f"✅ Scores recalculés: {updated} tenders mis à jour")
+            score=min(100,score)
+            if _sb_patch(tender["reference"],{"relevance_score":score}): updated+=1
         return updated
-    except Exception as e:
-        logger.error(f"❌ Error recalculating scores: {e}")
-        return 0
+    except: return 0
 
-# Stubs pour les fonctions de scraping non implémentées
+# Stubs
 def scrape_kenya(): return []
 def scrape_ghana(): return []
 def scrape_rwanda(): return []
