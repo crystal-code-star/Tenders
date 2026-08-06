@@ -34,7 +34,6 @@ from dotenv import load_dotenv
 from colorama import init, Fore, Style
 import supabase
 import requests as http_requests
-import time 
 
 init(autoreset=True)
 
@@ -318,7 +317,6 @@ def _extract_chunk_with_groq(text: str, filename: str, chunk_num: int, total_chu
             },
             timeout=90
         )
-        time.sleep(2)  # Délai pour éviter rate limit
         
         if response.status_code == 200:
             content = response.json()["choices"][0]["message"]["content"].strip()

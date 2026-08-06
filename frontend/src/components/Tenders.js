@@ -557,6 +557,8 @@ function TenderCard({ item, active, onClick, onQualify }) {
   const isElectronic = item.reponse_electronique_obligatoire;
   const hasBP = item.bp_extraction_status === 'completed';
   const qStatus = item.qualification_status || 'unseen';
+  // ⭐ NOUVEAU : Détecter si l'AO n'a pas encore été vu
+  const isUnseen = item.seen === false && item.qualification_status === 'unseen';
 
   const truncatedTitle = truncateTitleBeforeDots(item.objet || item.title || 'Untitled');
   const formattedPubDate = formatPublicationDate(publicationDate);
@@ -572,11 +574,25 @@ function TenderCard({ item, active, onClick, onQualify }) {
 
   return (
     <button onClick={onClick}
-      className={`w-full text-left transition-all duration-200 group relative bg-white rounded-2xl border overflow-hidden hover:shadow-md ${
-        active ? 'border-[#2563EB] shadow-lg shadow-[#2563EB]/10 scale-[1.01] z-10 ring-1 ring-[#2563EB]/10'
-          : 'border-[#E2E8F0] shadow-sm hover:border-[#CBD5E1]'
+      className={`w-full text-left transition-all duration-200 group relative rounded-2xl border overflow-hidden hover:shadow-md ${
+        active 
+          ? 'bg-white border-[#2563EB] shadow-lg shadow-[#2563EB]/10 scale-[1.01] z-10 ring-1 ring-[#2563EB]/10'
+          : isUnseen
+            ? 'bg-[#EFF6FF] border-[#93C5FD] shadow-sm hover:border-[#60A5FA] hover:bg-[#DBEAFE]'  // ⭐ Style AO non vu
+            : 'bg-white border-[#E2E8F0] shadow-sm hover:border-[#CBD5E1]'
       } ${item.status === 'ignored' ? 'opacity-40 hover:opacity-60' : ''}`}>
+      
+      {/* ⭐ Indicateur "Nouveau" pour les AO non vus */}
+      {isUnseen && (
+        <div className="absolute top-0 right-0">
+          <div className="bg-[#2563EB] text-white text-[9px] font-bold px-2.5 py-0.5 rounded-bl-xl shadow-sm">
+            NOUVEAU
+          </div>
+        </div>
+      )}
+      
       {active && <div className="absolute left-0 top-0 bottom-0 w-1 bg-[#2563EB]" />}
+      
       <div className="px-5 py-4">
         <div className="flex items-center gap-4">
           <button onClick={handleQualifyClick} title="Changer le statut" className="flex-shrink-0 hover:scale-105 transition-transform active:scale-95">
@@ -587,14 +603,20 @@ function TenderCard({ item, active, onClick, onQualify }) {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center gap-2 mb-1.5 flex-wrap text-[11px] text-[#64748B]">
                   {item.reference && (
-                    <span className="font-medium text-[#2563EB]">{item.reference}</span>
+                    <span className={`font-medium ${isUnseen ? 'text-[#1D4ED8]' : 'text-[#2563EB]'}`}>{item.reference}</span>
                   )}
                   {item.reference && (buyer !== '—' || location !== '—') && <span>•</span>}
                   {buyer !== '—' && <span title={buyer}>{truncatedBuyer}</span>}
                   {buyer !== '—' && location !== '—' && <span>•</span>}
                   {location !== '—' && <span title={location}>{truncatedLocation}</span>}
                 </div>
-                <h3 className={`text-[13px] font-semibold leading-snug line-clamp-2 transition-colors duration-200 ${active ? 'text-[#0F172A]' : 'text-[#0F172A] group-hover:text-[#2563EB]'}`}
+                <h3 className={`text-[13px] font-semibold leading-snug line-clamp-2 transition-colors duration-200 ${
+                  active 
+                    ? 'text-[#0F172A]' 
+                    : isUnseen 
+                      ? 'text-[#1E40AF] group-hover:text-[#2563EB]'  // ⭐ Texte plus foncé pour les non vus
+                      : 'text-[#0F172A] group-hover:text-[#2563EB]'
+                }`}
                     title={item.objet || item.title || 'Untitled'}>
                   {truncatedTitle}
                 </h3>
@@ -633,7 +655,7 @@ function TenderCard({ item, active, onClick, onQualify }) {
               <div className="flex items-center gap-3 flex-shrink-0">
                 <div className="flex items-center gap-2">
                   <GaugeDial score={score} size={42} thickness={3.5} />
-                  <div className="bg-[#F8FAFC] rounded-xl px-3 py-1.5 min-w-[85px]">
+                  <div className={`rounded-xl px-3 py-1.5 min-w-[85px] ${isUnseen ? 'bg-[#DBEAFE]' : 'bg-[#F8FAFC]'}`}>
                     {formattedPubDate && (
                       <div className="flex items-center gap-1 mb-1">
                         <Calendar size={10} className="text-[#94A3B8] flex-shrink-0" />
@@ -665,7 +687,7 @@ function TenderCard({ item, active, onClick, onQualify }) {
                     </span>
                   )}
                 </div>
-                <ChevronRight size={18} className={`transition-all duration-200 ${active ? 'text-[#2563EB] translate-x-1' : 'text-[#CBD5E1] group-hover:text-[#2563EB] group-hover:translate-x-1'}`} />
+                <ChevronRight size={18} className={`transition-all duration-200 ${active ? 'text-[#2563EB] translate-x-1' : isUnseen ? 'text-[#1D4ED8] group-hover:text-[#2563EB] group-hover:translate-x-1' : 'text-[#CBD5E1] group-hover:text-[#2563EB] group-hover:translate-x-1'}`} />
               </div>
             </div>
           </div>
